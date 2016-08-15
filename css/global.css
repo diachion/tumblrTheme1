@@ -1,0 +1,41 @@
+/* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+      GLOBAL CSS
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
+@import url(https://fonts.googleapis.com/css?family=Bitter|Raleway);
+body {
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.9em; }
+
+h1, h2, h3, h4, h5, h6, .collapsible-header {
+  font-family: 'Bitter', serif; }
+
+/* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+      HEADER / BANNER
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
+.header-img {
+  background-image: url("../imgs/ori-and-the-blind-forest.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: 50%;
+  position: relative;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: -999; }
+
+.parallax-container {
+  height: 100vh; }
+
+/* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+      SIDEBAR
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
+.card .card-content {
+  padding: 2px; }
+
+.collapsible .collapsible-header h6 {
+  display: inline-block; }
+.collapsible .collapsible-body p {
+  padding: 1.5rem; }
+
+/*# sourceMappingURL=global.css.map */
