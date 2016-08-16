@@ -28,10 +28,23 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
   height: 100vh; }
 
 /* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+      NAVIGATION
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
+nav {
+  background: #1e3342; }
+
+.btn {
+  background: #7e94a6;
+  font-family: 'Bitter', serif; }
+  .btn:hover {
+    background: #93a6b5; }
+
+/* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
       SIDEBAR
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
 .card .card-content {
-  padding: 2px; }
+  padding: 2px;
+  border-radius: 0; }
 
 .collapsible .collapsible-header h6 {
   display: inline-block; }

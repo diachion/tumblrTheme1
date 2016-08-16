@@ -32,12 +32,29 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
   height: 100vh;
 }
 
+
+/* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+      NAVIGATION
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
+nav {
+  background: #1e3342;
+}
+
+.btn {
+  background: #7e94a6;
+  font-family: 'Bitter', serif;
+  &:hover {
+    background: lighten(#7e94a6, 7%);
+  }
+}
+
 /* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
       SIDEBAR
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
 .card {
   .card-content {
     padding: 2px;
+    border-radius: 0;
   }
 }
 
