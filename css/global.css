@@ -8,14 +8,15 @@
 /* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
       GLOBAL CSS
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
-@import url(https://fonts.googleapis.com/css?family=Bitter|Raleway);
+@import url(https://fonts.googleapis.com/css?family=Montserrat|Raleway);
 body {
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   font-size: 0.9em;
-  color: #453C3B; }
+  color: #453C3B;
+  background: url(../imgs/white_wall_hash.png); }
 
 h1, h2, h3, h4, h5, h6, .collapsible-header {
-  font-family: 'Bitter', serif; }
+  font-family: "Montserrat", sans-serif; }
 
 .container {
   margin-top: 30px; }
@@ -27,6 +28,9 @@ a {
   -moz-transition: all 0.3s ease; }
   a:hover {
     color: #F4A33B; }
+
+* {
+  box-sizing: border-box; }
 
 /* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
       HEADER / BANNER
@@ -79,7 +83,7 @@ a {
 .btn {
   background: #D8BE86;
   color: #453C3B;
-  font-family: 'Bitter', serif; }
+  font-family: "Montserrat", sans-serif; }
   .btn:hover {
     background: #dec899; }
 
@@ -110,29 +114,43 @@ a {
     background: #f6b562;
     color: #fff; }
 
-.content-meta {
+.content-wrapper {
   width: 100%;
-  max-width: 580px;
-  text-align: left;
-  margin: 0 auto 15px auto; }
-  .content-meta .post-divider {
-    border-top: 2px dashed #ccc;
-    margin-bottom: 35px; }
-  .content-meta .meta-text {
-    margin-right: 15px; }
+  max-width: 650px;
+  margin: 0 auto 20px auto; }
+  .content-wrapper .content-meta {
+    width: 100%;
+    max-width: 580px;
+    text-align: left;
+    margin: 10px auto 5px auto;
+    border-bottom: 1px solid #F4A33B;
+    padding-bottom: 20px; }
+    .content-wrapper .content-meta .post-divider {
+      border-top: 2px dashed #ccc;
+      margin-bottom: 35px; }
+    .content-wrapper .content-meta .meta-text {
+      font-family: "Montserrat", sans-serif;
+      margin-right: 15px; }
 
 .content-post {
   width: 100%;
   max-width: 580px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  padding: 20px; }
+  .content-post .photoset {
+    margin-bottom: 15px; }
+  .content-post .chat-post {
+    margin-top: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #dcdcdc; }
   .content-post blockquote {
     margin-bottom: 0;
     border-left: 5px solid #E24E1B; }
 
 .content-tags {
   width: 100%;
-  max-width: 580px;
-  margin: 20px auto 40px auto;
+  max-width: 650px;
+  margin: 0 auto 40px auto;
   background: rgba(244, 163, 59, 0.75);
   color: #fff;
   padding: 15px;
@@ -150,11 +168,13 @@ a {
     top: -8px;
     left: 60px; }
   .content-tags .source-via {
+    font-family: "Montserrat", sans-serif;
     display: block;
     padding-bottom: 5px;
     margin-bottom: 10px;
     border-bottom: 1px solid #F1F7ED; }
   .content-tags .tag {
+    font-family: "Montserrat", sans-serif;
     display: inline-block;
     background: #F1F7ED;
     color: #453C3B;
