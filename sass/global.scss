@@ -9,11 +9,24 @@ $darkorange: #E24E1B;
 $darkbrown: #453C3B;
 $lightbrown: #D8BE86;
 
+
+
+/* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+      THEME
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
+$primary: $lightorange;
+$secondary: $lightbrown;
+$text: $darkbrown;
+$link: $darkorange;
+$nav: $darkbrown;
+
 @mixin trans($ease) {
   transition:         $ease;
   -webkit-transition: $ease;
   -moz-transition:    $ease;
 }
+
+$easyease: all .3s ease;
 
 /* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
       GLOBAL CSS
@@ -23,7 +36,7 @@ $lightbrown: #D8BE86;
 body {
   font-family: 'Raleway', sans-serif;
   font-size: 0.9em;
-  color: $darkbrown;
+  color: $text;
 }
 
 h1, h2, h3, h4, h5, h6, .collapsible-header {
@@ -35,12 +48,13 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
 }
 
 a {
-  color: $darkorange;
-  @include trans(all 0.3s ease);
+  color: $link;
+  @include trans($easyease);
   &:hover {
     color: $lightorange;
   }
 }
+
 
 /* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
       HEADER / BANNER
@@ -67,18 +81,18 @@ a {
       NAVIGATION
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
 nav {
-  background: $darkbrown;
+  background: $nav;
   a:hover {
     color: $darkbrown;
   }
 }
 
 .btn {
-  background: $lightbrown;
-  color: $darkbrown;
+  background: $secondary;
+  color: $text;
   font-family: 'Bitter', serif;
   &:hover {
-    background: lighten($lightbrown, 5%);
+    background: lighten($secondary, 5%);
   }
 }
 
@@ -96,8 +110,8 @@ nav {
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
 .card {
   .card-content {
-    background: $lightbrown;
-    color: $darkbrown;
+    background: $secondary;
+    color: $text;
     padding: 2px;
     border-radius: 0;
   }
@@ -105,8 +119,8 @@ nav {
 
 .collapsible {
   .collapsible-header {
-    background: $lightbrown;
-    color: $darkbrown;
+    background: $secondary;
+    color: $text;
     h6 {
       display: inline-block;
     }
@@ -122,11 +136,11 @@ nav {
       MAIN CONTENT
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
 .btn-floating {
-  background: $lightorange;
+  background: $primary;
   margin-right: 0.5rem;
   &:hover {
+    background: lighten($primary, 8%);
     color: #fff;
-    background: lighten($lightorange, 8%);
   }
 }
 
@@ -157,11 +171,24 @@ nav {
 .content-tags {
   width: 100%;
   max-width: 580px;
-  margin: 2rem auto 3rem auto;
-  background: rgba(244,163,59,0.75);
+  margin: 1.25rem auto 3rem auto;
+  background: transparentize($primary,.25);
   color: #fff;
   padding: 1rem;
   border-radius: 4px;
+  position: relative;
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-bottom: 1rem solid transparentize($primary,.25);
+    border-right: 1rem solid transparent;
+    border-left: 1rem solid transparent;
+    top: -1rem;
+    left: 3rem;
+  }
   .source-via {
     display: block;
     margin-bottom: 0.5rem;
@@ -170,8 +197,32 @@ nav {
     display: inline-block;
     background: $white;
     color: $darkbrown;
-    font-size: 0.9em;
-    padding: 0.3rem;
-    margin: 0 0.3rem;
+    font-size: 0.8em;
+    padding: 0.25rem 0 0.25rem 1.35rem;
+    margin: 0 1rem 0 0.3rem;
+    position: relative;
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 0; 
+      height: 0; 
+      border-top: .78rem solid transparent;
+      border-bottom: .78rem solid transparent;
+      border-left: .78rem solid $white;
+      top: 0;
+      right: -.73rem;
+    }
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: transparentize($primary,.25);
+      top: 8px;
+      left: 6px;
+    }
   }
 }
