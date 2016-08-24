@@ -1,3 +1,5 @@
+/* Color Scheme: https://coolors.co/f1f7ed-f4a33b-e24e1b-453c3b-d8be86 */
+
 /* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
       VARIABLES & MIXINS
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
@@ -6,6 +8,12 @@ $lightorange: #F4A33B;
 $darkorange: #E24E1B;
 $darkbrown: #453C3B;
 $lightbrown: #D8BE86;
+
+@mixin trans($ease) {
+  transition:         $ease;
+  -webkit-transition: $ease;
+  -moz-transition:    $ease;
+}
 
 /* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
       GLOBAL CSS
@@ -24,6 +32,14 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
 
 .container {
   margin-top: 3rem;
+}
+
+a {
+  color: $darkorange;
+  @include trans(all 0.3s ease);
+  &:hover {
+    color: $lightorange;
+  }
 }
 
 /* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
@@ -52,6 +68,9 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
 nav {
   background: $darkbrown;
+  a:hover {
+    color: $darkbrown;
+  }
 }
 
 .btn {
@@ -106,6 +125,7 @@ nav {
   background: $lightorange;
   margin-right: 0.5rem;
   &:hover {
+    color: #fff;
     background: lighten($lightorange, 8%);
   }
 }
@@ -151,7 +171,7 @@ nav {
     background: $white;
     color: $darkbrown;
     font-size: 0.9em;
-    padding: 0.5rem;
+    padding: 0.3rem;
     margin: 0 0.3rem;
   }
 }

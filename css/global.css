@@ -1,3 +1,4 @@
+/* Color Scheme: https://coolors.co/f1f7ed-f4a33b-e24e1b-453c3b-d8be86 */
 /* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
       VARIABLES & MIXINS
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
@@ -15,6 +16,14 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
 
 .container {
   margin-top: 3rem; }
+
+a {
+  color: #E24E1B;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease; }
+  a:hover {
+    color: #F4A33B; }
 
 /* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
       HEADER / BANNER
@@ -39,6 +48,8 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
 nav {
   background: #453C3B; }
+  nav a:hover {
+    color: #453C3B; }
 
 .btn {
   background: #D8BE86;
@@ -71,6 +82,7 @@ nav {
   background: #F4A33B;
   margin-right: 0.5rem; }
   .btn-floating:hover {
+    color: #fff;
     background: #f6b562; }
 
 .content-meta {
@@ -108,7 +120,7 @@ nav {
     background: #F1F7ED;
     color: #453C3B;
     font-size: 0.9em;
-    padding: 0.5rem;
+    padding: 0.3rem;
     margin: 0 0.3rem; }
 
 /*# sourceMappingURL=global.css.map */
