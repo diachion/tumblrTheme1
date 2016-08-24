@@ -82,10 +82,35 @@ a {
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
 nav {
   background: $nav;
-  a:hover {
-    color: $darkbrown;
+  .container {
+    margin: 0 auto;
+  }
+  .flex-nav {
+    display: flex;
+    flex-direction: row;
+    a.btn {
+      padding: 0 1rem;
+      flex-grow: 1;
+      margin: 14px 3px;
+      &:hover {
+        color: $darkbrown;
+      }
+    }
+  }
+  form {
+    input[type="search"] {
+      height: 36px !important; /* or height of nav */
+      position: relative;
+      top: 14px;
+      border-radius: 2px;
+      &:focus + label {
+        color: $primary !important;
+      }
+    }
   }
 }
+
+
 
 .btn {
   background: $secondary;
@@ -96,14 +121,6 @@ nav {
   }
 }
 
-// form {
-//   border: 1px solid red;
-//   display: inline-block;
-//   height: 50px;
-//   .input-field {
-//     background: #ccc;
-//   }
-// }
 
 /* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
       SIDEBAR

@@ -51,8 +51,25 @@ a {
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
 nav {
   background: #453C3B; }
-  nav a:hover {
-    color: #453C3B; }
+  nav .container {
+    margin: 0 auto; }
+  nav .flex-nav {
+    display: flex;
+    flex-direction: row; }
+    nav .flex-nav a.btn {
+      padding: 0 1rem;
+      flex-grow: 1;
+      margin: 14px 3px; }
+      nav .flex-nav a.btn:hover {
+        color: #453C3B; }
+  nav form input[type="search"] {
+    height: 36px !important;
+    /* or height of nav */
+    position: relative;
+    top: 14px;
+    border-radius: 2px; }
+    nav form input[type="search"]:focus + label {
+      color: #F4A33B !important; }
 
 .btn {
   background: #D8BE86;
