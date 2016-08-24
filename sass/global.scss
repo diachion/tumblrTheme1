@@ -9,8 +9,6 @@ $darkorange: #E24E1B;
 $darkbrown: #453C3B;
 $lightbrown: #D8BE86;
 
-
-
 /* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
       THEME
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
@@ -26,7 +24,7 @@ $nav: $darkbrown;
   -moz-transition:    $ease;
 }
 
-$easyease: all .3s ease;
+$easyease: all 0.3s ease;
 
 /* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
       GLOBAL CSS
@@ -44,7 +42,7 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
 }
 
 .container {
-  margin-top: 3rem;
+  margin-top: 30px;
 }
 
 a {
@@ -94,7 +92,7 @@ a {
     display: flex;
     flex-direction: row;
     a.btn {
-      padding: 0 1rem;
+      padding: 0 20px;
       flex-grow: 1;
       margin: 14px 3px;
       &:hover {
@@ -108,14 +106,13 @@ a {
       position: relative;
       top: 14px;
       border-radius: 2px;
+      padding-left: 40px;
       &:focus + label {
         color: $primary !important;
       }
     }
   }
 }
-
-
 
 .btn {
   background: $secondary;
@@ -149,7 +146,7 @@ a {
   }
   .collapsible-body {
     p {
-      padding: 1.5rem;
+      padding: 20px;
     }
   }
 }
@@ -159,7 +156,7 @@ a {
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
 .btn-floating {
   background: $primary;
-  margin-right: 0.5rem;
+  margin-right: 10px;
   &:hover {
     background: lighten($primary, 8%);
     color: #fff;
@@ -170,13 +167,13 @@ a {
   width: 100%;
   max-width: 580px;
   text-align: left;
-  margin: 0 auto 1rem auto;
+  margin: 0 auto 15px auto;
   .post-divider {
     border-top: 2px dashed #ccc;
-    margin-bottom: 2rem;
+    margin-bottom: 35px;
   }
   .meta-text {
-    margin-right: 2rem;
+    margin-right: 15px;
   }
 }
 
@@ -193,10 +190,10 @@ a {
 .content-tags {
   width: 100%;
   max-width: 580px;
-  margin: 1.25rem auto 3rem auto;
+  margin: 20px auto 40px auto;
   background: transparentize($primary,.25);
   color: #fff;
-  padding: 1rem;
+  padding: 15px;
   border-radius: 4px;
   position: relative;
   &::after {
@@ -205,23 +202,25 @@ a {
     position: absolute;
     width: 0;
     height: 0;
-    border-bottom: 1rem solid transparentize($primary,.25);
-    border-right: 1rem solid transparent;
-    border-left: 1rem solid transparent;
-    top: -1rem;
-    left: 3rem;
+    border-bottom: 8px solid transparentize($primary,.25);
+    border-right: 12px solid transparent;
+    border-left: 12px solid transparent;
+    top: -8px;
+    left: 60px;
   }
   .source-via {
     display: block;
-    margin-bottom: 0.5rem;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid $white;
   }
   .tag {
     display: inline-block;
     background: $white;
     color: $darkbrown;
     font-size: 0.8em;
-    padding: 0.25rem 0 0.25rem 1.35rem;
-    margin: 0 1rem 0 0.3rem;
+    padding: 5px 0 3px 20px;
+    margin: 0 10px;
     position: relative;
     &::after {
       content: "";
@@ -229,11 +228,11 @@ a {
       position: absolute;
       width: 0; 
       height: 0; 
-      border-top: .78rem solid transparent;
-      border-bottom: .78rem solid transparent;
-      border-left: .78rem solid $white;
+      border-top: 12px solid transparent;
+      border-bottom: 12px solid transparent;
+      border-left: 12px solid $white;
       top: 0;
-      right: -.73rem;
+      right: -12px;
     }
     &::before {
       content: "";
