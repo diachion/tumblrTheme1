@@ -49,26 +49,30 @@ a {
 /* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
       NAVIGATION
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
-nav {
-  background: #453C3B; }
-  nav .container {
+.nav-wrapper {
+  background: #453C3B;
+  z-index: 9999; }
+  .nav-wrapper.pinned {
+    width: 100%;
+    height: 64px; }
+  .nav-wrapper .container {
     margin: 0 auto; }
-  nav .flex-nav {
+  .nav-wrapper .flex-nav {
     display: flex;
     flex-direction: row; }
-    nav .flex-nav a.btn {
+    .nav-wrapper .flex-nav a.btn {
       padding: 0 1rem;
       flex-grow: 1;
       margin: 14px 3px; }
-      nav .flex-nav a.btn:hover {
+      .nav-wrapper .flex-nav a.btn:hover {
         color: #453C3B; }
-  nav form input[type="search"] {
+  .nav-wrapper form input[type="search"] {
     height: 36px !important;
     /* or height of nav */
     position: relative;
     top: 14px;
     border-radius: 2px; }
-    nav form input[type="search"]:focus + label {
+    .nav-wrapper form input[type="search"]:focus + label {
       color: #F4A33B !important; }
 
 .btn {

@@ -20,7 +20,7 @@
 
 
 <!-- =-=-=-=-=-=-=-=-=-= NAVBAR START =-=-=-=-=-=-=-=-=-= -->
-<nav>
+<nav style="height: 64px;">
   <div class="nav-wrapper">
       <div class="container">
         <div class="row">
@@ -201,6 +201,7 @@ $(document).ready(function(){
       $('.parallax').parallax();
     });
 
+    $('.nav-wrapper').pushpin({ top: $('header.parallax-container').height() });
 </script>
 
 </body>

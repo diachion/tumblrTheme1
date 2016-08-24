@@ -80,8 +80,13 @@ a {
 /* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
       NAVIGATION
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
-nav {
+.nav-wrapper {
   background: $nav;
+  z-index: 9999;
+  &.pinned {
+    width: 100%;
+    height: 64px;
+  }
   .container {
     margin: 0 auto;
   }
