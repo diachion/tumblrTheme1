@@ -1,13 +1,20 @@
 /* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+      VARIABLES & MIXINS
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
+/* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
       GLOBAL CSS
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
 @import url(https://fonts.googleapis.com/css?family=Bitter|Raleway);
 body {
   font-family: 'Raleway', sans-serif;
-  font-size: 0.9em; }
+  font-size: 0.9em;
+  color: #453C3B; }
 
 h1, h2, h3, h4, h5, h6, .collapsible-header {
   font-family: 'Bitter', serif; }
+
+.container {
+  margin-top: 3rem; }
 
 /* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
       HEADER / BANNER
@@ -31,24 +38,77 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
       NAVIGATION
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
 nav {
-  background: #1e3342; }
+  background: #453C3B; }
 
 .btn {
-  background: #7e94a6;
+  background: #D8BE86;
+  color: #453C3B;
   font-family: 'Bitter', serif; }
   .btn:hover {
-    background: #93a6b5; }
+    background: #dec899; }
 
 /* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
       SIDEBAR
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
 .card .card-content {
+  background: #D8BE86;
+  color: #453C3B;
   padding: 2px;
   border-radius: 0; }
 
-.collapsible .collapsible-header h6 {
-  display: inline-block; }
+.collapsible .collapsible-header {
+  background: #D8BE86;
+  color: #453C3B; }
+  .collapsible .collapsible-header h6 {
+    display: inline-block; }
 .collapsible .collapsible-body p {
   padding: 1.5rem; }
+
+/* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+      MAIN CONTENT
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
+.btn-floating {
+  background: #F4A33B;
+  margin-right: 0.5rem; }
+  .btn-floating:hover {
+    background: #f6b562; }
+
+.content-meta {
+  width: 100%;
+  max-width: 580px;
+  text-align: left;
+  margin: 0 auto 1rem auto; }
+  .content-meta .post-divider {
+    border-top: 2px dashed #ccc;
+    margin-bottom: 2rem; }
+  .content-meta .meta-text {
+    margin-right: 2rem; }
+
+.content-post {
+  width: 100%;
+  max-width: 580px;
+  margin: 0 auto; }
+  .content-post blockquote {
+    margin-bottom: 0;
+    border-left: 5px solid #E24E1B; }
+
+.content-tags {
+  width: 100%;
+  max-width: 580px;
+  margin: 2rem auto 3rem auto;
+  background: rgba(244, 163, 59, 0.75);
+  color: #fff;
+  padding: 1rem;
+  border-radius: 4px; }
+  .content-tags .source-via {
+    display: block;
+    margin-bottom: 0.5rem; }
+  .content-tags .tag {
+    display: inline-block;
+    background: #F1F7ED;
+    color: #453C3B;
+    font-size: 0.9em;
+    padding: 0.5rem;
+    margin: 0 0.3rem; }
 
 /*# sourceMappingURL=global.css.map */
