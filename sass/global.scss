@@ -171,9 +171,10 @@ a {
 }
 
 .content-wrapper {
+    position: relative;
     width: 100%;
     max-width: 650px;
-    margin: 0 auto 20px auto;
+    margin: 0 auto 15px auto;
   .content-meta {
     width: 100%;
     max-width: 580px;
@@ -211,11 +212,26 @@ a {
   }
 }
 
+.content-like-reblog {
+  position: absolute;
+  right: -60px;
+  .btn-reblog, .btn-like {
+    display: block;
+    margin-bottom: 10px;
+  }
+  .btn-like {
+    background: #f44336;
+  }
+  .btn-reblog {
+    background: #00bcd4;
+  }
+}
+
 .content-tags {
   width: 100%;
   max-width: 650px;
-  margin: 0 auto 40px auto;
-  background: transparentize($primary,.25);
+  margin: 0 auto 60px auto;
+  background: transparentize($primary,.75);
   color: #fff;
   padding: 15px;
   border-radius: 4px;
@@ -226,7 +242,7 @@ a {
     position: absolute;
     width: 0;
     height: 0;
-    border-bottom: 8px solid transparentize($primary,.25);
+    border-bottom: 8px solid transparentize($primary,.75);
     border-right: 12px solid transparent;
     border-left: 12px solid transparent;
     top: -8px;
@@ -234,10 +250,17 @@ a {
   }
   .source-via {
     font-family: $headings;
+    color: $darkorange;
     display: block;
     padding-bottom: 5px;
     margin-bottom: 10px;
     border-bottom: 1px solid $white;
+    >a {
+      color: $primary;
+      &:hover {
+        color: $darkorange;
+      }
+    }
   }
   .tag {
     font-family: $headings;
@@ -267,7 +290,7 @@ a {
       width: 8px;
       height: 8px;
       border-radius: 50%;
-      background: transparentize($primary,.25);
+      background: transparentize($primary,.75);
       top: 8px;
       left: 6px;
     }
