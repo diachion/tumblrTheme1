@@ -6,7 +6,8 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
 <!-- Stylesheets -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome-animation/0.0.9/font-awesome-animation.min.css">
   <link rel="stylesheet" type="text/css" href="css/global.css">
 </head>
 
@@ -26,13 +27,13 @@
         <div class="row">
           <div class="col s9">
             <div id="nav-mobile" class="center flex-nav">
-              <a class="waves-effect waves-light btn"><span class="fa fa-home"></span> Index</a>
-              <a class="waves-effect waves-light btn modal-trigger" href="#modal-ask"><span class="fa fa-envelope"></span> Ask</a>
-              <a class="waves-effect waves-light btn"><span class="fa fa-archive"></span> Archive</a>
-              <a class="waves-effect waves-light btn modal-trigger" href="#modal-me"><span class="fa fa-user"></span> Me</a>
-              <a class="waves-effect waves-light btn modal-trigger" href="#modal-blog"><span class="fa fa-pencil"></span> Blog</a>
-              <a class="waves-effect waves-light btn"><span class="fa fa-tags"></span> Tags</a>
-              <a class="waves-effect waves-light btn modal-trigger" href="#modal-credits"><span class="fa fa-heart"></span> Credits</a>
+              <a class="waves-effect waves-light btn faa-parent animated-hover"><span class="fa fa-home faa-shake"></span> Index</a>
+              <a class="waves-effect waves-light btn faa-parent animated-hover modal-trigger" href="#modal-ask"><span class="fa fa-envelope faa-shake"></span> Ask</a>
+              <a class="waves-effect waves-light btn faa-parent animated-hover"><span class="fa fa-archive faa-shake"></span> Archive</a>
+              <a class="waves-effect waves-light btn faa-parent animated-hover modal-trigger" href="#modal-me"><span class="fa fa-user faa-shake"></span> Me</a>
+              <a class="waves-effect waves-light btn faa-parent animated-hover modal-trigger" href="#modal-blog"><span class="fa fa-pencil faa-shake"></span> Blog</a>
+              <a class="waves-effect waves-light btn faa-parent animated-hover"><span class="fa fa-tags faa-shake"></span> Tags</a>
+              <a class="waves-effect waves-light btn faa-parent animated-hover modal-trigger" href="#modal-credits"><span class="fa fa-heart faa-shake"></span> Credits</a>
             </div>
           </div>
           <div class="col s3">
@@ -108,7 +109,7 @@
       <p><span class="fa fa-star"></span> <b>KnB Sprites:</b> <a href="http://nanairo-mikan.ciao.jp/bsk_main.htm" target="new">here</a></p>
       <p><span class="fa fa-star"></span> <b>Fire Emblem: Awakening pixels:</b> <a href="http://tacticiantwins-blog.tumblr.com/post/60677237887/1st-gen-pixels" target="new">here</a></p>
       <p><span class="fa fa-photo"></span> <b>Images:</b> header from <i>One Punch Man</i> <span class="fa fa-long-arrow-right"></span> vectored <small>(with his blood, sweat, and tears)</small> by <a href="http://kevinquach.ca/" target="new">KEVIN QUACH</a></p>
-      <p><span class="fa fa-trophy"></span> <b>Theme:</b> developed with <a href="http://materializecss.com/" target="new">marterializecss</a> <span class="fa fa-long-arrow-right"></span> 90% done by me, 10% done by Kevin</p>
+      <p><span class="fa fa-trophy"></span> <b>Theme:</b> developed and designed with <a href="http://materializecss.com/" target="new">marterializecss</a> <span class="fa fa-long-arrow-right"></span> 90% done by me, 10% done by Kevin</p>
     </div>
     <div class="modal-footer">
       <a href="#!" class="modal-action modal-close waves-effect btn-flat">Close</a>
@@ -120,7 +121,9 @@
 <!-- =-=-=-=-=-=-=-=-=-= CONTENT START =-=-=-=-=-=-=-=-=-= -->
 <section class="container">
   <div class="row">
-  <!-- SIDEBAR CONTENT -->
+  <!-- -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+            SIDEBAR CONTENT
+      -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- -->
     <div class="col s4">
       <div class="card">
         <div class="card-content">
@@ -196,6 +199,7 @@
               <span class="fa fa-toggle-off"></span> Fire Emblem Fates: Birthright <br/>
               <span class="fa fa-toggle-off"></span> Lightning Returns: Final Fantasy XIII <br/>
               <span class="fa fa-toggle-on"></span> Code: Realize ~Guardian of Rebirth~ <br/>
+              <span class="fa fa-toggle-on"></span> Minecraft <br/>
             </p>
           </div>
         </li>
@@ -204,18 +208,19 @@
     </div> <!-- col s3 -->
 
 
-  <!-- MAIN CONTENT -->
+  <!-- -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+            MAIN CONTENT
+   -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- -->
     <div class="col s8">
 
     <!-- POST TYPE: PHOTOSET start -->
     <div class="content-wrapper card-panel">
       <div class="content-like-reblog">
-        <a class="btn-floating waves-effect waves-light center btn-like tooltipped" data-position="right" data-delay="50" data-tooltip="Like"><span class="fa fa-heart"></span></a>
-        <a class="btn-floating waves-effect waves-light center btn-reblog tooltipped" data-position="right" data-delay="50" data-tooltip="Reblog"><span class="fa fa-retweet"></span></a>
+        <a class="btn-floating waves-effect waves-light center btn-like tooltipped faa-parent animated-hover" data-position="right" data-delay="50" data-tooltip="Like"><span class="fa fa-heart faa-pulse faa-fast"></span></a>
+        <a class="btn-floating waves-effect waves-light center btn-reblog tooltipped faa-parent animated-hover" data-position="right" data-delay="50" data-tooltip="Reblog"><span class="fa fa-retweet faa-pulse faa-fast"></span></a>
       </div>
 
       <div class="content-meta">
-        <!-- <div class="post-divider"></div> -->
         <a><span class="fa fa-calendar"></span></a> <span class="meta-text">August 15, 2016</span>
         <a><span class="fa fa-clock-o"></span></a> <span class="meta-text">21:46</span>
         <a><span class="fa fa-bookmark"></span></a> <span class="meta-text">4,839 Notes</span>
@@ -228,8 +233,6 @@
           <img src="imgs/4v2.gif"> <img src="imgs/5v2.gif">
         </div>
 
-        <span><a href="#">a-persons-url-here</a>:</span>
-        <blockquote>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum rutrum nibh eget ipsum cursus auctor.</blockquote>
       </div>
     </div>
 
@@ -242,12 +245,11 @@
     <!-- POST TYPE: PHOTOSET start -->
     <div class="content-wrapper card-panel">
       <div class="content-like-reblog">
-        <a class="btn-floating waves-effect waves-light center btn-like tooltipped" data-position="right" data-delay="50" data-tooltip="Like"><span class="fa fa-heart"></span></a>
-        <a class="btn-floating waves-effect waves-light center btn-reblog tooltipped" data-position="right" data-delay="50" data-tooltip="Reblog"><span class="fa fa-retweet"></span></a>
+        <a class="btn-floating waves-effect waves-light center btn-like tooltipped faa-parent animated-hover" data-position="right" data-delay="50" data-tooltip="Like"><span class="fa fa-heart faa-pulse faa-fast"></span></a>
+        <a class="btn-floating waves-effect waves-light center btn-reblog tooltipped faa-parent animated-hover" data-position="right" data-delay="50" data-tooltip="Reblog"><span class="fa fa-retweet faa-pulse faa-fast"></span></a>
       </div>
 
       <div class="content-meta">
-        <!-- <div class="post-divider"></div> -->
         <a><span class="fa fa-calendar"></span></a> <span class="meta-text">August 15, 2016</span>
         <a><span class="fa fa-clock-o"></span></a> <span class="meta-text">21:46</span>
         <a><span class="fa fa-bookmark"></span></a> <span class="meta-text">4,839 Notes</span>
@@ -275,12 +277,11 @@
     <!-- POST TYPE: TEXT start -->
     <div class="content-wrapper card-panel">
       <div class="content-like-reblog">
-        <a class="btn-floating waves-effect waves-light center btn-like tooltipped" data-position="right" data-delay="50" data-tooltip="Like"><span class="fa fa-heart"></span></a>
-        <a class="btn-floating waves-effect waves-light center btn-reblog tooltipped" data-position="right" data-delay="50" data-tooltip="Reblog"><span class="fa fa-retweet"></span></a>
+        <a class="btn-floating waves-effect waves-light center btn-like tooltipped faa-parent animated-hover" data-position="right" data-delay="50" data-tooltip="Like"><span class="fa fa-heart faa-pulse faa-fast"></span></a>
+        <a class="btn-floating waves-effect waves-light center btn-reblog tooltipped faa-parent animated-hover" data-position="right" data-delay="50" data-tooltip="Reblog"><span class="fa fa-retweet faa-pulse faa-fast"></span></a>
       </div>
 
       <div class="content-meta">
-        <!-- <div class="post-divider"></div> -->
         <a><span class="fa fa-calendar"></span></a> <span class="meta-text">August 15, 2016</span>
         <a><span class="fa fa-clock-o"></span></a> <span class="meta-text">21:46</span>
         <a><span class="fa fa-bookmark"></span></a> <span class="meta-text">4,839 Notes</span>
@@ -301,12 +302,11 @@
     <!-- POST TYPE: CHAT start -->
     <div class="content-wrapper card-panel">
       <div class="content-like-reblog">
-        <a class="btn-floating waves-effect waves-light center btn-like tooltipped" data-position="right" data-delay="50" data-tooltip="Like"><span class="fa fa-heart"></span></a>
-        <a class="btn-floating waves-effect waves-light center btn-reblog tooltipped" data-position="right" data-delay="50" data-tooltip="Reblog"><span class="fa fa-retweet"></span></a>
+        <a class="btn-floating waves-effect waves-light center btn-like tooltipped faa-parent animated-hover" data-position="right" data-delay="50" data-tooltip="Like"><span class="fa fa-heart faa-pulse faa-fast"></span></a>
+        <a class="btn-floating waves-effect waves-light center btn-reblog tooltipped faa-parent animated-hover" data-position="right" data-delay="50" data-tooltip="Reblog"><span class="fa fa-retweet faa-pulse faa-fast"></span></a>
       </div>
 
       <div class="content-meta">
-       <!--  <div class="post-divider"></div> -->
         <a><span class="fa fa-calendar"></span></a> <span class="meta-text">August 15, 2016</span>
         <a><span class="fa fa-clock-o"></span></a> <span class="meta-text">21:46</span>
         <a><span class="fa fa-bookmark"></span></a> <span class="meta-text">4,839 Notes</span>
@@ -328,12 +328,11 @@
     <!-- POST TYPE: QUOTE start -->
     <div class="content-wrapper card-panel">
       <div class="content-like-reblog">
-        <a class="btn-floating waves-effect waves-light center btn-like tooltipped" data-position="right" data-delay="50" data-tooltip="Like"><span class="fa fa-heart"></span></a>
-        <a class="btn-floating waves-effect waves-light center btn-reblog tooltipped" data-position="right" data-delay="50" data-tooltip="Reblog"><span class="fa fa-retweet"></span></a>
+        <a class="btn-floating waves-effect waves-light center btn-like tooltipped faa-parent animated-hover" data-position="right" data-delay="50" data-tooltip="Like"><span class="fa fa-heart faa-pulse faa-fast"></span></a>
+        <a class="btn-floating waves-effect waves-light center btn-reblog tooltipped faa-parent animated-hover" data-position="right" data-delay="50" data-tooltip="Reblog"><span class="fa fa-retweet faa-pulse faa-fast"></span></a>
       </div>
 
       <div class="content-meta">
-       <!--  <div class="post-divider"></div> -->
         <a><span class="fa fa-calendar"></span></a> <span class="meta-text">August 15, 2016</span>
         <a><span class="fa fa-clock-o"></span></a> <span class="meta-text">21:46</span>
         <a><span class="fa fa-bookmark"></span></a> <span class="meta-text">4,839 Notes</span>
@@ -355,12 +354,11 @@
     <!-- POST TYPE: AUDIO start -->
     <div class="content-wrapper card-panel">
       <div class="content-like-reblog">
-        <a class="btn-floating waves-effect waves-light center btn-like tooltipped" data-position="right" data-delay="50" data-tooltip="Like"><span class="fa fa-heart"></span></a>
-        <a class="btn-floating waves-effect waves-light center btn-reblog tooltipped" data-position="right" data-delay="50" data-tooltip="Reblog"><span class="fa fa-retweet"></span></a>
+        <a class="btn-floating waves-effect waves-light center btn-like tooltipped faa-parent animated-hover" data-position="right" data-delay="50" data-tooltip="Like"><span class="fa fa-heart faa-pulse faa-fast"></span></a>
+        <a class="btn-floating waves-effect waves-light center btn-reblog tooltipped faa-parent animated-hover" data-position="right" data-delay="50" data-tooltip="Reblog"><span class="fa fa-retweet faa-pulse faa-fast"></span></a>
       </div>
 
       <div class="content-meta">
-       <!--  <div class="post-divider"></div> -->
         <a><span class="fa fa-calendar"></span></a> <span class="meta-text">August 15, 2016</span>
         <a><span class="fa fa-clock-o"></span></a> <span class="meta-text">21:46</span>
         <a><span class="fa fa-bookmark"></span></a> <span class="meta-text">4,839 Notes</span>
@@ -384,7 +382,9 @@
 </section>
 <!-- =-=-=-=-=-=-=-=-=-= CONTENT END =-=-=-=-=-=-=-=-=-= -->
 
-<!-- JavaScript -->
+<!-- -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+        JavaScript
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
 <script src="https://use.fontawesome.com/a526ac30e9.js"></script>

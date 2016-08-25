@@ -197,10 +197,6 @@ a {
     margin: 10px auto 5px auto;
     border-bottom: 1px solid $primary;
     padding-bottom: 20px;
-    .post-divider {
-      border-top: 2px dashed #ccc;
-      margin-bottom: 35px;
-    }
     .meta-text {
       font-family: $headings;
       margin-right: 15px;
@@ -275,6 +271,9 @@ a {
     padding-bottom: 5px;
     margin-bottom: 10px;
     border-bottom: 1px solid #fff;
+    .fa-times {
+      color: $text;
+    }
     >a {
       color: $primary;
       &:hover {
