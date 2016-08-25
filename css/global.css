@@ -107,7 +107,8 @@ a {
 
 .collapsible .collapsible-header {
   background: #D8BE86;
-  color: #453C3B; }
+  color: #453C3B;
+  border-color: #F1F7ED; }
   .collapsible .collapsible-header h6 {
     display: inline-block; }
 .collapsible .collapsible-body p {
@@ -153,6 +154,10 @@ a {
     margin-top: 15px;
     padding-bottom: 15px;
     border-bottom: 1px solid #dcdcdc; }
+  .content-post .quote-post {
+    font-size: 1.5em;
+    text-align: center;
+    margin-top: 15px; }
   .content-post blockquote {
     margin-bottom: 0;
     border-left: 5px solid #E24E1B; }

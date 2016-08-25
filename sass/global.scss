@@ -161,6 +161,7 @@ a {
   .collapsible-header {
     background: $secondary;
     color: $text;
+    border-color: $white;
     h6 {
       display: inline-block;
     }
@@ -219,6 +220,11 @@ a {
     margin-top: 15px;
     padding-bottom: 15px;
     border-bottom: 1px solid #dcdcdc;
+  }
+  .quote-post {
+    font-size: 1.5em;
+    text-align: center;
+    margin-top: 15px;
   }
   blockquote {
     margin-bottom: 0;
