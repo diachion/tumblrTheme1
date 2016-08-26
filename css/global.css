@@ -97,6 +97,37 @@ a {
     background: #dec899; }
 
 /* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+      PAGINATION
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
+.pagination {
+  background: #453C3B;
+  text-align: center;
+  width: 100%;
+  padding: 5px 0;
+  margin: 0;
+  border-top: 3px solid #F4A33B;
+  position: fixed;
+  bottom: -40px;
+  z-index: 99;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease; }
+  .pagination > li {
+    height: 20px; }
+    .pagination > li.active {
+      background: #D8BE86; }
+      .pagination > li.active > a {
+        color: #453C3B; }
+    .pagination > li > a {
+      color: #D8BE86;
+      font-size: 1em;
+      padding: 0 8px;
+      line-height: 20px; }
+
+.stickyPagination {
+  bottom: 0; }
+
+/* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
       SIDEBAR
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
 .card .card-content {

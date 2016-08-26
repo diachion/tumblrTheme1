@@ -53,6 +53,20 @@
 <!-- =-=-=-=-=-=-=-=-=-= NAVBAR END =-=-=-=-=-=-=-=-=-= -->
 
 
+<!-- =-=-=-=-=-=-=-=-=-= PAGINATION START =-=-=-=-=-=-=-=-=-= -->
+<div>
+  <ul class="pagination">
+    <li class="waves-effect"><a href="#"><span class="fa fa-chevron-left"></span></a></li>
+    <li class="active"><a href="#">1</a></li>
+    <li class="waves-effect"><a href="#">2</a></li>
+    <li class="waves-effect"><a href="#">3</a></li>
+    <li class="waves-effect"><a href="#"><span class="fa fa-chevron-right"></span></a></li>
+  </ul>
+</div>
+
+<!-- =-=-=-=-=-=-=-=-=-= PAGINATION END =-=-=-=-=-=-=-=-=-= -->
+
+
 <!-- =-=-=-=-=-=-=-=-=-= "ASK" MODAL START =-=-=-=-=-=-=-=-=-= -->
 <div id="modal-ask" class="modal">
     <div class="modal-content">
@@ -396,6 +410,14 @@ $(document).ready(function(){
     });
 
     $('.nav-wrapper').pushpin({ top: $('header.parallax-container').height() });
+
+    $(window).scroll(function(){
+      if($(window).scrollTop() > $("header").height()) {
+        $(".pagination").addClass("stickyPagination");
+      } else {
+        $(".pagination").removeClass("stickyPagination");
+      }
+    });
 </script>
 
 </body>
