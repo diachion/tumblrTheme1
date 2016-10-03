@@ -121,18 +121,18 @@ a {
       }
     }
   }
-  form {
-    input[type="search"] {
-      height: 36px !important; /* or height of nav */
-      position: relative;
-      top: 14px;
-      border-radius: 2px;
-      padding-left: 40px;
-      &:focus + label {
-        color: $primary !important;
-      }
-    }
-  }
+  // form {
+  //   input[type="search"] {
+  //     height: 36px !important; /* or height of nav */
+  //     position: relative;
+  //     top: 14px;
+  //     border-radius: 2px;
+  //     padding-left: 40px;
+  //     &:focus + label {
+  //       color: $primary !important;
+  //     }
+  //   }
+  // }
 }
 
 .btn {
@@ -182,6 +182,33 @@ a {
 /* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
       SIDEBAR
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
+form {
+  input[type="search"] {
+    height: 36px !important; /* or height of nav */
+    position: relative;
+    top: 20px;
+    border-radius: 2px;
+    //padding-left: 40px;
+    &:focus + label {
+      color: $text !important;
+    }
+  }
+  .input-field {
+    margin-top: 0;
+    input[type="search"] {
+      padding-left: 1rem;
+      width: calc(100% - 1rem);
+      margin-bottom: 2.5rem;
+      background: lighten($secondary, 10%);
+      border: 0;
+    }
+    label {
+      top: 28px;
+      color: $text;
+    }
+  }
+}
+
 .card {
   .card-content {
     background: $secondary;

@@ -79,15 +79,6 @@ a {
       margin: 14px 3px; }
       .nav-wrapper .flex-nav a.btn:hover {
         color: #453C3B; }
-  .nav-wrapper form input[type="search"] {
-    height: 36px !important;
-    /* or height of nav */
-    position: relative;
-    top: 14px;
-    border-radius: 2px;
-    padding-left: 40px; }
-    .nav-wrapper form input[type="search"]:focus + label {
-      color: #F4A33B !important; }
 
 .btn {
   background: #D8BE86;
@@ -130,6 +121,26 @@ a {
 /* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
       SIDEBAR
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
+form input[type="search"] {
+  height: 36px !important;
+  /* or height of nav */
+  position: relative;
+  top: 20px;
+  border-radius: 2px; }
+  form input[type="search"]:focus + label {
+    color: #453C3B !important; }
+form .input-field {
+  margin-top: 0; }
+  form .input-field input[type="search"] {
+    padding-left: 1rem;
+    width: calc(100% - 1rem);
+    margin-bottom: 2.5rem;
+    background: #e4d3ad;
+    border: 0; }
+  form .input-field label {
+    top: 28px;
+    color: #453C3B; }
+
 .card .card-content {
   background: #D8BE86;
   color: #453C3B;
