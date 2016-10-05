@@ -187,6 +187,10 @@ form .input-field {
   max-width: 580px;
   margin: 0 auto;
   padding: 20px; }
+  .content-post .post-title {
+    font-size: 1.5em;
+    font-weight: 700;
+    margin-bottom: 15px; }
   .content-post .photoset {
     margin-bottom: 15px; }
   .content-post .chat-post {
@@ -196,6 +200,13 @@ form .input-field {
   .content-post .quote-post {
     font-size: 1.5em;
     text-align: center;
+    margin-top: 15px; }
+  .content-post .ask-content {
+    background: #eee;
+    padding: 10px; }
+    .content-post .ask-content span {
+      font-weight: 600; }
+  .content-post .ask-answer {
     margin-top: 15px; }
   .content-post blockquote {
     margin-bottom: 0;

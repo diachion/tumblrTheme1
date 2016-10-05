@@ -270,8 +270,16 @@ form {
   max-width: 580px;
   margin: 0 auto;
   padding: 20px;
+  .post-title {
+    font-size: 1.5em;
+    font-weight: 700;
+    margin-bottom: 15px;
+  }
   .photoset {
     margin-bottom: 15px;
+  }
+  .text-post {
+
   }
   .chat-post {
     margin-top: 15px;
@@ -281,6 +289,16 @@ form {
   .quote-post {
     font-size: 1.5em;
     text-align: center;
+    margin-top: 15px;
+  }
+  .ask-content {
+    background: #eee;
+    padding: 10px;
+    span {
+      font-weight: 600;
+    }
+  }
+  .ask-answer {
     margin-top: 15px;
   }
   blockquote {
