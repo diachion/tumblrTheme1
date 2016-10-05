@@ -201,10 +201,15 @@ form .input-field {
     font-size: 1.5em;
     text-align: center;
     margin-top: 15px; }
+  .content-post .ask-avvie {
+    border-radius: 50%; }
   .content-post .ask-content {
-    background: #eee;
-    padding: 10px; }
+    background: rgba(244, 163, 59, 0.05);
+    border: 1px dashed #F4A33B;
+    border-radius: 5px;
+    padding: 15px; }
     .content-post .ask-content span {
+      font-size: 1.1em;
       font-weight: 600; }
   .content-post .ask-answer {
     margin-top: 15px; }

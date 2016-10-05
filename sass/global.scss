@@ -278,9 +278,6 @@ form {
   .photoset {
     margin-bottom: 15px;
   }
-  .text-post {
-
-  }
   .chat-post {
     margin-top: 15px;
     padding-bottom: 15px;
@@ -291,10 +288,16 @@ form {
     text-align: center;
     margin-top: 15px;
   }
+  .ask-avvie {
+    border-radius: 50%;
+  }
   .ask-content {
-    background: #eee;
-    padding: 10px;
+    background: transparentize($primary,.95);
+    border: 1px dashed $lightorange;
+    border-radius: 5px;
+    padding: 15px;
     span {
+      font-size: 1.1em;
       font-weight: 600;
     }
   }
