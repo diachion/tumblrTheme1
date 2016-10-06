@@ -188,8 +188,8 @@ form .input-field {
   margin: 0 auto;
   padding: 20px; }
   .content-post .post-title {
+    font-family: "Montserrat", sans-serif;
     font-size: 1.5em;
-    font-weight: 700;
     margin-bottom: 15px; }
   .content-post .photoset {
     margin-bottom: 15px; }
@@ -209,8 +209,8 @@ form .input-field {
     border-radius: 5px;
     padding: 15px; }
     .content-post .ask-content span {
-      font-size: 1.1em;
-      font-weight: 600; }
+      font-family: "Montserrat", sans-serif;
+      font-size: 1.1em; }
   .content-post .ask-answer {
     margin-top: 15px; }
   .content-post blockquote {
@@ -270,6 +270,15 @@ form .input-field {
     padding: 5px 0 3px 20px;
     margin: 0 10px;
     position: relative; }
+    .content-tags .tag:hover {
+      -webkit-box-shadow: 0px 4px 6px #ec825e;
+      -moz-box-shadow: 0px 4px 6px #ec825e;
+      box-shadow: 0px 4px 6px #ec825e;
+      -webkit-transform: translateY(-2px);
+      -moz-transform: translateY(-2px);
+      -ms-transform: translateY(-2px);
+      -o-transform: translateY(-2px);
+      transform: translateY(-2px); }
     .content-tags .tag::after {
       content: "";
       display: block;
