@@ -12,8 +12,8 @@
 body {
   font-family: "Raleway", sans-serif;
   font-size: 0.9em;
-  color: #453C3B;
-  background: url(../imgs/white_wall_hash.png); }
+  color: #fff;
+  background-color: #770a10; }
 
 h1, h2, h3, h4, h5, h6, .collapsible-header {
   font-family: "Montserrat", sans-serif; }
@@ -22,12 +22,12 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
   margin-top: 30px; }
 
 a {
-  color: #E24E1B;
+  color: #d90c13;
   transition: all 0.3s ease;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease; }
   a:hover {
-    color: #F4A33B; }
+    color: #fff89d; }
 
 .modal {
   width: 45%;
@@ -35,8 +35,8 @@ a {
   .modal .modal-footer > a {
     font-family: "Montserrat", sans-serif; }
     .modal .modal-footer > a:hover {
-      color: #453C3B;
-      background: #D8BE86; }
+      color: #fff;
+      background: #000; }
 
 * {
   box-sizing: border-box; }
@@ -44,18 +44,6 @@ a {
 /* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
       HEADER / BANNER
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
-.header-img {
-  background-image: url("../imgs/ori-and-the-blind-forest.jpg");
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: 50%;
-  position: relative;
-  height: 100vh;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: -999; }
-
 .parallax-container {
   height: 100vh; }
 
@@ -63,7 +51,7 @@ a {
       NAVIGATION
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
 .nav-wrapper {
-  background: #453C3B;
+  background: #d90c13;
   z-index: 9999; }
   .nav-wrapper.pinned {
     width: 100%;
@@ -78,25 +66,26 @@ a {
       flex-grow: 1;
       margin: 14px 3px; }
       .nav-wrapper .flex-nav a.btn:hover {
-        color: #453C3B; }
+        color: #fff; }
 
 .btn {
-  background: #D8BE86;
-  color: #453C3B;
+  background: #000;
+  color: #fff;
   font-family: "Montserrat", sans-serif; }
   .btn:hover {
-    background: #dec899; }
+    background: #b20a10;
+    box-shadow: 2px 2px 0 0 #19fffd, -2px -2px 0 0 black; }
 
 /* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
       PAGINATION
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
 .pagination {
-  background: #453C3B;
+  background: #d90c13;
   text-align: center;
   width: 100%;
   padding: 5px 0;
   margin: 0;
-  border-top: 3px solid #F4A33B;
+  border-top: 3px solid #000;
   position: fixed;
   bottom: -40px;
   z-index: 99;
@@ -106,11 +95,11 @@ a {
   .pagination > li {
     height: 20px; }
     .pagination > li.active {
-      background: #D8BE86; }
+      background: #000; }
       .pagination > li.active > a {
-        color: #453C3B; }
+        color: #fff; }
     .pagination > li > a {
-      color: #D8BE86;
+      color: #fff;
       font-size: 1em;
       padding: 0 8px;
       line-height: 20px; }
@@ -128,65 +117,89 @@ form input[type="search"] {
   top: 20px;
   border-radius: 2px; }
   form input[type="search"]:focus + label {
-    color: #453C3B !important; }
+    color: #fff !important; }
 form .input-field {
   margin-top: 0; }
   form .input-field input[type="search"] {
     padding-left: 1rem;
     width: calc(100% - 1rem);
     margin-bottom: 2.5rem;
-    background: #e4d3ad;
+    background: #1a1a1a;
     border: 0; }
   form .input-field label {
     top: 28px;
-    color: #453C3B; }
+    color: #fff; }
 
-.card .card-content {
-  background: #D8BE86;
-  color: #453C3B;
-  padding: 2px;
-  border-radius: 0; }
+.card {
+  border-radius: 0;
+  border: 3px solid #fff; }
+  .card .card-content {
+    background: #000;
+    color: #fff;
+    padding: 2px;
+    border-radius: 0; }
+  .card .card-action {
+    background: #000;
+    color: #fff;
+    border-top: 1px solid #fff89d; }
 
 .collapsible .collapsible-header {
-  background: #D8BE86;
-  color: #453C3B;
-  border-color: #F1F7ED; }
+  background: #000;
+  color: #fff;
+  border-color: #fff89d; }
   .collapsible .collapsible-header h6 {
     display: inline-block; }
 .collapsible .collapsible-body p {
+  background: #000;
+  color: #fff;
   padding: 20px; }
 
 /* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
       MAIN CONTENT
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
+@media only screen and (min-width: 993px) {
+  .container {
+    width: 95%; } }
+@media only screen and (min-width: 601px) {
+  .container {
+    width: 90%; } }
+
 .btn-floating {
-  background: #F4A33B;
+  background: #d90c13;
   margin-right: 10px; }
   .btn-floating:hover {
-    background: #f6b562;
+    background: #f21b23;
     color: #fff; }
 
 .content-wrapper {
+  background: #000;
+  color: #000;
   position: relative;
   width: 100%;
   max-width: 650px;
-  margin: 0 auto 15px auto; }
+  margin: 0 auto 15px auto;
+  border-radius: 0; }
   .content-wrapper .content-meta {
     width: 100%;
     max-width: 580px;
     text-align: left;
-    margin: 10px auto 5px auto;
-    border-bottom: 1px solid #F4A33B;
-    padding-bottom: 20px; }
+    margin: 0 auto 5px auto;
+    border-bottom: 1px solid #000;
+    padding: 20px 0; }
     .content-wrapper .content-meta .meta-text {
       font-family: "Montserrat", sans-serif;
       margin-right: 15px; }
+  .content-wrapper .content-bg {
+    background: #fff; }
 
 .content-post {
   width: 100%;
   max-width: 580px;
   margin: 0 auto;
   padding: 20px; }
+  @media screen and (max-width: 1024px) {
+    .content-post {
+      padding: 13px; } }
   .content-post .post-title {
     font-family: "Montserrat", sans-serif;
     font-size: 1.5em;
@@ -204,8 +217,8 @@ form .input-field {
   .content-post .ask-avvie {
     border-radius: 50%; }
   .content-post .ask-content {
-    background: rgba(244, 163, 59, 0.05);
-    border: 1px dashed #F4A33B;
+    background: rgba(217, 12, 19, 0.05);
+    border: 1px dashed #d90c13;
     border-radius: 5px;
     padding: 15px; }
     .content-post .ask-content span {
@@ -215,7 +228,7 @@ form .input-field {
     margin-top: 15px; }
   .content-post blockquote {
     margin-bottom: 0;
-    border-left: 5px solid #E24E1B; }
+    border-left: 5px solid #d90c13; }
 
 .content-like-reblog {
   position: absolute;
@@ -232,7 +245,7 @@ form .input-field {
   width: 100%;
   max-width: 650px;
   margin: 0 auto 60px auto;
-  background: rgba(244, 163, 59, 0.25);
+  background: rgba(217, 12, 19, 0.25);
   color: #fff;
   padding: 15px;
   border-radius: 4px;
@@ -243,37 +256,37 @@ form .input-field {
     position: absolute;
     width: 0;
     height: 0;
-    border-bottom: 8px solid rgba(244, 163, 59, 0.25);
+    border-bottom: 8px solid rgba(217, 12, 19, 0.25);
     border-right: 12px solid transparent;
     border-left: 12px solid transparent;
     top: -8px;
     left: 60px; }
   .content-tags .source-via {
     font-family: "Montserrat", sans-serif;
-    color: #E24E1B;
+    color: #d90c13;
     display: block;
     padding-bottom: 5px;
     margin-bottom: 10px;
     border-bottom: 1px solid #fff; }
     .content-tags .source-via .fa-times {
-      color: #453C3B; }
+      color: #fff; }
     .content-tags .source-via > a {
-      color: #F4A33B; }
+      color: #d90c13; }
       .content-tags .source-via > a:hover {
-        color: #E24E1B; }
+        color: #d90c13; }
   .content-tags .tag {
     font-family: "Montserrat", sans-serif;
     display: inline-block;
-    background: #F1F7ED;
-    color: #453C3B;
+    background: #fff;
+    color: #fff;
     font-size: 0.8em;
     padding: 5px 0 3px 20px;
     margin: 0 10px;
     position: relative; }
     .content-tags .tag:hover {
-      -webkit-box-shadow: 0px 4px 6px #ec825e;
-      -moz-box-shadow: 0px 4px 6px #ec825e;
-      box-shadow: 0px 4px 6px #ec825e;
+      -webkit-box-shadow: 0px 4px 6px #f43d43;
+      -moz-box-shadow: 0px 4px 6px #f43d43;
+      box-shadow: 0px 4px 6px #f43d43;
       -webkit-transform: translateY(-2px);
       -moz-transform: translateY(-2px);
       -ms-transform: translateY(-2px);
@@ -287,7 +300,7 @@ form .input-field {
       height: 0;
       border-top: 12px solid transparent;
       border-bottom: 12px solid transparent;
-      border-left: 12px solid #F1F7ED;
+      border-left: 12px solid #fff;
       top: 0;
       right: -12px; }
     .content-tags .tag::before {
@@ -297,7 +310,7 @@ form .input-field {
       width: 8px;
       height: 8px;
       border-radius: 50%;
-      background: rgba(244, 163, 59, 0.25);
+      background: rgba(217, 12, 19, 0.25);
       top: 8px;
       left: 6px; }
 

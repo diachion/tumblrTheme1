@@ -3,23 +3,51 @@
 /* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
       VARIABLES & MIXINS
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
-$white: #F1F7ED;
-$lightorange: #F4A33B;
-$darkorange: #E24E1B;
-$darkbrown: #453C3B;
-$lightbrown: #D8BE86;
+// $white: #F1F7ED;
+// $lightorange: #F4A33B;
+// $darkorange: #E24E1B;
+// $darkbrown: #453C3B;
+// $lightbrown: #D8BE86;
 
 $headings: 'Montserrat', sans-serif;
 $body: 'Raleway', sans-serif;
 
+$mobile-width: 480px;
+$tablet-width: 768px;
+$desktop-width: 1024px;
+
+@mixin mobile {
+  @media screen and (max-width: #{$mobile-width}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (max-width: #{$tablet-width}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (max-width: #{$desktop-width}) {
+    @content;
+  }
+}
+
 /* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
       THEME
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
-$primary: $lightorange;
-$secondary: $lightbrown;
-$text: $darkbrown;
-$link: $darkorange;
-$nav: $darkbrown;
+// $primary: $lightorange;
+// $secondary: $lightbrown;
+// $text: $darkbrown;
+// $link: $darkorange;
+// $nav: $darkbrown;
+
+$primary: #d90c13;
+$secondary: #000;
+$text: #fff;
+$link: #d90c13;
+$nav: #d90c13;
 
 @mixin trans($ease) {
   transition:         $ease;
@@ -38,7 +66,8 @@ body {
   font-family: $body;
   font-size: 0.9em;
   color: $text;
-  background: url(../imgs/white_wall_hash.png);
+  //background: url(../imgs/white_wall_hash.png);
+  background-color: #770a10;
 }
 
 h1, h2, h3, h4, h5, h6, .collapsible-header {
@@ -53,7 +82,7 @@ a {
   color: $link;
   @include trans($easyease);
   &:hover {
-    color: $lightorange;
+    color: #fff89d;
   }
 }
 
@@ -64,7 +93,7 @@ a {
     >a {
       font-family: $headings;
       &:hover {
-        color: $darkbrown;
+        color: $text;
         background: $secondary;
       }
     }
@@ -78,18 +107,18 @@ a {
 /* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
       HEADER / BANNER
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
-.header-img {
-  background-image: url("../imgs/ori-and-the-blind-forest.jpg");
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: 50%;
-  position: relative;
-  height: 100vh;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: -999;
-}
+// .header-img {
+//   background-image: url("../imgs/ori-and-the-blind-forest.jpg");
+//   background-size: cover;
+//   background-attachment: fixed;
+//   background-position: 50%;
+//   position: relative;
+//   height: 100vh;
+//   top: 0;
+//   left: 0;
+//   right: 0;
+//   z-index: -999;
+// }
 
 .parallax-container {
   height: 100vh;
@@ -117,7 +146,7 @@ a {
       flex-grow: 1;
       margin: 14px 3px;
       &:hover {
-        color: $darkbrown;
+        color: $text;
       }
     }
   }
@@ -140,7 +169,8 @@ a {
   color: $text;
   font-family: $headings;
   &:hover {
-    background: lighten($secondary, 5%);
+    background: darken($primary, 8%);
+    box-shadow: 2px 2px 0 0 rgba(25,255,253,1),-2px -2px 0 0 rgba(0,0,0,1);
   }
 }
 
@@ -153,7 +183,7 @@ a {
   width: 100%;
   padding: 5px 0;
   margin: 0;
-  border-top: 3px solid $primary;
+  border-top: 3px solid $secondary;
   position: fixed;
   bottom: -40px;
   z-index: 99;
@@ -163,11 +193,11 @@ a {
     &.active {
       background: $secondary;
       >a {
-        color: $nav;
+        color: $text;
       }
     }
     >a {
-      color: $secondary;
+      color: $text;
       font-size: 1em;
       padding: 0 8px;
       line-height: 20px;
@@ -210,11 +240,19 @@ form {
 }
 
 .card {
+  //box-shadow: 2px -2px 0 0 rgba(25,255,253,1),-2px 2px 0 0 rgba(217,12,19,1);
+  border-radius: 0;
+  border: 3px solid $text;
   .card-content {
     background: $secondary;
     color: $text;
     padding: 2px;
     border-radius: 0;
+  }
+  .card-action {
+    background: $secondary;
+    color: $text;
+    border-top: 1px solid #fff89d;
   }
 }
 
@@ -222,13 +260,15 @@ form {
   .collapsible-header {
     background: $secondary;
     color: $text;
-    border-color: $white;
+    border-color: #fff89d;
     h6 {
       display: inline-block;
     }
   }
   .collapsible-body {
     p {
+      background: $secondary;
+      color: $text;
       padding: 20px;
     }
   }
@@ -237,6 +277,15 @@ form {
 /* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
       MAIN CONTENT
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
+.container {
+  @media only screen and (min-width: 993px) {
+    width: 95%;
+  }
+  @media only screen and (min-width: 601px) {
+    width: 90%;
+  }
+}
+
 .btn-floating {
   background: $primary;
   margin-right: 10px;
@@ -247,21 +296,27 @@ form {
 }
 
 .content-wrapper {
+    background: $secondary;
+    color: $secondary;
     position: relative;
     width: 100%;
     max-width: 650px;
     margin: 0 auto 15px auto;
+    border-radius: 0;
   .content-meta {
     width: 100%;
     max-width: 580px;
     text-align: left;
-    margin: 10px auto 5px auto;
-    border-bottom: 1px solid $primary;
-    padding-bottom: 20px;
+    margin: 0 auto 5px auto;
+    border-bottom: 1px solid $secondary;
+    padding: 20px 0;
     .meta-text {
       font-family: $headings;
       margin-right: 15px;
     }
+  }
+  .content-bg {
+    background: $text;
   }
 }
 
@@ -270,6 +325,9 @@ form {
   max-width: 580px;
   margin: 0 auto;
   padding: 20px;
+  @include desktop {
+    padding: 13px;
+  }
   .post-title {
     font-family: $headings;
     font-size: 1.5em;
@@ -293,7 +351,7 @@ form {
   }
   .ask-content {
     background: transparentize($primary,.95);
-    border: 1px dashed $lightorange;
+    border: 1px dashed $primary;
     border-radius: 5px;
     padding: 15px;
     span {
@@ -306,7 +364,7 @@ form {
   }
   blockquote {
     margin-bottom: 0;
-    border-left: 5px solid $darkorange;
+    border-left: 5px solid $link;
   }
 }
 
@@ -348,7 +406,7 @@ form {
   }
   .source-via {
     font-family: $headings;
-    color: $darkorange;
+    color: $link;
     display: block;
     padding-bottom: 5px;
     margin-bottom: 10px;
@@ -359,15 +417,15 @@ form {
     >a {
       color: $primary;
       &:hover {
-        color: $darkorange;
+        color: $link;
       }
     }
   }
   .tag {
     font-family: $headings;
     display: inline-block;
-    background: $white;
-    color: $darkbrown;
+    background: #fff;
+    color: $text;
     font-size: 0.8em;
     padding: 5px 0 3px 20px;
     margin: 0 10px;
@@ -390,7 +448,7 @@ form {
       height: 0; 
       border-top: 12px solid transparent;
       border-bottom: 12px solid transparent;
-      border-left: 12px solid $white;
+      border-left: 12px solid #fff;
       top: 0;
       right: -12px;
     }
