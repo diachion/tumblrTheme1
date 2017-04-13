@@ -1,3 +1,3 @@
 # tumblrTheme1
 
-Creating a tumblr theme.
+Experimenting on creating a Tumblr theme from the ground up.
