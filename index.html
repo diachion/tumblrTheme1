@@ -499,6 +499,12 @@
 $(document).ready(function(){
       $('.parallax').parallax();
       $('.modal-trigger').leanModal();
+      $("[data-tooltip]").each(function() {
+        	var id = $(this).attr("data-tooltip-id"),
+        		color = $(this).css("color");
+        	$("#" + id).css("color", color);
+        	
+       });
     });
 
     $('.nav-wrapper').pushpin({ top: $('header.parallax-container').height() });
