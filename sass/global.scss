@@ -179,6 +179,7 @@ a {
   color: $text;
   font-family: $headings;
   font-size: 1.3em;
+  border-radius: 0;
   &:hover {
     //background: darken($nav, 8%);
     background: $accent2;
@@ -428,62 +429,65 @@ form {
   // }
   .source-via {
     font-family: $headings;
-    color: $link;
+    color: $text;
     display: block;
     padding-bottom: 5px;
     margin-bottom: 10px;
     //border-bottom: 1px solid #fff;
-    .fa-times {
-      color: $text;
+    .fa {
+      color: $accent1;
     }
     >a {
       color: $primary;
       &:hover {
-        color: $link;
+        color: $secondary;
       }
     }
   }
   .tag {
-    font-family: $headings;
+    //font-family: $headings;
+    @include trans($easyease);
     display: inline-block;
-    background: #fff;
+    background: $primary;
     color: $text;
     font-size: 0.8em;
-    padding: 5px 0 3px 20px;
-    margin: 0 10px;
-    position: relative;
+    padding: 3px 7px;
+    margin: 5px 3px;
+    //position: relative;
     &:hover {
-      -webkit-box-shadow: 0px 4px 6px lighten($link, 15%);
-      -moz-box-shadow: 0px 4px 6px lighten($link, 15%);
-      box-shadow: 0px 4px 6px lighten($link, 15%);
-      -webkit-transform: translateY(-2px);
-      -moz-transform: translateY(-2px);
-      -ms-transform: translateY(-2px);
-      -o-transform: translateY(-2px);
-      transform: translateY(-2px);
+      -webkit-box-shadow: -2px 3px 0px $accent1, 2px -2px 0px $primary;
+      -moz-box-shadow: -2px 3px 0px $accent1, 2px -2px 0px $primary;
+      box-shadow: -2px 3px 0px $accent1, 2px -2px 0px $primary;
+      background: $accent2;
+      color: $secondary;
+      // -webkit-transform: translateY(-2px);
+      // -moz-transform: translateY(-2px);
+      // -ms-transform: translateY(-2px);
+      // -o-transform: translateY(-2px);
+      // transform: translateY(-2px);
     }
-    &::after {
-      content: "";
-      display: block;
-      position: absolute;
-      width: 0; 
-      height: 0; 
-      border-top: 12px solid transparent;
-      border-bottom: 12px solid transparent;
-      border-left: 12px solid #fff;
-      top: 0;
-      right: -12px;
-    }
-    &::before {
-      content: "";
-      display: block;
-      position: absolute;
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: transparentize($primary,.75);
-      top: 8px;
-      left: 6px;
-    }
+    // &::after {
+    //   content: "";
+    //   display: block;
+    //   position: absolute;
+    //   width: 0; 
+    //   height: 0; 
+    //   border-top: 12px solid transparent;
+    //   border-bottom: 12px solid transparent;
+    //   border-left: 12px solid #fff;
+    //   top: 0;
+    //   right: -12px;
+    // }
+    // &::before {
+    //   content: "";
+    //   display: block;
+    //   position: absolute;
+    //   width: 8px;
+    //   height: 8px;
+    //   border-radius: 50%;
+    //   background: transparentize($primary,.75);
+    //   top: 8px;
+    //   left: 6px;
+    // }
   }
 }
