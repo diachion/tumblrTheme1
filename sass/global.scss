@@ -70,8 +70,8 @@ body {
   font-family: $body;
   font-size: 0.9em;
   color: $text;
-  //background: url(../imgs/white_wall_hash.png);
-  background-color: #770a10;
+  background: url('../imgs/star_bg.jpg') no-repeat fixed;
+  //background-color: #770a10;
 }
 
 h1, h2, h3, h4, h5, h6, .collapsible-header {
@@ -432,7 +432,7 @@ form {
     display: block;
     padding-bottom: 5px;
     margin-bottom: 10px;
-    border-bottom: 1px solid #fff;
+    //border-bottom: 1px solid #fff;
     .fa-times {
       color: $text;
     }
