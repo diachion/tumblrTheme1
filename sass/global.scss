@@ -50,7 +50,8 @@ $link: #ff0000;
 $nav: #ff0000;
 $accent1: #00FFFF;
 $accent2: #ebffdf;
-$accent3: #6cff0d;
+$accent3: #084b06;
+$accent3v1: #6cff0d;
 
 @mixin trans($ease) {
   transition:         $ease;
@@ -93,18 +94,45 @@ a {
 .modal {
   width: 45%;
   z-index: 999999 !important;
-  background: $secondary;
-  border-radius: 0;
-  .modal-footer {
+  background: $accent3;
+  color: $accent3v1;
+  border-radius: 10px;
+  .modal-header {
+    display: inline-block;
     background: $secondary;
-    >a {
-      font-family: $headings;
+    border-radius: 15px;
+    margin: 10px 0 20px 10px;
+    padding: 12px 35px;
+    >h4 {
+      margin-bottom: 0;
+    }
+  }
+  .modal-content {
+    background: url('../imgs/chain_link_fence.png') repeat;
+    .modal-text{
       background: $text;
       color: $secondary;
-      border-radius: 0;
-      &:hover {
-        color: $text;
-        background: $primary;
+      padding: 15px;
+      border-radius: 15px;
+      box-shadow: 7px -7px 0 $secondary;
+      >p>a {
+        color: $accent3v1;
+        &:hover {
+          color: $secondary;
+        }
+      }
+    }
+    .modal-footer {
+      background: transparent;
+      >a {
+        font-family: $headings;
+        background: $accent3v1;
+        color: $secondary;
+        border-radius: 10px;
+        &:hover {
+          background: $text;
+          color: $secondary;
+        }
       }
     }
   }
@@ -333,6 +361,7 @@ form {
       right: -10px;
       border: 3px solid $text;
       padding: 10px;
+      text-shadow: -1px 2px 0 $secondary;
       z-index: 1;
     }
     .meta-text {
@@ -385,7 +414,7 @@ form {
   .chat-post {
     margin-top: 15px;
     padding-bottom: 15px;
-    border-bottom: 1px solid #dcdcdc;
+    border-bottom: 1px solid #bdbdbd;
   }
   .quote-post {
     font-size: 1.5em;
