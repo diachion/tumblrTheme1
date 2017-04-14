@@ -50,7 +50,7 @@ $link: #ff0000;
 $nav: #ff0000;
 $accent1: #00FFFF;
 $accent2: #ebffdf;
-// $accent3:
+$accent3: #6cff0d;
 
 @mixin trans($ease) {
   transition:         $ease;
@@ -324,16 +324,40 @@ form {
     text-align: left;
     margin: 0 auto;
     //border-bottom: 1px solid $secondary;
-    padding: 25px 0 0 30px;
+    padding: 35px 0 7px 30px;
+    .fa {
+      font-size: 1.3em;
+      position: relative;
+      background: $primary;
+      color: $text;
+      right: -10px;
+      border: 3px solid $text;
+      padding: 10px;
+      z-index: 1;
+    }
     .meta-text {
       font-family: $headings;
-      font-size: 1.1em;
+      font-size: 1.2em;
+      display: inline-block;
+      position: relative;
+      background: $secondary;
       color: $text;
-      margin-right: 15px;
+      top: 6px;
+      border: 3px solid $text;
+      margin: 0px 10px 0 -2px;
+      padding: 3px 10px 3px 15px;
+      @include trans($easyease);
+      &:hover {
+        -webkit-box-shadow: -2px 3px 0px $accent1, 2px -2px 0px $primary;
+        -moz-box-shadow: -2px 3px 0px $accent1, 2px -2px 0px $primary;
+        box-shadow: -2px 3px 0px $accent1, 2px -2px 0px $primary;
+        background: $accent2;
+        color: $secondary;
+      }
     }
   }
   .content-bg {
-    background: url(../imgs/white_wall_hash.png);
+    background: url('../imgs/extra_clean_paper.png');
     .rip {
       width: 100%;
       position: absolute;
@@ -433,7 +457,6 @@ form {
     display: block;
     padding-bottom: 5px;
     margin-bottom: 10px;
-    //border-bottom: 1px solid #fff;
     .fa {
       color: $accent1;
     }
@@ -445,7 +468,6 @@ form {
     }
   }
   .tag {
-    //font-family: $headings;
     @include trans($easyease);
     display: inline-block;
     background: $primary;

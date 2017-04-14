@@ -195,14 +195,38 @@ form .input-field {
     width: 100%;
     text-align: left;
     margin: 0 auto;
-    padding: 25px 0 0 30px; }
+    padding: 35px 0 7px 30px; }
+    .content-wrapper .content-meta .fa {
+      font-size: 1.3em;
+      position: relative;
+      background: #ff0000;
+      color: #fff;
+      right: -10px;
+      border: 3px solid #fff;
+      padding: 10px;
+      z-index: 1; }
     .content-wrapper .content-meta .meta-text {
       font-family: "Londrina Solid", cursive;
-      font-size: 1.1em;
+      font-size: 1.2em;
+      display: inline-block;
+      position: relative;
+      background: #000;
       color: #fff;
-      margin-right: 15px; }
+      top: 6px;
+      border: 3px solid #fff;
+      margin: 0px 10px 0 -2px;
+      padding: 3px 10px 3px 15px;
+      transition: all 0.3s ease;
+      -webkit-transition: all 0.3s ease;
+      -moz-transition: all 0.3s ease; }
+      .content-wrapper .content-meta .meta-text:hover {
+        -webkit-box-shadow: -2px 3px 0px #00FFFF, 2px -2px 0px #ff0000;
+        -moz-box-shadow: -2px 3px 0px #00FFFF, 2px -2px 0px #ff0000;
+        box-shadow: -2px 3px 0px #00FFFF, 2px -2px 0px #ff0000;
+        background: #ebffdf;
+        color: #000; }
   .content-wrapper .content-bg {
-    background: url(../imgs/white_wall_hash.png); }
+    background: url("../imgs/extra_clean_paper.png"); }
     .content-wrapper .content-bg .rip {
       width: 100%;
       position: absolute;
