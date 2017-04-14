@@ -48,10 +48,11 @@ $secondary: #000;
 $text: #fff;
 $link: #ff0000;
 $nav: #ff0000;
-$accent1: #00FFFF;
-$accent2: #ebffdf;
-$accent3: #084b06;
-$accent3v1: #6cff0d;
+$accent1: #00FFFF; // bright blue
+$accent2: #ebffdf; // light yellow-green
+$accent3: #084b06; // dark green
+$accent3v1: #6cff0d; // bright green
+$accent4: #fe6cec; // fuschia
 
 @mixin trans($ease) {
   transition:         $ease;
@@ -446,16 +447,23 @@ form {
 .content-like-reblog {
   position: absolute;
   right: -60px;
+  top: 15px;
   .btn-reblog, .btn-like {
     display: block;
     margin-bottom: 10px;
   }
   .btn-like {
-    background: $primary;
+    background: rgba(0,0,0,0.7);
+    color: $accent1;
   }
   .btn-reblog {
-    background: $secondary;
+    background: rgba(0,0,0,0.7);
+    color: $accent4;
   }
+}
+
+.backdrop {
+  background: rgba(0,0,0,0.7);
 }
 
 .content-tags {

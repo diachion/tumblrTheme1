@@ -294,14 +294,20 @@ form .input-field {
 
 .content-like-reblog {
   position: absolute;
-  right: -60px; }
+  right: -60px;
+  top: 15px; }
   .content-like-reblog .btn-reblog, .content-like-reblog .btn-like {
     display: block;
     margin-bottom: 10px; }
   .content-like-reblog .btn-like {
-    background: #ff0000; }
+    background: rgba(0, 0, 0, 0.7);
+    color: #00FFFF; }
   .content-like-reblog .btn-reblog {
-    background: #000; }
+    background: rgba(0, 0, 0, 0.7);
+    color: #fe6cec; }
+
+.backdrop {
+  background: rgba(0, 0, 0, 0.7); }
 
 .content-tags {
   width: 100%;
