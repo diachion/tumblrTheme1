@@ -9,34 +9,42 @@
       GLOBAL CSS
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
 @import url(https://fonts.googleapis.com/css?family=Montserrat|Raleway);
+@import url(https://fonts.googleapis.com/css?family=Londrina+Solid|Heebo);
 body {
-  font-family: "Raleway", sans-serif;
+  font-family: "Heebo", sans-serif;
   font-size: 0.9em;
   color: #fff;
   background-color: #770a10; }
 
 h1, h2, h3, h4, h5, h6, .collapsible-header {
-  font-family: "Montserrat", sans-serif; }
+  font-family: "Londrina Solid", cursive; }
 
 .container {
   margin-top: 30px; }
 
 a {
-  color: #d90c13;
+  color: #ff0000;
   transition: all 0.3s ease;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease; }
   a:hover {
-    color: #fff89d; }
+    color: #000; }
 
 .modal {
   width: 45%;
-  z-index: 999999 !important; }
-  .modal .modal-footer > a {
-    font-family: "Montserrat", sans-serif; }
-    .modal .modal-footer > a:hover {
-      color: #fff;
-      background: #000; }
+  z-index: 999999 !important;
+  background: #000;
+  border-radius: 0; }
+  .modal .modal-footer {
+    background: #000; }
+    .modal .modal-footer > a {
+      font-family: "Londrina Solid", cursive;
+      background: #fff;
+      color: #000;
+      border-radius: 0; }
+      .modal .modal-footer > a:hover {
+        color: #fff;
+        background: #ff0000; }
 
 * {
   box-sizing: border-box; }
@@ -51,7 +59,7 @@ a {
       NAVIGATION
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
 .nav-wrapper {
-  background: #d90c13;
+  background: #ff0000;
   z-index: 9999; }
   .nav-wrapper.pinned {
     width: 100%;
@@ -66,21 +74,23 @@ a {
       flex-grow: 1;
       margin: 14px 3px; }
       .nav-wrapper .flex-nav a.btn:hover {
-        color: #fff; }
+        color: #000; }
 
 .btn {
   background: #000;
   color: #fff;
-  font-family: "Montserrat", sans-serif; }
+  font-family: "Londrina Solid", cursive;
+  font-size: 1.3em; }
   .btn:hover {
-    background: #b20a10;
-    box-shadow: 2px 2px 0 0 #19fffd, -2px -2px 0 0 black; }
+    background: #ebffdf;
+    box-shadow: 3px 3px 0 0 cyan, -3px -3px 0 0 black;
+    border-radius: 0; }
 
 /* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
       PAGINATION
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
 .pagination {
-  background: #d90c13;
+  background: #ff0000;
   text-align: center;
   width: 100%;
   padding: 5px 0;
@@ -165,10 +175,10 @@ form .input-field {
     width: 90%; } }
 
 .btn-floating {
-  background: #d90c13;
+  background: #ff0000;
   margin-right: 10px; }
   .btn-floating:hover {
-    background: #f21b23;
+    background: #ff2929;
     color: #fff; }
 
 .content-wrapper {
@@ -177,31 +187,36 @@ form .input-field {
   position: relative;
   width: 100%;
   max-width: 650px;
-  margin: 0 auto 15px auto;
+  margin: 0 auto 40px auto;
   border-radius: 0; }
   .content-wrapper .content-meta {
+    background: #000;
     width: 100%;
-    max-width: 580px;
     text-align: left;
-    margin: 0 auto 5px auto;
-    border-bottom: 1px solid #000;
-    padding: 20px 0; }
+    margin: 0 auto;
+    padding: 25px 0 0 30px; }
     .content-wrapper .content-meta .meta-text {
-      font-family: "Montserrat", sans-serif;
+      font-family: "Londrina Solid", cursive;
+      font-size: 1.1em;
+      color: #fff;
       margin-right: 15px; }
   .content-wrapper .content-bg {
-    background: #fff; }
+    background: url(../imgs/white_wall_hash.png); }
+    .content-wrapper .content-bg .rip {
+      width: 100%;
+      position: absolute;
+      left: 0; }
 
 .content-post {
   width: 100%;
   max-width: 580px;
-  margin: 0 auto;
+  margin: 85px auto 0 auto;
   padding: 20px; }
   @media screen and (max-width: 1024px) {
     .content-post {
       padding: 13px; } }
   .content-post .post-title {
-    font-family: "Montserrat", sans-serif;
+    font-family: "Londrina Solid", cursive;
     font-size: 1.5em;
     margin-bottom: 15px; }
   .content-post .photoset {
@@ -217,18 +232,18 @@ form .input-field {
   .content-post .ask-avvie {
     border-radius: 50%; }
   .content-post .ask-content {
-    background: rgba(217, 12, 19, 0.05);
-    border: 1px dashed #d90c13;
+    background: rgba(255, 0, 0, 0.05);
+    border: 1px dashed #ff0000;
     border-radius: 5px;
     padding: 15px; }
     .content-post .ask-content span {
-      font-family: "Montserrat", sans-serif;
+      font-family: "Londrina Solid", cursive;
       font-size: 1.1em; }
   .content-post .ask-answer {
     margin-top: 15px; }
   .content-post blockquote {
     margin-bottom: 0;
-    border-left: 5px solid #d90c13; }
+    border-left: 5px solid #ff0000; }
 
 .content-like-reblog {
   position: absolute;
@@ -237,33 +252,21 @@ form .input-field {
     display: block;
     margin-bottom: 10px; }
   .content-like-reblog .btn-like {
-    background: #f44336; }
+    background: #ff0000; }
   .content-like-reblog .btn-reblog {
-    background: #00bcd4; }
+    background: #000; }
 
 .content-tags {
   width: 100%;
   max-width: 650px;
-  margin: 0 auto 60px auto;
-  background: rgba(217, 12, 19, 0.25);
+  margin: 70px auto 0 auto;
+  background: #000;
   color: #fff;
-  padding: 15px;
-  border-radius: 4px;
+  padding: 5px 30px 30px 30px;
   position: relative; }
-  .content-tags::after {
-    content: "";
-    display: block;
-    position: absolute;
-    width: 0;
-    height: 0;
-    border-bottom: 8px solid rgba(217, 12, 19, 0.25);
-    border-right: 12px solid transparent;
-    border-left: 12px solid transparent;
-    top: -8px;
-    left: 60px; }
   .content-tags .source-via {
-    font-family: "Montserrat", sans-serif;
-    color: #d90c13;
+    font-family: "Londrina Solid", cursive;
+    color: #ff0000;
     display: block;
     padding-bottom: 5px;
     margin-bottom: 10px;
@@ -271,11 +274,11 @@ form .input-field {
     .content-tags .source-via .fa-times {
       color: #fff; }
     .content-tags .source-via > a {
-      color: #d90c13; }
+      color: #ff0000; }
       .content-tags .source-via > a:hover {
-        color: #d90c13; }
+        color: #ff0000; }
   .content-tags .tag {
-    font-family: "Montserrat", sans-serif;
+    font-family: "Londrina Solid", cursive;
     display: inline-block;
     background: #fff;
     color: #fff;
@@ -284,9 +287,9 @@ form .input-field {
     margin: 0 10px;
     position: relative; }
     .content-tags .tag:hover {
-      -webkit-box-shadow: 0px 4px 6px #f43d43;
-      -moz-box-shadow: 0px 4px 6px #f43d43;
-      box-shadow: 0px 4px 6px #f43d43;
+      -webkit-box-shadow: 0px 4px 6px #ff4d4d;
+      -moz-box-shadow: 0px 4px 6px #ff4d4d;
+      box-shadow: 0px 4px 6px #ff4d4d;
       -webkit-transform: translateY(-2px);
       -moz-transform: translateY(-2px);
       -ms-transform: translateY(-2px);
@@ -310,7 +313,7 @@ form .input-field {
       width: 8px;
       height: 8px;
       border-radius: 50%;
-      background: rgba(217, 12, 19, 0.25);
+      background: rgba(255, 0, 0, 0.25);
       top: 8px;
       left: 6px; }
 

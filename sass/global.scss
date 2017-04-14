@@ -9,8 +9,8 @@
 // $darkbrown: #453C3B;
 // $lightbrown: #D8BE86;
 
-$headings: 'Montserrat', sans-serif;
-$body: 'Raleway', sans-serif;
+$headings: 'Londrina Solid', cursive;
+$body: 'Heebo', sans-serif;
 
 $mobile-width: 480px;
 $tablet-width: 768px;
@@ -43,11 +43,14 @@ $desktop-width: 1024px;
 // $link: $darkorange;
 // $nav: $darkbrown;
 
-$primary: #d90c13;
+$primary: #ff0000;
 $secondary: #000;
 $text: #fff;
-$link: #d90c13;
-$nav: #d90c13;
+$link: #ff0000;
+$nav: #ff0000;
+$accent1: #00FFFF;
+$accent2: #ebffdf;
+// $accent3:
 
 @mixin trans($ease) {
   transition:         $ease;
@@ -61,6 +64,7 @@ $easyease: all 0.3s ease;
       GLOBAL CSS
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
 @import url(https://fonts.googleapis.com/css?family=Montserrat|Raleway);
+@import url(https://fonts.googleapis.com/css?family=Londrina+Solid|Heebo);
 
 body {
   font-family: $body;
@@ -82,19 +86,25 @@ a {
   color: $link;
   @include trans($easyease);
   &:hover {
-    color: #fff89d;
+    color: $secondary;
   }
 }
 
 .modal {
   width: 45%;
   z-index: 999999 !important;
+  background: $secondary;
+  border-radius: 0;
   .modal-footer {
+    background: $secondary;
     >a {
       font-family: $headings;
+      background: $text;
+      color: $secondary;
+      border-radius: 0;
       &:hover {
         color: $text;
-        background: $secondary;
+        background: $primary;
       }
     }
   }
@@ -146,7 +156,7 @@ a {
       flex-grow: 1;
       margin: 14px 3px;
       &:hover {
-        color: $text;
+        color: $secondary;
       }
     }
   }
@@ -168,9 +178,12 @@ a {
   background: $secondary;
   color: $text;
   font-family: $headings;
+  font-size: 1.3em;
   &:hover {
-    background: darken($primary, 8%);
-    box-shadow: 2px 2px 0 0 rgba(25,255,253,1),-2px -2px 0 0 rgba(0,0,0,1);
+    //background: darken($nav, 8%);
+    background: $accent2;
+    box-shadow: 3px 3px 0 0 rgba(0,255,255,1),-3px -3px 0 0 rgba(0,0,0,1);
+    border-radius: 0;
   }
 }
 
@@ -301,29 +314,37 @@ form {
     position: relative;
     width: 100%;
     max-width: 650px;
-    margin: 0 auto 15px auto;
+    margin: 0 auto 40px auto;
     border-radius: 0;
   .content-meta {
+    background: $secondary;
     width: 100%;
-    max-width: 580px;
+    //max-width: 580px;
     text-align: left;
-    margin: 0 auto 5px auto;
-    border-bottom: 1px solid $secondary;
-    padding: 20px 0;
+    margin: 0 auto;
+    //border-bottom: 1px solid $secondary;
+    padding: 25px 0 0 30px;
     .meta-text {
       font-family: $headings;
+      font-size: 1.1em;
+      color: $text;
       margin-right: 15px;
     }
   }
   .content-bg {
-    background: $text;
+    background: url(../imgs/white_wall_hash.png);
+    .rip {
+      width: 100%;
+      position: absolute;
+      left: 0;
+    }
   }
 }
 
 .content-post {
   width: 100%;
   max-width: 580px;
-  margin: 0 auto;
+  margin: 85px auto 0 auto;
   padding: 20px;
   @include desktop {
     padding: 13px;
@@ -376,34 +397,35 @@ form {
     margin-bottom: 10px;
   }
   .btn-like {
-    background: #f44336;
+    background: $primary;
   }
   .btn-reblog {
-    background: #00bcd4;
+    background: $secondary;
   }
 }
 
 .content-tags {
   width: 100%;
   max-width: 650px;
-  margin: 0 auto 60px auto;
-  background: transparentize($primary,.75);
-  color: #fff;
-  padding: 15px;
-  border-radius: 4px;
+  //margin: 0 auto 60px auto;
+  margin: 70px auto 0 auto;
+  background: $secondary;
+  //background: transparentize($primary,.75);
+  color: $text;
+  padding: 5px 30px 30px 30px;
   position: relative;
-  &::after {
-    content: "";
-    display: block;
-    position: absolute;
-    width: 0;
-    height: 0;
-    border-bottom: 8px solid transparentize($primary,.75);
-    border-right: 12px solid transparent;
-    border-left: 12px solid transparent;
-    top: -8px;
-    left: 60px;
-  }
+  // &::after {
+  //   content: "";
+  //   display: block;
+  //   position: absolute;
+  //   width: 0;
+  //   height: 0;
+  //   border-bottom: 8px solid transparentize($primary,.75);
+  //   border-right: 12px solid transparent;
+  //   border-left: 12px solid transparent;
+  //   top: -8px;
+  //   left: 60px;
+  // }
   .source-via {
     font-family: $headings;
     color: $link;
