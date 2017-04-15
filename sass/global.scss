@@ -285,22 +285,38 @@ form {
 .card {
   //box-shadow: 2px -2px 0 0 rgba(25,255,253,1),-2px 2px 0 0 rgba(217,12,19,1);
   border-radius: 0;
+  margin: 30px 0;
   .card-content {
     background: url('../imgs/diamond_top_bg.png');
     color: $text;
     padding: 2px 2px 8px 2px;
     border-radius: 0;
+    h6 {
+      font-size: 1.5em;
+    }
   }
   .card-action {
-    background: #9e9e9e;
+    background: url('../imgs/circle_bg.png');
     color: $text;
     border-top: 0px solid transparent;
     padding-top: 30px;
-    .sidebar-rip {
+    padding-bottom: 60px;
+    .sidebar-top-rip {
       width: 100%;
       position: absolute;
       left: 0;
       top: -11px;
+      @include desktop {
+        top: -7px;
+      }
+    }
+    .sidebar-bottom-img {
+      background: url('../imgs/diamond_bottom_bg_v2.png');
+      position: absolute;
+      width: 100%;
+      left: 0;
+      bottom: 0;
+      padding: 28px 0;
     }
   }
 }

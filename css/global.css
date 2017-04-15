@@ -163,22 +163,36 @@ form .input-field {
     color: #fff; }
 
 .card {
-  border-radius: 0; }
+  border-radius: 0;
+  margin: 30px 0; }
   .card .card-content {
     background: url("../imgs/diamond_top_bg.png");
     color: #fff;
     padding: 2px 2px 8px 2px;
     border-radius: 0; }
+    .card .card-content h6 {
+      font-size: 1.5em; }
   .card .card-action {
-    background: #9e9e9e;
+    background: url("../imgs/circle_bg.png");
     color: #fff;
     border-top: 0px solid transparent;
-    padding-top: 30px; }
-    .card .card-action .sidebar-rip {
+    padding-top: 30px;
+    padding-bottom: 60px; }
+    .card .card-action .sidebar-top-rip {
       width: 100%;
       position: absolute;
       left: 0;
       top: -11px; }
+      @media screen and (max-width: 1024px) {
+        .card .card-action .sidebar-top-rip {
+          top: -7px; } }
+    .card .card-action .sidebar-bottom-img {
+      background: url("../imgs/diamond_bottom_bg_v2.png");
+      position: absolute;
+      width: 100%;
+      left: 0;
+      bottom: 0;
+      padding: 28px 0; }
 
 .collapsible .collapsible-header {
   background: #000;
