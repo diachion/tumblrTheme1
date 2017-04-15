@@ -260,8 +260,6 @@ form {
     height: 36px !important; /* or height of nav */
     position: relative;
     top: 20px;
-    border-radius: 2px;
-    //padding-left: 40px;
     &:focus + label {
       color: $text !important;
     }
@@ -272,7 +270,7 @@ form {
       padding-left: 1rem;
       width: calc(100% - 1rem);
       margin-bottom: 2.5rem;
-      background: lighten($secondary, 10%);
+      background: $secondary;
       border: 0;
     }
     label {
@@ -325,14 +323,16 @@ form {
   .collapsible-header {
     background: $secondary;
     color: $text;
-    border-color: #fff89d;
+    border-bottom: 2px solid $primary;
     h6 {
       display: inline-block;
+      font-size: 1.3em;
     }
   }
   .collapsible-body {
+    border-bottom: 0;
     p {
-      background: $secondary;
+      background: url('../imgs/circle_bg.png');
       color: $text;
       padding: 20px;
     }

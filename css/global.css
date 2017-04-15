@@ -146,8 +146,7 @@ form input[type="search"] {
   height: 36px !important;
   /* or height of nav */
   position: relative;
-  top: 20px;
-  border-radius: 2px; }
+  top: 20px; }
   form input[type="search"]:focus + label {
     color: #fff !important; }
 form .input-field {
@@ -156,7 +155,7 @@ form .input-field {
     padding-left: 1rem;
     width: calc(100% - 1rem);
     margin-bottom: 2.5rem;
-    background: #1a1a1a;
+    background: #000;
     border: 0; }
   form .input-field label {
     top: 28px;
@@ -197,13 +196,16 @@ form .input-field {
 .collapsible .collapsible-header {
   background: #000;
   color: #fff;
-  border-color: #fff89d; }
+  border-bottom: 2px solid #ff0000; }
   .collapsible .collapsible-header h6 {
-    display: inline-block; }
-.collapsible .collapsible-body p {
-  background: #000;
-  color: #fff;
-  padding: 20px; }
+    display: inline-block;
+    font-size: 1.3em; }
+.collapsible .collapsible-body {
+  border-bottom: 0; }
+  .collapsible .collapsible-body p {
+    background: url("../imgs/circle_bg.png");
+    color: #fff;
+    padding: 20px; }
 
 /* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
       MAIN CONTENT
