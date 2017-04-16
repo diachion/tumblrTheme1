@@ -281,7 +281,7 @@ form .fa {
       position: absolute;
       left: 0; }
   .content-wrapper .content-bg-ask {
-    background: #aa1f24; }
+    background: #bb0707; }
 
 .content-post {
   width: 100%;
@@ -308,21 +308,20 @@ form .fa {
   .content-post .ask-avvie {
     position: relative;
     border-radius: 50%;
+    margin-left: 6px !important;
     z-index: 2; }
     @media screen and (max-width: 1024px) {
       .content-post .ask-avvie {
-        margin-left: 15px !important; } }
+        margin-left: 20px !important; } }
   .content-post .chat-icon {
     position: absolute;
-    left: 11px; }
+    left: 25px; }
     @media screen and (max-width: 1024px) {
       .content-post .chat-icon {
-        left: 2px;
-        max-width: 145px; } }
+        left: 10px; } }
     @media screen and (max-width: 768px) {
       .content-post .chat-icon {
-        left: 18px;
-        max-width: 151px; } }
+        left: 32px; } }
   .content-post .ask-content {
     background: #000;
     color: #fff;
