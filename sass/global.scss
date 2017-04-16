@@ -167,12 +167,16 @@ a {
     position: absolute;
     bottom: 0;
     padding-bottom: 100px;
-    img {
+    text-align: center;
+    a { 
+    	display: inline-block;
+    	img {
       display: block;
       margin: 10px auto;
       -webkit-animation-duration: 0.3s;
       -moz-animation-duration: 0.3s;
       animation-duration: 0.3s;
+    	}
     }
   }
 }
