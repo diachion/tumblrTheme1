@@ -1,0 +1,59 @@
+/* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+      VARIABLES & MIXINS
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
+$headings: 'Londrina Solid', cursive;
+$body: 'Heebo', sans-serif;
+
+$mobile-width: 480px;
+$tablet-width: 768px;
+$desktop-width: 1024px;
+
+@mixin mobile {
+  @media screen and (max-width: #{$mobile-width}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (max-width: #{$tablet-width}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (max-width: #{$desktop-width}) {
+    @content;
+  }
+}
+
+
+/* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+      THEME
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
+$primary: #6cff0d; // bright green
+$secondary: #fff;
+$text: #000;
+$link: #6cff0d;
+$nav: #000;
+$accent1: #084b06; // dark green
+
+@mixin trans($ease) {
+  transition:         $ease;
+  -webkit-transition: $ease;
+  -moz-transition:    $ease;
+}
+
+$easyease: all 0.3s ease;
+
+/* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+      GLOBAL CSS
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
+@import url(https://fonts.googleapis.com/css?family=Montserrat|Raleway);
+@import url(https://fonts.googleapis.com/css?family=Londrina+Solid|Heebo);
+
+body {
+  font-family: $body;
+  font-size: 0.9em;
+  color: $text;
+  background: $accent1 url('../imgs/chain_link_fence.png') repeat fixed;
+}

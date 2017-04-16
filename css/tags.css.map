@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": ";;;;;;;;;AAkDQ,uEAA+D;AAC/D,yEAAiE;AAEzE,IAAK;EACH,WAAW,EAlDN,mBAAO;EAmDZ,SAAS,EAAE,KAAK;EAChB,KAAK,EAtBA,IAAI;EAuBT,UAAU,EAAE,wDAAyD",
+"sources": ["../sass/tags.scss"],
+"names": [],
+"file": "tags.css"
+}
