@@ -8,6 +8,7 @@
 <!-- Stylesheets -->
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome-animation/0.0.9/font-awesome-animation.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
   <link rel="stylesheet" type="text/css" href="css/global.css">
 </head>
 
@@ -16,12 +17,16 @@
 <!-- =-=-=-=-=-=-=-=-=-= HEADER START =-=-=-=-=-=-=-=-=-= -->
 <header class="parallax-container">
   <div class="parallax"><img src="imgs/persona5.jpg"></div>
+  <div class="header-menu">
+    <a class="smooth-scroll" href="#nav"><img src="imgs/load_game.png"></a>
+    <a href="https://www.tumblr.com/dashboard"><img src="imgs/return_to_title.png"></a>
+  </div>
 </header>
 <!-- =-=-=-=-=-=-=-=-=-= HEADER END =-=-=-=-=-=-=-=-=-= -->
 
 
 <!-- =-=-=-=-=-=-=-=-=-= NAVBAR START =-=-=-=-=-=-=-=-=-= -->
-<nav style="height: 64px;">
+<nav id="nav" style="height: 64px;">
   <div class="nav-wrapper">
       <div class="container">
         <div class="row">
@@ -78,9 +83,9 @@
         <p>Sorry, but please don't ask me anything code related because I'm dumb. Thanks.</p>
       </div>
       
-      <p>
+<!--       <p>
         <iframe frameborder="0" height="190" id="ask_form" scrolling="no" src="http://www.tumblr.com/ask_form/tuning-spork.tumblr.com" width="100%" style="background-color: transparent; overflow: hidden;"></iframe>
-      </p>
+      </p> -->
       <!--[if IE]><script type="text/javascript">document.getElementById('ask_form').allowTransparency=true;</script><![endif]-->
       
       <div class="modal-footer">
@@ -543,6 +548,19 @@ $(document).ready(function(){
       } else {
         $(".pagination").removeClass("stickyPagination");
       }
+    });
+
+    // ------------ scroll down ------------
+    $("a.smooth-scroll").click(function(){
+      $("html, body").animate({
+          scrollTop: $( $.attr(this, "href") ).offset().top+1
+      }, 500);
+      return false;
+    });
+
+    // ------------ boingy shit ------------
+    $(".header-menu img").hover(function(){
+      $(this).toggleClass("animated rubberBand");
     });
 </script>
 
