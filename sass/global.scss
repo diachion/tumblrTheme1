@@ -274,9 +274,12 @@ form {
       border: 0;
     }
     label {
-      top: 28px;
+      top: 27px;
       color: $text;
     }
+  }
+  .fa {
+    padding-right: 10px;
   }
 }
 
@@ -292,6 +295,11 @@ form {
     h6 {
       font-size: 1.5em;
     }
+  }
+  .note {
+    background: #333;
+    border: 3px solid $text;
+    padding: 10px !important;
   }
   .card-action {
     background: url('../imgs/circle_bg.png');
@@ -416,6 +424,9 @@ form {
       left: 0;
     }
   }
+  .content-bg-ask {
+    background: #aa1f24;
+  }
 }
 
 .content-post {
@@ -445,24 +456,64 @@ form {
     margin-top: 15px;
   }
   .ask-avvie {
+    position: relative;
     border-radius: 50%;
+    z-index: 2;
+    @include desktop {
+      margin-left: 15px !important;
+    }
+  }
+  .chat-icon {
+    position: absolute;
+    left: 11px;
+    @include desktop {
+      left: 2px;
+      max-width: 145px;
+    }
+    @include tablet {
+      left: 18px;
+      max-width: 151px;
+    }
   }
   .ask-content {
-    background: transparentize($primary,.95);
-    border: 1px dashed $primary;
-    border-radius: 5px;
+    background: $secondary;
+    color: $text;
+    max-width: 450px;
+    float: right;
+    border: 5px solid $text;
     padding: 15px;
     span {
       font-family: $headings;
       font-size: 1.1em;
     }
+    .chat-question-mark {
+      position: relative;
+      max-height: 50px;
+      float: right;
+      top: -48px;
+    }
   }
   .ask-answer {
-    margin-top: 15px;
+    background: $text;
+    color: $secondary;
+    border: 5px solid $secondary;
+    padding: 15px;
+    margin-top: 20px;
+  }
+  .chat-reply {
+    position: relative;
+    float: right;
+    right: -31px;
+    top: -60px;
+    @include desktop {
+      right: -24px;
+      top: -45px;
+      max-width: 30px;
+    }
   }
   blockquote {
     margin-bottom: 0;
-    border-left: 5px solid $link;
+    border-left: 3px solid $link;
   }
 }
 

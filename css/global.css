@@ -158,8 +158,10 @@ form .input-field {
     background: #000;
     border: 0; }
   form .input-field label {
-    top: 28px;
+    top: 27px;
     color: #fff; }
+form .fa {
+  padding-right: 10px; }
 
 .card {
   border-radius: 0;
@@ -171,6 +173,10 @@ form .input-field {
     border-radius: 0; }
     .card .card-content h6 {
       font-size: 1.5em; }
+  .card .note {
+    background: #333;
+    border: 3px solid #fff;
+    padding: 10px !important; }
   .card .card-action {
     background: url("../imgs/circle_bg.png");
     color: #fff;
@@ -274,6 +280,8 @@ form .input-field {
       width: 100%;
       position: absolute;
       left: 0; }
+  .content-wrapper .content-bg-ask {
+    background: #aa1f24; }
 
 .content-post {
   width: 100%;
@@ -298,20 +306,57 @@ form .input-field {
     text-align: center;
     margin-top: 15px; }
   .content-post .ask-avvie {
-    border-radius: 50%; }
+    position: relative;
+    border-radius: 50%;
+    z-index: 2; }
+    @media screen and (max-width: 1024px) {
+      .content-post .ask-avvie {
+        margin-left: 15px !important; } }
+  .content-post .chat-icon {
+    position: absolute;
+    left: 11px; }
+    @media screen and (max-width: 1024px) {
+      .content-post .chat-icon {
+        left: 2px;
+        max-width: 145px; } }
+    @media screen and (max-width: 768px) {
+      .content-post .chat-icon {
+        left: 18px;
+        max-width: 151px; } }
   .content-post .ask-content {
-    background: rgba(255, 0, 0, 0.05);
-    border: 1px dashed #ff0000;
-    border-radius: 5px;
+    background: #000;
+    color: #fff;
+    max-width: 450px;
+    float: right;
+    border: 5px solid #fff;
     padding: 15px; }
     .content-post .ask-content span {
       font-family: "Londrina Solid", cursive;
       font-size: 1.1em; }
+    .content-post .ask-content .chat-question-mark {
+      position: relative;
+      max-height: 50px;
+      float: right;
+      top: -48px; }
   .content-post .ask-answer {
-    margin-top: 15px; }
+    background: #fff;
+    color: #000;
+    border: 5px solid #000;
+    padding: 15px;
+    margin-top: 20px; }
+  .content-post .chat-reply {
+    position: relative;
+    float: right;
+    right: -31px;
+    top: -60px; }
+    @media screen and (max-width: 1024px) {
+      .content-post .chat-reply {
+        right: -24px;
+        top: -45px;
+        max-width: 30px; } }
   .content-post blockquote {
     margin-bottom: 0;
-    border-left: 5px solid #ff0000; }
+    border-left: 3px solid #ff0000; }
 
 .content-like-reblog {
   position: absolute;
