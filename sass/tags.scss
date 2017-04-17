@@ -45,6 +45,10 @@ $accent1: #084b06; // dark green
 
 $easyease: all 0.3s ease;
 
+* {
+  box-sizing: border-box;
+}
+
 /* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
       GLOBAL CSS
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
@@ -56,4 +60,119 @@ body {
   font-size: 0.9em;
   color: $text;
   background: $accent1 url('../imgs/chain_link_fence.png') repeat fixed;
+}
+
+h1, h2, h3, h4, h5, h6, .collapsible-header {
+  font-family: $headings;
+}
+
+.container {
+  width: 90%;
+}
+
+.row {
+  margin-bottom: 0;
+}
+
+/* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+      DOG TAG "TABS"
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
+.tabs {
+  background: transparent;
+  display: inline-block;
+  width: 200px !important;
+  margin-top: 50%;
+  margin-right: 50px;
+  float: right;
+  overflow: visible;
+  .tab {
+    background: $primary;
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 30px;
+    overflow: visible;
+    @include trans($easyease);
+    &:hover {
+      background: $secondary;
+    }
+    a {
+      font-family: $headings;
+      font-size: 1.4em;
+      color: $text;
+      padding: 20px 10px;
+      &:hover {
+        color: $text;
+      }
+    }
+  }
+  .animanga {
+    //position: relative;
+    //transform:rotate(3deg);
+  }
+  .games {
+    position: relative;
+    right: 30px;
+    top: -10px;
+    transform:rotate(7deg);
+  }
+  .movies {
+    position: relative;
+    right: 70px;
+    top: -15px;
+    transform:rotate(16deg);
+  }
+  .misc {
+    position: relative;
+    right: 125px;
+    top: -20px;
+    transform:rotate(28deg);
+  }
+  .random {
+    position: relative;
+    right: 200px;
+    top: -25px;
+    transform:rotate(45deg);
+  }
+  .active {
+    background: $secondary;
+    position: relative;
+    border-radius: 30px;
+    box-shadow: 3px 4px 0 $text;
+  }
+  .indicator {
+    height: 0px;
+  }
+}
+
+
+/* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+      ACTUAL TAGS DISPLAY
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
+.tags-content {
+  .col {
+    font-size: 1.3em;
+    font-weight: 700;
+    background: $primary;
+    padding: 30px;
+    height: 80vh;
+    overflow-y: scroll;
+    a {
+      display: block;
+      color: $text;
+      padding: 10px;
+      @include trans($easyease);
+      &:hover {
+        background: #ddd;
+      }
+    }
+    &::-webkit-scrollbar {
+      background: $secondary;
+      width: 8px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: $text;
+      width: 5px;
+    }
+  }
 }
