@@ -73,37 +73,38 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
 .row {
   margin-bottom: 0;
 }
-
+.text-right {
+  text-align: right;
+}
 /* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
       DOG TAG "TABS"
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
-.tabs {
+.tags {
   background: transparent;
   display: inline-block;
   width: 200px !important;
   margin-top: 50%;
+  float: none;
   margin-right: 50px;
-  float: right;
   overflow: visible;
-  .tab {
+  .tag {
     background: $primary;
     display: block;
     width: 100%;
     height: auto;
     border-radius: 30px;
     overflow: visible;
+    font-family: $headings;
+    font-size: 1.4em;
+    color: $text;
+    padding: 20px 10px;
     @include trans($easyease);
-    &:hover {
+    &.active, &:hover {
       background: $secondary;
-    }
-    a {
-      font-family: $headings;
-      font-size: 1.4em;
       color: $text;
-      padding: 20px 10px;
-      &:hover {
-        color: $text;
-      }
+    }
+    &.inactive {
+      background: $accent1;
     }
   }
   .animanga {
@@ -150,13 +151,17 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
       ACTUAL TAGS DISPLAY
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
 .tags-content {
-  .col {
+  .tag-content {
     font-size: 1.3em;
     font-weight: 700;
     background: $primary;
     padding: 30px;
     height: 80vh;
     overflow-y: scroll;
+    display: none;
+    &.active {
+      display: block;
+    }
     a {
       display: block;
       color: $text;

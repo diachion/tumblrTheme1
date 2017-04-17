@@ -19,14 +19,14 @@
   <!-- -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
             SIDEBAR CONTENT
       -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- -->
-    <div class="col s12 m12 l5">
-      <ul class="tabs">
-        <li class="tab animanga"><a href="#animanga">Anime / Manga</a></li>
-        <li class="tab games"><a href="#games">Video Games</a></li>
-        <li class="tab movies"><a href="#movies">Movies / Shows</a></li>
-        <li class="tab misc"><a href="#misc">Miscellaneous</a></li>
-        <li class="tab random"><a href="#random">My Random Tags</a></li>
-      </ul>
+    <div class="col s12 m12 l5 text-right">
+      <div class="tags">
+        <a class="tag animanga" href="#animanga">Anime / Manga</a>
+        <a class="tag games" href="#games">Video Games</a>
+        <a class="tag movies" href="#movies">Movies / Shows</a>
+        <a class="tag misc" href="#misc">Miscellaneous</a>
+        <a class="tag random" href="#random">My Random Tags</a>
+      </div>
     </div>
 
     <!-- -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
@@ -34,7 +34,7 @@
    -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- -->
     <div class="col s12 m12 l7">
       <div class="tags-content">
-        <div id="animanga" class="col s12">
+        <div id="animanga" class="tag-content col s12">
           <a href="/tagged/5-centimeters-per-second">5 Centimeters Per Second</A>
           <a href="/tagged/ace-of-diamond">Ace of Diamond</a>
           <a href="/tagged/ajin">Ajin</a>
@@ -123,7 +123,7 @@
           <a href="/tagged/zetsuen-no-tempest">Zetsuen no Tempest</a>
         </div>
 
-        <div id="games" class="col s12">
+        <div id="games" class=tag-content "col s12">
           <a href="/tagged/amnesia">Amnesia</A>
           <a href="/tagged/animal-crossing">Animal Crossing</A>
           <a href="/tagged/assassin's-creed">Assassin's Creed</a>
@@ -160,14 +160,14 @@
           <a href="/tagged/world-of-warcraft">World of Warcraft</A>
         </div>
 
-        <div id="movies" class="col s12">
+        <div id="movies" class="tag-content col s12">
           <a href="/tagged/big-hero-6">Big Hero 6</a>
           <a href="/tagged/deadpool">Deadpool</a>
           <a href="/tagged/how-to-train-your-dragon">How to Train Your Dragon</a>
           <a href="/tagged/we-bare-bears">We Bare Bears</a>
         </div>
 
-        <div id="misc" class="col s12">
+        <div id="misc" class="tag-content col s12">
           <a href="/tagged/art">Art</a>
           <a href="/tagged/audio">Audio / Music</a>
           <a href="/tagged/click-and-drag">Click-and-Drag Games</a>
@@ -193,7 +193,7 @@
           <a href="/tagged/wallpapers">Wallpapers</a>
         </div>
 
-        <div id="random" class="col s12">
+        <div id="random" class="tag-content col s12">
           <a href="/tagged/ahomine">Ahomine</A>
           <a href="/tagged/cutie-patootie">Cutie Patooties</A>
           <a href="/tagged/omg-so-cuuute">Died of Cuteness Overload</A>
@@ -221,6 +221,31 @@
 <script>
 $(document).ready(function(){
   $('ul.tabs').tabs();
+
+
+ $('.tags').children('.tag').click(function(e) {
+
+ 	e.preventDefault(); //Prevents the page from scrolling to the anchor point
+
+ 	if($(this).hasClass('active')) { //If the tag already has an active class, reset everything to default
+ 		$(this).parent().children().removeClass('inactive'); //Remove all inactive classes
+		$(this).removeClass('active'); // Remove all active classes
+		$('.tags-content').children().removeClass('active'); // Remove all active class from content
+ 	}
+ 	else {
+ 		$(this).siblings().removeClass('active'); //Remove active class of previous tag
+ 		$(this).siblings().addClass('inactive'); //Add inactive class to every other tag
+ 		$(this).addClass('active'); // Add active class to clicked on tag
+ 		$(this).removeClass('inactive'); //Remove any previous inactive class it had before
+
+ 		var target = $(this).attr('href'); //Grab the href of the content
+ 		$('.tags-content').children('.tag-content').removeClass('active'); //Remove the active class for previous content
+ 		$(target).addClass('active'); //Add active class to currently targeted content based on the href from the tag
+ 	}
+ });
+
+
+
 });
 
 </script>
