@@ -87,13 +87,14 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
   float: none;
   margin-right: 50px;
   overflow: visible;
+  position: relative;
   .ballchain {
     background: url('../imgs/ballchain.png') no-repeat;
     position: absolute;
-    height: 100%;
+    height: 100vh;
     width: 500px;
     top: 0;
-    left: 250px;
+    left: 350px;
     z-index: -1;
   }
   .tag {
