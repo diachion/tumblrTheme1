@@ -17,7 +17,8 @@ body {
   font-size: 0.9em;
   color: #000;
   background: url("../imgs/chain_link_fence.png") repeat fixed;
-  background-color: #0c7109; }
+  background-color: #0c7109;
+  overflow-y: hidden; }
 
 h1, h2, h3, h4, h5, h6, .collapsible-header {
   font-family: "Londrina Solid", cursive; }
@@ -87,6 +88,8 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
     top: 0;
     left: -350px;
     z-index: -1; }
+  .tags .animate-div {
+    animation-delay: 0.1s; }
   .tags .tag {
     font-family: "Londrina Solid", cursive;
     background: #6cff0d;
@@ -155,13 +158,15 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
 .tags-content {
   padding-top: 15%; }
   .tags-content .tag-content {
+    background: #6cff0d;
     font-size: 1.3em;
     font-weight: 700;
-    background: #6cff0d;
-    padding: 30px;
-    height: 80vh;
-    overflow-y: scroll;
+    text-align: center;
     display: none;
+    height: 80vh;
+    padding: 30px;
+    border-radius: 10px;
+    overflow-y: scroll;
     overflow-x: hidden;
     transition: all 0.3s ease;
     -webkit-transition: all 0.3s ease;
@@ -175,8 +180,8 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
       padding: 10px; }
       .tags-content .tag-content a .tags-hover {
         position: absolute;
-        width: 100%;
-        top: -3px;
+        width: 95%;
+        top: 0;
         display: none; }
       .tags-content .tag-content a .tag-text {
         position: relative; }
@@ -186,10 +191,12 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
         display: block; }
     .tags-content .tag-content::-webkit-scrollbar {
       background: #fff;
-      width: 8px; }
+      width: 8px;
+      border-radius: 10px; }
     .tags-content .tag-content::-webkit-scrollbar-thumb {
       background: #000;
-      width: 5px; }
+      width: 5px;
+      border-radius: 10px; }
 
 .jelly {
   -webkit-animation-name: jelly;
@@ -204,10 +211,10 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
 @keyframes jelly {
   from {
     transform-style: preserve-3d;
-    transform: skewX(45deg) rotateX(65deg) rotateY(15deg) rotateZ(-20deg) perspective(150px); }
+    transform: skewX(40deg) rotateX(60deg) rotateY(10deg) rotateZ(-10deg) perspective(150px); }
   50% {
     transform: skewX(-45deg); }
   to {
-    transform: skewX(45deg) rotateX(-65deg) rotateY(-15deg) rotateZ(-20deg) perspective(150px); } }
+    transform: skewX(40deg) rotateX(-60deg) rotateY(-10deg) rotateZ(-10deg) perspective(150px); } }
 
 /*# sourceMappingURL=tags.css.map */

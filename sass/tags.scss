@@ -61,6 +61,7 @@ body {
   color: $text;
   background: url('../imgs/chain_link_fence.png') repeat fixed;
   background-color: lighten($accent1,8%);
+  overflow-y: hidden;
 }
 
 h1, h2, h3, h4, h5, h6, .collapsible-header {
@@ -138,6 +139,9 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
     top: 0;
     left: -350px;
     z-index: -1;
+  }
+  .animate-div {
+    animation-delay: 0.1s;
   }
   .tag {
     font-family: $headings;
@@ -220,13 +224,15 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
 .tags-content {
   padding-top: 15%;
   .tag-content {
+    background: $primary;
     font-size: 1.3em;
     font-weight: 700;
-    background: $primary;
-    padding: 30px;
-    height: 80vh;
-    overflow-y: scroll;
+    text-align: center;
     display: none;
+    height: 80vh;
+    padding: 30px;
+    border-radius: 10px;
+    overflow-y: scroll;
     overflow-x: hidden;
     @include trans($easyease);
     &.active {
@@ -240,8 +246,8 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
       // @include trans($easyease);
       .tags-hover {
         position: absolute;
-        width: 100%;
-        top: -3px;
+        width: 95%;
+        top: 0;
         display: none;
       }
       .tag-text {
@@ -257,10 +263,12 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
     &::-webkit-scrollbar {
       background: $secondary;
       width: 8px;
+      border-radius: 10px;
     }
     &::-webkit-scrollbar-thumb {
       background: $text;
       width: 5px;
+      border-radius: 10px;
     }
   }
 }
@@ -279,8 +287,8 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
 @keyframes jelly {
   from {
     transform-style: preserve-3d;
-    transform: skewX(45deg) rotateX(65deg) rotateY(15deg) rotateZ(-20deg) perspective(150px);
+    transform: skewX(40deg) rotateX(60deg) rotateY(10deg) rotateZ(-10deg) perspective(150px);
   }
   50% { transform:skewX(-45deg); }
-  to { transform:skewX(45deg) rotateX(-65deg) rotateY(-15deg) rotateZ(-20deg) perspective(150px); }
+  to { transform:skewX(40deg) rotateX(-60deg) rotateY(-10deg) rotateZ(-10deg) perspective(150px); }
 }
