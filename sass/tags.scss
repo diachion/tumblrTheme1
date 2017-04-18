@@ -83,7 +83,7 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
   background: transparent;
   display: inline-block;
   width: 180px !important;
-  margin-top: 50%;
+  padding-top: 50%;
   float: none;
   margin-right: 50px;
   overflow: visible;
@@ -94,7 +94,7 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
     height: 100vh;
     width: 500px;
     top: 0;
-    left: 350px;
+    left: -350px;
     z-index: -1;
   }
   .tag {
