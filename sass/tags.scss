@@ -227,21 +227,31 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
     height: 80vh;
     overflow-y: scroll;
     display: none;
+    overflow-x: hidden;
     @include trans($easyease);
-    .tags-hover {
-      position: relative;
-      width: 100%;
-    }
     &.active {
       display: block;
     }
     a {
+      position: relative;
       display: block;
       color: $text;
       padding: 10px;
-      @include trans($easyease);
+      // @include trans($easyease);
+      .tags-hover {
+        position: absolute;
+        width: 100%;
+        top: -3px;
+        display: none;
+      }
+      .tag-text {
+        position: relative;
+      }
       &:hover {
         background: #bfbfbf;
+      }
+      &:hover .tags-hover {
+        display: block;
       }
     }
     &::-webkit-scrollbar {

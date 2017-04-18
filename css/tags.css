@@ -162,23 +162,28 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
     height: 80vh;
     overflow-y: scroll;
     display: none;
+    overflow-x: hidden;
     transition: all 0.3s ease;
     -webkit-transition: all 0.3s ease;
     -moz-transition: all 0.3s ease; }
-    .tags-content .tag-content .tags-hover {
-      position: relative;
-      width: 100%; }
     .tags-content .tag-content.active {
       display: block; }
     .tags-content .tag-content a {
+      position: relative;
       display: block;
       color: #000;
-      padding: 10px;
-      transition: all 0.3s ease;
-      -webkit-transition: all 0.3s ease;
-      -moz-transition: all 0.3s ease; }
+      padding: 10px; }
+      .tags-content .tag-content a .tags-hover {
+        position: absolute;
+        width: 100%;
+        top: -3px;
+        display: none; }
+      .tags-content .tag-content a .tag-text {
+        position: relative; }
       .tags-content .tag-content a:hover {
         background: #bfbfbf; }
+      .tags-content .tag-content a:hover .tags-hover {
+        display: block; }
     .tags-content .tag-content::-webkit-scrollbar {
       background: #fff;
       width: 8px; }
