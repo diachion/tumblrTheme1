@@ -95,20 +95,19 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
   .black-bg {
     background: $nav;
     position: absolute;
-    height: 200px;
+    height: 150px;
     width: 300px;
-    top: 110px;
+    top: 150px;
     right: 70px;
     border-radius: 20px;
     transform:rotate(-5deg);
     .nav-links {
-      color: $secondary;
       text-align: left;
       padding: 30px 20px 30px 25px;
       transform:rotate(5deg);
       a {
         font-family: $headings;
-        color: $secondary;
+        color: #bfbfbf;
         font-size: 1.3em;
         display: block;
         letter-spacing: 3px;
@@ -125,6 +124,7 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
     max-width: 200px;
     right: 250px;
     top: 260px;
+    z-index: -1;
     @include desktop {
       max-width: 170px;
       right: 230px;
@@ -161,6 +161,14 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
     }
     &.inactive {
       background: $accent1;
+      color: darken($primary,15%);
+      &:hover {
+        background: $secondary;
+        color: $text;
+        .fa {
+          color: $accent1;
+        }
+      }
       .fa {
         color: #00ff24;
       }
@@ -210,6 +218,7 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
       ACTUAL TAGS DISPLAY
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
 .tags-content {
+  padding-top: 15%;
   .tag-content {
     font-size: 1.3em;
     font-weight: 700;
@@ -219,6 +228,10 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
     overflow-y: scroll;
     display: none;
     @include trans($easyease);
+    .tags-hover {
+      position: relative;
+      width: 100%;
+    }
     &.active {
       display: block;
     }
@@ -228,7 +241,7 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
       padding: 10px;
       @include trans($easyease);
       &:hover {
-        background: #ddd;
+        background: #bfbfbf;
       }
     }
     &::-webkit-scrollbar {
@@ -240,4 +253,24 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
       width: 5px;
     }
   }
+}
+
+.jelly {
+  -webkit-animation-name: jelly;
+          animation-name: jelly;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+@keyframes jelly {
+  from {
+    transform-style: preserve-3d;
+    transform: skewX(45deg) rotateX(65deg) rotateY(15deg) rotateZ(-20deg) perspective(150px);
+  }
+  50% { transform:skewX(-45deg); }
+  to { transform:skewX(45deg) rotateX(-65deg) rotateY(-15deg) rotateZ(-20deg) perspective(150px); }
 }

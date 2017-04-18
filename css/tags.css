@@ -47,20 +47,19 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
   .tags .black-bg {
     background: #000;
     position: absolute;
-    height: 200px;
+    height: 150px;
     width: 300px;
-    top: 110px;
+    top: 150px;
     right: 70px;
     border-radius: 20px;
     transform: rotate(-5deg); }
     .tags .black-bg .nav-links {
-      color: #fff;
       text-align: left;
       padding: 30px 20px 30px 25px;
       transform: rotate(5deg); }
       .tags .black-bg .nav-links a {
         font-family: "Londrina Solid", cursive;
-        color: #fff;
+        color: #bfbfbf;
         font-size: 1.3em;
         display: block;
         letter-spacing: 3px;
@@ -74,7 +73,8 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
     position: absolute;
     max-width: 200px;
     right: 250px;
-    top: 260px; }
+    top: 260px;
+    z-index: -1; }
     @media screen and (max-width: 1024px) {
       .tags .tags-mark {
         max-width: 170px;
@@ -109,7 +109,13 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
       z-index: 2;
       box-shadow: 5px 3px 0 #000; }
     .tags .tag.inactive {
-      background: #084b06; }
+      background: #084b06;
+      color: #4bc000; }
+      .tags .tag.inactive:hover {
+        background: #fff;
+        color: #000; }
+        .tags .tag.inactive:hover .fa {
+          color: #084b06; }
       .tags .tag.inactive .fa {
         color: #00ff24; }
     .tags .tag .fa {
@@ -146,33 +152,57 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
 /* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
       ACTUAL TAGS DISPLAY
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
-.tags-content .tag-content {
-  font-size: 1.3em;
-  font-weight: 700;
-  background: #6cff0d;
-  padding: 30px;
-  height: 80vh;
-  overflow-y: scroll;
-  display: none;
-  transition: all 0.3s ease;
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease; }
-  .tags-content .tag-content.active {
-    display: block; }
-  .tags-content .tag-content a {
-    display: block;
-    color: #000;
-    padding: 10px;
+.tags-content {
+  padding-top: 15%; }
+  .tags-content .tag-content {
+    font-size: 1.3em;
+    font-weight: 700;
+    background: #6cff0d;
+    padding: 30px;
+    height: 80vh;
+    overflow-y: scroll;
+    display: none;
     transition: all 0.3s ease;
     -webkit-transition: all 0.3s ease;
     -moz-transition: all 0.3s ease; }
-    .tags-content .tag-content a:hover {
-      background: #ddd; }
-  .tags-content .tag-content::-webkit-scrollbar {
-    background: #fff;
-    width: 8px; }
-  .tags-content .tag-content::-webkit-scrollbar-thumb {
-    background: #000;
-    width: 5px; }
+    .tags-content .tag-content .tags-hover {
+      position: relative;
+      width: 100%; }
+    .tags-content .tag-content.active {
+      display: block; }
+    .tags-content .tag-content a {
+      display: block;
+      color: #000;
+      padding: 10px;
+      transition: all 0.3s ease;
+      -webkit-transition: all 0.3s ease;
+      -moz-transition: all 0.3s ease; }
+      .tags-content .tag-content a:hover {
+        background: #bfbfbf; }
+    .tags-content .tag-content::-webkit-scrollbar {
+      background: #fff;
+      width: 8px; }
+    .tags-content .tag-content::-webkit-scrollbar-thumb {
+      background: #000;
+      width: 5px; }
+
+.jelly {
+  -webkit-animation-name: jelly;
+  animation-name: jelly;
+  -webkit-transform-origin: center;
+  transform-origin: center;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear; }
+
+@keyframes jelly {
+  from {
+    transform-style: preserve-3d;
+    transform: skewX(45deg) rotateX(65deg) rotateY(15deg) rotateZ(-20deg) perspective(150px); }
+  50% {
+    transform: skewX(-45deg); }
+  to {
+    transform: skewX(45deg) rotateX(-65deg) rotateY(-15deg) rotateZ(-20deg) perspective(150px); } }
 
 /*# sourceMappingURL=tags.css.map */

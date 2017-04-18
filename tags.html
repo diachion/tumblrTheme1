@@ -23,9 +23,9 @@
       <div class="tags">
         <div class="black-bg">
           <div class="nav-links">
-            <a href="index.html">Return to Main Menu</a>
-            <a href="#">Archive</a>
-            <a href="https://www.tumblr.com/dashboard">Leave</a>
+            <a href="index.html"><span class="fa fa-home"></span> Return to Main Menu</a>
+            <a href="#"><span class="fa fa-archive"></span> Archive</a>
+            <a href="https://www.tumblr.com/dashboard"><span class="fa fa-window-close"></span> Leave</a>
           </div>
         </div>
         <img class="tags-mark" src="imgs/tags.png">
@@ -44,7 +44,7 @@
     <div class="col s12 m12 l7">
       <div class="tags-content">
         <div id="animanga" class="tag-content col s12">
-          <a href="/tagged/5-centimeters-per-second">5 Centimeters Per Second</A>
+          <a href="/tagged/5-centimeters-per-second"><img class="tags-hover animated jelly" src="imgs/tags_hover.png"> 5 Centimeters Per Second</A>
           <a href="/tagged/ace-of-diamond">Ace of Diamond</a>
           <a href="/tagged/ajin">Ajin</a>
           <a href="/tagged/akagami-no-shirayukihime">Akagami no Shirayukihime</a>
@@ -225,35 +225,37 @@
 -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
-<script src="https://use.fontawesome.com/a526ac30e9.js"></script>
+<script src="https://use.fontawesome.com/6b7cf57f69.js"></script>
 
 <script>
 $(document).ready(function(){
   $('ul.tabs').tabs();
 
+  $('.tags').children('.tag').click(function(e) {
 
- $('.tags').children('.tag').click(function(e) {
+  	e.preventDefault(); //Prevents the page from scrolling to the anchor point
 
- 	e.preventDefault(); //Prevents the page from scrolling to the anchor point
+  	if($(this).hasClass('active')) { //If the tag already has an active class, reset everything to default
+  		$(this).parent().children().removeClass('inactive'); //Remove all inactive classes
+  	$(this).removeClass('active'); // Remove all active classes
+  	$('.tags-content').children().removeClass('active'); // Remove all active class from content
+  	}
+  	else {
+  		$(this).siblings().removeClass('active'); //Remove active class of previous tag
+  		$(this).siblings().addClass('inactive'); //Add inactive class to every other tag
+  		$(this).addClass('active'); // Add active class to clicked on tag
+  		$(this).removeClass('inactive'); //Remove any previous inactive class it had before
 
- 	if($(this).hasClass('active')) { //If the tag already has an active class, reset everything to default
- 		$(this).parent().children().removeClass('inactive'); //Remove all inactive classes
-		$(this).removeClass('active'); // Remove all active classes
-		$('.tags-content').children().removeClass('active'); // Remove all active class from content
- 	}
- 	else {
- 		$(this).siblings().removeClass('active'); //Remove active class of previous tag
- 		$(this).siblings().addClass('inactive'); //Add inactive class to every other tag
- 		$(this).addClass('active'); // Add active class to clicked on tag
- 		$(this).removeClass('inactive'); //Remove any previous inactive class it had before
+  		var target = $(this).attr('href'); //Grab the href of the content
+  		$('.tags-content').children('.tag-content').removeClass('active'); //Remove the active class for previous content
+  		$(target).addClass('active'); //Add active class to currently targeted content based on the href from the tag
+  	}
+  });
 
- 		var target = $(this).attr('href'); //Grab the href of the content
- 		$('.tags-content').children('.tag-content').removeClass('active'); //Remove the active class for previous content
- 		$(target).addClass('active'); //Add active class to currently targeted content based on the href from the tag
- 	}
- });
+  $('.tags-content .tag-content a').hover(function(){
+    console.log("eeh");
 
-
+  });
 
 });
 
