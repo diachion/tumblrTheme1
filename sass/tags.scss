@@ -184,6 +184,9 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
         position: relative;
         z-index: 2;
         box-shadow: 5px 3px 0 $text;
+        &:hover {
+          background: $primary;
+        }
       }
     }
     &:hover {
