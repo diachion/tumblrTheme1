@@ -30,12 +30,12 @@
         </div>
         <img class="tags-mark" src="imgs/tags.png">
         <div class="ballchain animated bounceInUp"></div>
-        <div class="animate-div animated bounceInUp">
-          <a class="tag animanga" href="#animanga"><span class="fa fa-circle"></span> Anime / Manga</a>
-          <a class="tag games" href="#games"><span class="fa fa-circle"></span> Video Games</a>
-          <a class="tag movies" href="#movies"><span class="fa fa-circle"></span> Movies / Shows</a>
-          <a class="tag misc" href="#misc"><span class="fa fa-circle"></span> Miscellaneous</a>
-          <a class="tag random" href="#random"><span class="fa fa-circle"></span> Random Tags</a>
+        <div class="animate-div">
+          <div class="animated bounceInUp"><a class="tag animanga" href="#animanga"><span class="fa fa-circle"></span> Anime / Manga</a></div>
+          <div class="animated bounceInUp" style="animation-delay: 0.1s;"><a class="tag games" href="#games"><span class="fa fa-circle"></span> Video Games</a></div>
+          <div class="animated bounceInUp" style="animation-delay: 0.15s;"><a class="tag movies" href="#movies"><span class="fa fa-circle"></span> Movies / Shows</a></div>
+          <div class="animated bounceInUp" style="animation-delay: 0.2s;"><a class="tag misc" href="#misc"><span class="fa fa-circle"></span> Miscellaneous</a></div>
+          <div class="animated bounceInUp" style="animation-delay: 0.25s;"><a class="tag random" href="#random"><span class="fa fa-circle"></span> Random Tags</a></div>
         </div>
       </div>
     </div>
@@ -240,18 +240,18 @@
 $(document).ready(function(){
   $('ul.tabs').tabs();
 
-  $('.tags .animate-div').children('.tag').click(function(e) {
+  $('.tags .animate-div').find('.tag').click(function(e) {
 
   	e.preventDefault(); //Prevents the page from scrolling to the anchor point
 
   	if($(this).hasClass('active')) { //If the tag already has an active class, reset everything to default
-  		$(this).parent().children().removeClass('inactive'); //Remove all inactive classes
-  	$(this).removeClass('active'); // Remove all active classes
-  	$('.tags-content').children().removeClass('active'); // Remove all active class from content
+  		$(this).parent().siblings().children().removeClass('inactive'); //Remove all inactive classes
+  		$(this).removeClass('active'); // Remove all active classes
+  		$('.tags-content').children().removeClass('active'); // Remove all active class from content
   	}
   	else {
-  		$(this).siblings().removeClass('active'); //Remove active class of previous tag
-  		$(this).siblings().addClass('inactive'); //Add inactive class to every other tag
+  		$(this).parent().siblings().children().removeClass('active'); //Remove active class of previous tag
+  		$(this).parent().siblings().children().addClass('inactive'); //Add inactive class to every other tag
   		$(this).addClass('active'); // Add active class to clicked on tag
   		$(this).removeClass('inactive'); //Remove any previous inactive class it had before
 
