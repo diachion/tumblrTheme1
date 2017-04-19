@@ -235,7 +235,7 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
     .money .money-amount .fa {
       position: absolute;
       left: 20px;
-      top: 58px; }
+      top: 53px; }
       @media screen and (max-width: 1024px) {
         .money .money-amount .fa {
           top: 46px; } }
