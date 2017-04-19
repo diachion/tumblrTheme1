@@ -163,7 +163,7 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
       }
     }
     &.inactive .tag{
-        background: $accent1;
+        background: darken($accent1, 5%);
         color: darken($primary,15%);
         &:hover {
           background: $secondary;
@@ -176,7 +176,6 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
           color: #00ff24;
         }
     }
-
     &.active, &:hover {
       z-index: 99;
       .tag {
