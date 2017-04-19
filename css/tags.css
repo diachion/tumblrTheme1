@@ -16,7 +16,7 @@ body {
   font-family: "Heebo", sans-serif;
   font-size: 0.9em;
   color: #000;
-  background: url("../imgs/chain_link_fence_v2.jpg") repeat fixed;
+  background: url("../imgs/chain_link_fence_v2.jpg") repeat fixed center;
   background-color: #0c7109;
   overflow-y: hidden; }
 
@@ -198,6 +198,47 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
       background: #000;
       width: 3px;
       border-radius: 10px; }
+
+.money {
+  font-family: "Londrina Solid", cursive;
+  background: #000;
+  position: absolute;
+  bottom: 20px;
+  right: 15px;
+  height: 150px;
+  width: 300px;
+  padding: 10px;
+  border-radius: 20px;
+  transform: rotate(5deg);
+  z-index: 2; }
+  @media screen and (max-width: 1024px) {
+    .money {
+      bottom: 10px;
+      right: 7px;
+      height: 130px;
+      width: 230px; } }
+  .money .money-title {
+    color: #6cff0d;
+    font-size: 1.8em;
+    border-bottom: 2px solid #fff; }
+    @media screen and (max-width: 1024px) {
+      .money .money-title {
+        font-size: 1.4em; } }
+  .money .money-amount {
+    color: #fff;
+    font-size: 2.8em;
+    letter-spacing: 5px;
+    border-bottom: 7px double #fff; }
+    @media screen and (max-width: 1024px) {
+      .money .money-amount {
+        font-size: 2.4em; } }
+    .money .money-amount .fa {
+      position: absolute;
+      left: 20px;
+      top: 58px; }
+      @media screen and (max-width: 1024px) {
+        .money .money-amount .fa {
+          top: 46px; } }
 
 .jelly {
   -webkit-animation-name: jelly;

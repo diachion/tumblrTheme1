@@ -59,7 +59,7 @@ body {
   font-family: $body;
   font-size: 0.9em;
   color: $text;
-  background: url('../imgs/chain_link_fence_v2.jpg') repeat fixed;
+  background: url('../imgs/chain_link_fence_v2.jpg') repeat fixed center;
   background-color: lighten($accent1,8%);
   overflow-y: hidden;
 }
@@ -270,6 +270,51 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
       background: $text;
       width: 3px;
       border-radius: 10px;
+    }
+  }
+}
+
+.money {
+  font-family: $headings;
+  background: $text;
+  position: absolute;
+  bottom: 20px;
+  right: 15px;
+  height: 150px;
+  width: 300px;
+  padding: 10px;
+  border-radius: 20px;
+  transform:rotate(5deg);
+  z-index: 2;
+  @include desktop {
+    bottom: 10px;
+    right: 7px;
+    height: 130px;
+    width: 230px;
+  }
+  .money-title {
+    color: $primary;
+    font-size: 1.8em;
+    border-bottom: 2px solid $secondary;
+    @include desktop {
+      font-size: 1.4em;
+    }
+  }
+  .money-amount {
+    color: $secondary;
+    font-size: 2.8em;
+    letter-spacing: 5px;
+    border-bottom: 7px double $secondary;
+    @include desktop {
+      font-size: 2.4em;
+    }
+    .fa {
+      position: absolute;
+      left: 20px;
+      top: 58px;
+      @include desktop {
+        top: 46px;
+      }
     }
   }
 }
