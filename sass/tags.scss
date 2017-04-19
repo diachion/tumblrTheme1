@@ -59,7 +59,7 @@ body {
   font-family: $body;
   font-size: 0.9em;
   color: $text;
-  background: url('../imgs/chain_link_fence.png') repeat fixed;
+  background: url('../imgs/chain_link_fence_v2.jpg') repeat fixed;
   background-color: lighten($accent1,8%);
   overflow-y: hidden;
 }
@@ -234,6 +234,7 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
     border-radius: 10px;
     overflow-y: scroll;
     overflow-x: hidden;
+    animation-duration: 0.3s;
     @include trans($easyease);
     &.active {
       display: block;
@@ -262,12 +263,12 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
     }
     &::-webkit-scrollbar {
       background: $secondary;
-      width: 8px;
+      width: 5px;
       border-radius: 10px;
     }
     &::-webkit-scrollbar-thumb {
       background: $text;
-      width: 5px;
+      width: 3px;
       border-radius: 10px;
     }
   }
