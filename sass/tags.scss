@@ -190,7 +190,7 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
       }
     }
     &:hover {
-      z-index: 99;
+      z-index: 999;
       .tag {
         background: $secondary;
         color: $text;
@@ -251,18 +251,34 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
     &.active {
       display: block;
     }
+    .content-wrapper {
+      position: relative;
+      .jelly {
+        position: absolute;
+        display: none;
+        width: 95.2%;
+        top: -2px;
+        bottom: -10px;
+        left: 10px;
+      }
+      &:hover .jelly {
+        display: block;
+      }
+    }
     a {
       position: relative;
       display: block;
       color: $text;
-      padding: 10px;
+      padding: 1px 10px;
+      margin: 10px auto;
+      overflow: hidden;
       @include desktop {
         padding: 8px;
       }
       .tags-hover {
         position: absolute;
         width: 95%;
-        top: 5px;
+        //top: 0;
         display: none;
         @include desktop {
           top: 10px;
