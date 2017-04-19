@@ -7,7 +7,8 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat|Raleway);
 @import url(https://fonts.googleapis.com/css?family=Londrina+Solid|Heebo);
 * {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+}
 
 /* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
       GLOBAL CSS
@@ -18,16 +19,20 @@ body {
   color: #000;
   background: url("../imgs/chain_link_fence_v2.jpg") repeat fixed center;
   background-color: #0c7109;
-  overflow-y: hidden; }
+  overflow-y: hidden;
+}
 
 h1, h2, h3, h4, h5, h6, .collapsible-header {
-  font-family: "Londrina Solid", cursive; }
+  font-family: "Londrina Solid", cursive;
+}
 
 .container {
-  width: 90%; }
+  width: 90%;
+}
 
 .row {
-  margin-bottom: 0; }
+  margin-bottom: 0;
+}
 
 /* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
       DOG TAG "TABS"
@@ -40,168 +45,212 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
   padding-top: 55%;
   float: none;
   margin-right: 50px;
-  overflow: visible; }
-  @media screen and (max-width: 1024px) {
-    .tags {
-      padding-top: 75%;
-      margin-right: 0; } }
-  .tags .black-bg {
-    background: #000;
-    position: absolute;
-    height: 150px;
-    width: 300px;
-    top: 150px;
-    right: 70px;
-    border-radius: 20px;
-    transform: rotate(-5deg); }
-    .tags .black-bg .nav-links {
-      text-align: left;
-      padding: 30px 20px 30px 25px;
-      transform: rotate(5deg); }
-      .tags .black-bg .nav-links a {
-        font-family: "Londrina Solid", cursive;
-        color: #bfbfbf;
-        font-size: 1.3em;
-        display: block;
-        letter-spacing: 3px;
-        padding: 5px 0;
-        transition: all 0.3s ease;
-        -webkit-transition: all 0.3s ease;
-        -moz-transition: all 0.3s ease; }
-        .tags .black-bg .nav-links a:hover {
-          color: #6cff0d; }
+  overflow: visible;
+}
+@media screen and (max-width: 1024px) {
+  .tags {
+    padding-top: 75%;
+    margin-right: 0;
+  }
+}
+.tags .black-bg {
+  background: #000;
+  position: absolute;
+  height: 150px;
+  width: 300px;
+  top: 150px;
+  right: 70px;
+  border-radius: 20px;
+  transform: rotate(-5deg);
+}
+.tags .black-bg .nav-links {
+  text-align: left;
+  padding: 30px 20px 30px 25px;
+  transform: rotate(5deg);
+}
+.tags .black-bg .nav-links a {
+  font-family: "Londrina Solid", cursive;
+  color: #bfbfbf;
+  font-size: 1.3em;
+  display: block;
+  letter-spacing: 3px;
+  padding: 5px 0;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+}
+.tags .black-bg .nav-links a:hover {
+  color: #6cff0d;
+}
+.tags .tags-mark {
+  position: absolute;
+  max-width: 200px;
+  right: 250px;
+  top: 260px;
+  z-index: -1;
+}
+@media screen and (max-width: 1024px) {
   .tags .tags-mark {
-    position: absolute;
-    max-width: 200px;
-    right: 250px;
-    top: 260px;
-    z-index: -1; }
-    @media screen and (max-width: 1024px) {
-      .tags .tags-mark {
-        max-width: 170px;
-        right: 230px; } }
-  .tags .ballchain {
-    background: url("../imgs/ballchain.png") no-repeat;
-    position: absolute;
-    height: 100vh;
-    width: 500px;
-    top: 0;
-    left: -350px;
-    z-index: -1; }
-  .tags .tag {
-    font-family: "Londrina Solid", cursive;
-    background: #6cff0d;
-    color: #000;
-    font-size: 1.4em;
-    text-align: center;
-    display: block;
-    width: 100%;
-    height: auto;
-    border-radius: 30px;
-    padding: 30px 10px;
-    overflow: visible;
-    transition: all 0.3s ease;
-    -webkit-transition: all 0.3s ease;
-    -moz-transition: all 0.3s ease; }
-    .tags .tag.active, .tags .tag:hover {
-      background: #fff;
-      color: #000;
-      position: relative;
-      z-index: 2;
-      box-shadow: 5px 3px 0 #000; }
-    .tags .tag.inactive {
-      background: #084b06;
-      color: #4bc000; }
-      .tags .tag.inactive:hover {
-        background: #fff;
-        color: #000; }
-        .tags .tag.inactive:hover .fa {
-          color: #084b06; }
-      .tags .tag.inactive .fa {
-        color: #00ff24; }
-    .tags .tag .fa {
-      color: #0c7109;
-      font-size: 0.8em;
-      position: relative;
-      right: 15px; }
-  .tags .animanga {
-    position: relative;
-    right: 10px; }
-  .tags .games {
-    position: relative;
-    right: 40px;
-    top: -10px;
-    transform: rotate(7deg); }
-  .tags .movies {
-    position: relative;
-    right: 70px;
-    top: -10px;
-    transform: rotate(20deg); }
-  .tags .misc {
-    position: relative;
-    right: 115px;
-    top: -20px;
-    transform: rotate(28deg); }
-  .tags .random {
-    position: relative;
-    right: 185px;
-    top: -25px;
-    transform: rotate(45deg); }
-  .tags .indicator {
-    height: 0px; }
+    max-width: 170px;
+    right: 230px;
+  }
+}
+.tags .ballchain {
+  background: url("../imgs/ballchain.png") no-repeat;
+  position: absolute;
+  height: 100vh;
+  width: 500px;
+  top: 0;
+  left: -350px;
+  z-index: -1;
+}
+.tags .tag-wrapper {
+  position: relative;
+}
+.tags .tag-wrapper .tag {
+  font-family: "Londrina Solid", cursive;
+  background: #6cff0d;
+  color: #000;
+  font-size: 1.4em;
+  text-align: center;
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 30px;
+  padding: 30px 10px;
+  overflow: visible;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+}
+.tags .tag-wrapper .tag .fa {
+  color: #0c7109;
+  font-size: 0.8em;
+  position: relative;
+  right: 15px;
+}
+.tags .tag-wrapper.inactive .tag {
+  background: #084b06;
+  color: #4bc000;
+}
+.tags .tag-wrapper.inactive .tag:hover {
+  background: #fff;
+  color: #000;
+}
+.tags .tag-wrapper.inactive .tag:hover .fa {
+  color: #084b06;
+}
+.tags .tag-wrapper.inactive .tag .fa {
+  color: #00ff24;
+}
+.tags .tag-wrapper.active, .tags .tag-wrapper:hover {
+  z-index: 99;
+}
+.tags .tag-wrapper.active .tag, .tags .tag-wrapper:hover .tag {
+  background: #fff;
+  color: #000;
+  position: relative;
+  z-index: 2;
+  box-shadow: 5px 3px 0 #000;
+}
+.tags .animanga {
+  position: relative;
+  right: 10px;
+}
+.tags .games {
+  position: relative;
+  right: 40px;
+  top: -10px;
+  transform: rotate(7deg);
+}
+.tags .movies {
+  position: relative;
+  right: 70px;
+  top: -10px;
+  transform: rotate(20deg);
+}
+.tags .misc {
+  position: relative;
+  right: 115px;
+  top: -20px;
+  transform: rotate(28deg);
+}
+.tags .random {
+  position: relative;
+  right: 185px;
+  top: -25px;
+  transform: rotate(45deg);
+}
+.tags .indicator {
+  height: 0px;
+}
 
 /* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
       ACTUAL TAGS DISPLAY
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
 .tags-content {
-  padding-top: 15%; }
-  .tags-content .tag-content {
-    background: #6cff0d;
-    font-size: 1.3em;
-    font-weight: 700;
-    text-align: center;
-    display: none;
-    height: 80vh;
-    padding: 30px;
-    border-radius: 10px;
-    overflow-y: scroll;
-    overflow-x: hidden;
-    animation-duration: 0.3s;
-    transition: all 0.3s ease;
-    -webkit-transition: all 0.3s ease;
-    -moz-transition: all 0.3s ease; }
-    .tags-content .tag-content.active {
-      display: block; }
-    .tags-content .tag-content a {
-      position: relative;
-      display: block;
-      color: #000;
-      padding: 10px; }
-      @media screen and (max-width: 1024px) {
-        .tags-content .tag-content a {
-          padding: 8px; } }
-      .tags-content .tag-content a .tags-hover {
-        position: absolute;
-        width: 95%;
-        top: 5px;
-        display: none; }
-        @media screen and (max-width: 1024px) {
-          .tags-content .tag-content a .tags-hover {
-            top: 10px; } }
-      .tags-content .tag-content a .tag-text {
-        position: relative; }
-      .tags-content .tag-content a:hover {
-        background: #bfbfbf; }
-      .tags-content .tag-content a:hover .tags-hover {
-        display: block; }
-    .tags-content .tag-content::-webkit-scrollbar {
-      background: #fff;
-      width: 5px;
-      border-radius: 10px; }
-    .tags-content .tag-content::-webkit-scrollbar-thumb {
-      background: #000;
-      width: 3px;
-      border-radius: 10px; }
+  padding-top: 15%;
+}
+.tags-content .tag-content {
+  background: #6cff0d;
+  font-size: 1.3em;
+  font-weight: 700;
+  text-align: center;
+  display: none;
+  height: 80vh;
+  padding: 30px;
+  border-radius: 10px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  animation-duration: 0.3s;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+}
+.tags-content .tag-content.active {
+  display: block;
+}
+.tags-content .tag-content a {
+  position: relative;
+  display: block;
+  color: #000;
+  padding: 10px;
+}
+@media screen and (max-width: 1024px) {
+  .tags-content .tag-content a {
+    padding: 8px;
+  }
+}
+.tags-content .tag-content a .tags-hover {
+  position: absolute;
+  width: 95%;
+  top: 5px;
+  display: none;
+}
+@media screen and (max-width: 1024px) {
+  .tags-content .tag-content a .tags-hover {
+    top: 10px;
+  }
+}
+.tags-content .tag-content a .tag-text {
+  position: relative;
+}
+.tags-content .tag-content a:hover {
+  background: #bfbfbf;
+}
+.tags-content .tag-content a:hover .tags-hover {
+  display: block;
+}
+.tags-content .tag-content::-webkit-scrollbar {
+  background: #fff;
+  width: 5px;
+  border-radius: 10px;
+}
+.tags-content .tag-content::-webkit-scrollbar-thumb {
+  background: #000;
+  width: 3px;
+  border-radius: 10px;
+}
 
 .money {
   font-family: "Londrina Solid", cursive;
@@ -214,35 +263,47 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
   padding: 10px;
   border-radius: 20px;
   transform: rotate(5deg);
-  z-index: 2; }
-  @media screen and (max-width: 1024px) {
-    .money {
-      bottom: 10px;
-      right: 7px;
-      height: 120px;
-      width: 230px; } }
+  z-index: 2;
+}
+@media screen and (max-width: 1024px) {
+  .money {
+    bottom: 10px;
+    right: 7px;
+    height: 120px;
+    width: 230px;
+  }
+}
+.money .money-title {
+  color: #6cff0d;
+  font-size: 1.6em;
+  border-bottom: 2px solid #fff;
+}
+@media screen and (max-width: 1024px) {
   .money .money-title {
-    color: #6cff0d;
-    font-size: 1.6em;
-    border-bottom: 2px solid #fff; }
-    @media screen and (max-width: 1024px) {
-      .money .money-title {
-        font-size: 1.4em; } }
+    font-size: 1.4em;
+  }
+}
+.money .money-amount {
+  color: #fff;
+  font-size: 2.6em;
+  letter-spacing: 5px;
+  border-bottom: 7px double #fff;
+}
+@media screen and (max-width: 1024px) {
   .money .money-amount {
-    color: #fff;
-    font-size: 2.6em;
-    letter-spacing: 5px;
-    border-bottom: 7px double #fff; }
-    @media screen and (max-width: 1024px) {
-      .money .money-amount {
-        font-size: 2.4em; } }
-    .money .money-amount .fa {
-      position: absolute;
-      left: 20px;
-      top: 53px; }
-      @media screen and (max-width: 1024px) {
-        .money .money-amount .fa {
-          top: 46px; } }
+    font-size: 2.4em;
+  }
+}
+.money .money-amount .fa {
+  position: absolute;
+  left: 20px;
+  top: 53px;
+}
+@media screen and (max-width: 1024px) {
+  .money .money-amount .fa {
+    top: 46px;
+  }
+}
 
 .jelly {
   -webkit-animation-name: jelly;
@@ -252,15 +313,18 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
   -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
   -webkit-animation-timing-function: linear;
-  animation-timing-function: linear; }
+  animation-timing-function: linear;
+}
 
 @keyframes jelly {
   from {
     transform-style: preserve-3d;
-    transform: skewX(40deg) rotateX(60deg) rotateY(10deg) rotateZ(-10deg) perspective(150px); }
+    transform: skewX(40deg) rotateX(60deg) rotateY(10deg) rotateZ(-10deg) perspective(150px);
+  }
   50% {
-    transform: skewX(-45deg); }
+    transform: skewX(-45deg);
+  }
   to {
-    transform: skewX(40deg) rotateX(-60deg) rotateY(-10deg) rotateZ(-10deg) perspective(150px); } }
-
-/*# sourceMappingURL=tags.css.map */
+    transform: skewX(40deg) rotateX(-60deg) rotateY(-10deg) rotateZ(-10deg) perspective(150px);
+  }
+}
