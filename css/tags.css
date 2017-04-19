@@ -88,8 +88,6 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
     top: 0;
     left: -350px;
     z-index: -1; }
-  .tags .animate-div {
-    animation-delay: 0.1s; }
   .tags .tag {
     font-family: "Londrina Solid", cursive;
     background: #6cff0d;

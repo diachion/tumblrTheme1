@@ -30,13 +30,11 @@
         </div>
         <img class="tags-mark" src="imgs/tags.png">
         <div class="ballchain animated bounceInUp"></div>
-        <div class="animate-div">
-          <div class="animated bounceInUp"><a class="tag animanga" href="#animanga"><span class="fa fa-circle"></span> Anime / Manga</a></div>
-          <div class="animated bounceInUp" style="animation-delay: 0.1s;"><a class="tag games" href="#games"><span class="fa fa-circle"></span> Video Games</a></div>
-          <div class="animated bounceInUp" style="animation-delay: 0.15s;"><a class="tag movies" href="#movies"><span class="fa fa-circle"></span> Movies / Shows</a></div>
-          <div class="animated bounceInUp" style="animation-delay: 0.2s;"><a class="tag misc" href="#misc"><span class="fa fa-circle"></span> Miscellaneous</a></div>
-          <div class="animated bounceInUp" style="animation-delay: 0.25s;"><a class="tag random" href="#random"><span class="fa fa-circle"></span> Random Tags</a></div>
-        </div>
+        <div class="animated bounceInUp"><a class="tag animanga" href="#animanga"><span class="fa fa-circle"></span> Anime / Manga</a></div>
+        <div class="animated bounceInUp" style="animation-delay: 0.1s;"><a class="tag games" href="#games"><span class="fa fa-circle"></span> Video Games</a></div>
+        <div class="animated bounceInUp" style="animation-delay: 0.15s;"><a class="tag movies" href="#movies"><span class="fa fa-circle"></span> Movies / Shows</a></div>
+        <div class="animated bounceInUp" style="animation-delay: 0.2s;"><a class="tag misc" href="#misc"><span class="fa fa-circle"></span> Miscellaneous</a></div>
+        <div class="animated bounceInUp" style="animation-delay: 0.25s;"><a class="tag random" href="#random"><span class="fa fa-circle"></span> Random Tags</a></div>
       </div>
     </div>
 
@@ -240,7 +238,7 @@
 $(document).ready(function(){
   $('ul.tabs').tabs();
 
-  $('.tags .animate-div').find('.tag').click(function(e) {
+  $('.tags').find('.tag').click(function(e) {
 
   	e.preventDefault(); //Prevents the page from scrolling to the anchor point
 
