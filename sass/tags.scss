@@ -97,14 +97,14 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
     background: $nav;
     position: absolute;
     height: 150px;
-    width: 300px;
+    width: 280px;
     top: 150px;
-    right: 70px;
+    right: 95px;
     border-radius: 20px;
     transform:rotate(-5deg);
     .nav-links {
       text-align: left;
-      padding: 30px 20px 30px 25px;
+      padding: 25px 20px 30px 25px;
       transform:rotate(5deg);
       a {
         font-family: $headings;
@@ -240,7 +240,7 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
     text-align: center;
     display: none;
     height: 80vh;
-    padding: 30px;
+    padding: 15px 15px 25px 10px;
     border-radius: 10px;
     overflow-y: scroll;
     overflow-x: hidden;
@@ -291,6 +291,13 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
       }
       .tag-text {
         position: relative;
+        .fa {
+          background: $text;
+          color: #ff0000;
+          padding: 5px 5px 2px 15px;
+          margin-right: 5px;
+          border-radius: 3px;
+        }
       }
       .tag-price {
         font-weight: 700;
@@ -328,10 +335,10 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
   font-family: $headings;
   background: $text;
   position: absolute;
-  bottom: 20px;
-  right: 15px;
+  bottom: 15px;
+  right: 10px;
   height: 130px;
-  width: 250px;
+  width: 230px;
   padding: 10px;
   border-radius: 20px;
   transform:rotate(5deg);
