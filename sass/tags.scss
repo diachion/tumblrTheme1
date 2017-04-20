@@ -256,10 +256,13 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
       .jelly {
         position: absolute;
         display: none;
-        width: 95.2%;
+        width: 95%;
         top: -2px;
         bottom: -10px;
         left: 10px;
+        @include desktop {
+          top: 0;
+        }
       }
       &:hover .jelly {
         display: block;
@@ -272,17 +275,17 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
       padding: 1px 10px;
       margin: 10px auto;
       overflow: hidden;
-      @include desktop {
-        padding: 8px;
-      }
+      // @include desktop {
+      //   padding: 8px;
+      // }
       .tags-hover {
         position: absolute;
         width: 95%;
-        //top: 0;
+        top: 0;
         display: none;
-        @include desktop {
-          top: 10px;
-        }
+        // @include desktop {
+        // top: 10px;
+        // }
       }
       .tag-text {
         position: relative;

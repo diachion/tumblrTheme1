@@ -190,10 +190,13 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
       .tags-content .tag-content .content-wrapper .jelly {
         position: absolute;
         display: none;
-        width: 95.2%;
+        width: 95%;
         top: -2px;
         bottom: -10px;
         left: 10px; }
+        @media screen and (max-width: 1024px) {
+          .tags-content .tag-content .content-wrapper .jelly {
+            top: 0; } }
       .tags-content .tag-content .content-wrapper:hover .jelly {
         display: block; }
     .tags-content .tag-content a {
@@ -203,16 +206,11 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
       padding: 1px 10px;
       margin: 10px auto;
       overflow: hidden; }
-      @media screen and (max-width: 1024px) {
-        .tags-content .tag-content a {
-          padding: 8px; } }
       .tags-content .tag-content a .tags-hover {
         position: absolute;
         width: 95%;
+        top: 0;
         display: none; }
-        @media screen and (max-width: 1024px) {
-          .tags-content .tag-content a .tags-hover {
-            top: 10px; } }
       .tags-content .tag-content a .tag-text {
         position: relative; }
       .tags-content .tag-content a:hover {
