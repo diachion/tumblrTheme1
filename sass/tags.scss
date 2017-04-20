@@ -200,7 +200,6 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
       }
     }
   }
-
   .animanga {
     right: 10px;
   }
@@ -238,7 +237,6 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
   .tag-content {
     background: $primary;
     font-size: 1.3em;
-    font-weight: 700;
     text-align: center;
     display: none;
     height: 80vh;
@@ -287,8 +285,24 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
         // top: 10px;
         // }
       }
+      .flex-content {
+        display: flex;
+        justify-content: space-between;
+      }
       .tag-text {
         position: relative;
+      }
+      .tag-price {
+        font-weight: 700;
+        position: relative;
+        .fa {
+          font-size: 0.8em;
+        }
+        .quantity {
+          background: darken($primary,12%);
+          padding: 0 20px 0 10px;
+          margin-left: 5px;
+        }
       }
       &:hover {
         background: #bfbfbf;
@@ -341,17 +355,23 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
     font-size: 2.6em;
     letter-spacing: 5px;
     border-bottom: 7px double $secondary;
+    padding: 0 10px;
+    display: flex;
+    justify-content: space-between;
     @include desktop {
       font-size: 2.4em;
     }
     .fa {
-      position: absolute;
-      left: 20px;
-      top: 53px;
-      @include desktop {
-        top: 46px;
-      }
+      padding-top: 8px;
     }
+    // .fa {
+    //   position: absolute;
+    //   left: 20px;
+    //   top: 53px;
+    //   @include desktop {
+    //     top: 46px;
+    //   }
+    // }
   }
 }
 

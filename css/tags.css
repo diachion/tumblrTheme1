@@ -171,7 +171,6 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
   .tags-content .tag-content {
     background: #6cff0d;
     font-size: 1.3em;
-    font-weight: 700;
     text-align: center;
     display: none;
     height: 80vh;
@@ -211,8 +210,20 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
         width: 95%;
         top: 0;
         display: none; }
+      .tags-content .tag-content a .flex-content {
+        display: flex;
+        justify-content: space-between; }
       .tags-content .tag-content a .tag-text {
         position: relative; }
+      .tags-content .tag-content a .tag-price {
+        font-weight: 700;
+        position: relative; }
+        .tags-content .tag-content a .tag-price .fa {
+          font-size: 0.8em; }
+        .tags-content .tag-content a .tag-price .quantity {
+          background: #51cf00;
+          padding: 0 20px 0 10px;
+          margin-left: 5px; }
       .tags-content .tag-content a:hover {
         background: #bfbfbf; }
       .tags-content .tag-content a:hover .tags-hover {
@@ -255,17 +266,15 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
     color: #fff;
     font-size: 2.6em;
     letter-spacing: 5px;
-    border-bottom: 7px double #fff; }
+    border-bottom: 7px double #fff;
+    padding: 0 10px;
+    display: flex;
+    justify-content: space-between; }
     @media screen and (max-width: 1024px) {
       .money .money-amount {
         font-size: 2.4em; } }
     .money .money-amount .fa {
-      position: absolute;
-      left: 20px;
-      top: 53px; }
-      @media screen and (max-width: 1024px) {
-        .money .money-amount .fa {
-          top: 46px; } }
+      padding-top: 8px; }
 
 .jelly {
   -webkit-animation-name: jelly;
