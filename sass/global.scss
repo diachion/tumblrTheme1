@@ -94,10 +94,9 @@ a {
 
 .modal {
   width: 100%;
-  max-width: 800px;
+  max-width: 850px;
   z-index: 999999 !important;
   background: transparent;
-  color: $accent3v1;
   border-radius: 10px;
   box-shadow: none;
   max-height: 100%;
@@ -108,16 +107,16 @@ a {
     background: transparent;
     >h4 {
       position: absolute;
-      bottom: -20px;
+      bottom: -50px;
       width: 60%;
       color: #333434;
       font-size: 2.5vmin;
       text-align: center;
-      left: 10%;
+      left: 20%;
       background-image: url('../imgs/modal_header_white.svg');
       background-repeat: no-repeat;
       background-size: 100%;
-      padding: .8em 0 .5em 0;
+      padding: .9em 0 .5em 0;
       right: 0;
       margin: 0;
     }
@@ -126,14 +125,14 @@ a {
     overflow: hidden;
     .modal-text{
       position: relative;
-      padding: 5% 0 15% 0;
+      padding: 8% 0 10% 0;
          &::before {
           content: "";
           position: absolute;
-          width: 108%;
-          height: 110%;
-          top: -90px;
-          left: -40px;
+          width: 103%;
+          height: 115%;
+          top: -123px;
+          left: -23px;
           background-image: url('../imgs/modal_top.svg');
           background-repeat: no-repeat;
           background-size: cover;
@@ -146,7 +145,7 @@ a {
           height: 100%;
           bottom: 10px;
           transform: rotate(-2deg);
-          left: 16px;
+          left: 19px;
           background-image: url('../imgs/modal_bottom.svg');
           background-repeat: no-repeat;
           background-size: cover;
@@ -156,17 +155,35 @@ a {
         color: $text;
         position: relative;
         min-height: 150px;
-        max-height: 350px;
+        max-height: 340px;
         width: 80%;
         left: -1px;
         margin: 0 auto;
-        padding: 10px;
+        padding: 0 20px;
         overflow-y: auto;
         >p>a {
-          color: $accent3v1;
+          color: $primary;
           &:hover {
-            color: $secondary;
+            color: $text;
           }
+        }
+        .egg {
+          text-indent: 10px;
+          margin: 0;
+          .bacon {
+            text-indent: 10px;
+            margin: 0;
+          }
+        }
+        &::-webkit-scrollbar {
+          background: $secondary;
+          width: 5px;
+          border-radius: 10px;
+        }
+        &::-webkit-scrollbar-thumb {
+          background: $primary;
+          width: 3px;
+          border-radius: 10px;
         }
       }
     }
