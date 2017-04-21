@@ -94,7 +94,7 @@ a {
 
 .modal {
   width: 100%;
-  max-width: 650px;
+  max-width: 800px;
   z-index: 999999 !important;
   background: transparent;
   color: $accent3v1;
@@ -103,7 +103,7 @@ a {
   max-height: 100%;
   .modal-header {
     background: url('../imgs/modal_header_ask.png') no-repeat;
-    height: 105px;
+    height: 162px;
     background-size: 100% auto;
     background-position: 0 100%;
     position: relative;
@@ -111,11 +111,11 @@ a {
     >h4 {
       position: absolute;
       bottom: 13%;
-      color: #000;
+      color: #333434;
       font-size: 2.5vmin;
       text-align: center;
       left: 0;
-      transform: rotate(-3deg);
+      transform: rotate(-2deg);
       right: 0;
       margin: 0;
     }
@@ -129,6 +129,7 @@ a {
       width: 99.25%;
       padding-bottom: 30px;
       .modal-text-content {
+        color: $text;
         position: relative;
         min-height: 150px;
         max-height: 350px;
