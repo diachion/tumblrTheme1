@@ -56,7 +56,7 @@ a {
     .modal .modal-header .cover-up {
       position: absolute;
       width: 0;
-      height: 35px;
+      height: 34px;
       border-top: 20px solid transparent;
       border-left: 50px solid #fff;
       right: 30%;
