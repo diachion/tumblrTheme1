@@ -114,19 +114,19 @@ a {
     .dagger { // NOT DAGGER FROM FF9, GEEZ
       position: absolute;
       width: 240px;
-      top: -110px;
+      top: -105px;
       right: 45px;
       z-index: 1;
       animation-duration: 0.25s;
     }
     .cover-up {
       position: absolute;
-      width: 40px;
-      height: 40px;
+      width: 0;
+      height: 35px;
       border-top: 20px solid transparent;
-      border-left: 51px solid white;
+      border-left: 50px solid #fff;
       right: 30%;
-      top: 102%;
+      top: 108%;
       z-index: 999;
     }
     .modal-negotation {
