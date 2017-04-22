@@ -101,6 +101,11 @@ a {
   box-shadow: none;
   max-height: 100%;
   overflow-y: visible;
+  animation-duration: 0.2s;
+  // get rid of material design animation
+  //transform: scaleX(1) !important;
+  //opacity: 1 !important;
+  top: 10% !important;
   .modal-header {
     position: relative;
     width: 100%;
@@ -224,6 +229,7 @@ a {
     40%, 43%, 70% {
         -webkit-animation-timing-function: cubic-bezier(.755, .05, .855, .06);
         animation-timing-function: cubic-bezier(.755, .05, .855, .06);
+        -webkit-transform: scale(1,0.9);
         transform: scale(1,0.9);
     }
     70% {
@@ -245,6 +251,7 @@ a {
     40%, 43%, 70% {
         -webkit-animation-timing-function: cubic-bezier(.755, .05, .855, .06);
         animation-timing-function: cubic-bezier(.755, .05, .855, .06);
+        -webkit-transform: scale(1,0.9);
         transform: scale(1,0.9);
     }
     70% {

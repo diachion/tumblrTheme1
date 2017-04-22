@@ -38,7 +38,9 @@ a {
   border-radius: 10px;
   box-shadow: none;
   max-height: 100%;
-  overflow-y: visible; }
+  overflow-y: visible;
+  animation-duration: 0.2s;
+  top: 10% !important; }
   .modal .modal-header {
     position: relative;
     width: 100%;
@@ -133,6 +135,7 @@ a {
   40%, 43%, 70% {
     -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
     animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    -webkit-transform: scale(1, 0.9);
     transform: scale(1, 0.9); }
   70% {
     -webkit-transform: translate3d(5px, -5px, 0);
@@ -148,6 +151,7 @@ a {
   40%, 43%, 70% {
     -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
     animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    -webkit-transform: scale(1, 0.9);
     transform: scale(1, 0.9); }
   70% {
     -webkit-transform: translate3d(5px, -5px, 0);

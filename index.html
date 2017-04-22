@@ -73,7 +73,7 @@
 
 
 <!-- =-=-=-=-=-=-=-=-=-= "ASK" MODAL START =-=-=-=-=-=-=-=-=-= -->
-<div id="modal-ask" class="modal">
+<div id="modal-ask" class="modal animated rotateInUpLeft">
     <div class="modal-content">
       <div class="modal-header">
         <h4>This is a Hold Up!</h4>
@@ -98,7 +98,7 @@
 <!-- =-=-=-=-=-=-=-=-=-= "ASK" MODAL END =-=-=-=-=-=-=-=-=-= -->
 
 <!-- =-=-=-=-=-=-=-=-=-= "ME" MODAL START =-=-=-=-=-=-=-=-=-= -->
-<div id="modal-me" class="modal">
+<div id="modal-me" class="modal animated rotateInUpLeft">
     <div class="modal-content">
       <div class="modal-header">
         <h4>The Protagonist</h4>
@@ -125,7 +125,7 @@
 <!-- =-=-=-=-=-=-=-=-=-= "ME" MODAL END =-=-=-=-=-=-=-=-=-= -->
 
 <!-- =-=-=-=-=-=-=-=-=-= "BLOG" MODAL START =-=-=-=-=-=-=-=-=-= -->
-<div id="modal-blog" class="modal">
+<div id="modal-blog" class="modal animated rotateInUpLeft">
     <div class="modal-content">
       <div class="modal-header">
         <h4>The Blog</h4>
@@ -152,7 +152,7 @@
 <!-- =-=-=-=-=-=-=-=-=-= "BLOG" MODAL END =-=-=-=-=-=-=-=-=-= -->
 
 <!-- =-=-=-=-=-=-=-=-=-= "CREDITS" MODAL START =-=-=-=-=-=-=-=-=-= -->
-<div id="modal-credits" class="modal">
+<div id="modal-credits" class="modal animated rotateInUpLeft">
     <div class="modal-content">
       <div class="modal-header">
         <h4>Credits</h4>
@@ -552,38 +552,38 @@
 
 <script>
 $(document).ready(function(){
-      $('.parallax').parallax();
-      $('.modal-trigger').leanModal();
-      $("[data-tooltip]").each(function() {
-        	var id = $(this).attr("data-tooltip-id"),
-        		color = $(this).css("color");
-        	$("#" + id).css("color", color);
-        	
-       });
-    });
+  $('.parallax').parallax();
+  $('.modal-trigger').leanModal();
+  
+  $("[data-tooltip]").each(function() {
+    	var id = $(this).attr("data-tooltip-id"),
+    		color = $(this).css("color");
+    	$("#" + id).css("color", color);
+  });
 
-    $('.nav-wrapper').pushpin({ top: $('header.parallax-container').height() });
+  $('.nav-wrapper').pushpin({ top: $('header.parallax-container').height() });
 
-    $(window).scroll(function(){
-      if($(window).scrollTop() > $("header").height()) {
-        $(".pagination").addClass("stickyPagination");
-      } else {
-        $(".pagination").removeClass("stickyPagination");
-      }
-    });
+  $(window).scroll(function(){
+    if($(window).scrollTop() > $("header").height()) {
+      $(".pagination").addClass("stickyPagination");
+    } else {
+      $(".pagination").removeClass("stickyPagination");
+    }
+  });
 
-    // ------------ scroll down ------------
-    $("a.smooth-scroll").click(function(){
-      $("html, body").animate({
-          scrollTop: $( $.attr(this, "href") ).offset().top+1
-      }, 500);
-      return false;
-    });
+  // ------------ scroll down ------------
+  $("a.smooth-scroll").click(function(){
+    $("html, body").animate({
+        scrollTop: $( $.attr(this, "href") ).offset().top+1
+    }, 500);
+    return false;
+  });
 
-    // ------------ boingy shit ------------
-    $(".header-menu img").hover(function(){
-      $(this).toggleClass("animated rubberBand");
-    });
+  // ------------ boingy shit ------------
+  $(".header-menu img").hover(function(){
+    $(this).toggleClass("animated rubberBand");
+  });
+});
 </script>
 
 </body>
