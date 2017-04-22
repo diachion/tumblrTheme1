@@ -100,6 +100,7 @@ a {
   border-radius: 10px;
   box-shadow: none;
   max-height: 100%;
+  overflow-y: visible;
   .modal-header {
     position: relative;
     width: 100%;
@@ -122,7 +123,7 @@ a {
     }
   }
   .modal-content {
-    overflow: hidden;
+    //overflow: hidden;
     .modal-text{
       position: relative;
       padding: 8% 0 10% 0;
@@ -192,18 +193,68 @@ a {
       position: relative;
       width: 100%;
       top: -100px;
-      >a {
-        font-family: $headings;
-        background: $accent3v1;
-        color: $secondary;
-        border-radius: 10px;
-        &:hover {
-          background: $text;
-          color: $secondary;
-        }
+      .close-button {
+        position: absolute;
+        width: 100%;
+        max-width: 150px;
+        right: -100px;
+        bottom: 0;
+        animation-duration: 0.4s;
       }
+      // >a {
+      //   font-family: $headings;
+      //   background: $accent3v1;
+      //   color: $secondary;
+      //   border-radius: 10px;
+      //   &:hover {
+      //     background: $text;
+      //     color: $secondary;
+      //   }
+      // }
     }
   }
+}
+
+@-webkit-keyframes bounce {
+    0%, 20%, 53%, 80%,
+    to {
+        -webkit-animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+        animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+    }
+    40%, 43%, 70% {
+        -webkit-animation-timing-function: cubic-bezier(.755, .05, .855, .06);
+        animation-timing-function: cubic-bezier(.755, .05, .855, .06);
+        transform: scale(1,0.9);
+    }
+    70% {
+        -webkit-transform: translate3d(5px, -5px, 0);
+        transform: translate3d(5px, -5px, 0);
+    }
+    90% {
+        -webkit-transform: translate3d(5px, -5px, 0);
+        transform: translate3d(5px, -5px, 0);
+    }
+}
+
+@keyframes bounce {
+    0%, 20%, 53%, 80%,
+    to {
+        -webkit-animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+        animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+    }
+    40%, 43%, 70% {
+        -webkit-animation-timing-function: cubic-bezier(.755, .05, .855, .06);
+        animation-timing-function: cubic-bezier(.755, .05, .855, .06);
+        transform: scale(1,0.9);
+    }
+    70% {
+        -webkit-transform: translate3d(5px, -5px, 0);
+        transform: translate3d(5px, -5px, 0);
+    }
+    90% {
+        -webkit-transform: translate3d(5px, -5px, 0);
+        transform: translate3d(5px, -5px, 0);
+    }
 }
 
 * {
