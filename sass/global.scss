@@ -47,7 +47,7 @@ $primary: #ff0000;
 $secondary: #000;
 $text: #fff;
 $link: #ff0000;
-$nav: #fff;
+$nav: #ff0000;
 $accent1: #00FFFF; // bright blue
 $accent2: #ebffdf; // light yellow-green
 $accent3: #084b06; // dark green
@@ -352,7 +352,7 @@ a {
       NAVIGATION
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
 .nav-wrapper {
-  background: $nav url('../imgs/nav_bg.png') repeat-x;
+  background: darken($nav,12%) url('../imgs/nav_bg-10.png') repeat-x;
   z-index: 999;
   &.pinned {
     width: 100%;

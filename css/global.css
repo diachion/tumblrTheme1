@@ -239,7 +239,7 @@ a {
       NAVIGATION
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
 .nav-wrapper {
-  background: #fff url("../imgs/nav_bg.png") repeat-x;
+  background: #c20000 url("../imgs/nav_bg-10.png") repeat-x;
   z-index: 999; }
   .nav-wrapper.pinned {
     width: 100%;
@@ -271,7 +271,7 @@ a {
       PAGINATION
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
 .pagination {
-  background: #fff;
+  background: #ff0000;
   text-align: center;
   width: 100%;
   padding: 5px 0;
