@@ -320,12 +320,13 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
     }
     &::-webkit-scrollbar {
       background: $secondary;
-      width: 5px;
+      width: 7px;
       border-radius: 10px;
     }
     &::-webkit-scrollbar-thumb {
       background: $text;
-      width: 3px;
+      width: 2px;
+      border: 2px solid $secondary;
       border-radius: 10px;
     }
   }

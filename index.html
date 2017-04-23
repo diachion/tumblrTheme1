@@ -119,7 +119,7 @@
 								</div>
 							</a>
 							<a class="link-wrapper" href="tags.html">
-								<span class="fallback">Tags_</span>
+								<span class="fallback">Tags</span>
 								<div class="img-wrapper">
 									<img class="normal" src="http://www.img.kevinquach.ca/wp-content/uploads/2017/04/tags.png">
 									<img class="active" src="http://www.img.kevinquach.ca/wp-content/uploads/2017/04/tags_red.png">
@@ -276,6 +276,9 @@
       <div class="modal-text">
         <div class="modal-text-content">
           <!-- <p><span class="fa fa-star"></span> <b>KnB Sprites:</b> <a href="http://nanairo-mikan.ciao.jp/bsk_main.htm" target="new">here</a></p> -->
+          <p><div class="disclaimer">
+            <span class="fa fa-exclamation-triangle"></span> <u><b>DISCLAIMER:</b></u> The images and designs that are created and used for this Persona 5 Tumblr theme are solely for entertainment purposes only. No copyright infringement intended. No profit is made from this Tumblr blog. The owner of this blog is in no way, shape, or form associated with Atlus.
+          </div></p>
           <p><span class="fa fa-star"></span> <b>Fire Emblem: Awakening pixels:</b> <a href="http://tacticiantwins-blog.tumblr.com/post/60677237887/1st-gen-pixels" target="new">here</a></p>
           <p>
             <span class="fa fa-photo"></span> <b>Images:</b>  <br/>
@@ -310,7 +313,7 @@
   <!-- -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
             SIDEBAR CONTENT
       -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- -->
-    <div class="col s12 m12 l4">
+    <div class="col s12 m12 l4 sidebarz">
 
       <!-- SEARCH BAR start -->
       <form>
@@ -653,12 +656,17 @@
     </div>
     <!-- POST TYPE: ASKS end -->
 
+    <div class="pagination">
+      <img class="prev" src="imgs/prev.png">
+      <img class="next" src="imgs/next.png">
+    </div>
+
     </div> <!-- col s8 -->
 
   </div> <!-- row -->
-  <audio id="chains" preload="auto">
+<!--   <audio id="chains" preload="auto">
 		<source src="http://www.img.kevinquach.ca/wp-content/uploads/2017/04/chain-sound.mp3" controls></source>
-	</audio>
+	</audio> -->
 </section>
 <!-- =-=-=-=-=-=-=-=-=-= CONTENT END =-=-=-=-=-=-=-=-=-= -->
 
@@ -684,13 +692,13 @@ $(document).ready(function(){
 
   $('.nav-wrapper').pushpin({ top: $('header.parallax-container').height() });
 
-  $(window).scroll(function(){
-    if($(window).scrollTop() > $("header").height()) {
-      $(".pagination").addClass("stickyPagination");
-    } else {
-      $(".pagination").removeClass("stickyPagination");
-    }
-  });
+  // $(window).scroll(function(){
+  //   if($(window).scrollTop() > (($("header").height()) + ($("nav").height()) + ($(".sidebarz").height()))) {
+  //     $(".pagination").addClass("stickyPagination");
+  //   } else {
+  //     $(".pagination").removeClass("stickyPagination");
+  //   }
+  // });
 
   // ------------ scroll down ------------
   $("a.smooth-scroll").click(function(){
@@ -701,7 +709,7 @@ $(document).ready(function(){
   });
 
   // ------------ boingy shit ------------
-  $(".header-menu img").hover(function(){
+  $(".header-menu img, .prev, .next").hover(function(){
     $(this).toggleClass("animated rubberBand");
   });
 

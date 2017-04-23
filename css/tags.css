@@ -236,11 +236,12 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
         display: block; }
     .tags-content .tag-content::-webkit-scrollbar {
       background: #fff;
-      width: 5px;
+      width: 7px;
       border-radius: 10px; }
     .tags-content .tag-content::-webkit-scrollbar-thumb {
       background: #000;
-      width: 3px;
+      width: 2px;
+      border: 2px solid #fff;
       border-radius: 10px; }
 
 .money {
