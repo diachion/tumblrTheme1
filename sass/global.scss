@@ -13,11 +13,18 @@ $headings: 'Londrina Solid', cursive;
 $body: 'Heebo', sans-serif;
 
 $mobile-width: 480px;
+$tabmini-width: 680px;
 $tablet-width: 768px;
 $desktop-width: 1024px;
 
 @mixin mobile {
   @media screen and (max-width: #{$mobile-width}) {
+    @content;
+  }
+}
+
+@mixin tabmini {
+  @media screen and (max-width: #{$tabmini-width}) {
     @content;
   }
 }
@@ -73,6 +80,7 @@ body {
   font-size: 0.9em;
   color: $text;
   background: url('../imgs/star_bg.jpg') repeat fixed;
+  overflow-x: hidden;
   //background-color: #770a10;
 }
 
@@ -82,6 +90,9 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
 
 .container {
   margin-top: 30px;
+  @include tabmini {
+    margin: -60px auto 0 auto;
+  }
 }
 
 a {
@@ -336,6 +347,19 @@ a {
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
 .parallax-container {
   height: 100vh;
+  @include tabmini {
+    padding-top: 40px;
+    height: auto;
+    .parallax {
+      position: relative;
+      img {
+        position: relative;
+        transform: none !important;
+        width: 100% !important;
+        left: 0;
+      }
+    }
+  }
   .header-menu {
     width: 100%;
     display: block;
@@ -343,15 +367,28 @@ a {
     bottom: 0;
     padding-bottom: 100px;
     text-align: center;
+    @include tablet {
+      padding: 0;
+      margin: 0 auto;
+      left: 0;
+      right: 0;
+    }
     a { 
     	display: inline-block;
     	img {
-      display: block;
-      margin: 10px auto;
-      -webkit-animation-duration: 0.3s;
-      -moz-animation-duration: 0.3s;
-      animation-duration: 0.3s;
+        display: block;
+        margin: 10px auto;
+        -webkit-animation-duration: 0.3s;
+        -moz-animation-duration: 0.3s;
+        animation-duration: 0.3s;
     	}
+      @include tablet {
+        transform: scale(.7);
+        margin: -10px auto;
+      }
+      @include mobile {
+        display: none;
+      }
     }
   }
 }
@@ -360,9 +397,63 @@ a {
 /* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
       NAVIGATION
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
+nav {
+  @include tabmini {
+    background: transparent;
+  }
+}
 .nav-wrapper {
   background: darken($nav,12%) url('../imgs/nav_bg-10.png') repeat-x;
   z-index: 999;
+  .menu-toggle {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    top: 7px;
+    right: 5px;
+    z-index: 9999;
+    cursor: pointer;
+    display: none;
+    @include tabmini {
+      display: block;
+    }
+    span {
+      width: 100%;
+      border-radius: 20px;
+      display: block;
+      height: 6px;
+      background: #fff;
+      margin: 2px 0;
+      border: 2px solid black;
+      position: relative;
+      transition: all .3s ease;
+      top: 0;
+      left: 0;
+      opacity: 1;
+    }
+    &.active {
+      span:nth-child(1) {
+        transform: rotate(45deg);
+        top: 10px;
+      }
+      span:nth-child(2) {
+        left: -8px;
+        opacity: 0;
+      }
+      span:nth-child(3) {
+        transform: rotate(-45deg);
+        top: -6px;
+      }
+    }
+  }
+  @include tabmini {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 40px !important;
+    background-size: 150px;
+  }
   &.pinned {
     width: 100%;
     height: 64px;
@@ -457,6 +548,8 @@ a {
       SIDEBAR
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
 form {
+  max-width: 400px;
+  margin: 0 auto;
   input[type="search"] {
     height: 36px !important; /* or height of nav */
     position: relative;
@@ -487,12 +580,20 @@ form {
 .card {
   //box-shadow: 2px -2px 0 0 rgba(25,255,253,1),-2px 2px 0 0 rgba(217,12,19,1);
   border-radius: 0;
-  margin: 30px 0;
+  margin: 30px auto;
+  max-width: 400px;
   .card-content {
     background: url('../imgs/diamond_top_bg.png');
     color: $text;
     padding: 2px 2px 8px 2px;
     border-radius: 0;
+    h5 {
+      white-space: nowrap;
+      font-size: 1.55em;
+      @include tabmini {
+        font-size: 1.45em;
+      }
+    }
     h6 {
       font-size: 1.5em;
     }
@@ -527,7 +628,13 @@ form {
     }
   }
 }
-
+.accordion-statuses {
+  max-width: 400px;
+  margin: 0 auto 30px auto;
+  li {
+    margin: 0 !important;
+  }
+}
 .collapsible {
   .collapsible-header {
     background: $secondary;
@@ -577,6 +684,9 @@ form {
     max-width: 650px;
     margin: 0 auto 40px auto;
     border-radius: 0;
+    @include desktop {
+      max-width: 565px;
+    }
   .content-meta {
     background: $secondary;
     width: 100%;
@@ -585,6 +695,16 @@ form {
     margin: 0 auto;
     //border-bottom: 1px solid $secondary;
     padding: 35px 0 7px 30px;
+    @include tabmini {
+      padding: 10px 0 10px 10px;
+    }
+    .meta-wrap {
+      display: inline-block;
+      position: relative;
+      @include tabmini {
+        margin: 10px auto;
+      }
+    }
     .fa {
       font-size: 1.3em;
       position: relative;
@@ -632,11 +752,44 @@ form {
 
 .content-post {
   width: 100%;
-  max-width: 580px;
-  margin: 85px auto 0 auto;
-  padding: 20px;
+  padding: 100px 20px;
+  position: relative;
   @include desktop {
-    padding: 13px;
+    padding: 100px 10px;
+  }
+  &::before {  
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background-image: url('../imgs/top_rip_v2.png');
+    background-repeat:  no-repeat;
+    background-size: 100%;
+  }
+  &::after {  
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background-image: url('../imgs/bottom_rip_v2.png');
+    background-repeat:  no-repeat;
+    background-position: bottom;
+    background-size: 100%;
+  }
+  .content-post-inner {
+    max-width: 540px;
+    margin: 0 auto;
+    @include tabmini {
+      img {
+        display: block;
+        width: 100%;
+        margin: 5px 0;
+      }
+    }
   }
   .post-title {
     font-family: $headings;
@@ -644,7 +797,8 @@ form {
     margin-bottom: 15px;
   }
   .photoset {
-    margin-bottom: 15px;
+    margin: 0 auto;
+
   }
   .chat-post {
     margin-top: 15px;
@@ -721,9 +875,16 @@ form {
   position: absolute;
   right: -60px;
   top: 15px;
+  @include desktop {
+    right: 10px;
+    top: 5px;
+  }
   .btn-reblog, .btn-like {
     display: block;
     margin-bottom: 10px;
+    @include desktop {
+      margin-bottom: 5px;
+    }
   }
   .btn-like {
     background: rgba(0,0,0,0.7);
@@ -747,7 +908,7 @@ form {
 .content-tags {
   width: 100%;
   max-width: 650px;
-  margin: 70px auto 0 auto;
+  margin: 0 auto;
   background: $secondary;
   color: $text;
   padding: 5px 30px 30px 30px;
@@ -787,17 +948,67 @@ form {
   }
 }
 
+
 /* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
       FANCY NAV
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
 .navbar {
   text-align: center;
   margin-top: 18px;
+  @include desktop {
+    margin-top: 14px;
+  }
+  @include tabmini {
+    position: fixed;
+    width: 100%;
+    background: #c20000;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 20px;
+    top: -100%;
+    transition: all .3s ease;
+    &.active {
+      top: 0;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 20px;
+      top: 0;
+      left: 0;
+      background: url("../imgs/nav_bg-10.png") repeat-x;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 20px;
+      bottom: 0;
+      left: 0;
+      transform: rotate(-180deg);
+      background: url("../imgs/nav_bg-10.png") repeat-x;
+    }
+  }
 }
 .link-wrapper {
   position: relative;
   display: inline-block;
-  margin: 0px 16px;
+  margin: 0px 14px;
+  @include desktop {
+    margin: 0 -2px;
+    transform: scale(.8);
+  }
+  @include tablet {
+    margin: 0 - 10px;
+    transform: scale(.65);
+  }
+  @include tabmini {
+    display: block;
+    max-width: 150px;
+    margin: 0 auto;
+  }
   .fallback {
     font-size: 2.25em;
     letter-spacing: 4px;

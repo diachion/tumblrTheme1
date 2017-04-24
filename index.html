@@ -40,6 +40,11 @@
               <a class="waves-effect waves-light btn faa-parent animated-hover" href="tags.html"><span class="fa fa-tags faa-shake"></span> Tags</a>
               <a class="waves-effect waves-light btn faa-parent animated-hover modal-trigger" href="#modal-credits"><span class="fa fa-heart faa-shake"></span> Credits</a>
             </div> -->
+            <a class="menu-toggle">
+            	<span></span>
+            	<span></span>
+            	<span></span>
+            </a>
             <div class="navbar">
 							<a class="link-wrapper" href="#">
 								<span class="fallback">Index</span>
@@ -316,7 +321,7 @@
     <div class="col s12 m12 l4 sidebarz">
 
       <!-- SEARCH BAR start -->
-      <form>
+      <form class="search-bar">
         <div class="input-field">
           <input id="search" type="search" required>
           <label for="search"><span class="fa fa-search"></span> Infiltrate this Palace!</label>
@@ -382,7 +387,7 @@
       </div>
 
       <!-- ACCORDION STATUSES start -->
-      <ul class="collapsible popout" data-collapsible="accordion">
+      <ul class="collapsible popout accordion-statuses" data-collapsible="accordion">
         <li>
           <div class="collapsible-header"> <h6><span class="fa fa-television"></span> Watching</h6></div>
           <div class="collapsible-body">
@@ -433,21 +438,28 @@
 
       <div class="content-bg">
         <div class="content-meta">
-          <div class="fa fa-calendar"></div><div class="meta-text"> August 15, 2016</div>
-          <div class="fa fa-clock-o"></div><div class="meta-text"> 21:46</div>
-          <div class="fa fa-bookmark"></div><div class="meta-text"> 4,839 Notes</div>
+        	<div class="meta-wrap">
+          	<div class="fa fa-calendar"></div><div class="meta-text"> August 15, 2016</div>
+          </div>
+          <div class="meta-wrap">
+          	<div class="fa fa-clock-o"></div><div class="meta-text"> 21:46</div>
+          </div>
+          <div class="meta-wrap">
+          	<div class="fa fa-bookmark"></div><div class="meta-text"> 4,839 Notes</div>
+          </div>
         </div>
-        <img class="rip" src="imgs/top_rip_v2.png">
+    
 
         <div class="content-post">
-          <div class="photoset">
-            <img src="imgs/1v2.gif"> <img src="imgs/2v2.gif">
-            <img src="imgs/MUMEI_bannerv3-2.jpg"> <img src="imgs/3v2.gif">
-            <img src="imgs/4v2.gif"> <img src="imgs/5v2.gif">
+        	<div class="content-post-inner">
+	          <div class="photoset">
+	            <img src="imgs/1v2.gif"> <img src="imgs/2v2.gif">
+	            <img src="imgs/MUMEI_bannerv3-2.jpg"> <img src="imgs/3v2.gif">
+	            <img src="imgs/4v2.gif"> <img src="imgs/5v2.gif">
+	          </div>
           </div>
         </div>
 
-        <img class="rip" src="imgs/bottom_rip_v2.png">
         <div class="content-tags">
           <span class="source-via">SOURCE: <a href="#">persons-url</a> <span class="fa fa-star"></span> VIA: <a href="#">persons-url</a></span>
           <div class="tag"><span class="fa fa-lock"></span> kabaneri of the iron fortress</div> <div class="tag"><span class="fa fa-lock"></span> mumei</div> <div class="tag"><span class="fa fa-lock"></span> my stuff</div>
@@ -470,19 +482,19 @@
           <div class="fa fa-clock-o"></div><div class="meta-text"> 21:46</div>
           <div class="fa fa-bookmark"></div><div class="meta-text"> 4,839 Notes</div>
         </div>
-        <img class="rip" src="imgs/top_rip_v2.png">
 
         <div class="content-post">
-          <div class="photoset">
-            <img src="imgs/540px.jpg">
-            <img src="imgs/268px.jpg"> <img src="imgs/268px.jpg">
-            <img src="imgs/177px.jpg"> <img src="imgs/177px.jpg"> <img src="imgs/177px.jpg">
-          </div>
-          <span><a href="#">a-persons-url-here</a>:</span>
-          <blockquote>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum rutrum nibh eget ipsum cursus auctor.</blockquote>
+        	<div class="content-post-inner">
+	          <div class="photoset">
+	            <img src="imgs/540px.jpg">
+	            <img src="imgs/268px.jpg"> <img src="imgs/268px.jpg">
+	            <img src="imgs/177px.jpg"> <img src="imgs/177px.jpg"> <img src="imgs/177px.jpg">
+	          </div>
+	          <span><a href="#">a-persons-url-here</a>:</span>
+	          <blockquote>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum rutrum nibh eget ipsum cursus auctor.</blockquote>
+	         </div>
         </div>
 
-        <img class="rip" src="imgs/bottom_rip_v2.png">
         <div class="content-tags">
           <span class="source-via">SOURCE: <a href="#">persons-url</a> <span class="fa fa-star"></span> VIA: <a href="#">persons-url</a></span>
           <div class="tag"><span class="fa fa-lock"></span> boku no hero academia</div> <div class="tag"><span class="fa fa-lock"></span> bakugou katsuki</div> <div class="tag"><span class="fa fa-lock"></span> this is how tags look like</div> <div class="tag"><span class="fa fa-lock"></span> umm i guess more tags?</div> <div class="tag"><span class="fa fa-lock"></span> PERRSOONNAAAAAAAA</div>
@@ -506,16 +518,16 @@
           <div class="fa fa-clock-o"></div><div class="meta-text"> 21:46</div>
           <div class="fa fa-bookmark"></div><div class="meta-text"> 4,839 Notes</div>
         </div>
-        <img class="rip" src="imgs/top_rip_v2.png">
 
         <div class="content-post">
-          <div class="post-title">Title of Blog Post</div>
-          <div class="text-post">If you are lonely, dim all lights and put on a horror-movie. After a while it won’t feel like you are alone anymore.</div>
-          <span><a href="#">a-persons-url-here</a>:</span>
-          <blockquote>im sorry to everyone who has ever tried to talk to me and then realized my communication skills are equivalent to a stale piece of bread</blockquote>
+        	<div class="content-post-inner">
+	          <div class="post-title">Title of Blog Post</div>
+	          <div class="text-post">If you are lonely, dim all lights and put on a horror-movie. After a while it won’t feel like you are alone anymore.</div>
+	          <span><a href="#">a-persons-url-here</a>:</span>
+	          <blockquote>im sorry to everyone who has ever tried to talk to me and then realized my communication skills are equivalent to a stale piece of bread</blockquote>
+	         </div>
         </div>
 
-        <img class="rip" src="imgs/bottom_rip_v2.png">
         <div class="content-tags">
           <span class="source-via">SOURCE: <a href="#">persons-url</a> <span class="fa fa-star"></span> VIA: <a href="#">persons-url</a></span>
           <div class="tag"><span class="fa fa-lock"></span> text</div> <div class="tag"><span class="fa fa-lock"></span> me</div> <div class="tag"><span class="fa fa-lock"></span> this is so accurate omfg</div>
@@ -538,15 +550,15 @@
           <div class="fa fa-clock-o"></div><div class="meta-text"> 21:46</div>
           <div class="fa fa-bookmark"></div><div class="meta-text"> 4,839 Notes</div>
         </div>
-        <img class="rip" src="imgs/top_rip_v2.png">
 
         <div class="content-post">
-          <span><a href="#">a-persons-url-here</a>:</span>
-          <div class="chat-post"><b>Me:</b> I love strategy/tactical RPGs!</div>
-          <div class="chat-post"><b>Me, playing such a video game:</b> My strategy is to be physically stronger than my enemy. My tactic is to hit them really really hard.</div>
+        	<div class="content-post-inner">
+	          <span><a href="#">a-persons-url-here</a>:</span>
+	          <div class="chat-post"><b>Me:</b> I love strategy/tactical RPGs!</div>
+	          <div class="chat-post"><b>Me, playing such a video game:</b> My strategy is to be physically stronger than my enemy. My tactic is to hit them really really hard.</div>\
+	        </div>
         </div>
 
-        <img class="rip" src="imgs/bottom_rip_v2.png">
         <div class="content-tags">
           <span class="source-via">SOURCE: <a href="#">persons-url</a> <span class="fa fa-star"></span> VIA: <a href="#">persons-url</a></span>
           <div class="tag"><span class="fa fa-lock"></span> text</div> <div class="tag"><span class="fa fa-lock"></span> me</div> <div class="tag"><span class="fa fa-lock"></span> same omg loool</div>
@@ -569,15 +581,15 @@
           <div class="fa fa-clock-o"></div><div class="meta-text"> 21:46</div>
           <div class="fa fa-bookmark"></div><div class="meta-text"> 4,839 Notes</div>
         </div>
-        <img class="rip" src="imgs/top_rip_v2.png">
 
         <div class="content-post">
-          <span><a href="#">a-persons-url-here</a>:</span>
-          <div class="quote-post"><span class="fa fa-quote-left"></span> May the parts of you that feel like fighting always be stronger and louder than the parts of you that feel like giving up. <span class="fa fa-quote-right"></span></div>
-          <div class="center" style="margin-top: 15px;">- Myss, <i>Stay Strong</i> -</div>
+        	<div class="content-post-inner">
+	          <span><a href="#">a-persons-url-here</a>:</span>
+	          <div class="quote-post"><span class="fa fa-quote-left"></span> May the parts of you that feel like fighting always be stronger and louder than the parts of you that feel like giving up. <span class="fa fa-quote-right"></span></div>
+	          <div class="center" style="margin-top: 15px;">- Myss, <i>Stay Strong</i> -</div>
+	        </div>
         </div>
 
-        <img class="rip" src="imgs/bottom_rip_v2.png">
         <div class="content-tags">
           <span class="source-via">SOURCE: <a href="#">persons-url</a> <span class="fa fa-star"></span> VIA: <a href="#">persons-url</a></span>
           <div class="tag"><span class="fa fa-lock"></span> quote</div>
@@ -600,14 +612,14 @@
           <div class="fa fa-clock-o"></div><div class="meta-text"> 21:46</div>
           <div class="fa fa-bookmark"></div><div class="meta-text"> 4,839 Notes</div>
         </div>
-        <img class="rip" src="imgs/top_rip_v2.png">
 
         <div class="content-post">
-          <span><a href="#">a-persons-url-here</a>:</span>
-          <div class="chat-post">ADUIO POST HERE. omfg Dude I'm too lazy to do this help</div>
+        	<div class="content-post-inner">
+	          <span><a href="#">a-persons-url-here</a>:</span>
+	          <div class="chat-post">ADUIO POST HERE. omfg Dude I'm too lazy to do this help</div>
+	        </div>
         </div>
 
-        <img class="rip" src="imgs/bottom_rip_v2.png">
         <div class="content-tags">
           <span class="source-via">SOURCE: <a href="#">persons-url</a> <span class="fa fa-star"></span> VIA: <a href="#">persons-url</a></span>
           <div class="tag"><span class="fa fa-lock"></span> audio</div> <div class="tag"><span class="fa fa-lock"></span> music</div>
@@ -630,23 +642,23 @@
           <div class="fa fa-clock-o"></div><div class="meta-text"> 21:46</div>
           <div class="fa fa-bookmark"></div><div class="meta-text"> 4,839 Notes</div>
         </div>
-        <img class="rip" src="imgs/top_rip_v2.png">
 
         <div class="content-post">
-          <div class="row">
-            <img class="col s2 ask-avvie" src="http://assets.tumblr.com/images/anonymous_avatar_64.gif"/>
-            <img class="chat-icon" src="imgs/chat_icon.png">
-            <div class="col s10 ask-content">
-              <span>Anonymous:</span>
-              <img class="chat-question-mark" src="imgs/chat_question.png">
-              <div class="ask-question">Hi I really like your blog. You said to put this first : "www(.)jqueryscript(.)net/demo/jQuery-Plugin-For-Sakura-Petals-Falling-Animation-Sakura/" before the js and css file for the petals effect. Do you mean to go to that site and go to view page source and copy the file?</div>
-            </div>
-          </div>
-          <div class="ask-answer">Hi, and thanks! If you want to use the petals, you can do what you mentioned, but it’s best to download the files, upload them somewhere, and use that link instead. (・ω・)b</div>
-          <img class="chat-reply" src="imgs/chat_reply.png">
+        	<div class="content-post-inner">
+	          <div class="row">
+	            <img class="col s2 ask-avvie" src="http://assets.tumblr.com/images/anonymous_avatar_64.gif"/>
+	            <img class="chat-icon" src="imgs/chat_icon.png">
+	            <div class="col s10 ask-content">
+	              <span>Anonymous:</span>
+	              <img class="chat-question-mark" src="imgs/chat_question.png">
+	              <div class="ask-question">Hi I really like your blog. You said to put this first : "www(.)jqueryscript(.)net/demo/jQuery-Plugin-For-Sakura-Petals-Falling-Animation-Sakura/" before the js and css file for the petals effect. Do you mean to go to that site and go to view page source and copy the file?</div>
+	            </div>
+	          </div>
+	          <div class="ask-answer">Hi, and thanks! If you want to use the petals, you can do what you mentioned, but it’s best to download the files, upload them somewhere, and use that link instead. (・ω・)b</div>
+	          <img class="chat-reply" src="imgs/chat_reply.png">
+	        </div>
         </div>
 
-        <img class="rip" src="imgs/bottom_rip_v2.png">
         <div class="content-tags">
           <span class="source-via">SOURCE: <a href="#">persons-url</a> <span class="fa fa-star"></span> VIA: <a href="#">persons-url</a></span>
           <div class="tag"><span class="fa fa-lock"></span> anonymous</div> <div class="tag"><span class="fa fa-lock"></span> answered</div>
@@ -729,6 +741,11 @@ $(document).ready(function(){
   // ------------ boingy shit ------------
   $(".header-menu img, .prev, .next").hover(function(){
     $(this).toggleClass("animated rubberBand");
+  });
+
+  $(".menu-toggle").click(function() {
+  	$(this).toggleClass("active");
+  	$(".navbar").toggleClass("active");
   });
 
  //  var chain = $("#chains")[0];
