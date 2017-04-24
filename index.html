@@ -277,7 +277,7 @@
         <div class="modal-text-content">
           <!-- <p><span class="fa fa-star"></span> <b>KnB Sprites:</b> <a href="http://nanairo-mikan.ciao.jp/bsk_main.htm" target="new">here</a></p> -->
           <p><div class="disclaimer">
-            <span class="fa fa-exclamation-triangle"></span> <u><b>DISCLAIMER:</b></u> The images and designs that are created and used for this Persona 5 Tumblr theme are solely for entertainment purposes only. No copyright infringement intended. No profit is made from this Tumblr blog. The owner of this blog is in no way, shape, or form associated with Atlus.
+            <span class="fa fa-exclamation-triangle"></span> <u><b>DISCLAIMER:</b></u> The images and designs that are created and used for this Persona 5 Tumblr theme are solely for entertainment purposes only. No copyright infringement intended. No profit is made from this Tumblr blog and theme. The owner of this blog is in no way, shape, or form associated with Atlus. This blog theme is purely fan-made.
           </div></p>
           <p><span class="fa fa-star"></span> <b>Fire Emblem: Awakening pixels:</b> <a href="http://tacticiantwins-blog.tumblr.com/post/60677237887/1st-gen-pixels" target="new">here</a></p>
           <p>
@@ -664,6 +664,8 @@
     </div> <!-- col s8 -->
 
   </div> <!-- row -->
+
+  <img class="back2Top" src="imgs/top.png">
 <!--   <audio id="chains" preload="auto">
 		<source src="http://www.img.kevinquach.ca/wp-content/uploads/2017/04/chain-sound.mp3" controls></source>
 	</audio> -->
@@ -704,6 +706,22 @@ $(document).ready(function(){
   $("a.smooth-scroll").click(function(){
     $("html, body").animate({
         scrollTop: $( $.attr(this, "href") ).offset().top+1
+    }, 500);
+    return false;
+  });
+
+  // ------------ scroll up ------------
+  $(window).scroll(function(){
+    if($(window).scrollTop() > (($("header").height()) + ($("nav").height()))) {
+      $(".back2Top").fadeIn(300);
+    } else {
+      $(".back2Top").fadeOut(300);
+    }
+  });
+
+  $(".back2Top").click(function(){
+    $("html, body").animate({
+        scrollTop: $("header").height()
     }, 500);
     return false;
   });

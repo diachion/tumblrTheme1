@@ -30,6 +30,12 @@ a {
   a:hover {
     color: #000; }
 
+* {
+  box-sizing: border-box; }
+
+/* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+      MODALS
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
 .modal {
   width: 100%;
   max-width: 850px;
@@ -216,9 +222,6 @@ a {
     opacity: 1;
     -webkit-transform: none;
     transform: none; } }
-* {
-  box-sizing: border-box; }
-
 /* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
       HEADER / BANNER
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
@@ -275,6 +278,14 @@ a {
 
 .stickyPagination {
   bottom: 0; }
+
+.back2Top {
+  display: none;
+  position: fixed;
+  bottom: 5px;
+  left: 5px;
+  width: 100px;
+  cursor: pointer; }
 
 /* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
       SIDEBAR
