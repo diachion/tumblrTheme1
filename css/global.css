@@ -351,12 +351,9 @@ a {
   @media screen and (max-width: 768px) {
     .pagination {
       display: block;
-      padding: 50px;
+      padding: 60px;
       position: relative;
       margin-top: -40px; } }
-  @media screen and (max-width: 460px) {
-    .pagination {
-      padding: 60px; } }
   .pagination img {
     width: 130px;
     -webkit-animation-duration: 0.3s;
@@ -385,12 +382,8 @@ a {
   cursor: pointer; }
   @media screen and (max-width: 768px) {
     .back2Top {
-      left: 0;
-      right: -10px;
-      margin: 0 auto; } }
-  @media screen and (max-width: 460px) {
-    .back2Top {
-      right: -10px;
+      right: 15px;
+      left: auto;
       width: 70px; } }
 
 /* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
@@ -636,6 +629,9 @@ form {
     margin-top: 15px; }
   .content-post .ask-post {
     position: relative; }
+    @media screen and (max-width: 680px) {
+      .content-post .ask-post {
+        margin-top: 20px; } }
     .content-post .ask-post .ask-question {
       margin-bottom: 20px;
       overflow: auto; }

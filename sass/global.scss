@@ -525,12 +525,9 @@ nav {
   justify-content: space-between;
   @include tablet {
     display: block;
-    padding: 50px;
+    padding: 60px;
     position: relative;
     margin-top: -40px;
-  }
-  @include mobile {
-    padding: 60px;
   }
   img {
     width: 130px;
@@ -563,13 +560,9 @@ nav {
   left: 5px;
   width: 100px;
   cursor: pointer;
-  @include tablet {
-    left: 0; 
-    right: -10px;
-    margin: 0 auto;
-  }
-  @include mobile {
-    right: -10px;
+  @include tablet { 
+    right: 15px;
+    left: auto;
     width: 70px;
   }
 }
@@ -577,6 +570,7 @@ nav {
 /* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
       SIDEBAR
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
+
 form {
   max-width: 400px;
   margin: 0 auto;
@@ -859,6 +853,9 @@ form {
 
   .ask-post {
     position: relative;
+    @include tabmini {
+      margin-top: 20px;
+    }
     .ask-question {
         margin-bottom: 20px;
         overflow: auto;
