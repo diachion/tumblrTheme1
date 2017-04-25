@@ -271,7 +271,7 @@ a {
         .parallax-container .header-menu a {
           transform: scale(0.7);
           margin: -10px auto; } }
-      @media screen and (max-width: 480px) {
+      @media screen and (max-width: 680px) {
         .parallax-container .header-menu a {
           display: none; } }
 
@@ -348,11 +348,29 @@ a {
 .pagination {
   display: flex;
   justify-content: space-between; }
+  @media screen and (max-width: 768px) {
+    .pagination {
+      display: block;
+      padding: 50px;
+      position: relative; } }
+  @media screen and (max-width: 460px) {
+    .pagination {
+      padding: 60px; } }
   .pagination img {
     width: 130px;
     -webkit-animation-duration: 0.3s;
     -moz-animation-duration: 0.3s;
     animation-duration: 0.3s; }
+    @media screen and (max-width: 768px) {
+      .pagination img {
+        width: 70px;
+        height: auto;
+        position: absolute;
+        top: 20px; }
+        .pagination img:first-child {
+          left: 20px; }
+        .pagination img:last-child {
+          right: 20px; } }
 
 .stickyPagination {
   bottom: 0; }
@@ -364,6 +382,15 @@ a {
   left: 5px;
   width: 100px;
   cursor: pointer; }
+  @media screen and (max-width: 768px) {
+    .back2Top {
+      left: 0;
+      right: -10px;
+      margin: 0 auto; } }
+  @media screen and (max-width: 460px) {
+    .back2Top {
+      right: -10px;
+      width: 70px; } }
 
 /* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
       SIDEBAR
@@ -438,8 +465,6 @@ form {
 .accordion-statuses {
   max-width: 400px;
   margin: 0 auto 30px auto; }
-  .accordion-statuses li {
-    margin: 0 !important; }
 
 .collapsible .collapsible-header {
   background: #000;
@@ -485,6 +510,9 @@ form {
   @media screen and (max-width: 1024px) {
     .content-wrapper {
       max-width: 565px; } }
+  @media screen and (max-width: 768px) {
+    .content-wrapper {
+      margin: 0 auto; } }
   .content-wrapper .content-meta {
     background: #000;
     width: 100%;
@@ -499,7 +527,7 @@ form {
       position: relative; }
       @media screen and (max-width: 680px) {
         .content-wrapper .content-meta .meta-wrap {
-          margin: 10px auto; } }
+          margin: 5px auto; } }
     .content-wrapper .content-meta .fa {
       font-size: 1.3em;
       position: relative;
@@ -589,54 +617,79 @@ form {
     font-size: 1.5em;
     text-align: center;
     margin-top: 15px; }
-  .content-post .ask-avvie {
-    position: relative;
-    border-radius: 50%;
-    margin-left: 6px !important;
-    z-index: 2; }
-    @media screen and (max-width: 1024px) {
-      .content-post .ask-avvie {
-        margin-left: 20px !important; } }
-  .content-post .chat-icon {
-    position: absolute;
-    left: 25px; }
-    @media screen and (max-width: 1024px) {
-      .content-post .chat-icon {
-        left: 10px; } }
-    @media screen and (max-width: 768px) {
-      .content-post .chat-icon {
-        left: 32px; } }
+  .content-post .ask-post {
+    position: relative; }
+    .content-post .ask-post .ask-question {
+      margin-bottom: 20px;
+      overflow: auto; }
+    .content-post .ask-post .ask-avvie {
+      position: absolute;
+      right: calc(100% - 110px);
+      z-index: 2;
+      display: inline-block;
+      background-image: url("../imgs/chat_icon.png");
+      width: 130px;
+      height: 90px;
+      background-repeat: no-repeat;
+      background-size: contain; }
+      @media screen and (max-width: 768px) {
+        .content-post .ask-post .ask-avvie {
+          width: 103px;
+          height: 80px;
+          right: calc(100% - 103px); } }
+      @media screen and (max-width: 460px) {
+        .content-post .ask-post .ask-avvie {
+          top: -38px;
+          right: calc(100% - 80px);
+          background-image: none; } }
+      .content-post .ask-post .ask-avvie img {
+        border-radius: 50%;
+        position: relative;
+        left: 33px; }
+        @media screen and (max-width: 768px) {
+          .content-post .ask-post .ask-avvie img {
+            width: 48px;
+            bottom: -5px; } }
+    .content-post .ask-post .chat-question-mark {
+      position: absolute;
+      max-height: 50px;
+      width: auto;
+      top: -30px;
+      right: 20px; }
   .content-post .ask-content {
     background: #000;
     color: #fff;
-    max-width: 450px;
+    max-width: 443px;
     float: right;
     border: 5px solid #fff;
     padding: 15px; }
+    @media screen and (max-width: 768px) {
+      .content-post .ask-content {
+        max-width: calc(100% - 97px); } }
+    @media screen and (max-width: 460px) {
+      .content-post .ask-content {
+        max-width: 100%; } }
     .content-post .ask-content span {
       font-family: "Londrina Solid", cursive;
       font-size: 1.1em; }
-    .content-post .ask-content .chat-question-mark {
-      position: relative;
-      max-height: 50px;
-      float: right;
-      top: -48px; }
   .content-post .ask-answer {
+    clear: both;
     background: #fff;
     color: #000;
     border: 5px solid #000;
     padding: 15px;
-    margin-top: 20px; }
-  .content-post .chat-reply {
-    position: relative;
-    float: right;
-    right: -31px;
-    top: -60px; }
-    @media screen and (max-width: 1024px) {
-      .content-post .chat-reply {
-        right: -24px;
-        top: -45px;
-        max-width: 30px; } }
+    margin-top: 20px;
+    width: calc(100% - 20px); }
+    .content-post .ask-answer .chat-reply {
+      position: relative;
+      float: right;
+      right: -51px;
+      top: -60px;
+      width: 37px; }
+      @media screen and (max-width: 768px) {
+        .content-post .ask-answer .chat-reply {
+          width: 30px;
+          right: -44px; } }
   .content-post blockquote {
     margin-bottom: 0;
     border-left: 3px solid #ff0000; }
