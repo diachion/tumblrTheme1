@@ -30,12 +30,12 @@ $desktop-width: 1024px;
 /* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
       THEME
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
-$primary: #6cff0d; // bright green
+$primary: #fffa1c; // bright yellow
 $secondary: #fff;
 $text: #000;
 $link: #6cff0d;
 $nav: #000;
-$accent1: #084b06; // dark green
+$accent1: #3b0f06; // dark yellow
 
 @mixin trans($ease) {
   transition:         $ease;
@@ -59,7 +59,7 @@ body {
   font-family: $body;
   font-size: 0.9em;
   color: $text;
-  background: url('../imgs/chain_link_fence_v2.jpg') repeat fixed center;
+  background: url('../imgs/chain_link_fence_v3.jpg') repeat fixed center;
   background-color: lighten($accent1,8%);
   overflow-y: hidden;
 }
@@ -132,7 +132,7 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
     }
   }
   .ballchain {
-    background: url('../imgs/ballchain.png') no-repeat;
+    background: url('../imgs/ballchain_char.png') no-repeat;
     position: absolute;
     height: 100vh;
     width: 500px;
@@ -159,12 +159,12 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
         color: lighten($accent1,8%);
         font-size: 0.8em;
         position: relative;
-        right: 15px;
+        right: 50px;
       }
     }
     &.inactive .tag{
-        background: darken($accent1, 5%);
-        color: darken($primary,15%);
+        background: darken($accent1, 4%);
+        color: lighten(#ad532c, 10%);
         &:hover {
           background: $secondary;
           color: $text;
@@ -173,7 +173,7 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
           }
         }
         .fa {
-          color: #00ff24;
+          color: #ad532c;
         }
     }
     &.active {
@@ -200,25 +200,25 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
       }
     }
   }
-  .animanga {
+  .a-e {
     right: 10px;
   }
-  .games {
+  .f-j {
     right: 40px;
     top: -10px;
     .tag { transform:rotate(7deg); }
   }
-  .movies {
+  .k-o {
     right: 70px;
     top: -10px;
     .tag { transform:rotate(20deg); }
   }
-  .misc {
+  .p-t {
     right: 115px;
     top: -20px;
     .tag { transform:rotate(28deg); }
   }
-  .random {
+  .u-z {
     right: 185px;
     top: -25px;
     .tag { transform:rotate(45deg); }
@@ -324,7 +324,7 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
       border-radius: 10px;
     }
     &::-webkit-scrollbar-thumb {
-      background: lighten($accent1, 10%);
+      background: $text;
       width: 2px;
       border: 2px solid $secondary;
       border-radius: 10px;

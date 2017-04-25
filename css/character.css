@@ -16,8 +16,8 @@ body {
   font-family: "Heebo", sans-serif;
   font-size: 0.9em;
   color: #000;
-  background: url("../imgs/chain_link_fence_v2.jpg") repeat fixed center;
-  background-color: #0c7109;
+  background: url("../imgs/chain_link_fence_v3.jpg") repeat fixed center;
+  background-color: #60180a;
   overflow-y: hidden; }
 
 h1, h2, h3, h4, h5, h6, .collapsible-header {
@@ -69,7 +69,7 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
         -webkit-transition: all 0.3s ease;
         -moz-transition: all 0.3s ease; }
         .tags .black-bg .nav-links a:hover {
-          color: #6cff0d; }
+          color: #fffa1c; }
   .tags .tags-mark {
     position: absolute;
     max-width: 200px;
@@ -81,7 +81,7 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
         max-width: 170px;
         right: 230px; } }
   .tags .ballchain {
-    background: url("../imgs/ballchain.png") no-repeat;
+    background: url("../imgs/ballchain_char.png") no-repeat;
     position: absolute;
     height: 100vh;
     width: 500px;
@@ -92,7 +92,7 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
     position: relative; }
     .tags .tag-wrapper .tag {
       font-family: "Londrina Solid", cursive;
-      background: #6cff0d;
+      background: #fffa1c;
       color: #000;
       font-size: 1.4em;
       text-align: center;
@@ -106,30 +106,30 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
       -webkit-transition: all 0.3s ease;
       -moz-transition: all 0.3s ease; }
       .tags .tag-wrapper .tag .fa {
-        color: #0c7109;
+        color: #60180a;
         font-size: 0.8em;
         position: relative;
-        right: 15px; }
+        right: 50px; }
     .tags .tag-wrapper.inactive .tag {
-      background: #053304;
-      color: #4bc000; }
+      background: #280a04;
+      color: #ce6a3e; }
       .tags .tag-wrapper.inactive .tag:hover {
         background: #fff;
         color: #000; }
         .tags .tag-wrapper.inactive .tag:hover .fa {
-          color: #084b06; }
+          color: #3b0f06; }
       .tags .tag-wrapper.inactive .tag .fa {
-        color: #00ff24; }
+        color: #ad532c; }
     .tags .tag-wrapper.active {
       z-index: 99; }
       .tags .tag-wrapper.active .tag {
-        background: #6cff0d;
+        background: #fffa1c;
         color: #000;
         position: relative;
         z-index: 2;
         box-shadow: 5px 3px 0 #000; }
         .tags .tag-wrapper.active .tag:hover {
-          background: #6cff0d; }
+          background: #fffa1c; }
     .tags .tag-wrapper:hover {
       z-index: 999; }
       .tags .tag-wrapper:hover .tag {
@@ -138,27 +138,27 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
         position: relative;
         z-index: 2;
         box-shadow: 5px 3px 0 #000; }
-  .tags .animanga {
+  .tags .a-e {
     right: 10px; }
-  .tags .games {
+  .tags .f-j {
     right: 40px;
     top: -10px; }
-    .tags .games .tag {
+    .tags .f-j .tag {
       transform: rotate(7deg); }
-  .tags .movies {
+  .tags .k-o {
     right: 70px;
     top: -10px; }
-    .tags .movies .tag {
+    .tags .k-o .tag {
       transform: rotate(20deg); }
-  .tags .misc {
+  .tags .p-t {
     right: 115px;
     top: -20px; }
-    .tags .misc .tag {
+    .tags .p-t .tag {
       transform: rotate(28deg); }
-  .tags .random {
+  .tags .u-z {
     right: 185px;
     top: -25px; }
-    .tags .random .tag {
+    .tags .u-z .tag {
       transform: rotate(45deg); }
   .tags .indicator {
     height: 0px; }
@@ -169,7 +169,7 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
 .tags-content {
   padding-top: 15%; }
   .tags-content .tag-content {
-    background: #6cff0d;
+    background: #fffa1c;
     font-size: 1.3em;
     text-align: center;
     display: none;
@@ -227,7 +227,7 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
         .tags-content .tag-content a .tag-price .fa {
           font-size: 0.8em; }
         .tags-content .tag-content a .tag-price .quantity {
-          background: #51cf00;
+          background: #ded900;
           padding: 0 20px 0 10px;
           margin-left: 5px; }
       .tags-content .tag-content a:hover {
@@ -239,7 +239,7 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
       width: 7px;
       border-radius: 10px; }
     .tags-content .tag-content::-webkit-scrollbar-thumb {
-      background: #0d7a0a;
+      background: #000;
       width: 2px;
       border: 2px solid #fff;
       border-radius: 10px; }
@@ -263,7 +263,7 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
       height: 120px;
       width: 230px; } }
   .money .money-title {
-    color: #6cff0d;
+    color: #fffa1c;
     font-size: 1.6em;
     border-bottom: 2px solid #fff; }
     @media screen and (max-width: 1024px) {
@@ -302,4 +302,4 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
   to {
     transform: skewX(40deg) rotateX(-60deg) rotateY(-10deg) rotateZ(-10deg) perspective(150px); } }
 
-/*# sourceMappingURL=tags.css.map */
+/*# sourceMappingURL=character.css.map */
