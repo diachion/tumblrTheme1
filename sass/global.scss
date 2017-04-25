@@ -527,6 +527,7 @@ nav {
     display: block;
     padding: 50px;
     position: relative;
+    margin-top: -40px;
   }
   @include mobile {
     padding: 60px;
@@ -714,7 +715,7 @@ form {
       max-width: 565px;
     }
     @include tablet {
-      margin: 0 auto;
+      margin: 0 auto 40px auto;
     }
   .content-meta {
     background: $secondary;
@@ -733,6 +734,9 @@ form {
       @include tabmini {
         margin: 5px auto;
       }
+      @include mobile {
+        display: block;
+      }
     }
     .fa {
       font-size: 1.3em;
@@ -744,6 +748,10 @@ form {
       padding: 10px;
       text-shadow: -1px 2px 0 $secondary;
       z-index: 1;
+      @include mobile {
+        font-size: 1em;
+        padding: 5px;
+      }
     }
     .meta-text {
       font-family: $headings;
@@ -764,6 +772,9 @@ form {
         background: $accent2;
         color: $secondary;
       }
+      @include mobile {
+        font-size: .9em;
+      }
     }
   }
   .content-bg {
@@ -781,10 +792,16 @@ form {
 
 .content-post {
   width: 100%;
-  padding: 100px 20px;
+  padding: 120px 20px;
   position: relative;
   @include desktop {
     padding: 100px 10px;
+  }
+  @include tabmini {
+    padding: 80px 20px;
+  }
+  @include mobile {
+    padding: 60px 20px;
   }
   &::before {  
     content: "";
