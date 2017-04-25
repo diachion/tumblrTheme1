@@ -411,7 +411,7 @@ nav {
     height: 25px;
     top: 7px;
     right: 5px;
-    z-index: 9999;
+    z-index: 99999;
     cursor: pointer;
     display: none;
     @include tabmini {
@@ -560,6 +560,7 @@ nav {
   left: 5px;
   width: 100px;
   cursor: pointer;
+  z-index: 998;
   @include tablet { 
     right: 15px;
     left: auto;
@@ -1042,7 +1043,8 @@ form {
     margin: 0;
     padding: 20px;
     top: -100%;
-    transition: all .3s ease;
+    z-index: 9999;
+    transition: all .7s cubic-bezier(0.93, -0.52, 0.29, 1.22);
     &.active {
       top: 0;
     }
@@ -1065,6 +1067,22 @@ form {
       transform: rotate(-180deg);
       background: url("../imgs/nav_bg-10.png") repeat-x;
     }
+  }
+}
+.nav-backdrop {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  transition: all .3s ease;
+  opacity: 0;
+  visibility: hidden;
+  &.active {
+    opacity: .5;
+    visibility: visible;
   }
 }
 .link-wrapper {

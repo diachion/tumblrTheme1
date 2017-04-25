@@ -291,7 +291,7 @@ a {
     height: 25px;
     top: 7px;
     right: 5px;
-    z-index: 9999;
+    z-index: 99999;
     cursor: pointer;
     display: none; }
     @media screen and (max-width: 680px) {
@@ -379,7 +379,8 @@ a {
   bottom: 5px;
   left: 5px;
   width: 100px;
-  cursor: pointer; }
+  cursor: pointer;
+  z-index: 998; }
   @media screen and (max-width: 768px) {
     .back2Top {
       right: 15px;
@@ -791,7 +792,8 @@ form {
       margin: 0;
       padding: 20px;
       top: -100%;
-      transition: all .3s ease; }
+      z-index: 9999;
+      transition: all 0.7s cubic-bezier(0.93, -0.52, 0.29, 1.22); }
       .navbar.active {
         top: 0; }
       .navbar::before {
@@ -811,6 +813,21 @@ form {
         left: 0;
         transform: rotate(-180deg);
         background: url("../imgs/nav_bg-10.png") repeat-x; } }
+
+.nav-backdrop {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  transition: all .3s ease;
+  opacity: 0;
+  visibility: hidden; }
+  .nav-backdrop.active {
+    opacity: .5;
+    visibility: visible; }
 
 .link-wrapper {
   position: relative;
