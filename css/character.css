@@ -213,6 +213,8 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
       .tags-content .tag-content a .flex-content {
         display: flex;
         justify-content: space-between; }
+      .tags-content .tag-content a .tag-indent {
+        padding-left: 10px; }
       .tags-content .tag-content a .tag-text {
         position: relative; }
         .tags-content .tag-content a .tag-text .fa {
@@ -239,7 +241,7 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
       width: 7px;
       border-radius: 10px; }
     .tags-content .tag-content::-webkit-scrollbar-thumb {
-      background: #000;
+      background: #ad532c;
       width: 2px;
       border: 2px solid #fff;
       border-radius: 10px; }

@@ -289,6 +289,9 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
         display: flex;
         justify-content: space-between;
       }
+      .tag-indent {
+        padding-left: 10px;
+      }
       .tag-text {
         position: relative;
         .fa {
@@ -324,7 +327,7 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
       border-radius: 10px;
     }
     &::-webkit-scrollbar-thumb {
-      background: $text;
+      background: #ad532c;
       width: 2px;
       border: 2px solid $secondary;
       border-radius: 10px;
