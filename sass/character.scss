@@ -68,6 +68,10 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
   font-family: $headings;
 }
 
+h5 {
+  font-size: 1.2em;
+}
+
 .container {
   width: 90%;
 }
@@ -248,6 +252,12 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
     @include trans($easyease);
     &.active {
       display: block;
+    }
+    .series-name {
+      background: $text;
+      color: $primary;
+      display: inline-block;
+      padding: 2px 20px;
     }
     .content-wrapper {
       position: relative;

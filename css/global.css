@@ -178,7 +178,7 @@ a {
 
 @-webkit-keyframes bounce {
   0%, 20%, 53%, 80%,
-  to {
+    to {
     -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
     animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }
   40%, 43%, 70% {
@@ -192,10 +192,9 @@ a {
   90% {
     -webkit-transform: translate3d(5px, -5px, 0);
     transform: translate3d(5px, -5px, 0); } }
-
 @keyframes bounce {
   0%, 20%, 53%, 80%,
-  to {
+    to {
     -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
     animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }
   40%, 43%, 70% {
@@ -209,7 +208,6 @@ a {
   90% {
     -webkit-transform: translate3d(5px, -5px, 0);
     transform: translate3d(5px, -5px, 0); } }
-
 @-webkit-keyframes fadeInDownBig {
   0% {
     opacity: 0;
@@ -219,7 +217,6 @@ a {
     opacity: 1;
     -webkit-transform: none;
     transform: none; } }
-
 @keyframes fadeInDownBig {
   0% {
     opacity: 0;
@@ -229,7 +226,6 @@ a {
     opacity: 1;
     -webkit-transform: none;
     transform: none; } }
-
 /* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
       HEADER / BANNER
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
@@ -468,7 +464,6 @@ form {
   .collapsible .collapsible-header h6 {
     display: inline-block;
     font-size: 1.3em; }
-
 .collapsible .collapsible-body {
   border-bottom: 0; }
   .collapsible .collapsible-body p {
@@ -482,7 +477,6 @@ form {
 @media only screen and (min-width: 993px) {
   .container {
     width: 95%; } }
-
 @media only screen and (min-width: 601px) {
   .container {
     width: 90%; } }
@@ -935,7 +929,6 @@ form {
     transform: scale(1.5) rotate(-7deg); }
   100% {
     transform: scale(1.15) rotate(-7deg); } }
-
 @keyframes tiltBounceAlt {
   0% {
     transform: scale(1) rotate(7deg); }
@@ -943,7 +936,6 @@ form {
     transform: scale(1.5) rotate(7deg); }
   100% {
     transform: scale(1.15) rotate(7deg); } }
-
 @keyframes jelly {
   0% {
     width: 100%;
@@ -954,3 +946,5 @@ form {
   100% {
     width: 100%;
     transform: scale(1.25, 1) skewX(20deg) translateY(3px) rotateX(-40deg) rotateY(-10deg) rotateZ(-15deg); } }
+
+/*# sourceMappingURL=global.css.map */
