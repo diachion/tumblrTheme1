@@ -159,6 +159,7 @@ a {
         top: 50px;
       }
       @include mobile {
+        top: 40px;
         width: 170px;
       }
     }

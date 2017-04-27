@@ -87,6 +87,7 @@ a {
           top: 50px; } }
       @media screen and (max-width: 460px) {
         .modal .modal-header .modal-negotation {
+          top: 40px;
           width: 170px; } }
     .modal .modal-header .modal-stats {
       position: relative;

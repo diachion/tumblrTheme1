@@ -4,12 +4,19 @@
 $headings: 'Londrina Solid', cursive;
 $body: 'Heebo', sans-serif;
 
-$mobile-width: 480px;
+$mobile-width: 460px;
+$tabmini-width: 680px;
 $tablet-width: 768px;
-$desktop-width: 1024px;
+$desktop-width: 992px;
 
 @mixin mobile {
   @media screen and (max-width: #{$mobile-width}) {
+    @content;
+  }
+}
+
+@mixin tabmini {
+  @media screen and (max-width: #{$tabmini-width}) {
     @content;
   }
 }
@@ -92,6 +99,7 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
   @include desktop {
     padding-top: 75%;
     margin-right: 0;
+    left: 30px;
   }
   .black-bg {
     background: $nav;
@@ -127,8 +135,12 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
     top: 260px;
     z-index: -1;
     @include desktop {
-      max-width: 170px;
-      right: 230px;
+      max-width: 150px;
+      right: 100%;
+    }
+    @include tablet {
+      top: 100%;
+      right: 0;
     }
   }
   .ballchain {
@@ -139,6 +151,9 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
     top: 0;
     left: -350px;
     z-index: -1;
+    @include desktop {
+
+    }
   }
   .tag-wrapper {
     position: relative;
@@ -160,6 +175,15 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
         font-size: 0.8em;
         position: relative;
         right: 15px;
+      }
+      @include desktop {
+        font-size: 1.2em;
+        padding: 20px 0;
+        border-radius: 15px;
+        width: 70%;
+        .fa {
+          right: 7px;
+        }
       }
     }
     &.inactive .tag{
@@ -202,26 +226,45 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
   }
   .animanga {
     right: 10px;
+    @include desktop {
+      right: -10px;
+    }
   }
   .games {
     right: 40px;
     top: -10px;
     .tag { transform:rotate(7deg); }
+    @include desktop {
+      right: 0px;
+      top: 0;
+    }
   }
   .movies {
     right: 70px;
     top: -10px;
     .tag { transform:rotate(20deg); }
+    @include desktop {
+      right: 10px;
+      top: 8px;
+    }
   }
   .misc {
     right: 115px;
     top: -20px;
     .tag { transform:rotate(28deg); }
+    @include desktop {
+      right: 35px;
+      top: 10px;
+    }
   }
   .random {
     right: 185px;
     top: -25px;
     .tag { transform:rotate(45deg); }
+    @include desktop {
+      right: 85px;
+      top: 25px;
+    }
   }
   .indicator {
     height: 0px;
@@ -291,6 +334,10 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
       }
       .tag-text {
         position: relative;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        margin-right: 20px;
         .fa {
           background: $text;
           color: #ff0000;
@@ -302,6 +349,9 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
       .tag-price {
         font-weight: 700;
         position: relative;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
         .fa {
           font-size: 0.8em;
         }
@@ -309,6 +359,9 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
           background: darken($primary,12%);
           padding: 0 20px 0 10px;
           margin-left: 5px;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
         }
       }
       &:hover {
