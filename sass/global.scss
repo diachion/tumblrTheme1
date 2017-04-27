@@ -143,9 +143,9 @@ a {
         left: 74%;
       }
       @include mobile {
-        top: 10px;
+        top: 20px;
         width: 100px;
-        left: 80%;
+        left: 90%;
       }
     }
 
@@ -155,8 +155,11 @@ a {
       width: 400px;
       transform: rotate(5deg);
       @include tabmini {
-        width: 250px;
-        top: 0px;
+        width: 220px;
+        top: 50px;
+      }
+      @include mobile {
+        width: 170px;
       }
     }
     .modal-stats {
@@ -164,11 +167,12 @@ a {
       width: 230px;
       transform: rotate(5deg);
       @include tabmini {
-        width: 170px;
-        top: 0px;
+        width: 150px;
+        top: 35px;
       }
       @include mobile {
-        width: 150px;
+        width: 115px;
+        top: 30px;
       }
     }
     .modal-palaces {
@@ -180,7 +184,8 @@ a {
         top: 0px;
       }
       @include mobile {
-        width: 200px;
+        width: 150px;
+        top: 30px;
       }
     }
     .modal-system {
@@ -189,10 +194,12 @@ a {
       width: 300px;
       transform: rotate(5deg);
       @include tabmini {
-        width: 250px;
+        width: 180px;
+        top: 30px;
       }
       @include mobile {
-        width: 200px;
+        width: 150px;
+        top: 17px;
       }
     }
     >h4 {
@@ -216,10 +223,17 @@ a {
         width: 75%;
         margin: 10px auto;
       }
+      @include mobile {
+        width: 100%;
+        margin: 0 auto;
+      }
     }
   }
   .modal-content {
     //overflow: hidden;
+    @include tabmini {
+      margin: 0 15px;
+    }
     .modal-text{
       position: relative;
       padding: 8% 0 10% 0;
@@ -234,6 +248,14 @@ a {
           background-repeat: no-repeat;
           background-size: cover;
           z-index: -1;
+          @include tabmini {
+            height: 125%;
+            top: -80px;
+          }
+          @include mobile {
+            height: 120%;
+            top: -90px;
+          }
         }
         &::after {
           content: "";
@@ -247,6 +269,13 @@ a {
           background-repeat: no-repeat;
           background-size: cover;
           z-index: -1;
+          @include tabmini {
+            top: -35px;
+            height: 120%;
+          }
+          @include mobile {
+            top: -66px;
+          }
         }
       .modal-text-content {
         color: $text;
@@ -259,7 +288,9 @@ a {
         padding: 0 20px;
         overflow-y: auto;
         @include mobile {
-          margin-top: 20px;
+          margin-top: 40px;
+          padding: 0 10px;
+          width: 90%;
         }
         >p>a {
           color: $primary;
@@ -305,9 +336,15 @@ a {
         right: -100px;
         bottom: 0;
         animation-duration: 0.4s;
+        @include tabmini {
+          max-width: 100px;
+          right: -50px;
+          bottom: -45px;
+        }
         @include mobile {
-          max-width: 65px;
-          right: -30px;
+          max-width: 50px;
+          bottom: -35px;
+
         }
       }
     }
@@ -1119,7 +1156,7 @@ form {
   z-index: 999;
   top: 0;
   left: 0;
-  transition: all .3s ease;
+  transition: all .7s cubic-bezier(0.93, -0.52, 0.29, 1.22);
   opacity: 0;
   visibility: hidden;
   &.active {

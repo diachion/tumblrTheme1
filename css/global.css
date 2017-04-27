@@ -73,9 +73,9 @@ a {
           left: 74%; } }
       @media screen and (max-width: 460px) {
         .modal .modal-header .dagger {
-          top: 10px;
+          top: 20px;
           width: 100px;
-          left: 80%; } }
+          left: 90%; } }
     .modal .modal-header .modal-negotation {
       position: relative;
       left: -10px;
@@ -83,19 +83,23 @@ a {
       transform: rotate(5deg); }
       @media screen and (max-width: 680px) {
         .modal .modal-header .modal-negotation {
-          width: 250px;
-          top: 0px; } }
+          width: 220px;
+          top: 50px; } }
+      @media screen and (max-width: 460px) {
+        .modal .modal-header .modal-negotation {
+          width: 170px; } }
     .modal .modal-header .modal-stats {
       position: relative;
       width: 230px;
       transform: rotate(5deg); }
       @media screen and (max-width: 680px) {
         .modal .modal-header .modal-stats {
-          width: 170px;
-          top: 0px; } }
+          width: 150px;
+          top: 35px; } }
       @media screen and (max-width: 460px) {
         .modal .modal-header .modal-stats {
-          width: 150px; } }
+          width: 115px;
+          top: 30px; } }
     .modal .modal-header .modal-palaces {
       position: relative;
       width: 310px;
@@ -106,7 +110,8 @@ a {
           top: 0px; } }
       @media screen and (max-width: 460px) {
         .modal .modal-header .modal-palaces {
-          width: 200px; } }
+          width: 150px;
+          top: 30px; } }
     .modal .modal-header .modal-system {
       position: relative;
       top: -20px;
@@ -114,10 +119,12 @@ a {
       transform: rotate(5deg); }
       @media screen and (max-width: 680px) {
         .modal .modal-header .modal-system {
-          width: 250px; } }
+          width: 180px;
+          top: 30px; } }
       @media screen and (max-width: 460px) {
         .modal .modal-header .modal-system {
-          width: 200px; } }
+          width: 150px;
+          top: 17px; } }
     .modal .modal-header > h4 {
       position: absolute;
       bottom: -50px;
@@ -139,6 +146,13 @@ a {
           font-size: 1.5em;
           width: 75%;
           margin: 10px auto; } }
+      @media screen and (max-width: 460px) {
+        .modal .modal-header > h4 {
+          width: 100%;
+          margin: 0 auto; } }
+  @media screen and (max-width: 680px) {
+    .modal .modal-content {
+      margin: 0 15px; } }
   .modal .modal-content .modal-text {
     position: relative;
     padding: 8% 0 10% 0; }
@@ -153,6 +167,14 @@ a {
       background-repeat: no-repeat;
       background-size: cover;
       z-index: -1; }
+      @media screen and (max-width: 680px) {
+        .modal .modal-content .modal-text::before {
+          height: 125%;
+          top: -80px; } }
+      @media screen and (max-width: 460px) {
+        .modal .modal-content .modal-text::before {
+          height: 120%;
+          top: -90px; } }
     .modal .modal-content .modal-text::after {
       content: "";
       position: absolute;
@@ -165,6 +187,13 @@ a {
       background-repeat: no-repeat;
       background-size: cover;
       z-index: -1; }
+      @media screen and (max-width: 680px) {
+        .modal .modal-content .modal-text::after {
+          top: -35px;
+          height: 120%; } }
+      @media screen and (max-width: 460px) {
+        .modal .modal-content .modal-text::after {
+          top: -66px; } }
     .modal .modal-content .modal-text .modal-text-content {
       color: #fff;
       position: relative;
@@ -177,7 +206,9 @@ a {
       overflow-y: auto; }
       @media screen and (max-width: 460px) {
         .modal .modal-content .modal-text .modal-text-content {
-          margin-top: 20px; } }
+          margin-top: 40px;
+          padding: 0 10px;
+          width: 90%; } }
       .modal .modal-content .modal-text .modal-text-content > p > a {
         color: #ff0000; }
         .modal .modal-content .modal-text .modal-text-content > p > a:hover {
@@ -213,10 +244,15 @@ a {
       right: -100px;
       bottom: 0;
       animation-duration: 0.4s; }
+      @media screen and (max-width: 680px) {
+        .modal .modal-content .modal-footer .close-button {
+          max-width: 100px;
+          right: -50px;
+          bottom: -45px; } }
       @media screen and (max-width: 460px) {
         .modal .modal-content .modal-footer .close-button {
-          max-width: 65px;
-          right: -30px; } }
+          max-width: 50px;
+          bottom: -35px; } }
 
 @-webkit-keyframes bounce {
   0%, 20%, 53%, 80%,
@@ -864,7 +900,7 @@ form {
   z-index: 999;
   top: 0;
   left: 0;
-  transition: all .3s ease;
+  transition: all 0.7s cubic-bezier(0.93, -0.52, 0.29, 1.22);
   opacity: 0;
   visibility: hidden; }
   .nav-backdrop.active {
