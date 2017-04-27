@@ -56,54 +56,104 @@ a {
     width: 100%;
     height: 100px;
     background: transparent; }
+    @media screen and (max-width: 460px) {
+      .modal .modal-header {
+        height: 90px; } }
     .modal .modal-header .dagger {
       position: absolute;
       width: 240px;
-      top: -105px;
-      right: 45px;
+      top: -115px;
+      right: 0;
       z-index: 1;
       animation-duration: 0.25s; }
-    .modal .modal-header .cover-up {
-      position: absolute;
-      width: 0;
-      height: 34px;
-      border-top: 20px solid transparent;
-      border-left: 50px solid #fff;
-      right: 30%;
-      top: 109%;
-      z-index: 999; }
+      @media screen and (max-width: 768px) {
+        .modal .modal-header .dagger {
+          width: 175px;
+          top: -55px;
+          left: 74%; } }
+      @media screen and (max-width: 460px) {
+        .modal .modal-header .dagger {
+          top: 20px;
+          width: 100px;
+          left: 90%; } }
     .modal .modal-header .modal-negotation {
       position: relative;
       left: -10px;
       width: 400px;
       transform: rotate(5deg); }
+      @media screen and (max-width: 680px) {
+        .modal .modal-header .modal-negotation {
+          width: 220px;
+          top: 50px; } }
+      @media screen and (max-width: 460px) {
+        .modal .modal-header .modal-negotation {
+          top: 40px;
+          width: 170px; } }
     .modal .modal-header .modal-stats {
       position: relative;
       width: 230px;
       transform: rotate(5deg); }
+      @media screen and (max-width: 680px) {
+        .modal .modal-header .modal-stats {
+          width: 150px;
+          top: 35px; } }
+      @media screen and (max-width: 460px) {
+        .modal .modal-header .modal-stats {
+          width: 115px;
+          top: 30px; } }
     .modal .modal-header .modal-palaces {
       position: relative;
       width: 310px;
       transform: rotate(5deg); }
+      @media screen and (max-width: 680px) {
+        .modal .modal-header .modal-palaces {
+          width: 250px;
+          top: 0px; } }
+      @media screen and (max-width: 460px) {
+        .modal .modal-header .modal-palaces {
+          width: 150px;
+          top: 30px; } }
     .modal .modal-header .modal-system {
       position: relative;
       top: -20px;
       width: 300px;
       transform: rotate(5deg); }
+      @media screen and (max-width: 680px) {
+        .modal .modal-header .modal-system {
+          width: 180px;
+          top: 30px; } }
+      @media screen and (max-width: 460px) {
+        .modal .modal-header .modal-system {
+          width: 150px;
+          top: 17px; } }
     .modal .modal-header > h4 {
       position: absolute;
       bottom: -50px;
-      width: 60%;
+      width: 100%;
       color: #333434;
-      font-size: 2.5vmin;
+      font-size: 1.75em;
       text-align: center;
-      left: 20%;
+      left: 0;
+      max-width: 450px;
+      margin: 0 auto;
       background-image: url("../imgs/modal_header_white.svg");
       background-repeat: no-repeat;
-      background-size: 100%;
+      background-size: cover;
       padding: .9em 0 .5em 0;
-      right: 0;
-      margin: 0; }
+      right: 0; }
+      @media screen and (max-width: 680px) {
+        .modal .modal-header > h4 {
+          max-width: 375px;
+          font-size: 1.5em;
+          width: 75%;
+          margin: 10px auto; } }
+      @media screen and (max-width: 460px) {
+        .modal .modal-header > h4 {
+          width: 100%;
+          margin: 0 auto; } }
+  @media screen and (max-width: 680px) {
+    .modal .modal-content {
+      margin: 0 15px; } }
   .modal .modal-content .modal-text {
     position: relative;
     padding: 8% 0 10% 0; }
@@ -118,6 +168,14 @@ a {
       background-repeat: no-repeat;
       background-size: cover;
       z-index: -1; }
+      @media screen and (max-width: 680px) {
+        .modal .modal-content .modal-text::before {
+          height: 125%;
+          top: -80px; } }
+      @media screen and (max-width: 460px) {
+        .modal .modal-content .modal-text::before {
+          height: 120%;
+          top: -90px; } }
     .modal .modal-content .modal-text::after {
       content: "";
       position: absolute;
@@ -130,6 +188,13 @@ a {
       background-repeat: no-repeat;
       background-size: cover;
       z-index: -1; }
+      @media screen and (max-width: 680px) {
+        .modal .modal-content .modal-text::after {
+          top: -35px;
+          height: 120%; } }
+      @media screen and (max-width: 460px) {
+        .modal .modal-content .modal-text::after {
+          top: -66px; } }
     .modal .modal-content .modal-text .modal-text-content {
       color: #fff;
       position: relative;
@@ -140,6 +205,11 @@ a {
       margin: 0 auto;
       padding: 0 20px;
       overflow-y: auto; }
+      @media screen and (max-width: 460px) {
+        .modal .modal-content .modal-text .modal-text-content {
+          margin-top: 40px;
+          padding: 0 10px;
+          width: 90%; } }
       .modal .modal-content .modal-text .modal-text-content > p > a {
         color: #ff0000; }
         .modal .modal-content .modal-text .modal-text-content > p > a:hover {
@@ -175,6 +245,15 @@ a {
       right: -100px;
       bottom: 0;
       animation-duration: 0.4s; }
+      @media screen and (max-width: 680px) {
+        .modal .modal-content .modal-footer .close-button {
+          max-width: 100px;
+          right: -50px;
+          bottom: -45px; } }
+      @media screen and (max-width: 460px) {
+        .modal .modal-content .modal-footer .close-button {
+          max-width: 50px;
+          bottom: -35px; } }
 
 @-webkit-keyframes bounce {
   0%, 20%, 53%, 80%,
@@ -302,7 +381,7 @@ a {
       margin: 2px 0;
       border: 2px solid black;
       position: relative;
-      transition: all .3s ease;
+      transition: all 0.7s cubic-bezier(0.93, -0.6, 0.3, 1.2);
       top: 0;
       left: 0;
       opacity: 1; }
@@ -816,7 +895,7 @@ form {
   z-index: 999;
   top: 0;
   left: 0;
-  transition: all .3s ease;
+  transition: all 0.7s cubic-bezier(0.93, -0.52, 0.29, 1.22);
   opacity: 0;
   visibility: hidden; }
   .nav-backdrop.active {
