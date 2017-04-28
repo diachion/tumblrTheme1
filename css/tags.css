@@ -92,8 +92,8 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
           color: #6cff0d; }
         @media screen and (max-width: 768px) {
           .tags .black-bg .nav-links a {
-            width: 33%;
-            font-size: 1.1em;
+            width: 33.3%;
+            font-size: 1em;
             padding: 10px 0;
             float: left; } }
     @media screen and (max-width: 992px) {
@@ -146,7 +146,8 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
     @media screen and (max-width: 460px) {
       .tags .ballchain {
         top: -90px;
-        left: -355px; } }
+        left: -355px;
+        height: 120vh; } }
   .tags .tag-wrapper {
     position: relative; }
     .tags .tag-wrapper .tag {
@@ -344,8 +345,8 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
               padding: 0 10px 0 5px; } }
         @media screen and (max-width: 460px) {
           .tags-content .tag-content a .tag-price {
-            font-size: 12px;
-            width: 105px;
+            font-size: 10px;
+            width: 80px;
             text-align: right; } }
       .tags-content .tag-content a:hover {
         background: #bfbfbf; }

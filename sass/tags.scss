@@ -145,8 +145,8 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
           color: $primary;
         }
         @include tablet {
-          width: 33%;
-          font-size: 1.1em;
+          width: 33.3%;
+          font-size: 1em;
           padding: 10px 0;
           float: left;
         }
@@ -206,8 +206,9 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
     left: -350px;
     z-index: -1;
     @include mobile {
-          top: -90px;
-    left: -355px;
+      top: -90px;
+      left: -355px;
+      height: 120vh;
     }
   }
   .tag-wrapper {
@@ -435,8 +436,8 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
           }
         }
         @include mobile {
-          font-size: 12px;
-          width: 105px;
+          font-size: 10px;
+          width: 80px;
           text-align: right;
         }
       }
