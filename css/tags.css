@@ -96,6 +96,10 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
             font-size: 1.1em;
             padding: 10px 0;
             float: left; } }
+    @media screen and (max-width: 992px) {
+      .tags .black-bg {
+        top: 20px;
+        right: 0; } }
     @media screen and (max-width: 768px) {
       .tags .black-bg {
         position: fixed;
@@ -105,7 +109,7 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
         height: 40px;
         transform: none;
         border-radius: 0;
-        z-index: 999; }
+        z-index: 999999; }
         .tags .black-bg .nav-links {
           transform: none;
           padding: 0 12px; }
@@ -119,17 +123,18 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
     z-index: -1; }
     @media screen and (max-width: 992px) {
       .tags .tags-mark {
+        top: 150px;
         max-width: 150px;
         right: 100%; } }
     @media screen and (max-width: 768px) {
       .tags .tags-mark {
-        top: 100%;
-        right: 50%; } }
+        top: 15%;
+        right: 90%; } }
     @media screen and (max-width: 680px) {
       .tags .tags-mark {
-        max-width: 125px;
-        top: 25%;
-        right: 100%; } }
+        max-width: 150px;
+        top: 10%;
+        right: 90%; } }
   .tags .ballchain {
     background: url("../imgs/ballchain.png") no-repeat;
     position: absolute;

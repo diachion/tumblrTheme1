@@ -154,6 +154,10 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
       }
 
     }
+    @include desktop {
+      top: 20px;
+      right: 0;
+    }
     @include tablet {
       position: fixed;
       top: 0;
@@ -162,7 +166,7 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
       height: 40px;
       transform: none;
       border-radius: 0;
-      z-index: 999;
+      z-index: 999999;
       .nav-links {
         transform: none;
         padding: 0 12px;
@@ -179,17 +183,18 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
     top: 260px;
     z-index: -1;
     @include desktop {
+      top: 150px;
       max-width: 150px;
       right: 100%;
     }
     @include tablet {
-      top: 100%;
-      right: 50%;
+      top: 15%;
+      right: 90%;
     }
     @include tabmini {
-      max-width: 125px;
-      top: 25%;
-      right: 100%;
+      max-width: 150px;
+      top: 10%;
+      right: 90%;
     }
   }
   .ballchain {

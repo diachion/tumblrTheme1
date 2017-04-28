@@ -1657,6 +1657,7 @@ $(document).ready(function(){
   		$('.tags-content').children('.tag-content').removeClass('active'); //Remove the active class for previous content
   		$(target).addClass('active'); //Add active class to currently targeted content based on the href from the tag
       $(target).animate({ scrollTop: 0 }, "fast");
+      $('body').animate({ scrollTop: 450 }, 500);
   	}
   });
 
