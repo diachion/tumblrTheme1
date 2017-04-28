@@ -19,15 +19,30 @@ body {
   background: url("../imgs/chain_link_fence_v2.jpg") repeat fixed center;
   background-color: #0c7109;
   overflow-y: hidden; }
+  @media screen and (max-width: 680px) {
+    body {
+      overflow-x: hidden;
+      overflow-y: auto;
+      padding-bottom: 80px; } }
 
 h1, h2, h3, h4, h5, h6, .collapsible-header {
   font-family: "Londrina Solid", cursive; }
 
 .container {
-  width: 90%; }
+  width: 95%; }
 
 .row {
   margin-bottom: 0; }
+
+.small-only {
+  display: none; }
+  @media screen and (max-width: 680px) {
+    .small-only {
+      display: inline-block; } }
+
+@media screen and (max-width: 680px) {
+  .tablet-only {
+    display: none; } }
 
 /* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
       DOG TAG "TABS"
@@ -46,6 +61,10 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
       padding-top: 75%;
       margin-right: 0;
       left: 30px; } }
+  @media screen and (max-width: 768px) {
+    .tags {
+      padding: 80px 0;
+      left: 50px; } }
   .tags .black-bg {
     background: #000;
     position: absolute;
@@ -71,6 +90,27 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
         -moz-transition: all 0.3s ease; }
         .tags .black-bg .nav-links a:hover {
           color: #6cff0d; }
+        @media screen and (max-width: 768px) {
+          .tags .black-bg .nav-links a {
+            width: 33%;
+            font-size: 1.1em;
+            padding: 10px 0;
+            float: left; } }
+    @media screen and (max-width: 768px) {
+      .tags .black-bg {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 40px;
+        transform: none;
+        border-radius: 0;
+        z-index: 999; }
+        .tags .black-bg .nav-links {
+          transform: none;
+          padding: 0 12px; }
+          .tags .black-bg .nav-links a {
+            display: inline-block; } }
   .tags .tags-mark {
     position: absolute;
     max-width: 200px;
@@ -84,7 +124,12 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
     @media screen and (max-width: 768px) {
       .tags .tags-mark {
         top: 100%;
-        right: 0; } }
+        right: 50%; } }
+    @media screen and (max-width: 680px) {
+      .tags .tags-mark {
+        max-width: 125px;
+        top: 25%;
+        right: 100%; } }
   .tags .ballchain {
     background: url("../imgs/ballchain.png") no-repeat;
     position: absolute;
@@ -93,6 +138,10 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
     top: 0;
     left: -350px;
     z-index: -1; }
+    @media screen and (max-width: 460px) {
+      .tags .ballchain {
+        top: -90px;
+        left: -355px; } }
   .tags .tag-wrapper {
     position: relative; }
     .tags .tag-wrapper .tag {
@@ -192,6 +241,10 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
       .tags .random {
         right: 85px;
         top: 25px; } }
+    @media screen and (max-width: 768px) {
+      .tags .random {
+        right: 70px;
+        top: 35px; } }
   .tags .indicator {
     height: 0px; }
 
@@ -214,6 +267,11 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
     transition: all 0.3s ease;
     -webkit-transition: all 0.3s ease;
     -moz-transition: all 0.3s ease; }
+    @media screen and (max-width: 768px) {
+      .tags-content .tag-content {
+        overflow-y: auto;
+        height: auto;
+        padding: 15px 5px; } }
     .tags-content .tag-content.active {
       display: block; }
     .tags-content .tag-content .content-wrapper {
@@ -257,21 +315,33 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
           padding: 5px 5px 2px 15px;
           margin-right: 5px;
           border-radius: 3px; }
+          @media screen and (max-width: 680px) {
+            .tags-content .tag-content a .tag-text .fa {
+              padding: 5px;
+              font-size: .8em; } }
+        @media screen and (max-width: 460px) {
+          .tags-content .tag-content a .tag-text {
+            font-size: 12px;
+            width: 75%;
+            text-align: left;
+            margin-right: 10px; } }
       .tags-content .tag-content a .tag-price {
         font-weight: 700;
-        position: relative;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis; }
+        position: relative; }
         .tags-content .tag-content a .tag-price .fa {
           font-size: 0.8em; }
         .tags-content .tag-content a .tag-price .quantity {
           background: #51cf00;
           padding: 0 20px 0 10px;
-          margin-left: 5px;
-          white-space: nowrap;
-          overflow: hidden;
-          text-overflow: ellipsis; }
+          margin-left: 5px; }
+          @media screen and (max-width: 680px) {
+            .tags-content .tag-content a .tag-price .quantity {
+              padding: 0 10px 0 5px; } }
+        @media screen and (max-width: 460px) {
+          .tags-content .tag-content a .tag-price {
+            font-size: 12px;
+            width: 105px;
+            text-align: right; } }
       .tags-content .tag-content a:hover {
         background: #bfbfbf; }
       .tags-content .tag-content a:hover .tags-hover {
@@ -297,13 +367,24 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
   padding: 10px;
   border-radius: 20px;
   transform: rotate(5deg);
-  z-index: 2; }
+  z-index: 2;
+  cursor: pointer; }
   @media screen and (max-width: 992px) {
     .money {
       bottom: 10px;
       right: 7px;
       height: 120px;
       width: 230px; } }
+  @media screen and (max-width: 680px) {
+    .money {
+      position: relative;
+      margin: 60px 0px 0 auto; } }
+  @media screen and (max-width: 460px) {
+    .money {
+      transform: scale(0.5) rotate(-12deg);
+      right: -50px;
+      bottom: -15px;
+      position: fixed; } }
   .money .money-title {
     color: #6cff0d;
     font-size: 1.6em;

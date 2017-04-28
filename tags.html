@@ -21,13 +21,15 @@
       -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- -->
     <div class="col s12 m4 l5 right-align">
       <div class="tags">
+
         <div class="black-bg">
           <div class="nav-links">
-            <a href="index.html"><span class="fa fa-home"></span> Return to Main Menu</a>
-            <a href="character.html"><span class="fa fa-tags"></span> Character Tags</a>
-            <a href="#"><span class="fa fa-archive"></span> History</a>
+            <a href="index.html"><span class="fa fa-home"></span><span class="small-only">Back</span><span class="tablet-only">Return to Main Menu</span></a>
+            <a href="character.html"><span class="fa fa-tags"></span><span class="small-only">Char</span><span class="tablet-only">Character Tags</span></a>
+            <a href="#"><span class="fa fa-archive"></span>History</a>
           </div>
         </div>
+
         <img class="tags-mark" src="imgs/tags_badge.png">
         <div class="ballchain animated bounceInUp"></div>
         <div class="tag-wrapper animated bounceInUp animanga"><a class="tag" href="#animanga"><span class="fa fa-circle"></span> Anime / Manga</a></div>
@@ -1281,7 +1283,7 @@
               <img class="tags-hover animated jelly" src="imgs/tags_hover.png">
               <div class="flex-content">
               <span class="tag-text"><span class="fa fa-film"></span> How to Train Your Dragon</span>
-                <span class="tag-price"><span class="fa fa-jpy"></span> 1,500 <span class="quantity">x 0</span></span>
+                <span class="tag-price"><span class="fa fa-jpy"></span> 1,500 <span class="quantity">x0</span></span>
               </div>
             </a>
           </div>
@@ -1611,8 +1613,8 @@
     </div> <!-- col -->
 
     <!-- =-=-=-=-=-=-=-=-=-= WALLET START =-=-=-=-=-=-=-=-=-= -->
-    <div class="col s12 m12 l1">
-      <div class="money">
+    <div class="col s12 m12 l1 ">
+      <div class="money back2Top">
         <div class="money-title center-align">Which one ya want?</div>
         <div class="money-amount"><span class="fa fa-jpy"></span> <span>37,418</span></div>
       </div>
@@ -1654,7 +1656,15 @@ $(document).ready(function(){
   		var target = $(this).children().attr('href'); //Grab the href of the content
   		$('.tags-content').children('.tag-content').removeClass('active'); //Remove the active class for previous content
   		$(target).addClass('active'); //Add active class to currently targeted content based on the href from the tag
+      $(target).animate({ scrollTop: 0 }, "fast");
   	}
+  });
+
+  $(".back2Top").click(function(){
+    $("html, body").animate({
+        scrollTop: $("header").height()
+    }, 500);
+    return false;
   });
 
 });

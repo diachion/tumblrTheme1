@@ -69,6 +69,11 @@ body {
   background: url('../imgs/chain_link_fence_v2.jpg') repeat fixed center;
   background-color: lighten($accent1,8%);
   overflow-y: hidden;
+  @include tabmini {
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding-bottom: 80px;
+  }
 }
 
 h1, h2, h3, h4, h5, h6, .collapsible-header {
@@ -76,14 +81,24 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
 }
 
 .container {
-  width: 90%;
+  width: 95%;
 }
 
 .row {
   margin-bottom: 0;
 }
 
-
+.small-only {
+  display: none;
+  @include tabmini {
+    display: inline-block;
+  }
+}
+.tablet-only {
+  @include tabmini {
+    display: none;
+  }
+}
 /* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
       DOG TAG "TABS"
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
@@ -100,6 +115,10 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
     padding-top: 75%;
     margin-right: 0;
     left: 30px;
+  }
+  @include tablet {
+    padding: 80px 0;
+    left: 50px;
   }
   .black-bg {
     background: $nav;
@@ -125,6 +144,31 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
         &:hover {
           color: $primary;
         }
+        @include tablet {
+          width: 33%;
+          font-size: 1.1em;
+          padding: 10px 0;
+          float: left;
+        }
+ 
+      }
+
+    }
+    @include tablet {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 40px;
+      transform: none;
+      border-radius: 0;
+      z-index: 999;
+      .nav-links {
+        transform: none;
+        padding: 0 12px;
+        a {
+          display: inline-block;
+        }
       }
     }
   }
@@ -140,7 +184,12 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
     }
     @include tablet {
       top: 100%;
-      right: 0;
+      right: 50%;
+    }
+    @include tabmini {
+      max-width: 125px;
+      top: 25%;
+      right: 100%;
     }
   }
   .ballchain {
@@ -151,8 +200,9 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
     top: 0;
     left: -350px;
     z-index: -1;
-    @include desktop {
-
+    @include mobile {
+          top: -90px;
+    left: -355px;
     }
   }
   .tag-wrapper {
@@ -265,6 +315,10 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
       right: 85px;
       top: 25px;
     }
+    @include tablet {
+      right: 70px;
+      top: 35px;
+    }
   }
   .indicator {
     height: 0px;
@@ -289,6 +343,11 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
     overflow-x: hidden;
     animation-duration: 0.3s;
     @include trans($easyease);
+    @include tablet {
+      overflow-y: auto;
+      height: auto;
+      padding: 15px 5px;
+    }
     &.active {
       display: block;
     }
@@ -344,14 +403,21 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
           padding: 5px 5px 2px 15px;
           margin-right: 5px;
           border-radius: 3px;
+          @include tabmini {
+            padding: 5px;
+            font-size: .8em;
+          }
+        }
+        @include mobile {
+          font-size: 12px;
+          width: 75%;
+          text-align: left;
+          margin-right: 10px;
         }
       }
       .tag-price {
         font-weight: 700;
         position: relative;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
         .fa {
           font-size: 0.8em;
         }
@@ -359,9 +425,14 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
           background: darken($primary,12%);
           padding: 0 20px 0 10px;
           margin-left: 5px;
-          white-space: nowrap;
-          overflow: hidden;
-          text-overflow: ellipsis;
+          @include tabmini {
+            padding: 0 10px 0 5px;
+          }
+        }
+        @include mobile {
+          font-size: 12px;
+          width: 105px;
+          text-align: right;
         }
       }
       &:hover {
@@ -397,11 +468,22 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
   border-radius: 20px;
   transform:rotate(5deg);
   z-index: 2;
+  cursor: pointer;
   @include desktop {
     bottom: 10px;
     right: 7px;
     height: 120px;
     width: 230px;
+  }
+  @include tabmini {
+    position: relative;
+    margin: 60px 0px 0 auto;
+  }
+  @include mobile {
+    transform: scale(.5) rotate(-12deg);
+    right: -50px;
+    bottom: -15px;
+    position: fixed;
   }
   .money-title {
     color: $primary;
