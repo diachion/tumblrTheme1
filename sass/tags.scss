@@ -107,7 +107,7 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
   display: inline-block;
   position: relative;
   width: 180px !important;
-  padding-top: 55%;
+  padding-top: 300px;
   float: none;
   margin-right: 50px;
   overflow: visible;
@@ -125,7 +125,7 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
     position: absolute;
     height: 150px;
     width: 280px;
-    top: 150px;
+    top: 125px;
     right: 95px;
     border-radius: 20px;
     transform:rotate(-5deg);
@@ -187,7 +187,7 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
   .tags-mark {
     position: absolute;
     max-width: 200px;
-    right: 250px;
+    right: 100%;
     top: 260px;
     z-index: -1;
     @include desktop {
