@@ -19,17 +19,19 @@
   <!-- -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
             SIDEBAR CONTENT
       -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- -->
-    <div class="col s12 m12 l5 right-align">
+    <div class="col s12 m4 l5 right-align">
       <div class="tags">
         <div class="black-bg">
           <div class="nav-links">
-            <a href="index.html"><span class="fa fa-home"></span> Return to Main Menu</a>
-            <a href="tags.html"><span class="fa fa-tags"></span> Tags</a>
-            <a href="#"><span class="fa fa-archive"></span> History</a>
+            <a href="index.html"><span class="fa fa-home"></span><span class="small-only">Home</span><span class="tablet-only">Return to Main Menu</span></a>
+            <a href="tags.html"><span class="fa fa-tags"></span><span class="small-only">Tags</span><span class="tablet-only">Tags</span></a>
+            <a href="#"><span class="fa fa-archive"></span>History</a>
           </div>
         </div>
         <img class="tags-mark" src="imgs/tags_char_badge.png">
+
         <div class="ballchain animated bounceInUp"></div>
+
         <div class="tag-wrapper animated bounceInUp a-e"><a class="tag" href="#a-e"><span class="fa fa-circle"></span> A - E</a></div>
         <div class="tag-wrapper animated bounceInUp f-j" style="animation-delay: 0.1s;"><a class="tag" href="#f-j"><span class="fa fa-circle"></span> F - J</a></div>
         <div class="tag-wrapper animated bounceInUp k-o" style="animation-delay: 0.15s;"><a class="tag " href="#k-o"><span class="fa fa-circle"></span> K - O</a></div>
@@ -41,7 +43,7 @@
     <!-- -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
             MAIN CONTENT
    -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- -->
-    <div class="col s12 m12 l6">
+    <div class="col s12 m8 l6">
       <div class="tags-content">
         <!-- =-=-=-=-=-=-=-=-=-= A - E TAGS START =-=-=-=-=-=-=-=-=-= -->
         <div id="a-e" class="tag-content col s12 animated pulse">
@@ -3238,7 +3240,7 @@
 
     <!-- =-=-=-=-=-=-=-=-=-= WALLET START =-=-=-=-=-=-=-=-=-= -->
     <div class="col s12 m12 l1">
-      <div class="money">
+      <div class="money back2Top">
         <div class="money-title center-align">Who's it for?</div>
         <div class="money-amount"><span class="fa fa-jpy"></span> <span>37,418</span></div>
       </div>
@@ -3280,7 +3282,18 @@ $(document).ready(function(){
       var target = $(this).children().attr('href'); //Grab the href of the content
       $('.tags-content').children('.tag-content').removeClass('active'); //Remove the active class for previous content
       $(target).addClass('active'); //Add active class to currently targeted content based on the href from the tag
+      $(target).animate({ scrollTop: 0 }, "fast");
+      console.log($(window).width());
+      if($(window).width() <= 583) {
+        $('body').animate({ scrollTop: 450 }, 500);
+      }
     }
+  });
+  $(".back2Top").click(function(){
+    $("html, body").animate({
+        scrollTop: $("header").height()
+    }, 500);
+    return false;
   });
 
 });
