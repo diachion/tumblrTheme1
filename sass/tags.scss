@@ -503,9 +503,9 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
     margin: 60px 0px 0 auto;
   }
   @include mobile {
-    transform: scale(.5) rotate(-12deg);
+    transform: scale(.5) rotate(5deg);
     right: -50px;
-    bottom: -15px;
+    bottom: -25px;
     position: fixed;
   }
   .money-title {

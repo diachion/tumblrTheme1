@@ -133,19 +133,19 @@ a {
     .dagger { // NOT DAGGER FROM FF9, GEEZ
       position: absolute;
       width: 240px;
-      top: -115px;
+      top: -100px;
       right:  0;
       z-index: 1;
       animation-duration: 0.25s;
       @include tablet {
         width: 175px;
-        top: -55px;
+        top: -40px;
         left: 74%;
       }
       @include mobile {
-        top: 20px;
+        top: 30px;
         width: 100px;
-        left: 90%;
+        left: 85%;
       }
     }
 

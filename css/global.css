@@ -62,20 +62,20 @@ a {
     .modal .modal-header .dagger {
       position: absolute;
       width: 240px;
-      top: -115px;
+      top: -100px;
       right: 0;
       z-index: 1;
       animation-duration: 0.25s; }
       @media screen and (max-width: 768px) {
         .modal .modal-header .dagger {
           width: 175px;
-          top: -55px;
+          top: -40px;
           left: 74%; } }
       @media screen and (max-width: 460px) {
         .modal .modal-header .dagger {
-          top: 20px;
+          top: 30px;
           width: 100px;
-          left: 90%; } }
+          left: 85%; } }
     .modal .modal-header .modal-negotation {
       position: relative;
       left: -10px;
