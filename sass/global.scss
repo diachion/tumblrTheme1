@@ -145,7 +145,7 @@ a {
       @include mobile {
         top: 30px;
         width: 100px;
-        left: 85%;
+        left: 78%;
       }
     }
 
@@ -203,7 +203,7 @@ a {
         top: 17px;
       }
     }
-    >h4 {
+    > h4 {
       position: absolute;
       bottom: -50px;
       width: 100%;
@@ -225,7 +225,7 @@ a {
         margin: 10px auto;
       }
       @include mobile {
-        width: 100%;
+        width: 80%;
         margin: 0 auto;
       }
     }

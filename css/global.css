@@ -75,7 +75,7 @@ a {
         .modal .modal-header .dagger {
           top: 30px;
           width: 100px;
-          left: 85%; } }
+          left: 78%; } }
     .modal .modal-header .modal-negotation {
       position: relative;
       left: -10px;
@@ -149,7 +149,7 @@ a {
           margin: 10px auto; } }
       @media screen and (max-width: 460px) {
         .modal .modal-header > h4 {
-          width: 100%;
+          width: 80%;
           margin: 0 auto; } }
   @media screen and (max-width: 680px) {
     .modal .modal-content {

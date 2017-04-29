@@ -405,7 +405,7 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
     .money {
       transform: scale(0.5) rotate(5deg);
       right: -50px;
-      bottom: -25px;
+      bottom: -21px;
       position: fixed; } }
   .money .money-title {
     color: #6cff0d;
