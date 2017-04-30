@@ -14,7 +14,7 @@ body {
   font-family: "Heebo", sans-serif;
   font-size: 0.9em;
   color: #fff;
-  background: url("../imgs/star_bg.jpg") repeat fixed;
+  background: url("http://www.img.kevinquach.ca/wp-content/uploads/2017/04/star_bg.jpg") repeat fixed;
   overflow-x: hidden; }
 
 h1, h2, h3, h4, h5, h6, .collapsible-header {
@@ -136,7 +136,7 @@ a {
       left: 0;
       max-width: 450px;
       margin: 0 auto;
-      background-image: url("../imgs/modal_header_white.svg");
+      background-image: url("http://www.img.kevinquach.ca/wp-content/uploads/2017/04/modal_header_white.svg");
       background-repeat: no-repeat;
       background-size: cover;
       padding: .9em 0 .5em 0;
@@ -164,7 +164,7 @@ a {
       height: 115%;
       top: -123px;
       left: -23px;
-      background-image: url("../imgs/modal_top.svg");
+      background-image: url("http://www.img.kevinquach.ca/wp-content/uploads/2017/04/modal_top.svg");
       background-repeat: no-repeat;
       background-size: cover;
       z-index: -1; }
@@ -184,7 +184,7 @@ a {
       bottom: 10px;
       transform: rotate(-2deg);
       left: 19px;
-      background-image: url("../imgs/modal_bottom.svg");
+      background-image: url("http://www.img.kevinquach.ca/wp-content/uploads/2017/04/modal_bottom.svg");
       background-repeat: no-repeat;
       background-size: cover;
       z-index: -1; }
@@ -257,7 +257,7 @@ a {
 
 @-webkit-keyframes bounce {
   0%, 20%, 53%, 80%,
-  to {
+    to {
     -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
     animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }
   40%, 43%, 70% {
@@ -271,10 +271,9 @@ a {
   90% {
     -webkit-transform: translate3d(5px, -5px, 0);
     transform: translate3d(5px, -5px, 0); } }
-
 @keyframes bounce {
   0%, 20%, 53%, 80%,
-  to {
+    to {
     -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
     animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }
   40%, 43%, 70% {
@@ -288,7 +287,6 @@ a {
   90% {
     -webkit-transform: translate3d(5px, -5px, 0);
     transform: translate3d(5px, -5px, 0); } }
-
 @-webkit-keyframes fadeInDownBig {
   0% {
     opacity: 0;
@@ -298,7 +296,6 @@ a {
     opacity: 1;
     -webkit-transform: none;
     transform: none; } }
-
 @keyframes fadeInDownBig {
   0% {
     opacity: 0;
@@ -308,7 +305,6 @@ a {
     opacity: 1;
     -webkit-transform: none;
     transform: none; } }
-
 /* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
       HEADER / BANNER
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
@@ -362,7 +358,7 @@ a {
     background: transparent; } }
 
 .nav-wrapper {
-  background: #c20000 url("../imgs/nav_bg-10.png") repeat-x;
+  background: #c20000 url("http://www.img.kevinquach.ca/wp-content/uploads/2017/04/nav_bg-10.png") repeat-x;
   z-index: 999; }
   .nav-wrapper .menu-toggle {
     position: absolute;
@@ -498,7 +494,7 @@ form {
   margin: 30px auto;
   max-width: 400px; }
   .card .card-content {
-    background: url("../imgs/diamond_top_bg.png");
+    background: url("http://www.img.kevinquach.ca/wp-content/uploads/2017/04/diamond_top_bg.png");
     color: #fff;
     padding: 2px 2px 8px 2px;
     border-radius: 0; }
@@ -515,7 +511,7 @@ form {
     border: 3px solid #fff;
     padding: 10px !important; }
   .card .card-action {
-    background: url("../imgs/circle_bg.png");
+    background: url("http://www.img.kevinquach.ca/wp-content/uploads/2017/04/circle_bg.png");
     color: #fff;
     border-top: 0px solid transparent;
     padding-top: 30px;
@@ -529,7 +525,7 @@ form {
         .card .card-action .sidebar-top-rip {
           top: -7px; } }
     .card .card-action .sidebar-bottom-img {
-      background: url("../imgs/diamond_bottom_bg_v2.png");
+      background: url("http://www.img.kevinquach.ca/wp-content/uploads/2017/04/diamond_bottom_bg_v2.png");
       position: absolute;
       width: 100%;
       left: 0;
@@ -547,11 +543,10 @@ form {
   .collapsible .collapsible-header h6 {
     display: inline-block;
     font-size: 1.3em; }
-
 .collapsible .collapsible-body {
   border-bottom: 0; }
   .collapsible .collapsible-body p {
-    background: url("../imgs/circle_bg.png");
+    background: url("http://www.img.kevinquach.ca/wp-content/uploads/2017/04/circle_bg.png");
     color: #fff;
     padding: 20px; }
 
@@ -561,7 +556,6 @@ form {
 @media only screen and (min-width: 993px) {
   .container {
     width: 95%; } }
-
 @media only screen and (min-width: 601px) {
   .container {
     width: 90%; } }
@@ -643,7 +637,7 @@ form {
         .content-wrapper .content-meta .meta-text {
           font-size: .9em; } }
   .content-wrapper .content-bg {
-    background: url("../imgs/extra_clean_paper.png"); }
+    background: url("http://www.img.kevinquach.ca/wp-content/uploads/2017/04/extra_clean_paper.png"); }
     .content-wrapper .content-bg .rip {
       width: 100%;
       position: absolute;
@@ -671,7 +665,7 @@ form {
     left: 0;
     width: 100%;
     height: 100px;
-    background-image: url("../imgs/top_rip_v2.png");
+    background-image: url("http://www.img.kevinquach.ca/wp-content/uploads/2017/04/top_rip_v2.png");
     background-repeat: no-repeat;
     background-size: 100%; }
   .content-post::after {
@@ -681,7 +675,7 @@ form {
     left: 0;
     width: 100%;
     height: 100px;
-    background-image: url("../imgs/bottom_rip_v2.png");
+    background-image: url("http://www.img.kevinquach.ca/wp-content/uploads/2017/04/bottom_rip_v2.png");
     background-repeat: no-repeat;
     background-position: bottom;
     background-size: 100%; }
@@ -707,6 +701,25 @@ form {
     font-size: 1.5em;
     text-align: center;
     margin-top: 15px; }
+  .content-post .audio-post {
+    display: flex; }
+    .content-post .audio-post .album-art {
+      margin-left: 10px; }
+      .content-post .audio-post .album-art img {
+        width: 100%;
+        max-width: 100px; }
+      .content-post .audio-post .album-art .album-img {
+        background: #ff0000;
+        width: 100%;
+        max-width: 82px;
+        padding: 5px;
+        margin: -8px auto; }
+    .content-post .audio-post .album-info {
+      width: 100%;
+      background: #fff;
+      border: 5px solid #000;
+      text-align: right;
+      padding: 10px; }
   .content-post .ask-post {
     position: relative; }
     @media screen and (max-width: 680px) {
@@ -720,7 +733,7 @@ form {
       right: calc(100% - 110px);
       z-index: 2;
       display: inline-block;
-      background-image: url("../imgs/chat_icon.png");
+      background-image: url("http://www.img.kevinquach.ca/wp-content/uploads/2017/04/chat_icon.png");
       width: 130px;
       height: 90px;
       background-repeat: no-repeat;
@@ -882,7 +895,7 @@ form {
         height: 20px;
         top: 0;
         left: 0;
-        background: url("../imgs/nav_bg-10.png") repeat-x; }
+        background: url("http://www.img.kevinquach.ca/wp-content/uploads/2017/04/nav_bg-10.png") repeat-x; }
       .navbar::after {
         content: "";
         position: absolute;
@@ -891,7 +904,7 @@ form {
         bottom: 0;
         left: 0;
         transform: rotate(-180deg);
-        background: url("../imgs/nav_bg-10.png") repeat-x; } }
+        background: url("http://www.img.kevinquach.ca/wp-content/uploads/2017/04/nav_bg-10.png") repeat-x; } }
 
 .nav-backdrop {
   position: fixed;
@@ -1014,7 +1027,6 @@ form {
     transform: scale(1.5) rotate(-7deg); }
   100% {
     transform: scale(1.15) rotate(-7deg); } }
-
 @keyframes tiltBounceAlt {
   0% {
     transform: scale(1) rotate(7deg); }
@@ -1022,7 +1034,6 @@ form {
     transform: scale(1.5) rotate(7deg); }
   100% {
     transform: scale(1.15) rotate(7deg); } }
-
 @keyframes jelly {
   0% {
     width: 100%;
@@ -1033,3 +1044,5 @@ form {
   100% {
     width: 100%;
     transform: scale(1.25, 1) skewX(20deg) translateY(3px) rotateX(-40deg) rotateY(-10deg) rotateZ(-15deg); } }
+
+/*# sourceMappingURL=global.css.map */
