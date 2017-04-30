@@ -244,10 +244,10 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
       overflow: visible;
       @include trans($easyease);
       .fa {
-        color: lighten($accent1,8%);
+        color: $accent1;
         font-size: 0.8em;
         position: relative;
-        right: 15px;
+        right: 50px;
       }
       @include desktop {
         font-size: 1.2em;
@@ -266,7 +266,7 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
           background: $secondary;
           color: $text;
           .fa {
-            color: #ad532c;
+            color: #280a04;
           }
         }
         .fa {
@@ -374,12 +374,14 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
     &.active {
       display: block;
     }
+    h5 {
+      font-size: 1.2em;
+    }
     .series-name {
       background: $text;
       color: $primary;
       display: inline-block;
-      padding: 0 20px;
-      font-size: .85em;
+      padding: 2px 20px;
     }
     .content-wrapper {
       position: relative;
