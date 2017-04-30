@@ -301,7 +301,8 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
       background: #000;
       color: #fffa1c;
       display: inline-block;
-      padding: 2px 20px; }
+      padding: 0 20px;
+      font-size: .85em; }
     .tags-content .tag-content .content-wrapper {
       position: relative; }
       .tags-content .tag-content .content-wrapper .jelly {
