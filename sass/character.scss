@@ -68,8 +68,8 @@ body {
   color: $text;
   background: url('../imgs/chain_link_fence_v3.jpg') repeat fixed center;
   background-color: lighten($accent1,8%);
-
-  @include tabmini {
+  overflow-y: hidden;
+  @include tablet {
     overflow-x: hidden;
     overflow-y: auto;
     padding-bottom: 0px;
@@ -374,6 +374,12 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
     &.active {
       display: block;
     }
+    .series-name {
+      background: $text;
+      color: $primary;
+      display: inline-block;
+      padding: 2px 20px;
+    }
     .content-wrapper {
       position: relative;
       .jelly {
@@ -413,6 +419,9 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
       .flex-content {
         display: flex;
         justify-content: space-between;
+      }
+      .tag-indent {
+        padding-left: 10px;
       }
       .tag-text {
         position: relative;
