@@ -194,7 +194,7 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
           border-radius: 15px;
           width: 70%; }
           .tags .tag-wrapper .tag .fa {
-            right: 7px; } }
+            right: 30px; } }
     .tags .tag-wrapper.inactive .tag {
       background: #280a04;
       color: #ce6a3e; }
@@ -299,6 +299,9 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
       display: block; }
     .tags-content .tag-content h5 {
       font-size: 1.2em; }
+      @media screen and (max-width: 680px) {
+        .tags-content .tag-content h5 {
+          font-size: 1em; } }
     .tags-content .tag-content .series-name {
       background: #000;
       color: #fffa1c;
