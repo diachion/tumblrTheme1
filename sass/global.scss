@@ -867,7 +867,7 @@ form {
 
 .content-post {
   width: 100%;
-  padding: 120px 20px;
+  padding: 110px 20px;
   position: relative;
   @include desktop {
     padding: 100px 10px;
@@ -935,24 +935,57 @@ form {
     display: flex;
     .album-art {
       margin-left: 10px;
-      img {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      .nya {
         width: 100%;
-        max-width: 100px;
+        max-width: 130px;
+        @include mobile {
+          max-width: 160px;
+        }
       }
       .album-img {
-        background: $primary;
+        position: absolute;
         width: 100%;
-        max-width: 82px;
-        padding: 5px;
-        margin: -8px auto;
+        max-width: 80px;
+        left: 505px;
+        top: 190px;
+        @include desktop {
+          left: 462px;
+          top: 180px;
+        }
+        @include mobile {
+          left: calc(100% - 110px);
+          top: calc(100% - 260px);
+        }
       }
     }
     .album-info {
-      width: 100%;
-      background: $text;
-      border: 5px solid $secondary;
+      background: rgba(0,0,0,0.9);
+      color: $text;
+      display: flex;
+      flex-direction: column;
+      border: 5px solid $primary;
       text-align: right;
+      width: 100%;
       padding: 10px;
+      .audio-title {
+        font-family: $headings;
+        font-size: 1.3em;
+      }
+      .audio-artist {
+        color: $accent1;
+      }
+      .audio-album {
+        color: $accent4;
+      }
+      p {
+        margin: 12px 0;
+        @include mobile {
+          margin: 8px 0;
+        }
+      }
     }
   }
   .ask-post {
