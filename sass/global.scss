@@ -1,14 +1,6 @@
-/* Color Scheme: https://coolors.co/f1f7ed-f4a33b-e24e1b-453c3b-d8be86 */
-
 /* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
       VARIABLES & MIXINS
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
-// $white: #F1F7ED;
-// $lightorange: #F4A33B;
-// $darkorange: #E24E1B;
-// $darkbrown: #453C3B;
-// $lightbrown: #D8BE86;
-
 $headings: 'Londrina Solid', cursive;
 $body: 'Heebo', sans-serif;
 
@@ -44,12 +36,6 @@ $desktop-width: 1024px;
 /* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
       THEME
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
-// $primary: $lightorange;
-// $secondary: $lightbrown;
-// $text: $darkbrown;
-// $link: $darkorange;
-// $nav: $darkbrown;
-
 $primary: #ff0000;
 $secondary: #000;
 $text: #fff;
@@ -69,10 +55,37 @@ $accent4: #fe6cec; // fuschia
 
 $easyease: all 0.3s ease;
 
+@mixin anidura($dura) {
+  animation-duration: $dura;
+  -webkit-animation-duration: $dura;
+  -moz-animation-duration: $dura;
+  -o-animation-duration: $dura;
+}
+
+@mixin anidelay($delay) {
+  animation-delay: $delay;
+  -webkit-animation-delay: $delay;
+  -moz-animation-delay: $delay;
+  -o-animation-delay: $delay;
+}
+
+@mixin transform($trans) {
+  transform: $trans;
+  -webkit-transform: $trans;
+  -moz-transform: $trans;
+  -ms-transform: $trans;
+  -o-transform: $trans;
+}
+
+@mixin box($box) {
+  box-shadow: $box;
+  -webkit-box-shadow: $box;
+  -moz-box-shadow: $box;
+}
+
 /* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
       GLOBAL CSS
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
-@import url(https://fonts.googleapis.com/css?family=Montserrat|Raleway);
 @import url(https://fonts.googleapis.com/css?family=Londrina+Solid|Heebo);
 
 body {
@@ -107,6 +120,39 @@ a {
   box-sizing: border-box;
 }
 
+
+/* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+      TUMBLR CONTROLS
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
+iframe#tumblr_controls, .tmblr-iframe.tmblr-iframe--desktop-loggedin-controls.iframe-controls--desktop, .tmblr-iframe.tmblr-iframe--desktop-logged-in-controls.iframe-controls--desktop {
+    margin-top: 65px !important;
+    z-index: 99999999999;
+    right: -500px;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.tControls {
+  font-size: 1.3em;
+  background: rgba(0,0,0,0.7);
+  position: fixed;
+  top: 18px;
+  right: 12px;
+  padding: 2px 8px;
+  z-index: 9999999999;
+  &:hover {
+    cursor: pointer;
+  }
+  @include mobile {
+    display: none;
+  }
+}
+
+.sneaky {
+    right: 0 !important;
+}
+
 /* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
       MODALS
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
@@ -116,10 +162,10 @@ a {
   z-index: 999999 !important;
   background: transparent;
   border-radius: 10px;
-  box-shadow: none;
+  @include box(none);
   max-height: 100%;
   overflow-y: visible;
-  animation-duration: 0.2s;
+  @include anidura(0.2s);
   // get rid of material design animation
   top: 10% !important;
   .modal-header {
@@ -136,7 +182,7 @@ a {
       top: -100px;
       right:  0;
       z-index: 1;
-      animation-duration: 0.25s;
+      @include anidura(0.25s);
       @include tablet {
         width: 175px;
         top: -40px;
@@ -153,7 +199,7 @@ a {
       position: relative;
       left: -10px;
       width: 400px;
-      transform: rotate(5deg);
+      @include transform(rotate(5deg));
       @include tabmini {
         width: 220px;
         top: 50px;
@@ -166,7 +212,7 @@ a {
     .modal-stats {
       position: relative;
       width: 230px;
-      transform: rotate(5deg);
+      @include transform(rotate(5deg));
       @include tabmini {
         width: 150px;
         top: 35px;
@@ -179,7 +225,7 @@ a {
     .modal-palaces {
       position: relative;
       width: 310px;
-      transform: rotate(5deg);
+      @include transform(rotate(5deg));
       @include tabmini {
         width: 250px;
         top: 0px;
@@ -193,7 +239,7 @@ a {
       position: relative;
       top: -20px;
       width: 300px;
-      transform: rotate(5deg);
+      @include transform(rotate(5deg));
       @include tabmini {
         width: 180px;
         top: 30px;
@@ -264,7 +310,7 @@ a {
           width: 100%;
           height: 100%;
           bottom: 10px;
-          transform: rotate(-2deg);
+          @include transform(rotate(-2deg));
           left: 19px;
           background-image: url('http://www.img.kevinquach.ca/wp-content/uploads/2017/04/modal_bottom.svg');
           background-repeat: no-repeat;
@@ -336,7 +382,7 @@ a {
         max-width: 150px;
         right: -100px;
         bottom: 0;
-        animation-duration: 0.4s;
+        @include anidura(0.4s);
         @include tabmini {
           max-width: 100px;
           right: -50px;
@@ -361,16 +407,13 @@ a {
     40%, 43%, 70% {
         -webkit-animation-timing-function: cubic-bezier(.755, .05, .855, .06);
         animation-timing-function: cubic-bezier(.755, .05, .855, .06);
-        -webkit-transform: scale(1,0.9);
-        transform: scale(1,0.9);
+        @include transform(scale(1,0.9));
     }
     70% {
-        -webkit-transform: translate3d(5px, -5px, 0);
-        transform: translate3d(5px, -5px, 0);
+        @include transform(translate3d(5px, -5px, 0));
     }
     90% {
-        -webkit-transform: translate3d(5px, -5px, 0);
-        transform: translate3d(5px, -5px, 0);
+        @include transform(translate3d(5px, -5px, 0));
     }
 }
 
@@ -383,42 +426,35 @@ a {
     40%, 43%, 70% {
         -webkit-animation-timing-function: cubic-bezier(.755, .05, .855, .06);
         animation-timing-function: cubic-bezier(.755, .05, .855, .06);
-        -webkit-transform: scale(1,0.9);
-        transform: scale(1,0.9);
+        @include transform(scale(1,0.9));
     }
     70% {
-        -webkit-transform: translate3d(5px, -5px, 0);
-        transform: translate3d(5px, -5px, 0);
+        @include transform(translate3d(5px, -5px, 0));
     }
     90% {
-        -webkit-transform: translate3d(5px, -5px, 0);
-        transform: translate3d(5px, -5px, 0);
+        @include transform(translate3d(5px, -5px, 0));
     }
 }
 
 @-webkit-keyframes fadeInDownBig {
     0% {
         opacity: 0;
-        -webkit-transform: translate3d(2000px, -2000px, 0);
-        transform: translate3d(2000px, -2000px, 0)
+        @include transform(translate3d(2000px, -2000px, 0));
     }
     to {
         opacity: 1;
-        -webkit-transform: none;
-        transform: none
+        @include transform(none);
     }
 }
 
 @keyframes fadeInDownBig {
     0% {
         opacity: 0;
-        -webkit-transform: translate3d(2000px, -2000px, 0);
-        transform: translate3d(2000px, -2000px, 0)
+        @include transform(translate3d(2000px, -2000px, 0));
     }
     to {
         opacity: 1;
-        -webkit-transform: none;
-        transform: none
+        @include transform(none);
     }
 }
 
@@ -434,7 +470,7 @@ a {
       position: relative;
       img {
         position: relative;
-        transform: none !important;
+        @include transform(none !important);
         width: 100% !important;
         left: 0;
       }
@@ -458,12 +494,10 @@ a {
     	img {
         display: block;
         margin: 10px auto;
-        -webkit-animation-duration: 0.3s;
-        -moz-animation-duration: 0.3s;
-        animation-duration: 0.3s;
+        @include anidura(0.3s);
     	}
       @include tablet {
-        transform: scale(.7);
+        @include transform(scale(.7));
         margin: -10px auto;
       }
       @include tabmini {
@@ -506,14 +540,14 @@ nav {
       margin: 2px 0;
       border: 2px solid black;
       position: relative;
-      transition: all .7s cubic-bezier(0.93, -0.60, 0.30, 1.20);
+      @include trans(all .7s cubic-bezier(0.93, -0.60, 0.30, 1.20));
       top: 0;
       left: 0;
       opacity: 1;
     }
     &.active {
       span:nth-child(1) {
-        transform: rotate(45deg);
+        @include transform(rotate(45deg));
         top: 10px;
       }
       span:nth-child(2) {
@@ -521,7 +555,7 @@ nav {
         opacity: 0;
       }
       span:nth-child(3) {
-        transform: rotate(-45deg);
+        @include transform(rotate(-45deg));
         top: -6px;
       }
     }
@@ -542,10 +576,16 @@ nav {
     margin: 0 auto;
   }
   .flex-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex;
     flex-direction: row;
     a.btn {
       padding: 0 20px;
+      -webkit-flex-grow: 1;
+      -moz-flex-grow: 1;
+      -ms-flex-grow: 1;
       flex-grow: 1;
       margin: 14px 3px;
       &:hover {
@@ -601,7 +641,13 @@ nav {
 // }
 
 .pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
+  -webkit-justify-content:  space-between;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
   justify-content: space-between;
   @include tablet {
     display: block;
@@ -611,9 +657,7 @@ nav {
   }
   img {
     width: 130px;
-    -webkit-animation-duration: 0.3s;
-    -moz-animation-duration: 0.3s;
-    animation-duration: 0.3s;
+    @include anidura(0.3s);
     @include tablet {
       width: 70px;
       height: auto;
@@ -758,8 +802,68 @@ form {
 }
 
 /* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+      CUSTOM LIKE BUTTON
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
+.like-wrap {
+  position: relative;
+  display: block;
+  width: 40px;
+  height: 40px;
+}
+
+.likey .like_button {
+  position: absolute;
+  top: 3px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  z-index: 10;
+}
+
+.like_button iframe {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.likey {
+  position: absolute;
+  top: 3px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.likey:hover span:before {
+  content: "\f004"; }
+
+.likey .like_button.liked {
+  opacity: 0; }
+
+.like_button.liked + .likey {
+  color: cyan; }
+
+.likey .like_button.liked + span:before {
+  content: "\f004"; }
+
+/* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
       MAIN CONTENT
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
+.tControls {
+  font-size: 1.3em;
+  background: rgba(0,0,0,0.7);
+  position: fixed;
+  top: 18px;
+  right: 12px;
+  padding: 2px 8px;
+  z-index: 9999999999;
+}
+
 .container {
   @media only screen and (min-width: 993px) {
     width: 95%;
@@ -867,7 +971,7 @@ form {
 
 .content-post {
   width: 100%;
-  padding: 110px 20px;
+  padding: 110px 20px 100px 20px;
   position: relative;
   @include desktop {
     padding: 100px 10px;
@@ -904,6 +1008,12 @@ form {
   .content-post-inner {
     max-width: 540px;
     margin: 0 auto;
+    ul {
+      padding-left: 40px;
+      li {
+        list-style-type: disc;
+      }
+    }
     @include tabmini {
       img {
         display: block;
@@ -931,41 +1041,65 @@ form {
     text-align: center;
     margin-top: 15px;
   }
+  .link-post {
+    a {
+      font-family: $headings;
+      font-size: 1.3em;
+      color: $text;
+      text-align: center;
+    }
+    .link-button {
+      background: $primary;
+      width: 100%;
+      border: 3px solid $secondary;
+      padding: 10px;
+      @include anidura(0.3s);
+      .fa {
+        padding-left: 10px;
+      }
+    }
+  }
   .audio-post {
     text-align: right;
     position: relative;
-    margin: -35px 15px 15px 0;
+    margin: -40px 15px 15px 0;
      &::after {
       content: "";
       position: absolute;
       width: 100%;
-      height: 150px;
-      top: 93px;
+      height: 125px;
+      top: 77px;
       left: 10px;
       background: red;
       z-index: 1;
+      @include desktop {
+        height: 120px;
+      }
       @include tablet {
-        
-        height: 125px;
+        height: 130px;
       }
       @include tabmini {
         top: 100px;
       }
       @include mobile {
-        height: 78%;
+        height: 75%;
         top: 80px;
       }
     }
     .nya {
       width: 100%;
-      max-width: 130px;
+      max-width: 230px;
       position: relative;
-      z-index: 999;
-      bottom:  -18px;
+      z-index: 99;
+      bottom:  -12px;
       text-align: right;
       display: inline-block;
+      @include desktop {
+        bottom: -11px;
+      }
       @include mobile {
-        max-width: 100px;
+        max-width: 210px;
+        bottom: -16px;
       }
     }
     .album-info {
@@ -973,14 +1107,11 @@ form {
       color: $text;
       text-align: left;
       width: 100%;
-      padding: 10px 0 30px 0;
+      padding: 10px 0 0 0;
       position: relative;
       border: 4px solid #fff;
       z-index: 9;
-      box-shadow: 4px -4px 0 #414042;
-      @include desktop {
-        padding: 10px 0 30px 0;
-      }
+      @include box(4px -4px 0 #414042);
       @include tablet {
         padding: 10px 0;
       }
@@ -1003,12 +1134,12 @@ form {
         top: 50%;
         left: 0;
         right: 0;
-        transform: translateY(-50%);
+        @include transform(translateY(-50%));
         margin: 0 auto;
         height: 26px;
         box-sizing: content-box;
         overflow: hidden;
-        border: 12px solid rgba(200,200,200,.65);
+        border: 12px solid rgba(0,0,0,.65);
         @include trans($easyease);
         iframe {
           position: relative;
@@ -1018,7 +1149,7 @@ form {
           @include trans($easyease);
         }
         &:hover {
-          border: 12px solid rgba(245,245,245,1);
+          border: 12px solid rgba(0,0,0,1);
           iframe {
             opacity: 1;
           }
@@ -1026,7 +1157,7 @@ form {
       }
       .audio-art {
         width: 100%;
-        max-width: 125px;
+        max-width: 100px;
         @include tablet {
           max-width: 80px;
           margin: 14px 15px;
@@ -1208,7 +1339,7 @@ form {
     >a {
       color: $primary;
       &:hover {
-        color: $secondary;
+        color: $text;
       }
     }
   }
@@ -1231,6 +1362,39 @@ form {
   }
 }
 
+/* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+      PERMAPAGE
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
+.permapage {
+  background: rgba(0,0,0,0.8);
+  width: 100%;
+  max-width: 650px;
+  margin: 0 auto;
+  border: 5px solid $text;
+  padding: 20px;
+  max-height: 500px;
+  overflow-y: scroll;
+  ol.notes {
+    list-style: none;
+    padding-left: 20px;
+    span.action {
+      padding-left: 15px;
+    }
+    li.note blockquote {
+      border-color: $primary;
+    }
+  }
+  &::-webkit-scrollbar {
+    background: $secondary;
+    width: 5px;
+    border-radius: 10px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: $primary;
+    width: 3px;
+    border-radius: 10px;
+  }
+}
 
 /* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
       FANCY NAV
@@ -1251,7 +1415,7 @@ form {
     padding: 20px;
     top: -100%;
     z-index: 9999;
-    transition: all .7s cubic-bezier(0.93, -0.52, 0.29, 1.22);
+    @include trans(all .7s cubic-bezier(0.93, -0.52, 0.29, 1.22));
     &.active {
       top: 0;
     }
@@ -1271,7 +1435,7 @@ form {
       height: 20px;
       bottom: 0;
       left: 0;
-      transform: rotate(-180deg);
+      @include transform(rotate(-180deg));
       background: url("http://www.img.kevinquach.ca/wp-content/uploads/2017/04/nav_bg-10.png") repeat-x;
     }
   }
@@ -1284,7 +1448,7 @@ form {
   z-index: 999;
   top: 0;
   left: 0;
-  transition: all .7s cubic-bezier(0.93, -0.52, 0.29, 1.22);
+  @include trans(all .7s cubic-bezier(0.93, -0.52, 0.29, 1.22));
   opacity: 0;
   visibility: hidden;
   &.active {
@@ -1298,11 +1462,11 @@ form {
   margin: 0px 14px;
   @include desktop {
     margin: 0 -2px;
-    transform: scale(.8);
+    @include transform(scale(.8));
   }
   @include tablet {
     margin: 0 - 10px;
-    transform: scale(.65);
+    @include transform(scale(.65));
   }
   @include tabmini {
     display: block;
@@ -1328,17 +1492,19 @@ form {
   &:hover {
     z-index: 9999;
     .shape-wrapper { 
-      transform: rotate(-6deg);
+      @include transform(rotate(-6deg));
       display: block; 
       .shape.cyan-fill {
-        transform: scale(3,.1);
+        @include transform(scale(3,.1));
       }
     }
     .img-wrapper {
       img {
-       animation: tiltBounce .15s ease;
-       animation-fill-mode: forwards;
-       display: block;
+      -webkit-animation: tiltBounce .15s ease;
+      animation: tiltBounce .15s ease;
+      -webkit-animation-fill-mode: forwards;
+      animation-fill-mode: forwards;
+      display: block;
         &.normal {
            mix-blend-mode: darken;
         }
@@ -1347,10 +1513,14 @@ form {
   }
   &:nth-child(even) {
     &:hover {
-      .shape-wrapper { transform: rotate(11deg) }
+      .shape-wrapper { 
+        @include transform(rotate(11deg));
+      }
       .img-wrapper img {
-         animation: tiltBounceAlt .15s ease;
-         animation-fill-mode: forwards;
+        -webkit-animation: tiltBounceAlt .15s ease;
+        animation: tiltBounceAlt .15s ease;
+        -webkit-animation-fill-mode: forwards;
+        animation-fill-mode: forwards;
       }
     }
   }
@@ -1377,9 +1547,10 @@ form {
   }
 }
 .shape-wrapper {
+  -webkit-filter: sepia(50%) saturate(3);
   filter: sepia(50%) saturate(3);
   .shape {
-    transition: all .1s linear;
+    @include trans(all .1s linear);
     position: absolute;
     top: 0;
     left: 0;
@@ -1393,12 +1564,12 @@ form {
     }
     &.cyan-fill {
       mix-blend-mode: screen;
-      animation-delay: 0.05s;
-      animation-duration: .4s;
+      @include anidelay(0.05s);
+      @include anidura(0.4s);
     }
     &.red-fill {
-      animation-duration: .45s;
-      animation-delay: 0.08s;
+      @include anidura(0.45s);
+      @include anidelay(0.08s);
       opacity: .8;
     }
   }
@@ -1417,30 +1588,37 @@ form {
 
 @keyframes tiltBounce {
   0% {
-    transform: scale(1) rotate(-7deg);
+    @include transform(scale(1) rotate(-7deg));
   }
   50% {
-    transform: scale(1.5) rotate(-7deg);
+    @include transform(scale(1.5) rotate(-7deg));
   }
   100% {
-    transform: scale(1.15) rotate(-7deg);
+    @include transform(scale(1.15) rotate(-7deg));
   }
 }
 @keyframes tiltBounceAlt {
   0% {
-    transform: scale(1) rotate(7deg);
+    @include transform(scale(1) rotate(7deg));
   }
   50% {
-    transform: scale(1.5) rotate(7deg);
+    @include transform(scale(1.5) rotate(7deg));
   }
   100% {
-    transform: scale(1.15) rotate(7deg);
+    @include transform(scale(1.15) rotate(7deg));
   }
 }
 @keyframes jelly {
   0% {
-    width: 100%; transform: scale(1.25,1) skewX(20deg) translateY(3px) rotateX(40deg) rotateY(10deg) rotateZ(-10deg);
+    width: 100%;
+    @include transform(scale(1.25,1) skewX(20deg) translateY(3px) rotateX(40deg) rotateY(10deg) rotateZ(-10deg));
   }
-  50% { width: 100%; transform: scale(1.25,1.1) skewX(-15deg) translateY(-2px) translateZ(-30px); }
-  100% { width: 100%; transform: scale(1.25,1) skewX(20deg) translateY(3px) rotateX(-40deg) rotateY(-10deg) rotateZ(-15deg); }
+  50% { 
+    width: 100%;
+    @include transform(scale(1.25,1.1) skewX(-15deg) translateY(-2px) translateZ(-30px));
+  }
+  100% { 
+    width: 100%;
+    @include transform(scale(1.25,1) skewX(20deg) translateY(3px) rotateX(-40deg) rotateY(-10deg) rotateZ(-15deg));
+  }
 }

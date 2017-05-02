@@ -52,6 +52,27 @@ $accent1: #084b06; // dark green
 
 $easyease: all 0.3s ease;
 
+@mixin transform($trans) {
+  transform: $trans;
+  -webkit-transform: $trans;
+  -moz-transform: $trans;
+  -ms-transform: $trans;
+  -o-transform: $trans;
+}
+
+@mixin anidura($dura) {
+  animation-duration: $dura;
+  -webkit-animation-duration: $dura;
+  -moz-animation-duration: $dura;
+  -o-animation-duration: $dura;
+}
+
+@mixin box($box) {
+  box-shadow: $box;
+  -webkit-box-shadow: $box;
+  -moz-box-shadow: $box;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -59,14 +80,13 @@ $easyease: all 0.3s ease;
 /* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
       GLOBAL CSS
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
-@import url(https://fonts.googleapis.com/css?family=Montserrat|Raleway);
 @import url(https://fonts.googleapis.com/css?family=Londrina+Solid|Heebo);
 
 body {
   font-family: $body;
   font-size: 0.9em;
   color: $text;
-  background: url('../imgs/chain_link_fence_v2.jpg') repeat fixed center;
+  background: url('http://www.img.kevinquach.ca/wp-content/uploads/2017/04/chain_link_fence_v2.jpg') repeat fixed center;
   background-color: lighten($accent1,8%);
   overflow-y: hidden;
   @include tablet {
@@ -128,11 +148,11 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
     top: 150px;
     right: 95px;
     border-radius: 20px;
-    transform:rotate(-5deg);
+    @include transform(rotate(-5deg));
     .nav-links {
       text-align: left;
       padding: 25px 20px 30px 25px;
-      transform:rotate(5deg);
+      @include transform(rotate(5deg));
       a {
         font-family: $headings;
         color: #bfbfbf;
@@ -175,11 +195,11 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
       left: 0;
       width: 100%;
       height: 37px;
-      transform: none;
+      @include transform(none);
       border-radius: 0;
       z-index: 999999;
       .nav-links {
-        transform: none;
+        @include transform(none);
         padding: 0;
         a {
           display: inline-block;
@@ -212,7 +232,7 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
     }
   }
   .ballchain {
-    background: url('../imgs/ballchain.png') no-repeat;
+    background: url('http://www.img.kevinquach.ca/wp-content/uploads/2017/04/ballchain.png') no-repeat;
     position: absolute;
     height: 100vh;
     width: 500px;
@@ -280,7 +300,7 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
         color: $text;
         position: relative;
         z-index: 2;
-        box-shadow: 5px 3px 0 $text;
+        @include box(5px 3px 0 $text);
         &:hover {
           background: $primary;
         }
@@ -293,7 +313,7 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
         color: $text;
         position: relative;
         z-index: 2;
-        box-shadow: 5px 3px 0 $text;
+        @include box(5px 3px 0 $text);
       }
     }
   }
@@ -306,7 +326,7 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
   .games {
     right: 40px;
     top: -10px;
-    .tag { transform:rotate(7deg); }
+    .tag { @include transform(rotate(7deg)); }
     @include desktop {
       right: 0px;
       top: 0;
@@ -315,7 +335,7 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
   .movies {
     right: 70px;
     top: -10px;
-    .tag { transform:rotate(20deg); }
+    .tag { @include transform(rotate(20deg)); }
     @include desktop {
       right: 10px;
       top: 8px;
@@ -324,7 +344,7 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
   .misc {
     right: 115px;
     top: -20px;
-    .tag { transform:rotate(28deg); }
+    .tag { @include transform(rotate(28deg)); }
     @include desktop {
       right: 35px;
       top: 10px;
@@ -333,7 +353,7 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
   .random {
     right: 185px;
     top: -25px;
-    .tag { transform:rotate(45deg); }
+    .tag { @include transform(rotate(45deg)); }
     @include desktop {
       right: 85px;
       top: 25px;
@@ -364,7 +384,7 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
     border-radius: 10px;
     overflow-y: scroll;
     overflow-x: hidden;
-    animation-duration: 0.3s;
+    @include anidura(0.3s);
     @include trans($easyease);
     @include tablet {
       overflow-y: auto;
@@ -411,7 +431,13 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
         // }
       }
       .flex-content {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
         display: flex;
+        -webkit-justify-content:  space-between;
+        -moz-justify-content: space-between;
+        -ms-justify-content: space-between;
         justify-content: space-between;
       }
       .tag-text {
@@ -489,7 +515,7 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
   width: 230px;
   padding: 10px;
   border-radius: 20px;
-  transform:rotate(5deg);
+  @include transform(rotate(5deg));
   z-index: 2;
   cursor: pointer;
   @include desktop {
@@ -503,7 +529,7 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
     margin: 35px -5px 12px auto;
   }
   @include mobile {
-    transform: scale(.5) rotate(5deg);
+    @include transform(scale(.5) rotate(5deg));
     right: -50px;
     bottom: -21px;
     margin: 0;
@@ -523,7 +549,13 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
     letter-spacing: 5px;
     border-bottom: 7px double $secondary;
     padding: 0 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex;
+    -webkit-justify-content:  space-between;
+    -moz-justify-content: space-between;
+    -ms-justify-content: space-between;
     justify-content: space-between;
     @include desktop {
       font-size: 2.4em;
@@ -548,8 +580,8 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
 @keyframes jelly {
   from {
     transform-style: preserve-3d;
-    transform: skewX(40deg) rotateX(60deg) rotateY(10deg) rotateZ(-10deg) perspective(150px);
+    @include transform(skewX(40deg) rotateX(60deg) rotateY(10deg) rotateZ(-10deg) perspective(150px));
   }
-  50% { transform:skewX(-45deg); }
-  to { transform:skewX(40deg) rotateX(-60deg) rotateY(-10deg) rotateZ(-10deg) perspective(150px); }
+  50% { @include transform(skewX(-45deg)); }
+  to { @include transform(skewX(40deg) rotateX(-60deg) rotateY(-10deg) rotateZ(-10deg) perspective(150px)); }
 }

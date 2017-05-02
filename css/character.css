@@ -4,7 +4,6 @@
 /* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
       THEME
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
-@import url(https://fonts.googleapis.com/css?family=Montserrat|Raleway);
 @import url(https://fonts.googleapis.com/css?family=Londrina+Solid|Heebo);
 * {
   box-sizing: border-box; }
@@ -16,7 +15,7 @@ body {
   font-family: "Heebo", sans-serif;
   font-size: 0.9em;
   color: #000;
-  background: url("../imgs/chain_link_fence_v3.jpg") repeat fixed center;
+  background: url("http://www.img.kevinquach.ca/wp-content/uploads/2017/04/chain_link_fence_v3.jpg") repeat fixed center;
   background-color: #60180a;
   overflow-y: hidden; }
   @media screen and (max-width: 768px) {
@@ -73,11 +72,19 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
     top: 150px;
     right: 95px;
     border-radius: 20px;
-    transform: rotate(-5deg); }
+    transform: rotate(-5deg);
+    -webkit-transform: rotate(-5deg);
+    -moz-transform: rotate(-5deg);
+    -ms-transform: rotate(-5deg);
+    -o-transform: rotate(-5deg); }
     .tags .black-bg .nav-links {
       text-align: left;
       padding: 25px 20px 30px 25px;
-      transform: rotate(5deg); }
+      transform: rotate(5deg);
+      -webkit-transform: rotate(5deg);
+      -moz-transform: rotate(5deg);
+      -ms-transform: rotate(5deg);
+      -o-transform: rotate(5deg); }
       .tags .black-bg .nav-links a {
         font-family: "Londrina Solid", cursive;
         color: #bfbfbf;
@@ -119,10 +126,18 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
         width: 100%;
         height: 37px;
         transform: none;
+        -webkit-transform: none;
+        -moz-transform: none;
+        -ms-transform: none;
+        -o-transform: none;
         border-radius: 0;
         z-index: 999999; }
         .tags .black-bg .nav-links {
           transform: none;
+          -webkit-transform: none;
+          -moz-transform: none;
+          -ms-transform: none;
+          -o-transform: none;
           padding: 0; }
           .tags .black-bg .nav-links a {
             display: inline-block; } }
@@ -150,7 +165,7 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
       .tags .tags-mark {
         right: 102%; } }
   .tags .ballchain {
-    background: url("../imgs/ballchain_char.png") no-repeat;
+    background: url("http://www.img.kevinquach.ca/wp-content/uploads/2017/04/ballchain_char.png") no-repeat;
     position: absolute;
     height: 100vh;
     width: 500px;
@@ -212,7 +227,9 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
         color: #000;
         position: relative;
         z-index: 2;
-        box-shadow: 5px 3px 0 #000; }
+        box-shadow: 5px 3px 0 #000;
+        -webkit-box-shadow: 5px 3px 0 #000;
+        -moz-box-shadow: 5px 3px 0 #000; }
         .tags .tag-wrapper.active .tag:hover {
           background: #fffa1c; }
     .tags .tag-wrapper:hover {
@@ -222,7 +239,9 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
         color: #000;
         position: relative;
         z-index: 2;
-        box-shadow: 5px 3px 0 #000; }
+        box-shadow: 5px 3px 0 #000;
+        -webkit-box-shadow: 5px 3px 0 #000;
+        -moz-box-shadow: 5px 3px 0 #000; }
   .tags .a-e {
     right: 10px; }
     @media screen and (max-width: 992px) {
@@ -232,7 +251,11 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
     right: 40px;
     top: -10px; }
     .tags .f-j .tag {
-      transform: rotate(7deg); }
+      transform: rotate(7deg);
+      -webkit-transform: rotate(7deg);
+      -moz-transform: rotate(7deg);
+      -ms-transform: rotate(7deg);
+      -o-transform: rotate(7deg); }
     @media screen and (max-width: 992px) {
       .tags .f-j {
         right: 0px;
@@ -241,7 +264,11 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
     right: 70px;
     top: -10px; }
     .tags .k-o .tag {
-      transform: rotate(20deg); }
+      transform: rotate(20deg);
+      -webkit-transform: rotate(20deg);
+      -moz-transform: rotate(20deg);
+      -ms-transform: rotate(20deg);
+      -o-transform: rotate(20deg); }
     @media screen and (max-width: 992px) {
       .tags .k-o {
         right: 10px;
@@ -250,7 +277,11 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
     right: 115px;
     top: -20px; }
     .tags .p-t .tag {
-      transform: rotate(28deg); }
+      transform: rotate(28deg);
+      -webkit-transform: rotate(28deg);
+      -moz-transform: rotate(28deg);
+      -ms-transform: rotate(28deg);
+      -o-transform: rotate(28deg); }
     @media screen and (max-width: 992px) {
       .tags .p-t {
         right: 35px;
@@ -259,7 +290,11 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
     right: 185px;
     top: -25px; }
     .tags .u-z .tag {
-      transform: rotate(45deg); }
+      transform: rotate(45deg);
+      -webkit-transform: rotate(45deg);
+      -moz-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      -o-transform: rotate(45deg); }
     @media screen and (max-width: 992px) {
       .tags .u-z {
         right: 85px;
@@ -287,6 +322,9 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
     overflow-y: scroll;
     overflow-x: hidden;
     animation-duration: 0.3s;
+    -webkit-animation-duration: 0.3s;
+    -moz-animation-duration: 0.3s;
+    -o-animation-duration: 0.3s;
     transition: all 0.3s ease;
     -webkit-transition: all 0.3s ease;
     -moz-transition: all 0.3s ease; }
@@ -334,7 +372,13 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
         top: 0;
         display: none; }
       .tags-content .tag-content a .flex-content {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
         display: flex;
+        -webkit-justify-content: space-between;
+        -moz-justify-content: space-between;
+        -ms-justify-content: space-between;
         justify-content: space-between; }
       .tags-content .tag-content a .tag-indent {
         padding-left: 10px; }
@@ -402,6 +446,10 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
   padding: 10px;
   border-radius: 20px;
   transform: rotate(5deg);
+  -webkit-transform: rotate(5deg);
+  -moz-transform: rotate(5deg);
+  -ms-transform: rotate(5deg);
+  -o-transform: rotate(5deg);
   z-index: 2;
   cursor: pointer; }
   @media screen and (max-width: 992px) {
@@ -417,6 +465,10 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
   @media screen and (max-width: 460px) {
     .money {
       transform: scale(0.5) rotate(5deg);
+      -webkit-transform: scale(0.5) rotate(5deg);
+      -moz-transform: scale(0.5) rotate(5deg);
+      -ms-transform: scale(0.5) rotate(5deg);
+      -o-transform: scale(0.5) rotate(5deg);
       right: -50px;
       bottom: -21px;
       margin: 0;
@@ -434,7 +486,13 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
     letter-spacing: 5px;
     border-bottom: 7px double #fff;
     padding: 0 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex;
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    -ms-justify-content: space-between;
     justify-content: space-between; }
     @media screen and (max-width: 992px) {
       .money .money-amount {
@@ -455,8 +513,22 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
 @keyframes jelly {
   from {
     transform-style: preserve-3d;
-    transform: skewX(40deg) rotateX(60deg) rotateY(10deg) rotateZ(-10deg) perspective(150px); }
+    transform: skewX(40deg) rotateX(60deg) rotateY(10deg) rotateZ(-10deg) perspective(150px);
+    -webkit-transform: skewX(40deg) rotateX(60deg) rotateY(10deg) rotateZ(-10deg) perspective(150px);
+    -moz-transform: skewX(40deg) rotateX(60deg) rotateY(10deg) rotateZ(-10deg) perspective(150px);
+    -ms-transform: skewX(40deg) rotateX(60deg) rotateY(10deg) rotateZ(-10deg) perspective(150px);
+    -o-transform: skewX(40deg) rotateX(60deg) rotateY(10deg) rotateZ(-10deg) perspective(150px); }
   50% {
-    transform: skewX(-45deg); }
+    transform: skewX(-45deg);
+    -webkit-transform: skewX(-45deg);
+    -moz-transform: skewX(-45deg);
+    -ms-transform: skewX(-45deg);
+    -o-transform: skewX(-45deg); }
   to {
-    transform: skewX(40deg) rotateX(-60deg) rotateY(-10deg) rotateZ(-10deg) perspective(150px); } }
+    transform: skewX(40deg) rotateX(-60deg) rotateY(-10deg) rotateZ(-10deg) perspective(150px);
+    -webkit-transform: skewX(40deg) rotateX(-60deg) rotateY(-10deg) rotateZ(-10deg) perspective(150px);
+    -moz-transform: skewX(40deg) rotateX(-60deg) rotateY(-10deg) rotateZ(-10deg) perspective(150px);
+    -ms-transform: skewX(40deg) rotateX(-60deg) rotateY(-10deg) rotateZ(-10deg) perspective(150px);
+    -o-transform: skewX(40deg) rotateX(-60deg) rotateY(-10deg) rotateZ(-10deg) perspective(150px); } }
+
+/*# sourceMappingURL=character.css.map */

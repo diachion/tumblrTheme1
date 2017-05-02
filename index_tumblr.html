@@ -1,0 +1,1096 @@
+<!DOCTYPE html>
+<!--
+                  .--------------------------------...
+               ,'-------------------------------,'   |
+              /                                /     |
+             /________________________________/    ,'|
+             |               ..               |  ,'  |
+             |___________-==/88\==-___________|,' /) |.
+             |  \    \     ((  ))     /    /  |  (/  |-. .
+             |   \    \     \{}/     /    /   |    .' .  .
+          . '|    \    \     )(     / _  /    |    ,   .  .
+         . . |\    \    \    \/    _.( ~-.   /|\ ,' .   . .
+       ` .  -`_-.--.______..._____( ,/  ` \~-.|,' .   .
+        .  `    .     .       .  ,'\. ~-  . , .  .  .   .
+           .  `   .     ,   .      , ~~-.' .  .    .
+      Morgana: Joker, look. A treasure chest!
+      Ryuji: Let's open it!
+      Joker: Hm?
+      Ann: What's wrong?
+      Ryuji: Is that a note?
+      Ann: A note? What does it say?
+      Morgana: It says,
+        "It seems like you found my treasure chest! I know it's a treasure chest and all but,
+          do you really have to steal it? I worked really hard on the contents (the code below) 
+          and it'll be bad if you were to just steal it. I mean, you might be thieves and all but,
+          do you really have to? I'd appreciate it if you didn't steal this... Oh! How about this?
+          You can look at the contents but not take anything! But then again, I'll never know unless
+          I catch you guys. Ahaha."
+      Ryuji: What the heck!?
+      Ann: Hmmm. I do feel a bit bad if we were to just steal this with this note and all.
+      Morgana: I agree. What do you think we should do, Joker?
+      Joker: (Choose an option)
+        [ Steal the treasure chest ]
+        [ Look at the contents ]
+        [ Leave it alone ]
+-->
+<html>
+<head>
+  <title>{Title}</title>
+<!-- META Tags -->
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<!-- Stylesheets -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome-animation/0.0.9/font-awesome-animation.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+</head>
+
+<style>
+@import url(https://fonts.googleapis.com/css?family=Londrina+Solid|Heebo);.back2Top,.tControls:hover{cursor:pointer}body{font-family:Heebo,sans-serif;font-size:.9em;color:#fff;background:url(http://www.img.kevinquach.ca/wp-content/uploads/2017/04/star_bg.jpg) fixed;overflow-x:hidden}.collapsible-header,.content-post .ask-content span,.content-post .audio-post .album-info .audio-title,.content-post .link-post a,.content-post .post-title,.content-tags .source-via,.content-wrapper .content-meta .meta-text,.material-tooltip,h1,h2,h3,h4,h5,h6{font-family:"Londrina Solid",cursive}.container{margin-top:30px}@media screen and (max-width:680px){.container{margin:-60px auto 0}}a{color:red;transition:all .3s ease;-webkit-transition:all .3s ease;-moz-transition:all .3s ease}a:hover{color:#000}*{box-sizing:border-box}.tmblr-iframe.tmblr-iframe--desktop-logged-in-controls.iframe-controls--desktop,.tmblr-iframe.tmblr-iframe--desktop-loggedin-controls.iframe-controls--desktop,iframe#tumblr_controls{margin-top:65px!important;z-index:99999999999;right:-500px;-webkit-transition:all .5s ease;-moz-transition:all .5s ease;transition:all .5s ease}.sneaky{right:0!important}.modal{width:100%;max-width:850px;z-index:999999!important;background:0 0;border-radius:10px;box-shadow:none;-webkit-box-shadow:none;-moz-box-shadow:none;max-height:100%;overflow-y:visible;animation-duration:.2s;-webkit-animation-duration:.2s;-moz-animation-duration:.2s;-o-animation-duration:.2s;top:10%!important}.modal .modal-header{position:relative;width:100%;height:100px;background:0 0}.modal .modal-header .dagger{position:absolute;width:240px;top:-100px;right:0;z-index:1;animation-duration:.25s;-webkit-animation-duration:.25s;-moz-animation-duration:.25s;-o-animation-duration:.25s}@media screen and (max-width:768px){.modal .modal-header .dagger{width:175px;top:-40px;left:74%}}@media screen and (max-width:460px){.tControls{display:none}.modal .modal-header{height:90px}.modal .modal-header .dagger{top:30px;width:100px;left:78%}}.modal .modal-header .modal-negotation{position:relative;left:-10px;width:400px;transform:rotate(5deg);-webkit-transform:rotate(5deg);-moz-transform:rotate(5deg);-ms-transform:rotate(5deg);-o-transform:rotate(5deg)}@media screen and (max-width:680px){.modal .modal-header .modal-negotation{width:220px;top:50px}}@media screen and (max-width:460px){.modal .modal-header .modal-negotation{top:40px;width:170px}}.modal .modal-header .modal-stats{position:relative;width:230px;transform:rotate(5deg);-webkit-transform:rotate(5deg);-moz-transform:rotate(5deg);-ms-transform:rotate(5deg);-o-transform:rotate(5deg)}@media screen and (max-width:680px){.modal .modal-header .modal-stats{width:150px;top:35px}}@media screen and (max-width:460px){.modal .modal-header .modal-stats{width:115px;top:30px}}.modal .modal-header .modal-palaces{position:relative;width:310px;transform:rotate(5deg);-webkit-transform:rotate(5deg);-moz-transform:rotate(5deg);-ms-transform:rotate(5deg);-o-transform:rotate(5deg)}@media screen and (max-width:680px){.modal .modal-header .modal-palaces{width:250px;top:0}}@media screen and (max-width:460px){.modal .modal-header .modal-palaces{width:150px;top:30px}}.modal .modal-header .modal-system{position:relative;top:-20px;width:300px;transform:rotate(5deg);-webkit-transform:rotate(5deg);-moz-transform:rotate(5deg);-ms-transform:rotate(5deg);-o-transform:rotate(5deg)}@media screen and (max-width:680px){.modal .modal-header .modal-system{width:180px;top:30px}}@media screen and (max-width:460px){.modal .modal-header .modal-system{width:150px;top:17px}}.modal .modal-header>h4{position:absolute;bottom:-50px;width:100%;color:#333434;font-size:1.75em;text-align:center;left:0;max-width:450px;margin:0 auto;background-image:url(http://www.img.kevinquach.ca/wp-content/uploads/2017/04/modal_header_white.svg);background-repeat:no-repeat;background-size:cover;padding:.9em 0 .5em;right:0}@media screen and (max-width:680px){.modal .modal-header>h4{max-width:375px;font-size:1.5em;width:75%;margin:10px auto}}@media screen and (max-width:460px){.modal .modal-header>h4{width:80%;margin:0 auto}}.modal .modal-content .modal-text{position:relative;padding:8% 0 10%}.modal .modal-content .modal-text::after,.modal .modal-content .modal-text::before{content:"";position:absolute;background-repeat:no-repeat;background-size:cover;z-index:-1}.modal .modal-content .modal-text::before{width:103%;height:115%;top:-123px;left:-23px;background-image:url(http://www.img.kevinquach.ca/wp-content/uploads/2017/04/modal_top.svg)}@media screen and (max-width:680px){.modal .modal-content{margin:0 15px}.modal .modal-content .modal-text::before{height:125%;top:-80px}}@media screen and (max-width:460px){.modal .modal-content .modal-text::before{height:120%;top:-90px}}.modal .modal-content .modal-text::after{width:100%;height:100%;bottom:10px;transform:rotate(-2deg);-webkit-transform:rotate(-2deg);-moz-transform:rotate(-2deg);-ms-transform:rotate(-2deg);-o-transform:rotate(-2deg);left:19px;background-image:url(http://www.img.kevinquach.ca/wp-content/uploads/2017/04/modal_bottom.svg)}.likey .like_button.liked+span:before,.likey:hover span:before{content:"\f004"}@media screen and (max-width:680px){.modal .modal-content .modal-text::after{top:-35px;height:120%}}.modal .modal-content .modal-text .modal-text-content{color:#fff;position:relative;min-height:150px;max-height:340px;width:80%;left:-1px;margin:0 auto;padding:0 20px;overflow-y:auto}@media screen and (max-width:460px){.modal .modal-content .modal-text::after{top:-66px}.modal .modal-content .modal-text .modal-text-content{margin-top:40px;padding:0 10px;width:90%}}.modal .modal-content .modal-text .modal-text-content>p>a{color:red}.modal .modal-content .modal-text .modal-text-content>p>a:hover{color:#fff}.modal .modal-content .modal-text .modal-text-content .egg,.modal .modal-content .modal-text .modal-text-content .egg .bacon{text-indent:10px;margin:0}.modal .modal-content .modal-text .modal-text-content .disclaimer{background:rgba(0,0,0,.7);font-size:.9em;padding:5px;border:2px solid red}.modal .modal-content .modal-text .modal-text-content::-webkit-scrollbar{background:#000;width:5px;border-radius:10px}.modal .modal-content .modal-text .modal-text-content::-webkit-scrollbar-thumb{background:red;width:3px;border-radius:10px}.modal .modal-content .modal-footer{background:0 0;position:relative;width:100%;top:-100px}.modal .modal-content .modal-footer .close-button{position:absolute;width:100%;max-width:150px;right:-100px;bottom:0;animation-duration:.4s;-webkit-animation-duration:.4s;-moz-animation-duration:.4s;-o-animation-duration:.4s}@media screen and (max-width:680px){.modal .modal-content .modal-footer .close-button{max-width:100px;right:-50px;bottom:-45px}}@media screen and (max-width:460px){.modal .modal-content .modal-footer .close-button{max-width:50px;bottom:-35px}}.card,form{max-width:400px}@-webkit-keyframes bounce{0%,20%,53%,80%,to{-webkit-animation-timing-function:cubic-bezier(.215,.61,.355,1);animation-timing-function:cubic-bezier(.215,.61,.355,1)}40%,43%,70%{-webkit-animation-timing-function:cubic-bezier(.755,.05,.855,.06);animation-timing-function:cubic-bezier(.755,.05,.855,.06);transform:scale(1,.9);-webkit-transform:scale(1,.9);-moz-transform:scale(1,.9);-ms-transform:scale(1,.9);-o-transform:scale(1,.9)}70%,90%{transform:translate3d(5px,-5px,0);-webkit-transform:translate3d(5px,-5px,0);-moz-transform:translate3d(5px,-5px,0);-ms-transform:translate3d(5px,-5px,0);-o-transform:translate3d(5px,-5px,0)}}@keyframes bounce{0%,20%,53%,80%,to{-webkit-animation-timing-function:cubic-bezier(.215,.61,.355,1);animation-timing-function:cubic-bezier(.215,.61,.355,1)}40%,43%,70%{-webkit-animation-timing-function:cubic-bezier(.755,.05,.855,.06);animation-timing-function:cubic-bezier(.755,.05,.855,.06);transform:scale(1,.9);-webkit-transform:scale(1,.9);-moz-transform:scale(1,.9);-ms-transform:scale(1,.9);-o-transform:scale(1,.9)}70%,90%{transform:translate3d(5px,-5px,0);-webkit-transform:translate3d(5px,-5px,0);-moz-transform:translate3d(5px,-5px,0);-ms-transform:translate3d(5px,-5px,0);-o-transform:translate3d(5px,-5px,0)}}@-webkit-keyframes fadeInDownBig{0%{opacity:0;transform:translate3d(2000px,-2000px,0);-webkit-transform:translate3d(2000px,-2000px,0);-moz-transform:translate3d(2000px,-2000px,0);-ms-transform:translate3d(2000px,-2000px,0);-o-transform:translate3d(2000px,-2000px,0)}to{opacity:1;transform:none;-webkit-transform:none;-moz-transform:none;-ms-transform:none;-o-transform:none}}@keyframes fadeInDownBig{0%{opacity:0;transform:translate3d(2000px,-2000px,0);-webkit-transform:translate3d(2000px,-2000px,0);-moz-transform:translate3d(2000px,-2000px,0);-ms-transform:translate3d(2000px,-2000px,0);-o-transform:translate3d(2000px,-2000px,0)}to{opacity:1;transform:none;-webkit-transform:none;-moz-transform:none;-ms-transform:none;-o-transform:none}}.parallax-container{height:100vh}@media screen and (max-width:680px){.parallax-container{padding-top:40px;height:auto}.parallax-container .parallax{position:relative}.parallax-container .parallax img{position:relative;transform:none!important;-webkit-transform:none!important;-moz-transform:none!important;-ms-transform:none!important;-o-transform:none!important;width:100%!important;left:0}}.parallax-container .header-menu{width:100%;display:block;position:absolute;bottom:0;padding-bottom:100px;text-align:center}@media screen and (max-width:768px){.parallax-container .header-menu{padding:0;margin:0 auto;left:0;right:0}}.parallax-container .header-menu a{display:inline-block}.parallax-container .header-menu a img{display:block;margin:10px auto;animation-duration:.3s;-webkit-animation-duration:.3s;-moz-animation-duration:.3s;-o-animation-duration:.3s}@media screen and (max-width:768px){.parallax-container .header-menu a{transform:scale(.7);-webkit-transform:scale(.7);-moz-transform:scale(.7);-ms-transform:scale(.7);-o-transform:scale(.7);margin:-10px auto}}@media screen and (max-width:680px){.parallax-container .header-menu a{display:none}nav{background:0 0}}.nav-wrapper{background:url(http://www.img.kevinquach.ca/wp-content/uploads/2017/04/nav_bg-10.png) repeat-x #c20000;z-index:999}.nav-wrapper .menu-toggle{position:absolute;width:25px;height:25px;top:7px;right:5px;z-index:99999;cursor:pointer;display:none}.nav-wrapper .menu-toggle span{width:100%;border-radius:20px;display:block;height:6px;background:#fff;margin:2px 0;border:2px solid #000;position:relative;transition:all .7s cubic-bezier(.93,-.6,.3,1.2);-webkit-transition:all .7s cubic-bezier(.93,-.6,.3,1.2);-moz-transition:all .7s cubic-bezier(.93,-.6,.3,1.2);top:0;left:0;opacity:1}.nav-wrapper .menu-toggle.active span:nth-child(1){transform:rotate(45deg);-webkit-transform:rotate(45deg);-moz-transform:rotate(45deg);-ms-transform:rotate(45deg);-o-transform:rotate(45deg);top:10px}.nav-wrapper .menu-toggle.active span:nth-child(2){left:-8px;opacity:0}.nav-wrapper .menu-toggle.active span:nth-child(3){transform:rotate(-45deg);-webkit-transform:rotate(-45deg);-moz-transform:rotate(-45deg);-ms-transform:rotate(-45deg);-o-transform:rotate(-45deg);top:-6px}@media screen and (max-width:680px){.nav-wrapper .menu-toggle{display:block}.nav-wrapper{position:fixed!important;top:0;left:0;width:100%;height:40px!important;background-size:150px}}.nav-wrapper.pinned{width:100%;height:64px}.nav-wrapper .container{margin:0 auto}.nav-wrapper .flex-nav{display:-webkit-box;display:-ms-flexbox;display:-webkit-flex;display:flex;flex-direction:row}.nav-wrapper .flex-nav a.btn{padding:0 20px;-webkit-flex-grow:1;-moz-flex-grow:1;-ms-flex-grow:1;flex-grow:1;margin:14px 3px}.nav-wrapper .flex-nav a.btn:hover{color:#000}.pagination{display:-webkit-box;display:-ms-flexbox;display:-webkit-flex;display:flex;-webkit-justify-content:space-between;-moz-justify-content:space-between;-ms-justify-content:space-between;justify-content:space-between}.pagination img{width:130px;animation-duration:.3s;-webkit-animation-duration:.3s;-moz-animation-duration:.3s;-o-animation-duration:.3s}@media screen and (max-width:768px){.pagination{display:block;padding:60px;position:relative;margin-top:-40px}.pagination img{width:70px;height:auto;position:absolute;top:20px}.pagination img:first-child{left:20px}.pagination img:last-child{right:20px}}.stickyPagination{bottom:0}.back2Top{display:none;position:fixed;bottom:5px;left:5px;width:100px;z-index:998}@media screen and (max-width:768px){.back2Top{right:15px;left:auto;width:70px}}form{margin:0 auto}form input[type=search]{height:36px!important;position:relative;top:20px}form input[type=search]:focus+label{color:#fff!important}form .input-field{margin-top:0}form .input-field input[type=search]{padding-left:1rem;width:calc(100% - 1rem);margin-bottom:2.5rem;background:#000;border:0}form .input-field label{top:27px;color:#fff}form .fa{padding-right:10px}.card{border-radius:0;margin:30px auto}.card .card-content{background:url(http://www.img.kevinquach.ca/wp-content/uploads/2017/04/diamond_top_bg.png);color:#fff;padding:2px 2px 8px;border-radius:0}.card .card-content h5{white-space:nowrap;font-size:1.55em}@media screen and (max-width:680px){.card .card-content h5{font-size:1.45em}}.card .card-content h6{font-size:1.5em}.card .note{background:#333;border:3px solid #fff;padding:10px!important}.card .card-action{background:url(http://www.img.kevinquach.ca/wp-content/uploads/2017/04/circle_bg.png);color:#fff;border-top:0 solid transparent;padding-top:30px;padding-bottom:60px}.card .card-action .sidebar-top-rip{width:100%;position:absolute;left:0;top:-11px}@media screen and (max-width:1024px){.card .card-action .sidebar-top-rip{top:-7px}}.card .card-action .sidebar-bottom-img{background:url(http://www.img.kevinquach.ca/wp-content/uploads/2017/04/diamond_bottom_bg_v2.png);position:absolute;width:100%;left:0;bottom:0;padding:28px 0}.accordion-statuses{max-width:400px;margin:0 auto 30px}.collapsible .collapsible-header{background:#000;color:#fff;border-bottom:2px solid red}.collapsible .collapsible-header h6{display:inline-block;font-size:1.3em}.collapsible .collapsible-body{border-bottom:0}.collapsible .collapsible-body p{background:url(http://www.img.kevinquach.ca/wp-content/uploads/2017/04/circle_bg.png);color:#fff;padding:20px}.like-wrap{position:relative;display:block;width:40px;height:40px}.likey,.likey .like_button{position:absolute;top:3px;right:0;left:0;bottom:0}.likey .like_button{width:100%;height:100%;opacity:0;z-index:10}.like_button iframe{width:100%!important;height:100%!important}.likey{width:100%;height:100%;z-index:1}.likey .like_button.liked{opacity:0}.like_button.liked+.likey{color:#0ff}.tControls{font-size:1.3em;background:rgba(0,0,0,.7);position:fixed;top:18px;right:12px;padding:2px 8px;z-index:9999999999}@media only screen and (min-width:993px){.container{width:95%}}@media only screen and (min-width:601px){.container{width:90%}}.btn-floating{background:red;margin-right:10px}.btn-floating:hover{background:#ff2929;color:#fff}.content-wrapper{background:#000;color:#000;position:relative;width:100%;max-width:650px;margin:0 auto 40px;border-radius:0}@media screen and (max-width:768px){.content-wrapper{margin:0 auto 40px}}.content-wrapper .content-meta{background:#000;width:100%;text-align:left;margin:0 auto;padding:35px 0 7px 30px}.content-wrapper .content-meta .meta-wrap{display:inline-block;position:relative}@media screen and (max-width:680px){.content-wrapper .content-meta{padding:10px 0 10px 10px}.content-wrapper .content-meta .meta-wrap{margin:5px auto}}.content-wrapper .content-meta .fa{font-size:1.3em;position:relative;background:red;color:#fff;right:-10px;border:3px solid #fff;padding:10px;text-shadow:-1px 2px 0 #000;z-index:1}@media screen and (max-width:460px){.content-wrapper .content-meta .meta-wrap{display:block}.content-wrapper .content-meta .fa{font-size:1em;padding:5px}}.content-wrapper .content-meta .meta-text{font-size:1.2em;display:inline-block;position:relative;background:#000;color:#fff;top:6px;border:3px solid #fff;margin:0 10px 0 -2px;padding:3px 10px 3px 15px;transition:all .3s ease;-webkit-transition:all .3s ease;-moz-transition:all .3s ease}.content-wrapper .content-meta .meta-text:hover{-webkit-box-shadow:-2px 3px 0 #0FF,2px -2px 0 red;-moz-box-shadow:-2px 3px 0 #0FF,2px -2px 0 red;box-shadow:-2px 3px 0 #0FF,2px -2px 0 red;background:#ebffdf;color:#000}.content-wrapper .content-bg{background:url(http://www.img.kevinquach.ca/wp-content/uploads/2017/04/extra_clean_paper.png)}.content-wrapper .content-bg .rip{width:100%;position:absolute;left:0}.content-wrapper .content-bg-ask{background:#bb0707}.content-post{width:100%;padding:110px 20px 100px;position:relative}.content-post::after,.content-post::before{position:absolute;left:0;height:100px;background-repeat:no-repeat;background-size:100%;content:"";width:100%}@media screen and (max-width:1024px){.content-wrapper{max-width:565px}.content-post{padding:100px 10px}}@media screen and (max-width:680px){.content-post{padding:80px 20px}}@media screen and (max-width:460px){.content-wrapper .content-meta .meta-text{font-size:.9em}.content-post{padding:60px 20px}}.content-post::before{top:0;background-image:url(http://www.img.kevinquach.ca/wp-content/uploads/2017/04/top_rip_v2.png)}.content-post::after{bottom:0;background-image:url(http://www.img.kevinquach.ca/wp-content/uploads/2017/04/bottom_rip_v2.png);background-position:bottom}.content-post .content-post-inner{max-width:540px;margin:0 auto}.content-post .content-post-inner ul{padding-left:40px}.content-post .content-post-inner ul li{list-style-type:disc}@media screen and (max-width:680px){.content-post .content-post-inner img{display:block;width:100%;margin:5px 0}}.content-post .post-title{font-size:1.5em;margin-bottom:15px}.content-post .photoset{margin:0 auto}.content-post .chat-post{margin-top:15px;padding-bottom:15px;border-bottom:1px solid #bdbdbd}.content-post .quote-post{font-size:1.5em;text-align:center;margin-top:15px}.content-post .link-post a{font-size:1.3em;color:#fff;text-align:center}.content-post .link-post .link-button{background:red;width:100%;border:3px solid #000;padding:10px;animation-duration:.3s;-webkit-animation-duration:.3s;-moz-animation-duration:.3s;-o-animation-duration:.3s}.content-post .link-post .link-button .fa{padding-left:10px}.content-post .audio-post{text-align:right;position:relative;margin:-40px 15px 15px 0}.content-post .audio-post::after{content:"";position:absolute;width:100%;height:125px;top:77px;left:10px;background:red;z-index:1}@media screen and (max-width:1024px){.content-post .audio-post::after{height:120px}}@media screen and (max-width:768px){.content-post .audio-post::after{height:130px}}@media screen and (max-width:680px){.content-post .audio-post::after{top:100px}}.content-post .audio-post .nya{width:100%;max-width:230px;position:relative;z-index:99;bottom:-12px;text-align:right;display:inline-block}@media screen and (max-width:1024px){.content-post .audio-post .nya{bottom:-11px}}.content-post .audio-post .album-info{background:#000;color:#fff;text-align:left;width:100%;padding:10px 0 0;position:relative;border:4px solid #fff;z-index:9;box-shadow:4px -4px 0 #414042;-webkit-box-shadow:4px -4px 0 #414042;-moz-box-shadow:4px -4px 0 #414042}@media screen and (max-width:768px){.content-post .audio-post .album-info{padding:10px 0}}@media screen and (max-width:680px){.content-post .audio-post .album-info{padding:10px 0}}@media screen and (max-width:460px){.content-post .audio-post::after{height:75%;top:80px}.content-post .audio-post .nya{max-width:210px;bottom:-16px}.content-post .audio-post .album-info{padding:17px}}.content-post .audio-post .album-info .album-art-wrapper{float:left;margin:0 15px 0 12px;position:relative;overflow:hidden}.content-post .audio-post .album-info .audio-player-wrapper{position:absolute;width:30px;top:50%;left:0;right:0;transform:translateY(-50%);-webkit-transform:translateY(-50%);-moz-transform:translateY(-50%);-ms-transform:translateY(-50%);-o-transform:translateY(-50%);margin:0 auto;height:26px;box-sizing:content-box;overflow:hidden;border:12px solid rgba(0,0,0,.65);transition:all .3s ease;-webkit-transition:all .3s ease;-moz-transition:all .3s ease}.content-post .audio-post .album-info .audio-player-wrapper iframe{position:relative;top:-2px;left:-4px;opacity:.5;transition:all .3s ease;-webkit-transition:all .3s ease;-moz-transition:all .3s ease}.content-post .audio-post .album-info .audio-player-wrapper:hover{border:12px solid #000}.content-post .audio-post .album-info .audio-player-wrapper:hover iframe{opacity:1}.content-post .audio-post .album-info .audio-art{width:100%;max-width:100px}@media screen and (max-width:768px){.content-post .audio-post .album-info .audio-art{max-width:80px;margin:14px 15px}}@media screen and (max-width:680px){.content-post .audio-post .album-info .audio-art{max-width:80px;margin:13px 15px}}@media screen and (max-width:460px){.content-post .audio-post .album-info .audio-art{display:block;text-align:center;float:none;margin:0 auto 15px;max-width:150px}}.content-post .audio-post .album-info .audio-title{font-size:1.6em;line-height:100%}.content-post .audio-post .album-info .audio-artist{color:#0FF}.content-post .audio-post .album-info .audio-album{color:#fe6cec}.content-post .audio-post .album-info p{margin:12px 0}@media screen and (max-width:460px){.content-post .audio-post .album-info p{margin:8px 0}}.content-post .ask-post{position:relative}@media screen and (max-width:680px){.content-post .ask-post{margin-top:20px}}.content-post .ask-post .ask-question{margin-bottom:20px;overflow:auto}.content-post .ask-post .ask-avvie{position:absolute;right:calc(100% - 110px);z-index:2;display:inline-block;background-image:url(http://www.img.kevinquach.ca/wp-content/uploads/2017/04/chat_icon.png);width:130px;height:90px;background-repeat:no-repeat;background-size:contain}@media screen and (max-width:768px){.content-post .ask-post .ask-avvie{width:103px;height:80px;right:calc(100% - 103px)}.content-post .ask-post .ask-avvie img{width:48px;bottom:-5px}}@media screen and (max-width:460px){.content-post .ask-post .ask-avvie{top:-38px;right:calc(100% - 80px);background-image:none}}.content-post .ask-post .ask-avvie img{border-radius:50%;position:relative;left:33px}.content-post .ask-post .chat-question-mark{position:absolute;max-height:50px;width:auto;top:-30px;right:20px}.content-post .ask-content{background:#000;color:#fff;max-width:443px;float:right;border:5px solid #fff;padding:15px}@media screen and (max-width:768px){.content-post .ask-content{max-width:calc(100% - 97px)}}@media screen and (max-width:460px){.content-post .ask-content{max-width:100%}}.content-post .ask-content span{font-size:1.1em}.content-post .ask-answer{clear:both;background:#fff;color:#000;border:5px solid #000;padding:15px;margin-top:20px;width:calc(100% - 20px)}.content-post .ask-answer .chat-reply{position:relative;float:right;right:-51px;top:-60px;width:37px}@media screen and (max-width:768px){.content-post .ask-answer .chat-reply{width:30px;right:-44px}}.content-tags,.permapage{width:100%;max-width:650px}.content-post blockquote{margin-bottom:0;border-left:3px solid red}.content-like-reblog{position:absolute;right:-60px;top:15px}.content-like-reblog .btn-like,.content-like-reblog .btn-reblog{display:block;margin-bottom:10px}@media screen and (max-width:1024px){.content-like-reblog{right:10px;top:5px}.content-like-reblog .btn-like,.content-like-reblog .btn-reblog{margin-bottom:5px}}.content-like-reblog .btn-like{background:rgba(0,0,0,.7);color:#0FF}.content-like-reblog .btn-reblog{background:rgba(0,0,0,.7);color:#fe6cec}.material-tooltip{text-transform:uppercase}.backdrop{background:rgba(0,0,0,.7)}.content-tags{margin:0 auto;background:#000;color:#fff;padding:5px 30px 30px;position:relative}.content-tags .source-via{color:#fff;display:block;padding-bottom:5px;margin-bottom:10px}.content-tags .source-via .fa{color:#9e9e9e}.content-tags .source-via>a{color:red}.content-tags .source-via>a:hover{color:#fff}.content-tags .tag{transition:all .3s ease;-webkit-transition:all .3s ease;-moz-transition:all .3s ease;display:inline-block;background:red;color:#fff;font-size:.8em;padding:3px 7px;margin:5px 3px}.content-tags .tag:hover{-webkit-box-shadow:-2px 3px 0 #0FF,2px -2px 0 red;-moz-box-shadow:-2px 3px 0 #0FF,2px -2px 0 red;box-shadow:-2px 3px 0 #0FF,2px -2px 0 red;background:#ebffdf;color:#000}.permapage{background:rgba(0,0,0,.8);margin:0 auto;border:5px solid #fff;padding:20px;max-height:500px;overflow-y:scroll}.permapage ol.notes{list-style:none;padding-left:20px}.permapage ol.notes span.action{padding-left:15px}.permapage ol.notes li.note blockquote{border-color:red}.permapage::-webkit-scrollbar{background:#000;width:5px;border-radius:10px}.permapage::-webkit-scrollbar-thumb{background:red;width:3px;border-radius:10px}.navbar{text-align:center;margin-top:18px}@media screen and (max-width:1024px){.navbar{margin-top:14px}}@media screen and (max-width:680px){.navbar{position:fixed;width:100%;background:#c20000;left:0;margin:0;padding:20px;top:-100%;z-index:9999;transition:all .7s cubic-bezier(.93,-.52,.29,1.22);-webkit-transition:all .7s cubic-bezier(.93,-.52,.29,1.22);-moz-transition:all .7s cubic-bezier(.93,-.52,.29,1.22)}.navbar::after,.navbar::before{content:"";position:absolute;width:100%;height:20px;left:0;background:url(http://www.img.kevinquach.ca/wp-content/uploads/2017/04/nav_bg-10.png) repeat-x}.navbar.active,.navbar::before{top:0}.navbar::after{bottom:0;transform:rotate(-180deg);-webkit-transform:rotate(-180deg);-moz-transform:rotate(-180deg);-ms-transform:rotate(-180deg);-o-transform:rotate(-180deg)}}.nav-backdrop{position:fixed;width:100%;height:100%;background:#000;z-index:999;top:0;left:0;transition:all .7s cubic-bezier(.93,-.52,.29,1.22);-webkit-transition:all .7s cubic-bezier(.93,-.52,.29,1.22);-moz-transition:all .7s cubic-bezier(.93,-.52,.29,1.22);opacity:0;visibility:hidden}.nav-backdrop.active{opacity:.5;visibility:visible}.link-wrapper{position:relative;display:inline-block;margin:0 14px}@media screen and (max-width:1024px){.link-wrapper{margin:0 -2px;transform:scale(.8);-webkit-transform:scale(.8);-moz-transform:scale(.8);-ms-transform:scale(.8);-o-transform:scale(.8)}}@media screen and (max-width:768px){.link-wrapper{margin:-10px;transform:scale(.65);-webkit-transform:scale(.65);-moz-transform:scale(.65);-ms-transform:scale(.65);-o-transform:scale(.65)}}@media screen and (max-width:680px){.link-wrapper{display:block;max-width:150px;margin:0 auto}}.link-wrapper .fallback{font-size:2.25em;letter-spacing:4px;line-height:0;opacity:0;position:relative;top:15px;left:0}.link-wrapper .shape-wrapper{display:none;position:absolute;top:0;left:0;right:0}.link-wrapper:hover{z-index:9999}.link-wrapper:hover .shape-wrapper{transform:rotate(-6deg);-webkit-transform:rotate(-6deg);-moz-transform:rotate(-6deg);-ms-transform:rotate(-6deg);-o-transform:rotate(-6deg);display:block}.link-wrapper:hover .shape-wrapper .shape.cyan-fill{transform:scale(3,.1);-webkit-transform:scale(3,.1);-moz-transform:scale(3,.1);-ms-transform:scale(3,.1);-o-transform:scale(3,.1)}.link-wrapper:hover .img-wrapper img{-webkit-animation:tiltBounce .15s ease;animation:tiltBounce .15s ease;-webkit-animation-fill-mode:forwards;animation-fill-mode:forwards;display:block}.link-wrapper:hover .img-wrapper img.normal{mix-blend-mode:darken}.link-wrapper:nth-child(even):hover .shape-wrapper{transform:rotate(11deg);-webkit-transform:rotate(11deg);-moz-transform:rotate(11deg);-ms-transform:rotate(11deg);-o-transform:rotate(11deg)}.link-wrapper:nth-child(even):hover .img-wrapper img{-webkit-animation:tiltBounceAlt .15s ease;animation:tiltBounceAlt .15s ease;-webkit-animation-fill-mode:forwards;animation-fill-mode:forwards}.img-wrapper img{width:auto;height:40px;display:block;left:0;right:0;top:-5px;margin:0 auto;position:absolute;z-index:999}.shape-wrapper .shape,.shape-wrapper .shape svg{position:absolute;left:0;top:0}.img-wrapper img.normal{display:block}.img-wrapper img.active{display:none;z-index:-1}.shape-wrapper{-webkit-filter:sepia(50%) saturate(3);filter:sepia(50%) saturate(3)}.shape-wrapper .shape{transition:all .1s linear;-webkit-transition:all .1s linear;-moz-transition:all .1s linear;right:0;height:35px;overflow:hidden}.shape-wrapper .shape.cyan-fill{mix-blend-mode:screen;animation-delay:50ms;-webkit-animation-delay:50ms;-moz-animation-delay:50ms;-o-animation-delay:50ms;animation-duration:.4s;-webkit-animation-duration:.4s;-moz-animation-duration:.4s;-o-animation-duration:.4s}.shape-wrapper .shape.red-fill{animation-duration:.45s;-webkit-animation-duration:.45s;-moz-animation-duration:.45s;-o-animation-duration:.45s;animation-delay:80ms;-webkit-animation-delay:80ms;-moz-animation-delay:80ms;-o-animation-delay:80ms;opacity:.8}.jelly{-webkit-animation-name:jelly;animation-name:jelly;-webkit-transform-origin:center;transform-origin:center;-webkit-animation-iteration-count:infinite;animation-iteration-count:infinite;-webkit-animation-timing-function:linear;animation-timing-function:linear}@keyframes tiltBounce{0%{transform:scale(1) rotate(-7deg);-webkit-transform:scale(1) rotate(-7deg);-moz-transform:scale(1) rotate(-7deg);-ms-transform:scale(1) rotate(-7deg);-o-transform:scale(1) rotate(-7deg)}50%{transform:scale(1.5) rotate(-7deg);-webkit-transform:scale(1.5) rotate(-7deg);-moz-transform:scale(1.5) rotate(-7deg);-ms-transform:scale(1.5) rotate(-7deg);-o-transform:scale(1.5) rotate(-7deg)}100%{transform:scale(1.15) rotate(-7deg);-webkit-transform:scale(1.15) rotate(-7deg);-moz-transform:scale(1.15) rotate(-7deg);-ms-transform:scale(1.15) rotate(-7deg);-o-transform:scale(1.15) rotate(-7deg)}}@keyframes tiltBounceAlt{0%{transform:scale(1) rotate(7deg);-webkit-transform:scale(1) rotate(7deg);-moz-transform:scale(1) rotate(7deg);-ms-transform:scale(1) rotate(7deg);-o-transform:scale(1) rotate(7deg)}50%{transform:scale(1.5) rotate(7deg);-webkit-transform:scale(1.5) rotate(7deg);-moz-transform:scale(1.5) rotate(7deg);-ms-transform:scale(1.5) rotate(7deg);-o-transform:scale(1.5) rotate(7deg)}100%{transform:scale(1.15) rotate(7deg);-webkit-transform:scale(1.15) rotate(7deg);-moz-transform:scale(1.15) rotate(7deg);-ms-transform:scale(1.15) rotate(7deg);-o-transform:scale(1.15) rotate(7deg)}}@keyframes jelly{0%{width:100%;transform:scale(1.25,1) skewX(20deg) translateY(3px) rotateX(40deg) rotateY(10deg) rotateZ(-10deg);-webkit-transform:scale(1.25,1) skewX(20deg) translateY(3px) rotateX(40deg) rotateY(10deg) rotateZ(-10deg);-moz-transform:scale(1.25,1) skewX(20deg) translateY(3px) rotateX(40deg) rotateY(10deg) rotateZ(-10deg);-ms-transform:scale(1.25,1) skewX(20deg) translateY(3px) rotateX(40deg) rotateY(10deg) rotateZ(-10deg);-o-transform:scale(1.25,1) skewX(20deg) translateY(3px) rotateX(40deg) rotateY(10deg) rotateZ(-10deg)}50%{width:100%;transform:scale(1.25,1.1) skewX(-15deg) translateY(-2px) translateZ(-30px);-webkit-transform:scale(1.25,1.1) skewX(-15deg) translateY(-2px) translateZ(-30px);-moz-transform:scale(1.25,1.1) skewX(-15deg) translateY(-2px) translateZ(-30px);-ms-transform:scale(1.25,1.1) skewX(-15deg) translateY(-2px) translateZ(-30px);-o-transform:scale(1.25,1.1) skewX(-15deg) translateY(-2px) translateZ(-30px)}100%{width:100%;transform:scale(1.25,1) skewX(20deg) translateY(3px) rotateX(-40deg) rotateY(-10deg) rotateZ(-15deg);-webkit-transform:scale(1.25,1) skewX(20deg) translateY(3px) rotateX(-40deg) rotateY(-10deg) rotateZ(-15deg);-moz-transform:scale(1.25,1) skewX(20deg) translateY(3px) rotateX(-40deg) rotateY(-10deg) rotateZ(-15deg);-ms-transform:scale(1.25,1) skewX(20deg) translateY(3px) rotateX(-40deg) rotateY(-10deg) rotateZ(-15deg);-o-transform:scale(1.25,1) skewX(20deg) translateY(3px) rotateX(-40deg) rotateY(-10deg) rotateZ(-15deg)}}
+</style>
+
+<body>
+
+<!-- =-=-=-=-=-=-=-=-=-= HEADER START =-=-=-=-=-=-=-=-=-= -->
+{block:IndexPage}
+<header class="parallax-container">
+  <div class="parallax"><img src="http://www.img.kevinquach.ca/wp-content/uploads/2017/04/persona5_v2.jpg" alt="Persona 5 Wallpaper"/></div>
+  <div class="header-menu">
+    <a class="smooth-scroll" href="#nav"><img src="http://www.img.kevinquach.ca/wp-content/uploads/2017/04/load_game_v2.png" alt="Load Game"/></a><br/>
+    <a href="https://www.tumblr.com/dashboard"><img src="http://www.img.kevinquach.ca/wp-content/uploads/2017/04/return_to_title_v2.png" alt="Return to Title"/></a>
+  </div>
+</header>
+{/block:IndexPage}
+<!-- =-=-=-=-=-=-=-=-=-= HEADER END =-=-=-=-=-=-=-=-=-= -->
+
+
+<!-- =-=-=-=-=-=-=-=-=-= NAVBAR START =-=-=-=-=-=-=-=-=-= -->
+<nav id="nav" style="height: 64px;">
+  <div class="nav-wrapper">
+      <div class="container">
+        <div class="row">
+          <div class="col s12">
+            <a class="menu-toggle">
+              <span></span>
+              <span></span>
+              <span></span>
+            </a>
+            
+            <div class="navbar">
+        <a class="link-wrapper" href="/">
+          <span class="fallback">Index</span>
+          <div class="img-wrapper">
+            <img class="normal" src="http://www.img.kevinquach.ca/wp-content/uploads/2017/04/index.png">
+            <img class="active" src="http://www.img.kevinquach.ca/wp-content/uploads/2017/04/index_red.png">
+          </div>
+          <div class="shape-wrapper">
+            <div class="shape red-fill jelly">
+              <svg x="0px" y="0px" viewBox="0 0 108.1 47" enable-background="new 0 0 108.1 47"><polygon fill="#ff2c63" points="29.5,8.5 150.7,0 108.1,32.7 3.1,47 "/></svg>
+            </div>
+            <div class="shape cyan-fill jelly">
+              <svg x="0px" y="0px" viewBox="0 0 108.1 47" enable-background="new 0 0 108.1 47"><polygon fill="#00FFFF" points="0.3,17 125.1,0 68.8,45.6 24.3,39 "/></svg>
+            </div>
+          </div>
+        </a>
+        <a class="link-wrapper modal-trigger" href="#modal-ask">
+          <span class="fallback">Ask</span>
+          <div class="img-wrapper">
+            <img class="normal" src="http://www.img.kevinquach.ca/wp-content/uploads/2017/04/ask.png">
+            <img class="active" src="http://www.img.kevinquach.ca/wp-content/uploads/2017/04/ask_red.png">
+          </div>
+          <div class="shape-wrapper">
+            <div class="shape red-fill jelly">
+              <svg x="0px" y="0px" viewBox="0 0 108.1 47" enable-background="new 0 0 108.1 47"> <polygon fill="#ff2c63" points="0,7.1 127.3,0 32.3,64 4.8,58.2"> </svg>
+            </div>
+            <div class="shape cyan-fill jelly">
+              <svg x="0px" y="0px" viewBox="0 0 108.1 47" enable-background="new 0 0 108.1 47"> <polygon fill="#00FFFF" points="14,0.5 127.4,0 77.4,164 2.3,61.1 "/></svg>
+            </div>
+          </div>
+        </a>
+        <a class="link-wrapper" href="/archive">
+          <span class="fallback">Archive</span>
+          <div class="img-wrapper">
+            <img class="normal" src="http://www.img.kevinquach.ca/wp-content/uploads/2017/04/archive.png">
+            <img class="active" src="http://www.img.kevinquach.ca/wp-content/uploads/2017/04/archive_red.png">
+          </div>
+          <div class="shape-wrapper">
+            <div class="shape red-fill jelly">
+              <svg x="0px" y="0px" viewBox="0 0 108.1 47" enable-background="new 0 0 108.1 47"> <polygon fill="#ff2c63" points="15.5,0 70.7,0 118.1,32.7 43.1,47 "/></svg>
+            </div>
+            <div class="shape cyan-fill jelly">
+              <svg x="0px" y="0px" viewBox="0 0 108.1 47" enable-background="new 0 0 108.1 47"> <polygon fill="#00FFFF" points="17.3,0 105.1,0 68.8,45.6 24.3,39 "/></svg>
+            </div>
+          </div>
+        </a>
+        <a class="link-wrapper modal-trigger" href="#modal-me">
+          <span class="fallback">About</span>
+          <div class="img-wrapper">
+            <img class="normal" src="http://www.img.kevinquach.ca/wp-content/uploads/2017/04/about.png">
+            <img class="active" src="http://www.img.kevinquach.ca/wp-content/uploads/2017/04/about_red.png">
+          </div>
+          <div class="shape-wrapper">
+            <div class="shape red-fill jelly">
+              <svg x="0px" y="0px" viewBox="0 0 108.1 47" enable-background="new 0 0 108.1 47"> <polygon fill="#ff2c63" points="19.5,0,110.7,0,80.1,32.7,3.1,47 "/> </svg>
+            </div>
+            <div class="shape cyan-fill jelly">
+              <svg x="0px" y="0px" viewBox="0 0 108.1 47" enable-background="new 0 0 108.1 47"> <polygon fill="#00FFFF" points="11,3,85.1,0 118.8,45.6,14.3,29 "/> </svg>
+            </div>
+          </div>
+        </a>
+        <a class="link-wrapper modal-trigger" href="#modal-blog">
+          <span class="fallback">Blog_</span>
+          <div class="img-wrapper">
+            <img class="normal" src="http://www.img.kevinquach.ca/wp-content/uploads/2017/04/blog.png">
+            <img class="active" src="http://www.img.kevinquach.ca/wp-content/uploads/2017/04/blog_red.png">
+          </div>
+          <div class="shape-wrapper">
+            <div class="shape red-fill jelly"><svg x="0px" y="0px"
+            viewBox="0 0 108.1 47" enable-background="new 0 0 108.1 47">
+            <polygon fill="#ff2c63" points="0,7.1 127.3,0 32.3,64 4.8,58.2">
+            </svg></div>
+            <div class="shape cyan-fill jelly"><svg x="0px" y="0px"
+            viewBox="0 0 108.1 47" enable-background="new 0 0 108.1 47">
+            <polygon fill="#00FFFF" points="14,0.5 127.4,0 77.4,164 2.3,61.1 "/>
+            </svg></div>
+          </div>
+        </a>
+        <a class="link-wrapper" href="/tags">
+          <span class="fallback">Tags</span>
+          <div class="img-wrapper">
+            <img class="normal" src="http://www.img.kevinquach.ca/wp-content/uploads/2017/04/tags.png">
+            <img class="active" src="http://www.img.kevinquach.ca/wp-content/uploads/2017/04/tags_red.png">
+          </div>
+          <div class="shape-wrapper">
+            <div class="shape red-fill jelly"><svg x="0px" y="0px"
+            viewBox="0 0 108.1 47" enable-background="new 0 0 108.1 47">
+            <polygon fill="#ff2c63" points="0,7.1 127.3,0 32.3,64 4.8,58.2">
+            </svg></div>
+            <div class="shape cyan-fill jelly"><svg x="0px" y="0px"
+            viewBox="0 0 108.1 47" enable-background="new 0 0 108.1 47">
+            <polygon fill="#00FFFF" points="14,0.5 127.4,0 77.4,164 2.3,61.1 "/>
+            </svg></div>
+          </div>
+        </a>
+        <a class="link-wrapper modal-trigger" href="#modal-credits">
+          <span class="fallback">Credits_</span>
+          <div class="img-wrapper">
+            <img class="normal" src="http://www.img.kevinquach.ca/wp-content/uploads/2017/04/credits.png">
+            <img class="active" src="http://www.img.kevinquach.ca/wp-content/uploads/2017/04/credits_red.png">
+          </div>
+          <div class="shape-wrapper">
+            <div class="shape red-fill jelly"><svg x="0px" y="0px"
+            viewBox="0 0 108.1 47" enable-background="new 0 0 108.1 47">
+            <polygon fill="#ff2c63" points="15.5,0 70.7,0 118.1,32.7 43.1,47 "/>
+            </svg></div>
+            <div class="shape cyan-fill jelly"><svg x="0px" y="0px"
+            viewBox="0 0 108.1 47" enable-background="new 0 0 108.1 47">
+            <polygon fill="#00FFFF" points="17.3,0 105.1,0 68.8,45.6 24.3,39 "/>
+            </svg></div>
+          </div>
+        </a>
+      </div>
+      <div class="nav-backdrop"></div>
+          </div>
+        </div> <!-- row -->
+      </div> <!-- container -->
+    </div> <!-- nav-wrapper -->
+</nav>
+<!-- =-=-=-=-=-=-=-=-=-= NAVBAR END =-=-=-=-=-=-=-=-=-= -->
+
+
+<!-- =-=-=-=-=-=-=-=-=-= "ASK" MODAL START =-=-=-=-=-=-=-=-=-= -->
+<div id="modal-ask" class="modal animated rotateInUpLeft">
+    <div class="modal-content">
+      <div class="modal-header">
+        <img class="modal-negotation" src="http://www.img.kevinquach.ca/wp-content/uploads/2017/04/negotiation.png" alt="Negotiation"/>
+        <img class="dagger animated fadeInDownBig" src="http://www.img.kevinquach.ca/wp-content/uploads/2017/04/dagger.png" alt="Dagger"/>
+        <h4>This is a Hold Up!</h4>
+      </div>
+
+      <div class="modal-text">
+        <div class="modal-text-content">
+          <p>Sorry, but please don't ask me anything code related because I'm dumb. Thanks. </p>
+
+          <p>
+            <iframe frameborder="0" height="190" id="ask_form" scrolling="no" src="http://www.tumblr.com/ask_form/tuning-spork.tumblr.com" width="100%" style="background-color: transparent; overflow: hidden;"></iframe>
+          </p>
+          <!--[if IE]><script type="text/javascript">document.getElementById('ask_form').allowTransparency=true;</script><![endif]-->
+        </div>
+      </div>
+      
+      <div class="modal-footer">
+        <a href="#!" class="modal-action modal-close"><img class="close-button animated infinite bounce" src="http://www.img.kevinquach.ca/wp-content/uploads/2017/04/modal_close.png" alt="Close"/></a>
+      </div>
+    </div>
+  </div>
+<!-- =-=-=-=-=-=-=-=-=-= "ASK" MODAL END =-=-=-=-=-=-=-=-=-= -->
+
+<!-- =-=-=-=-=-=-=-=-=-= "ME" MODAL START =-=-=-=-=-=-=-=-=-= -->
+<div id="modal-me" class="modal animated rotateInUpLeft">
+    <div class="modal-content">
+      <div class="modal-header">
+        <img class="modal-stats" src="http://www.img.kevinquach.ca/wp-content/uploads/2017/04/stats.png" alt="Stats"/>
+        <img class="dagger animated fadeInDownBig" src="http://www.img.kevinquach.ca/wp-content/uploads/2017/04/dagger.png" alt="Dagger"/>
+        <h4>The Protagonist</h4>
+      </div>
+
+      <div class="modal-text">
+        <div class="modal-text-content">
+          <p>Useless potato of society by day, nerdy geek by night! 8)</p>
+          <p><b>name</b>: dia</p>
+          <p><b>level</b>: 25</p>
+          <p><b>gender</b>: female</p>
+          <p>The "<a href="http://tuning-spork.tumblr.com/tagged/me">me</a>" tag pretty much explains and sums up stuff about me as well.</p>
+        </div>
+      </div>
+    
+      <div class="modal-footer">
+        <a href="#!" class="modal-action modal-close"><img class="close-button animated infinite bounce" src="http://www.img.kevinquach.ca/wp-content/uploads/2017/04/modal_close.png" alt="Close"/></a>
+      </div>
+    </div>
+  </div>
+<!-- =-=-=-=-=-=-=-=-=-= "ME" MODAL END =-=-=-=-=-=-=-=-=-= -->
+
+<!-- =-=-=-=-=-=-=-=-=-= "BLOG" MODAL START =-=-=-=-=-=-=-=-=-= -->
+<div id="modal-blog" class="modal animated rotateInUpLeft">
+    <div class="modal-content">
+      <div class="modal-header">
+        <img class="modal-palaces" src="http://www.img.kevinquach.ca/wp-content/uploads/2017/04/palaces.png" alt="Palaces"/>
+        <img class="dagger animated fadeInDownBig" src="http://www.img.kevinquach.ca/wp-content/uploads/2017/04/dagger.png" alt="Dagger"/>
+        <h4>The Blog</h4>
+      </div>
+
+      <div class="modal-text">
+        <div class="modal-text-content">
+          <p>A personal && multifandom blog.</p>
+          <p>Contents mainly include anime, manga, and video games … with some food and photography! Take a look at the <a href="http://tuning-spork.tumblr.com/tags">tags</a> to get an idea on what to expect in here.</p>
+          <p>Once in a blue moon, an <a href="http://tuning-spork.tumblr.com/tagged/my-stuff">ultra rare post</a> made by me would appear. Since it's ultra rare, it won't appear often!</p>
+          <p>Random blabbering sometimes appear in the tags. <i>Sometimes</i>.</p>
+          <p>Duplicate posts may appear because of bad memory.</p>
+          <p><b>This is a safe for work blog.</b></p>
+          <p><b>Not spoiler free.</b> Spoilers are not tagged because of laziness.</p>
+          <p>Blog appeared on January 6, 2014.</p>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <a href="#!" class="modal-action modal-close"><img class="close-button animated infinite bounce" src="http://www.img.kevinquach.ca/wp-content/uploads/2017/04/modal_close.png" alt="Close"/></a>
+      </div>
+    </div>
+  </div>
+<!-- =-=-=-=-=-=-=-=-=-= "BLOG" MODAL END =-=-=-=-=-=-=-=-=-= -->
+
+<!-- =-=-=-=-=-=-=-=-=-= "CREDITS" MODAL START =-=-=-=-=-=-=-=-=-= -->
+<div id="modal-credits" class="modal animated rotateInUpLeft">
+    <div class="modal-content">
+      <div class="modal-header">
+        <img class="modal-system" src="http://www.img.kevinquach.ca/wp-content/uploads/2017/04/system.png" alt="System"/>
+        <img class="dagger animated fadeInDownBig" src="http://www.img.kevinquach.ca/wp-content/uploads/2017/04/dagger.png" alt="Dagger"/>
+        <h4>Credits</h4>
+      </div>
+
+      <div class="modal-text">
+        <div class="modal-text-content">
+          <!-- <p><span class="fa fa-star"></span> <b>KnB Sprites:</b> <a href="http://nanairo-mikan.ciao.jp/bsk_main.htm" target="new">here</a></p> -->
+          <p><div class="disclaimer">
+            <span class="fa fa-exclamation-triangle"></span> <u><b>DISCLAIMER:</b></u> The images and designs that are created and used for this Persona 5 Tumblr theme are solely for entertainment purposes only. No profit is made from this Tumblr blog and theme. The owner of this blog is in no way, shape, or form associated with Atlus. This blog theme is purely fan-made.
+          </div></p>
+          <p><span class="fa fa-star"></span> <b>Fire Emblem: Awakening pixels:</b> <a href="http://tacticiantwins-blog.tumblr.com/post/60677237887/1st-gen-pixels" target="new">here</a></p>
+          <p><span class="fa fa-star"></span> <b>ASCII Art:</b> <a href="http://ascii.co.uk/art/coffin" target="new">here</a></p>
+          <p>
+            <span class="fa fa-photo"></span> <b>Images:</b>  <br/>
+            <p class="egg"><span class="fa fa-long-arrow-right"></span> Header from <i>Persona 5</i> official artwork</p>
+            <p class="egg"><span class="fa fa-long-arrow-right"></span> All other related images, visuals, and graphics based off of <i>Persona 5</i> were created by me</p>
+          </p>
+          <p>
+            <span class="fa fa-trophy"></span> <b>Theme:</b> <br/>
+            <p class="egg"><span class="fa fa-long-arrow-right"></span> Heavily themed after <i>Persona 5</i>'s <a href="http://atlus.com/persona5/home.html" target="new">official website</a> and in-game UI</p>
+            <p class="egg"><span class="fa fa-long-arrow-right"></span> Designed and developed by me using the below listed resources</p>
+          </p>
+          <p>
+            <span class="fa fa-folder-open"></span> <b>Resources:</b> <br/>
+            <p class="egg"><span class="fa fa-long-arrow-right"></span> Material Design: <a href="http://materializecss.com/" target="new">marterializecss</a></p>
+            <p class="egg"><span class="fa fa-long-arrow-right"></span> Icon Fonts: <a href="http://fontawesome.io/" target="new">Font Awesome</a></p>
+            <p class="egg"><span class="fa fa-long-arrow-right"></span> CSS Animations: <a href="https://daneden.github.io/animate.css/" target="new">animate.css</a></p>
+          </p>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <a href="#!" class="modal-action modal-close"><img class="close-button animated infinite bounce" src="http://www.img.kevinquach.ca/wp-content/uploads/2017/04/modal_close.png" alt="Close"/></a>
+      </div>
+    </div>
+  </div>
+<!-- =-=-=-=-=-=-=-=-=-= "CREDITS" MODAL END =-=-=-=-=-=-=-=-=-= -->
+
+
+<!-- =-=-=-=-=-=-=-=-=-= CONTENT START =-=-=-=-=-=-=-=-=-= -->
+<section class="container">
+  <div class="row">
+  <!-- -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+            SIDEBAR CONTENT
+      -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- -->
+    <div class="col s12 m12 l4 sidebarz">
+
+      <!-- SEARCH BAR start -->
+      <form action="/search" method="get" class="search-bar">
+        <div class="input-field">
+          <input id="search" type="search" name="q" value="{SearchQuery}" required/>
+          <label for="search"><span class="fa fa-search"></span> Infiltrate this Palace!</label>
+        </div>
+      </form>
+      <!-- SEARCH BAR end -->
+
+      <!-- TUMBLR BLOG DESCRIPTION start -->
+      <div class="card">
+        <div class="card-content">
+          <h5 class="center-align">{Title}</h5> <!-- tumblr blog title -->
+        </div>
+
+        <div class="card-action">
+          <img class="sidebar-top-rip" src="http://www.img.kevinquach.ca/wp-content/uploads/2017/04/sidebar_top_rip.png" alt="Sidebar Top Rip"/>
+          <span>
+            {Description}
+          </span> <!-- tumblr blog description -->
+
+          <div class="sidebar-bottom-img"></div>
+        </div>
+      </div>
+      <!-- TUMBLR BLOG DESCRIPTION end -->
+
+      <!-- EXTRA BOX start -->
+      <div class="card">
+        <div class="card-content">
+          <h6 class="center-align">Daily Life</h6>
+        </div>
+
+        <div class="card-action">
+          <img class="sidebar-top-rip" src="http://www.img.kevinquach.ca/wp-content/uploads/2017/04/sidebar_top_rip.png" alt="Sidebar Top Rip"/>
+          <span>I sold my soul to Persona 5 & my heart has been stolen by the Protagonist. I'm playing this game ultra slow, too, RIP. The Dancing All Night DLC was the best thing ever because rainbow afro Morgana :3c</span>
+          <div class="sidebar-bottom-img"></div>
+        </div>
+      </div>
+      <!-- EXTRA BOX end -->
+
+
+      <div class="card">
+        <div class="note">
+        <span>※ Woooooah. Looking cool, Joker!</span>
+        </div>
+      </div>
+
+      <!-- ACCORDION STATUSES start -->
+      <ul class="collapsible popout accordion-statuses" data-collapsible="accordion">
+        <li>
+          <div class="collapsible-header"> <h6><span class="fa fa-television"></span> Watching</h6></div>
+          <div class="collapsible-body">
+            <p>
+              <span class="fa fa-toggle-on"></span> Tales of Zestiria the X 2nd Season <br/>
+              <span class="fa fa-toggle-on"></span> Boku no Hero Academia 2nd Season <br/>
+            </p>
+          </div>
+        </li>
+        <li>
+          <div class="collapsible-header"> <h6><span class="fa fa-book"></span> Reading</h6></div>
+          <div class="collapsible-body">
+            <p>
+              <span class="fa fa-toggle-on"></span> Tsubaki-chou Lonely Planet <br/>
+              <span class="fa fa-toggle-on"></span> Omoi, Omoware, Furi, Furare <br/>
+              <span class="fa fa-toggle-on"></span> Boku no Hero Academia <br/>
+              <span class="fa fa-toggle-off"></span> Shokugeki no Souma <br/>
+              <span class="fa fa-toggle-on"></span> Fukumenkei Noise <br/>
+            </p>
+          </div>
+        </li>
+        <li>
+          <div class="collapsible-header"> <h6><span class="fa fa-gamepad"></span> Playing</h6></div>
+          <div class="collapsible-body">
+            <p>
+              <span class="fa fa-toggle-off"></span> Code: Realize ~Guardian of Rebirth~ <br/>
+              <span class="fa fa-toggle-on"></span> Final Fantasy XIV Online <br/>
+              <span class="fa fa-toggle-on"></span> Persona 5 <br/>
+            </p>
+          </div>
+        </li>
+      </ul>
+      <!-- ACCORDION STATUSES end -->
+
+    </div> <!-- col s3 -->
+
+
+  <!-- -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+            MAIN CONTENT
+   -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- -->
+    <div class="tControls">
+      <span class="fa fa-plus-square"></span>
+    </div>
+
+    <div class="col s12 m12 l8">
+    {block:Posts}
+    <!-- POST TYPE: PHOTOSET start -->
+    <div class="content-wrapper">
+    {block:Photoset}
+      <div class="content-like-reblog">
+        <div class="like-wrap btn-floating waves-effect waves-light center btn-like tooltipped" data-position="right" data-delay="50" data-tooltip="Like"><div class="likey">
+            {LikeButton}
+            <span class="fa fa-heart-o"></span>
+        </div></div>
+        <a href="{ReblogURL}" class="btn-floating waves-effect waves-light center btn-reblog tooltipped faa-parent animated-hover" data-position="right" data-delay="50" data-tooltip="Reblog"><span class="fa fa-retweet faa-pulse faa-fast"></span></a>
+      </div>
+
+      <div class="content-bg">
+        <div class="content-meta">
+          <div class="meta-wrap">
+          {block:Date}
+            <div class="fa fa-calendar"></div><a href="{Permalink}"><div class="meta-text"> {Month} {DayOfMonth}, {Year}</div></a>
+            {/block:Date}
+          </div>
+          <div class="meta-wrap">
+            {block:Date}
+            <div class="fa fa-clock-o"></div><a href="{Permalink}"><div class="meta-text"> {24HourWithZero}:{Minutes}</div></a>
+            {/block:Date}
+          </div>
+          <div class="meta-wrap">
+            <div class="fa fa-bookmark"></div><a href="{Permalink}"><div class="meta-text"> {NoteCount} Notes</div></a>
+          </div>
+        </div>
+    
+        <div class="content-post">
+          <div class="content-post-inner">
+            <div class="photoset">
+              {Photoset}
+            </div>
+            {block:Caption}{Caption}{/block:Caption}
+          </div>
+        </div>
+
+        <div class="content-tags">
+          {block:RebloggedFrom}
+          <span class="source-via">SOURCE: <a href="{ReblogRootURL}">{ReblogRootName}</a> <span class="fa fa-star"></span> VIA: <a href="{ReblogParentURL}">{ReblogParentName}</a></span>
+          {/block:RebloggedFrom}
+         
+        {block:HasTags}
+          {block:Tags}
+          <a href="{TagURL}"><div class="tag"><span class="fa fa-lock"></span> {Tag}</div></a>
+          {/block:Tags}
+        {/block:HasTags}
+        </div>
+    
+      </div>
+    {/block:Photoset}
+    </div>
+    <!-- POST TYPE: PHOTOSET end -->
+
+    <!-- POST TYPE: PHOTO start -->
+    <div class="content-wrapper">
+    {block:Photo}
+      <div class="content-like-reblog">
+        <div class="like-wrap btn-floating waves-effect waves-light center btn-like tooltipped" data-position="right" data-delay="50" data-tooltip="Like"><div class="likey">
+            {LikeButton}
+            <span class="fa fa-heart-o"></span>
+        </div></div>
+        <a href="{ReblogURL}" class="btn-floating waves-effect waves-light center btn-reblog tooltipped faa-parent animated-hover" data-position="right" data-delay="50" data-tooltip="Reblog"><span class="fa fa-retweet faa-pulse faa-fast"></span></a>
+      </div>
+
+      <div class="content-bg">
+        <div class="content-meta">
+          <div class="meta-wrap">
+          {block:Date}
+            <div class="fa fa-calendar"></div><a href="{Permalink}"><div class="meta-text"> {Month} {DayOfMonth}, {Year}</div></a>
+            {/block:Date}
+          </div>
+          <div class="meta-wrap">
+            {block:Date}
+            <div class="fa fa-clock-o"></div><a href="{Permalink}"><div class="meta-text"> {24HourWithZero}:{Minutes}</div></a>
+            {/block:Date}
+          </div>
+          <div class="meta-wrap">
+            <div class="fa fa-bookmark"></div><a href="{Permalink}"><div class="meta-text"> {NoteCount} Notes</div></a>
+          </div>
+        </div>
+
+        <div class="content-post">
+          <div class="content-post-inner">
+            <div class="photoset">
+              {LinkOpenTag}<img style="display: block; margin: 0 auto;" src="{PhotoURL-500}"/>{LinkCloseTag}
+            </div>
+            {block:Caption}{Caption}{/block:Caption}
+           </div>
+        </div>
+
+        <div class="content-tags">
+          {block:RebloggedFrom}
+          <span class="source-via">SOURCE: <a href="{ReblogRootURL}">{ReblogRootName}</a> <span class="fa fa-star"></span> VIA: <a href="{ReblogParentURL}">{ReblogParentName}</a></span>
+          {/block:RebloggedFrom}
+         
+        {block:HasTags}
+          {block:Tags}
+          <a href="{TagURL}"><div class="tag"><span class="fa fa-lock"></span> {Tag}</div></a>
+          {/block:Tags}
+        {/block:HasTags}
+        </div>
+
+      </div>
+    {/block:Photo}
+    </div>
+    <!-- POST TYPE: PHOTO end -->
+    
+    <!-- POST TYPE: PANORAMA start -->
+    <div class="content-wrapper">
+    {block:Panorama}
+      <div class="content-like-reblog">
+        <div class="like-wrap btn-floating waves-effect waves-light center btn-like tooltipped" data-position="right" data-delay="50" data-tooltip="Like"><div class="likey">
+            {LikeButton}
+            <span class="fa fa-heart-o"></span>
+        </div></div>
+        <a href="{ReblogURL}" class="btn-floating waves-effect waves-light center btn-reblog tooltipped faa-parent animated-hover" data-position="right" data-delay="50" data-tooltip="Reblog"><span class="fa fa-retweet faa-pulse faa-fast"></span></a>
+      </div>
+
+      <div class="content-bg">
+        <div class="content-meta">
+          <div class="meta-wrap">
+          {block:Date}
+            <div class="fa fa-calendar"></div><a href="{Permalink}"><div class="meta-text"> {Month} {DayOfMonth}, {Year}</div></a>
+            {/block:Date}
+          </div>
+          <div class="meta-wrap">
+            {block:Date}
+            <div class="fa fa-clock-o"></div><a href="{Permalink}"><div class="meta-text"> {24HourWithZero}:{Minutes}</div></a>
+            {/block:Date}
+          </div>
+          <div class="meta-wrap">
+            <div class="fa fa-bookmark"></div><a href="{Permalink}"><div class="meta-text"> {NoteCount} Notes</div></a>
+          </div>
+        </div>
+
+        <div class="content-post">
+          <div class="content-post-inner">
+            <div class="photoset">
+              {LinkOpenTag}<img style="width: 100%;" src="{PhotoURL-Panorama}"/>{LinkCloseTag}
+            </div>
+            {block:Caption}{Caption}{/block:Caption}
+           </div>
+        </div>
+
+        <div class="content-tags">
+          {block:RebloggedFrom}
+          <span class="source-via">SOURCE: <a href="{ReblogRootURL}">{ReblogRootName}</a> <span class="fa fa-star"></span> VIA: <a href="{ReblogParentURL}">{ReblogParentName}</a></span>
+          {/block:RebloggedFrom}
+         
+        {block:HasTags}
+          {block:Tags}
+          <a href="{TagURL}"><div class="tag"><span class="fa fa-lock"></span> {Tag}</div></a>
+          {/block:Tags}
+        {/block:HasTags}
+        </div>
+
+      </div>
+    {/block:Panorama}
+    </div>
+    <!-- POST TYPE: PANORAMA end -->
+
+    <!-- POST TYPE: TEXT start -->
+    <div class="content-wrapper">
+    {block:Text}
+      <div class="content-like-reblog">
+        <div class="like-wrap btn-floating waves-effect waves-light center btn-like tooltipped" data-position="right" data-delay="50" data-tooltip="Like"><div class="likey">
+            {LikeButton}
+            <span class="fa fa-heart-o"></span>
+        </div></div>
+        <a href="{ReblogURL}" class="btn-floating waves-effect waves-light center btn-reblog tooltipped faa-parent animated-hover" data-position="right" data-delay="50" data-tooltip="Reblog"><span class="fa fa-retweet faa-pulse faa-fast"></span></a>
+      </div>
+
+      <div class="content-bg">
+        <div class="content-meta">
+          <div class="meta-wrap">
+          {block:Date}
+            <div class="fa fa-calendar"></div><a href="{Permalink}"><div class="meta-text"> {Month} {DayOfMonth}, {Year}</div></a>
+            {/block:Date}
+          </div>
+          <div class="meta-wrap">
+            {block:Date}
+            <div class="fa fa-clock-o"></div><a href="{Permalink}"><div class="meta-text"> {24HourWithZero}:{Minutes}</div></a>
+            {/block:Date}
+          </div>
+          <div class="meta-wrap">
+            <div class="fa fa-bookmark"></div><a href="{Permalink}"><div class="meta-text"> {NoteCount} Notes</div></a>
+          </div>
+        </div>
+
+        <div class="content-post">
+          <div class="content-post-inner">
+           {block:Title}<div class="post-title">{Title}</div>{/block:Title}
+            <div class="text-post">
+            {Body}
+            </div>
+          </div>
+        </div>
+
+        <div class="content-tags">
+          {block:RebloggedFrom}
+          <span class="source-via">SOURCE: <a href="{ReblogRootURL}">{ReblogRootName}</a> <span class="fa fa-star"></span> VIA: <a href="{ReblogParentURL}">{ReblogParentName}</a></span>
+          {/block:RebloggedFrom}
+         
+        {block:HasTags}
+          {block:Tags}
+          <a href="{TagURL}"><div class="tag"><span class="fa fa-lock"></span> {Tag}</div></a>
+          {/block:Tags}
+        {/block:HasTags}
+        </div>
+
+      </div>
+    {/block:Text}
+    </div>
+    <!-- POST TYPE: TEXT end -->
+
+    <!-- POST TYPE: CHAT start -->
+    <div class="content-wrapper">
+    {block:Chat}
+      <div class="content-like-reblog">
+        <div class="like-wrap btn-floating waves-effect waves-light center btn-like tooltipped" data-position="right" data-delay="50" data-tooltip="Like"><div class="likey">
+            {LikeButton}
+            <span class="fa fa-heart-o"></span>
+        </div></div>
+        <a href="{ReblogURL}" class="btn-floating waves-effect waves-light center btn-reblog tooltipped faa-parent animated-hover" data-position="right" data-delay="50" data-tooltip="Reblog"><span class="fa fa-retweet faa-pulse faa-fast"></span></a>
+      </div>
+
+      <div class="content-bg">
+        <div class="content-meta">
+          <div class="meta-wrap">
+          {block:Date}
+            <div class="fa fa-calendar"></div><a href="{Permalink}"><div class="meta-text"> {Month} {DayOfMonth}, {Year}</div></a>
+            {/block:Date}
+          </div>
+          <div class="meta-wrap">
+            {block:Date}
+            <div class="fa fa-clock-o"></div><a href="{Permalink}"><div class="meta-text"> {24HourWithZero}:{Minutes}</div></a>
+            {/block:Date}
+          </div>
+          <div class="meta-wrap">
+            <div class="fa fa-bookmark"></div><a href="{Permalink}"><div class="meta-text"> {NoteCount} Notes</div></a>
+          </div>
+        </div>
+
+        <div class="content-post">
+          <div class="content-post-inner">
+            {block:Title}<div class="post-title">{Title}</div>{/block:Title}
+            {block:Lines} <div class="chat-post">{block:Label}<b>{Label}</b>{/block:Label} {Line}</div>{/block:Lines}
+          </div>
+        </div>
+
+        <div class="content-tags">
+          {block:RebloggedFrom}
+          <span class="source-via">SOURCE: <a href="{ReblogRootURL}">{ReblogRootName}</a> <span class="fa fa-star"></span> VIA: <a href="{ReblogParentURL}">{ReblogParentName}</a></span>
+          {/block:RebloggedFrom}
+         
+        {block:HasTags}
+          {block:Tags}
+          <a href="{TagURL}"><div class="tag"><span class="fa fa-lock"></span> {Tag}</div></a>
+          {/block:Tags}
+        {/block:HasTags}
+        </div>
+
+      </div>
+    {/block:Chat}
+    </div>
+    <!-- POST TYPE: CHAT end -->
+
+    <!-- POST TYPE: QUOTE start -->
+    <div class="content-wrapper">
+    {block:Quote}
+      <div class="content-like-reblog">
+        <div class="like-wrap btn-floating waves-effect waves-light center btn-like tooltipped" data-position="right" data-delay="50" data-tooltip="Like"><div class="likey">
+            {LikeButton}
+            <span class="fa fa-heart-o"></span>
+        </div></div>
+        <a href="{ReblogURL}" class="btn-floating waves-effect waves-light center btn-reblog tooltipped faa-parent animated-hover" data-position="right" data-delay="50" data-tooltip="Reblog"><span class="fa fa-retweet faa-pulse faa-fast"></span></a>
+      </div>
+
+      <div class="content-bg">
+        <div class="content-meta">
+          <div class="meta-wrap">
+          {block:Date}
+            <div class="fa fa-calendar"></div><a href="{Permalink}"><div class="meta-text"> {Month} {DayOfMonth}, {Year}</div></a>
+            {/block:Date}
+          </div>
+          <div class="meta-wrap">
+            {block:Date}
+            <div class="fa fa-clock-o"></div><a href="{Permalink}"><div class="meta-text"> {24HourWithZero}:{Minutes}</div></a>
+            {/block:Date}
+          </div>
+          <div class="meta-wrap">
+            <div class="fa fa-bookmark"></div><a href="{Permalink}"><div class="meta-text"> {NoteCount} Notes</div></a>
+          </div>
+        </div>
+
+        <div class="content-post">
+          <div class="content-post-inner">
+            <div class="quote-post"><span class="fa fa-quote-left"></span> {Quote} <span class="fa fa-quote-right"></span></div>
+            {block:Source}<div class="center" style="margin-top: 15px;">- {Source} -</div>{/block:Source}
+          </div>
+        </div>
+
+        <div class="content-tags">
+          {block:RebloggedFrom}
+          <span class="source-via">SOURCE: <a href="{ReblogRootURL}">{ReblogRootName}</a> <span class="fa fa-star"></span> VIA: <a href="{ReblogParentURL}">{ReblogParentName}</a></span>
+          {/block:RebloggedFrom}
+         
+        {block:HasTags}
+          {block:Tags}
+          <a href="{TagURL}"><div class="tag"><span class="fa fa-lock"></span> {Tag}</div></a>
+          {/block:Tags}
+        {/block:HasTags}
+        </div>
+
+      </div>
+    {/block:Quote}
+    </div>
+    <!-- POST TYPE: QUOTE end -->
+    
+    <!-- POST TYPE: LINK start -->
+    <div class="content-wrapper">
+    {block:Link}
+      <div class="content-like-reblog">
+        <div class="like-wrap btn-floating waves-effect waves-light center btn-like tooltipped" data-position="right" data-delay="50" data-tooltip="Like"><div class="likey">
+            {LikeButton}
+            <span class="fa fa-heart-o"></span>
+        </div></div>
+        <a href="{ReblogURL}" class="btn-floating waves-effect waves-light center btn-reblog tooltipped faa-parent animated-hover" data-position="right" data-delay="50" data-tooltip="Reblog"><span class="fa fa-retweet faa-pulse faa-fast"></span></a>
+      </div>
+
+      <div class="content-bg">
+        <div class="content-meta">
+          <div class="meta-wrap">
+          {block:Date}
+            <div class="fa fa-calendar"></div><a href="{Permalink}"><div class="meta-text"> {Month} {DayOfMonth}, {Year}</div></a>
+            {/block:Date}
+          </div>
+          <div class="meta-wrap">
+            {block:Date}
+            <div class="fa fa-clock-o"></div><a href="{Permalink}"><div class="meta-text"> {24HourWithZero}:{Minutes}</div></a>
+            {/block:Date}
+          </div>
+          <div class="meta-wrap">
+            <div class="fa fa-bookmark"></div><a href="{Permalink}"><div class="meta-text"> {NoteCount} Notes</div></a>
+          </div>
+        </div>
+
+        <div class="content-post">
+          <div class="content-post-inner">
+            <div class="link-post">
+                  <a href="{URL}" target="new">
+                    <div class="link-button">{Name} <span class="fa fa-caret-right"></span></div>
+                  </a>
+              </div>
+              {block:Description}{Description}{/block:Description}
+          </div>
+        </div>
+
+        <div class="content-tags">
+          {block:RebloggedFrom}
+          <span class="source-via">SOURCE: <a href="{ReblogRootURL}">{ReblogRootName}</a> <span class="fa fa-star"></span> VIA: <a href="{ReblogParentURL}">{ReblogParentName}</a></span>
+          {/block:RebloggedFrom}
+         
+        {block:HasTags}
+          {block:Tags}
+          <a href="{TagURL}"><div class="tag"><span class="fa fa-lock"></span> {Tag}</div></a>
+          {/block:Tags}
+        {/block:HasTags}
+        </div>
+
+      </div>
+    {/block:Link}
+    </div>
+    <!-- POST TYPE: LINK end -->
+
+    <!-- POST TYPE: AUDIO start -->
+    <div class="content-wrapper">
+    {block:Audio}
+      <div class="content-like-reblog">
+        <div class="like-wrap btn-floating waves-effect waves-light center btn-like tooltipped" data-position="right" data-delay="50" data-tooltip="Like"><div class="likey">
+            {LikeButton}
+            <span class="fa fa-heart-o"></span>
+        </div></div>
+        <a href="{ReblogURL}" class="btn-floating waves-effect waves-light center btn-reblog tooltipped faa-parent animated-hover" data-position="right" data-delay="50" data-tooltip="Reblog"><span class="fa fa-retweet faa-pulse faa-fast"></span></a>
+      </div>
+
+      <div class="content-bg">
+        <div class="content-meta">
+          <div class="meta-wrap">
+          {block:Date}
+            <div class="fa fa-calendar"></div><a href="{Permalink}"><div class="meta-text"> {Month} {DayOfMonth}, {Year}</div></a>
+            {/block:Date}
+          </div>
+          <div class="meta-wrap">
+            {block:Date}
+            <div class="fa fa-clock-o"></div><a href="{Permalink}"><div class="meta-text"> {24HourWithZero}:{Minutes}</div></a>
+            {/block:Date}
+          </div>
+          <div class="meta-wrap">
+            <div class="fa fa-bookmark"></div><a href="{Permalink}"><div class="meta-text"> {NoteCount} Notes</div></a>
+          </div>
+        </div>
+
+        <div class="content-post">
+          <div class="content-post-inner">
+            <div class="audio-post">
+              <img class="nya" src="http://www.img.kevinquach.ca/wp-content/uploads/2017/05/morgana_music.png" alt="Morgana"/>
+              <div class="album-info">
+                <div class="album-art-wrapper">
+                  {block:AlbumArt}<img class="audio-art" src="{AlbumArtURL}"/>{/block:AlbumArt}
+                  <div class="audio-player-wrapper">
+                       {block:AudioPlayer}{AudioPlayer}{/block:AudioPlayer}
+                  </div>
+                </div>
+                <p class="audio-title"><span class="fa fa-headphones"></span> {block:TrackName}{TrackName}{/block:TrackName}</p>
+                <p class="audio-artist"><span class="fa fa-user"></span> {block:Artist}{Artist}{/block:Artist}</p>
+                <p class="audio-album"><span class="fa fa-navicon"></span> {block:Album}{Album}{/block:Album}</p>
+              </div>
+            </div>
+            {block:Caption}{Caption}{/block:Caption}
+          </div>
+        </div>
+
+        <div class="content-tags">
+          {block:RebloggedFrom}
+          <span class="source-via">SOURCE: <a href="{ReblogRootURL}">{ReblogRootName}</a> <span class="fa fa-star"></span> VIA: <a href="{ReblogParentURL}">{ReblogParentName}</a></span>
+          {/block:RebloggedFrom}
+         
+        {block:HasTags}
+          {block:Tags}
+          <a href="{TagURL}"><div class="tag"><span class="fa fa-lock"></span> {Tag}</div></a>
+          {/block:Tags}
+        {/block:HasTags}
+        </div>
+
+      </div>
+    {/block:Audio}
+    </div>
+    <!-- POST TYPE: AUDIO end -->
+    
+    <!-- POST TYPE: VIDEO start -->
+    <div class="content-wrapper">
+    {block:Video}
+      <div class="content-like-reblog">
+        <div class="like-wrap btn-floating waves-effect waves-light center btn-like tooltipped" data-position="right" data-delay="50" data-tooltip="Like"><div class="likey">
+            {LikeButton}
+            <span class="fa fa-heart-o"></span>
+        </div></div>
+        <a href="{ReblogURL}" class="btn-floating waves-effect waves-light center btn-reblog tooltipped faa-parent animated-hover" data-position="right" data-delay="50" data-tooltip="Reblog"><span class="fa fa-retweet faa-pulse faa-fast"></span></a>
+      </div>
+
+      <div class="content-bg">
+        <div class="content-meta">
+          <div class="meta-wrap">
+          {block:Date}
+            <div class="fa fa-calendar"></div><a href="{Permalink}"><div class="meta-text"> {Month} {DayOfMonth}, {Year}</div></a>
+            {/block:Date}
+          </div>
+          <div class="meta-wrap">
+            {block:Date}
+            <div class="fa fa-clock-o"></div><a href="{Permalink}"><div class="meta-text"> {24HourWithZero}:{Minutes}</div></a>
+            {/block:Date}
+          </div>
+          <div class="meta-wrap">
+            <div class="fa fa-bookmark"></div><a href="{Permalink}"><div class="meta-text"> {NoteCount} Notes</div></a>
+          </div>
+        </div>
+
+        <div class="content-post">
+          <div class="content-post-inner">
+            <div style="text-align: center;" class="video">
+              {Video-500}
+            </div>
+            {block:Caption}{Caption}{/block:Caption}
+           </div>
+        </div>
+
+        <div class="content-tags">
+          {block:RebloggedFrom}
+          <span class="source-via">SOURCE: <a href="{ReblogRootURL}">{ReblogRootName}</a> <span class="fa fa-star"></span> VIA: <a href="{ReblogParentURL}">{ReblogParentName}</a></span>
+          {/block:RebloggedFrom}
+         
+        {block:HasTags}
+          {block:Tags}
+          <a href="{TagURL}"><div class="tag"><span class="fa fa-lock"></span> {Tag}</div></a>
+          {/block:Tags}
+        {/block:HasTags}
+        </div>
+
+      </div>
+    {/block:Video}
+    </div>
+    <!-- POST TYPE: VIDEO end -->
+
+    <!-- POST TYPE: ASKS start -->
+    <div class="content-wrapper">
+    {block:Answer}
+      <div class="content-like-reblog">
+        <div class="like-wrap btn-floating waves-effect waves-light center btn-like tooltipped" data-position="right" data-delay="50" data-tooltip="Like"><div class="likey">
+            {LikeButton}
+            <span class="fa fa-heart-o"></span>
+        </div></div>
+        <a href="{ReblogURL}" class="btn-floating waves-effect waves-light center btn-reblog tooltipped faa-parent animated-hover" data-position="right" data-delay="50" data-tooltip="Reblog"><span class="fa fa-retweet faa-pulse faa-fast"></span></a>
+      </div>
+
+      <div class="content-bg content-bg-ask">
+        <div class="content-meta">
+          <div class="meta-wrap">
+          {block:Date}
+            <div class="fa fa-calendar"></div><a href="{Permalink}"><div class="meta-text"> {Month} {DayOfMonth}, {Year}</div></a>
+            {/block:Date}
+          </div>
+          <div class="meta-wrap">
+            {block:Date}
+            <div class="fa fa-clock-o"></div><a href="{Permalink}"><div class="meta-text"> {24HourWithZero}:{Minutes}</div></a>
+            {/block:Date}
+          </div>
+          <div class="meta-wrap">
+            <div class="fa fa-bookmark"></div><a href="{Permalink}"><div class="meta-text"> {NoteCount} Notes</div></a>
+          </div>
+        </div>
+
+        <div class="content-post">
+          <div class="content-post-inner">
+            <div class="ask-post">
+              <div class="ask-question">
+                <div class="ask-avvie">
+                  <img src="{AskerPortraitURL-64}"/>
+                </div>
+                <img class="chat-question-mark" src="http://www.img.kevinquach.ca/wp-content/uploads/2017/04/chat_question.png" alt="Question Mark"/>
+                <div class="ask-content">
+                  <span>{Asker}:</span>
+                  <div class="ask-question">{Question}</div>
+                  </div>
+              </div>
+            <div class="ask-answer">
+            {block:Answerer}<span>{Answerer}:</span>{/block:Answerer}
+              <p>{Answer}</p>
+              <img class="chat-reply" src="http://www.img.kevinquach.ca/wp-content/uploads/2017/04/chat_reply.png" alt="Chat Squiggly"/>
+              </div>
+            </div>
+         </div>
+        </div>
+
+        <div class="content-tags">
+          {block:RebloggedFrom}
+          <span class="source-via">SOURCE: <a href="{ReblogRootURL}">{ReblogRootName}</a> <span class="fa fa-star"></span> VIA: <a href="{ReblogParentURL}">{ReblogParentName}</a></span>
+          {/block:RebloggedFrom}
+         
+        {block:HasTags}
+          {block:Tags}
+          <a href="{TagURL}"><div class="tag"><span class="fa fa-lock"></span> {Tag}</div></a>
+          {/block:Tags}
+        {/block:HasTags}
+        </div>
+
+      </div>
+    {/block:Answer}
+    </div>
+    <!-- POST TYPE: ASKS end -->
+    
+    <!-- PERALINK PAGE start -->
+    {block:PermalinkPage}
+    <div class="permapage">
+    {block:PostNotes}
+        {PostNotes}
+    {/block:PostNotes}
+    </div>
+        
+    {/block:PermalinkPage}
+    <!-- PERALINK PAGE end -->
+{/block:Posts}
+
+<!-- =-=-=-=-=-=-=-=-=-= PAGINATION START =-=-=-=-=-=-=-=-=-= -->
+<div class="pagination">
+{block:Pagination}
+    <div>
+        {block:PreviousPage}<a href="{PreviousPage}"><img class="prev" src="http://www.img.kevinquach.ca/wp-content/uploads/2017/04/prev.png" alt="Previous Page"/></a>{/block:PreviousPage}
+    </div>
+    <div>
+        {block:NextPage}<a href="{NextPage}"><img class="next" src="http://www.img.kevinquach.ca/wp-content/uploads/2017/04/next.png" alt="Next Page"/></a>{/block:NextPage}
+    </div>
+{/block:Pagination}
+</div>
+<!-- =-=-=-=-=-=-=-=-=-= PAGINATION END =-=-=-=-=-=-=-=-=-= -->
+
+    </div> <!-- col s8 -->
+  </div> <!-- row -->
+
+  <img class="back2Top" src="http://www.img.kevinquach.ca/wp-content/uploads/2017/04/top.png" alt="Back to Top"/>
+</section>
+<!-- =-=-=-=-=-=-=-=-=-= CONTENT END =-=-=-=-=-=-=-=-=-= -->
+
+<!-- -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+        JavaScript
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+<script src="https://use.fontawesome.com/6b7cf57f69.js"></script>
+
+<script>
+$(document).ready(function(){
+  $('.parallax').parallax();
+  $('.modal-trigger').leanModal({
+    out_duration: 0,
+  });
+
+  $("[data-tooltip]").each(function() {
+      var id = $(this).attr("data-tooltip-id"),
+        color = $(this).css("color");
+      $("#" + id).css("color", color);
+  });
+
+  $('.nav-wrapper').pushpin({ top: $('header.parallax-container').height() });
+
+  // ------------ scroll down ------------
+  $("a.smooth-scroll").click(function(){
+    $("html, body").animate({
+        scrollTop: $( $.attr(this, "href") ).offset().top+1
+    }, 500);
+    return false;
+  });
+
+  // ------------ scroll up ------------
+  $(window).scroll(function(){
+    if($(window).scrollTop() > (($("header").height()) + ($("nav").height()))) {
+      $(".back2Top").fadeIn(300);
+    } else {
+      $(".back2Top").fadeOut(300);
+    }
+  });
+
+  $(".back2Top").click(function(){
+    $("html, body").animate({
+        scrollTop: $("header").height()
+    }, 500);
+    return false;
+  });
+
+  // ------------ boingy shit ------------
+  $(".header-menu img, .prev, .next, .link-button").hover(function(){
+    $(this).toggleClass("animated rubberBand");
+  });
+
+  $(".menu-toggle").click(function() {
+    $(this).toggleClass("active");
+    $(".navbar").toggleClass("active");
+    $(".nav-backdrop").toggleClass("active");
+  });
+  $(".nav-backdrop").click(function() {
+    $(this).removeClass("active");
+    $(".navbar").removeClass("active");
+    $(".menu-toggle").removeClass("active");
+  });
+  
+  // ------------ tumblr controls ------------
+  $(".tControls").click(function(){
+      $("iframe#tumblr_controls, .tmblr-iframe.tmblr-iframe--desktop-loggedin-controls.iframe-controls--desktop, .tmblr-iframe.tmblr-iframe--desktop-logged-in-controls.iframe-controls--desktop").toggleClass("sneaky");
+  });
+  
+});
+</script>
+
+</body>
+</html>

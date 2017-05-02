@@ -461,6 +461,9 @@
   <!-- -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
             MAIN CONTENT
    -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- -->
+<div class="tControls">
+  <span class="fa fa-plus-square"></span>
+</div>
     <div class="col s12 m12 l8">
 
     <!-- POST TYPE: PHOTOSET start -->
@@ -680,10 +683,10 @@
         <div class="content-post">
         	<div class="content-post-inner">
 	          <div class="audio-post">
-              <img class="nya" src="imgs/morgana-02.png">
+              <img class="nya" src="imgs/morgana_music.png" alt="Morgana"/>
               <div class="album-info">
                 <div class="album-art-wrapper">
-                  <img class="audio-art" src="http://static.tumblr.com/p0knose/7A1nhv7rk/default-cover.png">
+                  <img class="audio-art" src="http://static.tumblr.com/p0knose/7A1nhv7rk/default-cover.png"/>
                   <div class="audio-player-wrapper">
                        <iframe class="tumblr_audio_player" src="http://tuning-spork.tumblr.com/post/160079522625/audio_player_iframe/tuning-spork/tumblr_ofs0z6QD541u4utjk?audio_file=https%3A%2F%2Fwww.tumblr.com%2Faudio_file%2Ftuning-spork%2F160079522625%2Ftumblr_ofs0z6QD541u4utjk&color=white&simple=1"></iframe>
                   </div>
@@ -706,6 +709,45 @@
 
     </div>
     <!-- POST TYPE: AUDIO end -->
+
+    <!-- POST TYPE: LINK start -->
+    <div class="content-wrapper">
+      <div class="content-like-reblog">
+        <a class="btn-floating waves-effect waves-light center btn-like tooltipped faa-parent animated-hover" data-position="right" data-delay="50" data-tooltip="Like"><span class="fa fa-heart faa-pulse faa-fast"></span></a>
+        <a class="btn-floating waves-effect waves-light center btn-reblog tooltipped faa-parent animated-hover" data-position="right" data-delay="50" data-tooltip="Reblog"><span class="fa fa-retweet faa-pulse faa-fast"></span></a>
+      </div>
+
+      <div class="content-bg">
+        <div class="content-meta">
+          <div class="meta-wrap">
+            <div class="fa fa-calendar"></div><div class="meta-text"> August 15, 2016</div>
+          </div>
+          <div class="meta-wrap">
+            <div class="fa fa-clock-o"></div><div class="meta-text"> 21:46</div>
+          </div>
+          <div class="meta-wrap">
+            <div class="fa fa-bookmark"></div><div class="meta-text"> 4,839 Notes</div>
+          </div>
+        </div>
+
+        <div class="content-post">
+          <div class="content-post-inner">
+            <div class="link-post">
+              <a href="https://www.google.com/" target="new">
+                <div class="link-button">Google <span class="fa fa-caret-right"></span></div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="content-tags">
+          <span class="source-via">SOURCE: <a href="#">persons-url</a> <span class="fa fa-star"></span> VIA: <a href="#">persons-url</a></span>
+          <div class="tag"><span class="fa fa-lock"></span> link</div>
+        </div>
+      </div>
+
+    </div>
+    <!-- POST TYPE: LINK end -->
 
     <!-- POST TYPE: ASKS start -->
     <div class="content-wrapper">
@@ -831,7 +873,7 @@ $(document).ready(function(){
   });
 
   // ------------ boingy shit ------------
-  $(".header-menu img, .prev, .next").hover(function(){
+  $(".header-menu img, .prev, .next, .link-button").hover(function(){
     $(this).toggleClass("animated rubberBand");
   });
 
@@ -850,6 +892,12 @@ $(document).ready(function(){
 	//     chain.currentTime = 0;
 	// 		chain.play();
 	// });
+
+  // ------------ tumblr controls ------------
+  $(".tControls").click(function(){
+      $("iframe#tumblr_controls, .tmblr-iframe.tmblr-iframe--desktop-loggedin-controls.iframe-controls--desktop, .tmblr-iframe.tmblr-iframe--desktop-logged-in-controls.iframe-controls--desktop").toggleClass("sneaky");
+  });
+
 });
 </script>
 
