@@ -51,7 +51,7 @@
 
 <!-- =-=-=-=-=-=-=-=-=-= HEADER START =-=-=-=-=-=-=-=-=-= -->
 <header class="parallax-container">
-  <div class="parallax"><img src="http://www.img.kevinquach.ca/wp-content/uploads/2017/04/persona5_v2.jpg" alt="Persona 5 Wallpaper"/></div>
+  <div class="parallax"><img src="http://static.tumblr.com/hqiihx2/2xFopem8u/persona5_v2.jpg" alt="Persona 5 Wallpaper"/></div>
   <div class="header-menu">
     <a class="smooth-scroll" href="#nav"><img src="http://www.img.kevinquach.ca/wp-content/uploads/2017/04/load_game_v2.png" alt="Load Game"/></a><br/>
     <a href="https://www.tumblr.com/dashboard"><img src="http://www.img.kevinquach.ca/wp-content/uploads/2017/04/return_to_title_v2.png" alt="Return to Title"/></a>
@@ -462,7 +462,11 @@
             MAIN CONTENT
    -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- -->
 <div class="tControls">
-  <span class="fa fa-plus-square"></span>
+  <!-- <span class="fa fa-plus-square"></span> -->
+  <a class="tcontrols-toggle">
+    <span></span>
+    <span></span>
+  </a>
 </div>
     <div class="col s12 m12 l8">
 
@@ -877,6 +881,7 @@ $(document).ready(function(){
     $(this).toggleClass("animated rubberBand");
   });
 
+  // ------------ big bang burger challenge ------------
   $(".menu-toggle").click(function() {
   	$(this).toggleClass("active");
   	$(".navbar").toggleClass("active");
@@ -895,7 +900,11 @@ $(document).ready(function(){
 
   // ------------ tumblr controls ------------
   $(".tControls").click(function(){
-      $("iframe#tumblr_controls, .tmblr-iframe.tmblr-iframe--desktop-loggedin-controls.iframe-controls--desktop, .tmblr-iframe.tmblr-iframe--desktop-logged-in-controls.iframe-controls--desktop").toggleClass("sneaky");
+    $("iframe#tumblr_controls, .tmblr-iframe.tmblr-iframe--desktop-loggedin-controls.iframe-controls--desktop, .tmblr-iframe.tmblr-iframe--desktop-logged-in-controls.iframe-controls--desktop").toggleClass("sneaky");
+  });
+
+  $(".tControls .tcontrols-toggle").click(function(){
+    $(".tControls .tcontrols-toggle span:nth-child(2)").toggleClass("active");
   });
 
 });

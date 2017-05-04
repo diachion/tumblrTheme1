@@ -92,7 +92,7 @@ body {
   font-family: $body;
   font-size: 0.9em;
   color: $text;
-  background: url('http://www.img.kevinquach.ca/wp-content/uploads/2017/04/star_bg.jpg') repeat fixed;
+  background: url('http://static.tumblr.com/hqiihx2/tvaopem8v/star_bg.jpg') repeat fixed;
   overflow-x: hidden;
   //background-color: #770a10;
 }
@@ -128,21 +128,48 @@ iframe#tumblr_controls, .tmblr-iframe.tmblr-iframe--desktop-loggedin-controls.if
     margin-top: 65px !important;
     z-index: 99999999999;
     right: -500px;
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    transition: all 0.5s ease;
+    -webkit-transition: all 0.8s cubic-bezier(0.81, -0.38, 0.18, 1.44);
+    -moz-transition: all 0.8s cubic-bezier(0.81, -0.38, 0.18, 1.44);
+    transition: all 0.8s cubic-bezier(0.81, -0.38, 0.18, 1.44);
 }
 
 .tControls {
-  font-size: 1.3em;
+  //font-size: 1.3em;
   background: rgba(0,0,0,0.7);
   position: fixed;
   top: 18px;
   right: 12px;
-  padding: 2px 8px;
-  z-index: 9999999999;
-  &:hover {
+  //padding: 2px 8px;
+  z-index: 9999;
+  .tcontrols-toggle {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    top: 10px;
+    right: 5px;
+    z-index: 99999;
     cursor: pointer;
+    span {
+      width: 100%;
+      border-radius: 20px;
+      display: block;
+      height: 6px;
+      background: #fff;
+      margin: 2px 0;
+      border: 2px solid black;
+      position: relative;
+      @include trans(all .7s cubic-bezier(0.93, -0.60, 0.30, 1.20));
+      top: 0;
+      left: 0;
+      opacity: 1;
+      &:nth-child(2) {
+        top: -8px;
+        @include transform(rotate(90deg));
+      }
+    }
+    .active {
+      @include transform(rotate(0deg) !important);
+    }
   }
   @include mobile {
     display: none;
@@ -854,16 +881,6 @@ form {
 /* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
       MAIN CONTENT
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
-.tControls {
-  font-size: 1.3em;
-  background: rgba(0,0,0,0.7);
-  position: fixed;
-  top: 18px;
-  right: 12px;
-  padding: 2px 8px;
-  z-index: 9999999999;
-}
-
 .container {
   @media only screen and (min-width: 993px) {
     width: 95%;
@@ -1008,6 +1025,12 @@ form {
   .content-post-inner {
     max-width: 540px;
     margin: 0 auto;
+    h1 {
+      font-size: 2.3em;
+    }
+    h2 {
+      font-size: 1.5em;
+    }
     ul {
       padding-left: 40px;
       li {

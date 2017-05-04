@@ -3269,22 +3269,22 @@ $(document).ready(function(){
 
   $('.tags').children('.tag-wrapper').click(function(e) {
 
-    e.preventDefault(); //Prevents the page from scrolling to the anchor point
+    e.preventDefault();
 
-    if($(this).hasClass('active')) { //If the tag already has an active class, reset everything to default
-      $(this).siblings().removeClass('inactive'); //Remove all inactive classes
-      $(this).removeClass('active'); // Remove all active classes
-      $('.tags-content').children().removeClass('active'); // Remove all active class from content
+    if($(this).hasClass('active')) {
+      $(this).siblings().removeClass('inactive');
+      $(this).removeClass('active');
+      $('.tags-content').children().removeClass('active');
     }
     else {
-      $(this).siblings().removeClass('active'); //Remove active class of previous tag
-      $(this).siblings().addClass('inactive'); //Add inactive class to every other tag
-      $(this).addClass('active'); // Add active class to clicked on tag
-      $(this).removeClass('inactive'); //Remove any previous inactive class it had before
+      $(this).siblings().removeClass('active');
+      $(this).siblings().addClass('inactive');
+      $(this).addClass('active');
+      $(this).removeClass('inactive');
 
-      var target = $(this).children().attr('href'); //Grab the href of the content
-      $('.tags-content').children('.tag-content').removeClass('active'); //Remove the active class for previous content
-      $(target).addClass('active'); //Add active class to currently targeted content based on the href from the tag
+      var target = $(this).children().attr('href');
+      $('.tags-content').children('.tag-content').removeClass('active');
+      $(target).addClass('active');
       $(target).animate({ scrollTop: 0 }, "fast");
       console.log($(window).width());
       if($(window).width() <= 583) {

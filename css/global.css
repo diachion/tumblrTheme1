@@ -12,7 +12,7 @@ body {
   font-family: "Heebo", sans-serif;
   font-size: 0.9em;
   color: #fff;
-  background: url("http://www.img.kevinquach.ca/wp-content/uploads/2017/04/star_bg.jpg") repeat fixed;
+  background: url("http://static.tumblr.com/hqiihx2/tvaopem8v/star_bg.jpg") repeat fixed;
   overflow-x: hidden; }
 
 h1, h2, h3, h4, h5, h6, .collapsible-header {
@@ -42,20 +42,52 @@ iframe#tumblr_controls, .tmblr-iframe.tmblr-iframe--desktop-loggedin-controls.if
   margin-top: 65px !important;
   z-index: 99999999999;
   right: -500px;
-  -webkit-transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
-  transition: all 0.5s ease; }
+  -webkit-transition: all 0.8s cubic-bezier(0.81, -0.38, 0.18, 1.44);
+  -moz-transition: all 0.8s cubic-bezier(0.81, -0.38, 0.18, 1.44);
+  transition: all 0.8s cubic-bezier(0.81, -0.38, 0.18, 1.44); }
 
 .tControls {
-  font-size: 1.3em;
   background: rgba(0, 0, 0, 0.7);
   position: fixed;
   top: 18px;
   right: 12px;
-  padding: 2px 8px;
-  z-index: 9999999999; }
-  .tControls:hover {
+  z-index: 9999; }
+  .tControls .tcontrols-toggle {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    top: 10px;
+    right: 5px;
+    z-index: 99999;
     cursor: pointer; }
+    .tControls .tcontrols-toggle span {
+      width: 100%;
+      border-radius: 20px;
+      display: block;
+      height: 6px;
+      background: #fff;
+      margin: 2px 0;
+      border: 2px solid black;
+      position: relative;
+      transition: all 0.7s cubic-bezier(0.93, -0.6, 0.3, 1.2);
+      -webkit-transition: all 0.7s cubic-bezier(0.93, -0.6, 0.3, 1.2);
+      -moz-transition: all 0.7s cubic-bezier(0.93, -0.6, 0.3, 1.2);
+      top: 0;
+      left: 0;
+      opacity: 1; }
+      .tControls .tcontrols-toggle span:nth-child(2) {
+        top: -8px;
+        transform: rotate(90deg);
+        -webkit-transform: rotate(90deg);
+        -moz-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+        -o-transform: rotate(90deg); }
+    .tControls .tcontrols-toggle .active {
+      transform: rotate(0deg) !important;
+      -webkit-transform: rotate(0deg) !important;
+      -moz-transform: rotate(0deg) !important;
+      -ms-transform: rotate(0deg) !important;
+      -o-transform: rotate(0deg) !important; }
   @media screen and (max-width: 460px) {
     .tControls {
       display: none; } }
@@ -718,15 +750,6 @@ form {
 /* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
       MAIN CONTENT
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
-.tControls {
-  font-size: 1.3em;
-  background: rgba(0, 0, 0, 0.7);
-  position: fixed;
-  top: 18px;
-  right: 12px;
-  padding: 2px 8px;
-  z-index: 9999999999; }
-
 @media only screen and (min-width: 993px) {
   .container {
     width: 95%; } }
@@ -856,6 +879,10 @@ form {
   .content-post .content-post-inner {
     max-width: 540px;
     margin: 0 auto; }
+    .content-post .content-post-inner h1 {
+      font-size: 2.3em; }
+    .content-post .content-post-inner h2 {
+      font-size: 1.5em; }
     .content-post .content-post-inner ul {
       padding-left: 40px; }
       .content-post .content-post-inner ul li {
