@@ -534,7 +534,27 @@ iframe#tumblr_controls, .tmblr-iframe.tmblr-iframe--desktop-loggedin-controls.if
   }
 }
 
-
+/* PRELOADER */
+#preloader {
+position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #000;
+    z-index: 999999;
+    #status {
+      width: 200px;
+      height: 200px;
+      position: absolute;
+      bottom: 50px;
+      right: 50px;
+      background-image: url(../imgs/TakeYourTime.gif);
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+}
 /* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
       NAVIGATION
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */

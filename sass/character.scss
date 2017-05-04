@@ -600,3 +600,25 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
   50% { @include transform(skewX(-45deg)); }
   to { @include transform(skewX(40deg) rotateX(-60deg) rotateY(-10deg) rotateZ(-10deg) perspective(150px)); }
 }
+
+/* PRELOADER */
+#preloader {
+position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #000;
+    z-index: 999999;
+    #status {
+      width: 200px;
+      height: 200px;
+      position: absolute;
+      bottom: 50px;
+      right: 50px;
+      background-image: url(../imgs/TakeYourTime.gif);
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+}

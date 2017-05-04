@@ -14,6 +14,8 @@
 
 <body>
 
+<div id="preloader"><div id="status">&nbsp;</div></div>
+
 <section class="container">
   <div class="row">
   <!-- -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
@@ -30,13 +32,13 @@
         </div>
         <img class="tags-mark" src="http://www.img.kevinquach.ca/wp-content/uploads/2017/04/tags_char_badge.png">
 
-        <div class="ballchain animated bounceInUp"></div>
+        <div class="ballchain" data-animate></div>
 
-        <div class="tag-wrapper animated bounceInUp a-e"><a class="tag" href="#a-e"><span class="fa fa-circle"></span> A - E</a></div>
-        <div class="tag-wrapper animated bounceInUp f-j" style="animation-delay: 0.1s;"><a class="tag" href="#f-j"><span class="fa fa-circle"></span> F - J</a></div>
-        <div class="tag-wrapper animated bounceInUp k-o" style="animation-delay: 0.15s;"><a class="tag " href="#k-o"><span class="fa fa-circle"></span> K - O</a></div>
-        <div class="tag-wrapper animated bounceInUp p-t" style="animation-delay: 0.2s;"><a class="tag" href="#p-t"><span class="fa fa-circle"></span> P - T</a></div>
-        <div class="tag-wrapper animated bounceInUp u-z" style="animation-delay: 0.25s;"><a class="tag " href="#u-z"><span class="fa fa-circle"></span> U - Z</a></div>
+        <div class="tag-wrapper a-e" data-animate><a class="tag" href="#a-e"><span class="fa fa-circle"></span> A - E</a></div>
+        <div class="tag-wrapper f-j" data-animate style="animation-delay: 0.1s;"><a class="tag" href="#f-j"><span class="fa fa-circle"></span> F - J</a></div>
+        <div class="tag-wrapper k-o" data-animate style="animation-delay: 0.15s;"><a class="tag " href="#k-o"><span class="fa fa-circle"></span> K - O</a></div>
+        <div class="tag-wrapper p-t" data-animate style="animation-delay: 0.2s;"><a class="tag" href="#p-t"><span class="fa fa-circle"></span> P - T</a></div>
+        <div class="tag-wrapper u-z" data-animate style="animation-delay: 0.25s;"><a class="tag " href="#u-z"><span class="fa fa-circle"></span> U - Z</a></div>
       </div>
     </div>
 
@@ -3289,6 +3291,15 @@ $(document).ready(function(){
       }
     }
   });
+
+  $(window).load(function() { // makes sure the whole site is loaded
+    $("#status").fadeOut(); // will first fade out the loading animation
+    $("#preloader").delay(100).fadeOut("fast"); // will fade out the white DIV that covers the website.
+    $("[data-animate]").each(function() {
+      $(this).delay(150).addClass("animated bounceInUp");
+    });
+  });
+
   $(".back2Top").click(function(){
     $("html, body").animate({
         scrollTop: $("header").height()

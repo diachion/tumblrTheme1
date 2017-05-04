@@ -14,6 +14,8 @@
 
 <body>
 
+<div id="preloader"><div id="status">&nbsp;</div></div>
+
 <section class="container">
   <div class="row">
   <!-- -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
@@ -32,13 +34,13 @@
 
         <img class="tags-mark" src="http://www.img.kevinquach.ca/wp-content/uploads/2017/04/tags_badge.png" alt="Tags">
 
-        <div class="ballchain animated bounceInUp"></div>
+        <div class="ballchain" data-animate></div>
         
-        <div class="tag-wrapper animated bounceInUp animanga"><a class="tag" href="#animanga"><span class="fa fa-circle"></span> Anime / Manga</a></div>
-        <div class="tag-wrapper animated bounceInUp games" style="animation-delay: 0.1s;"><a class="tag" href="#games"><span class="fa fa-circle"></span> Video Games</a></div>
-        <div class="tag-wrapper animated bounceInUp movies" style="animation-delay: 0.15s;"><a class="tag" href="#movies"><span class="fa fa-circle"></span> Movies / Shows</a></div>
-        <div class="tag-wrapper animated bounceInUp misc" style="animation-delay: 0.2s;"><a class="tag" href="#misc"><span class="fa fa-circle"></span> Miscellaneous</a></div>
-        <div class="tag-wrapper animated bounceInUp random" style="animation-delay: 0.25s;"><a class="tag" href="#random"><span class="fa fa-circle"></span> Random Tags</a></div>
+        <div class="tag-wrapper animanga" data-animate><a class="tag" href="#animanga"><span class="fa fa-circle"></span> Anime / Manga</a></div>
+        <div class="tag-wrapper games" data-animate style="animation-delay: 0.1s;"><a class="tag" href="#games"><span class="fa fa-circle"></span> Video Games</a></div>
+        <div class="tag-wrapper  movies" data-animate style="animation-delay: 0.15s;"><a class="tag" href="#movies"><span class="fa fa-circle"></span> Movies / Shows</a></div>
+        <div class="tag-wrapper  misc" data-animate style="animation-delay: 0.2s;"><a class="tag" href="#misc"><span class="fa fa-circle"></span> Miscellaneous</a></div>
+        <div class="tag-wrapper  random" data-animate style="animation-delay: 0.25s;"><a class="tag" href="#random"><span class="fa fa-circle"></span> Random Tags</a></div>
       </div>
     </div>
 
@@ -1675,6 +1677,14 @@ $(document).ready(function(){
       }
       
   	}
+  });
+
+  $(window).load(function() { // makes sure the whole site is loaded
+    $("#status").fadeOut(); // will first fade out the loading animation
+    $("#preloader").delay(100).fadeOut("fast"); // will fade out the white DIV that covers the website.
+    $("[data-animate]").each(function() {
+      $(this).delay(150).addClass("animated bounceInUp");
+    });
   });
 
   $(".back2Top").click(function(){
