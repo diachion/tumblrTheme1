@@ -47,7 +47,7 @@
   <link rel="stylesheet" type="text/css" href="css/global.css">
 </head>
 
-<body>
+<body class="preload">
 
 <div id="preloader"><div id="status">&nbsp;</div></div>
 
@@ -653,7 +653,7 @@
         	<div class="content-post-inner">
 	          <span><a href="#">a-persons-url-here</a>:</span>
 	          <div class="quote-post"><span class="fa fa-quote-left"></span> May the parts of you that feel like fighting always be stronger and louder than the parts of you that feel like giving up. <span class="fa fa-quote-right"></span></div>
-	          <div class="center" style="margin-top: 15px;">- Myss, <i>Stay Strong</i> -</div>
+	          <div class="quote-source center" style="margin-top: 15px;">- Myss, <i>Stay Strong</i> -</div>
 	        </div>
         </div>
 
@@ -904,7 +904,7 @@ $(document).ready(function(){
   $(window).load(function() { // makes sure the whole site is loaded
     $("#status").fadeOut(); // will first fade out the loading animation
     $("#preloader").delay(100).fadeOut("fast"); // will fade out the white DIV that covers the website.
-    $("body").delay(100).css({"overflow":"visible"});
+    $("body").delay(100).removeClass("preload");
   })
 
   // ------------ tumblr controls ------------

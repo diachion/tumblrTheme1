@@ -518,7 +518,6 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
     -moz-transform: skewX(40deg) rotateX(-60deg) rotateY(-10deg) rotateZ(-10deg) perspective(150px);
     -ms-transform: skewX(40deg) rotateX(-60deg) rotateY(-10deg) rotateZ(-10deg) perspective(150px);
     -o-transform: skewX(40deg) rotateX(-60deg) rotateY(-10deg) rotateZ(-10deg) perspective(150px); } }
-
 /* PRELOADER */
 #preloader {
   position: fixed;
@@ -534,7 +533,9 @@ h1, h2, h3, h4, h5, h6, .collapsible-header {
     position: absolute;
     bottom: 50px;
     right: 50px;
-    background-image: url(../imgs/TakeYourTime.gif);
+    background-image: url("http://static.tumblr.com/hqiihx2/krbopeyea/takeyourtime.gif");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center; }
+
+/*# sourceMappingURL=tags.css.map */
